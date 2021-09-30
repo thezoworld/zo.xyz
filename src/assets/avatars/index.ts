@@ -1,4 +1,5 @@
 import ConfusedMale1 from "./ConfusedMale1";
+import FemaleBoarding from "./FemaleBoarding";
 import FemaleFull1 from "./FemaleFull1";
 import FemaleFull2 from "./FemaleFull2";
 import FemaleLeftFull1 from "./FemaleLeftFull1";
@@ -10,6 +11,7 @@ import MaleFull2 from "./MaleFull2";
 import MaleRightFull1 from "./MaleRightFull1";
 import MaleSittingLog from "./MaleSittingLog";
 import MaleSittingWithCards from "./MaleSittingWithCards";
+import MaleWithMap from "./MaleWithMap";
 import MultipleFull1 from "./MultipleFull1";
 import MultipleFull2 from "./MultipleFull2";
 
@@ -19,6 +21,8 @@ export {
   MaleFull2,
   FemaleLeftFull1,
   ConfusedMale1,
+  FemaleBoarding,
+  MaleWithMap,
   FemaleSittingLog,
   FemaleWithMarshmellow,
   MaleSittingLog,

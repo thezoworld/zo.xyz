@@ -1,10 +1,13 @@
 import React from "react";
 import { BuildingZo } from "../../../assets/props";
+import { useWindowSize } from "../../hooks";
 import { Button } from "../../ui";
 
 interface BuildZoWorldProps {}
 
 const BuildZoWorld: React.FC<BuildZoWorldProps> = () => {
+  const { width } = useWindowSize();
+
   return (
     <section
       className="h-screen relative px-4 flex flex-col items-center justify-center"
@@ -19,7 +22,10 @@ const BuildZoWorld: React.FC<BuildZoWorldProps> = () => {
         country, culture while empowering local communities.
       </span>
       <Button className="mt-8 mb-40">Watch Video</Button>
-      <BuildingZo className="absolute bottom-0" />
+      <BuildingZo
+        className="absolute bottom-0"
+        style={{ height: width <= 768 ? "auto" : "40vh" }}
+      />
     </section>
   );
 };
