@@ -1,4 +1,6 @@
-import React from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import React, { useEffect, useRef } from "react";
 import {
   ConfusedMale1,
   FemaleFull2,
@@ -11,6 +13,35 @@ import { Button } from "../../ui";
 interface MasterPlanProps {}
 
 const MasterPlan: React.FC<MasterPlanProps> = () => {
+  const female1 = useRef<SVGSVGElement>(null);
+  const male1 = useRef<SVGSVGElement>(null);
+  const male2 = useRef<SVGSVGElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(male1.current, {
+      scrollTrigger: {
+        scrub: true,
+        trigger: male1.current,
+      },
+      y: "10vh",
+    });
+    gsap.to(female1.current, {
+      scrollTrigger: {
+        scrub: true,
+        trigger: female1.current,
+      },
+      y: "10vh",
+    });
+    gsap.to(male2.current, {
+      scrollTrigger: {
+        scrub: true,
+        trigger: male2.current,
+      },
+      y: "10vh",
+    });
+  });
   return (
     <section
       className="h-screen relative px-4 flex flex-col items-center text-white justify-center overflow-hidden"
@@ -30,9 +61,9 @@ const MasterPlan: React.FC<MasterPlanProps> = () => {
       </Flex>
       <Fields1 className="absolute bottom-0 z-1" />
       <Flex items="end" className="absolute bottom-0 z-2">
-        <ConfusedMale1 style={{ height: "30vh" }} />
-        <GeekyMale1 style={{ height: "30vh" }} />
-        <FemaleFull2 style={{ height: "30vh" }} />
+        <ConfusedMale1 ref={male1} style={{ height: "30vh" }} />
+        <GeekyMale1 ref={male2} style={{ height: "30vh" }} />
+        <FemaleFull2 ref={female1} style={{ height: "30vh" }} />
       </Flex>
     </section>
   );

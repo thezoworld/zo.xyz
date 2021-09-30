@@ -1,3 +1,4 @@
+import Bonfire1 from "./Bonfire1";
 import BuildingZo from "./BuildingZo";
 import Cuisines from "./Cuisines";
 import Globe from "./Globe";
@@ -8,6 +9,7 @@ import OrangeCircle from "./OrangeCircle";
 import Sky from "./Sky";
 
 export {
+  Bonfire1,
   Cuisines,
   LeavesLeft1,
   LeavesRight1,
