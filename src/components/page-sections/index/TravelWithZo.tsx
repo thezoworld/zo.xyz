@@ -56,7 +56,7 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
 
   return (
     <section
-      className="h-screen relative px-4 flex text-white flex-col items-center justify-center"
+      className="h-screen relative px-4 flex text-white flex-col items-center justify-center overflow-hidden"
       style={{
         background:
           "linear-gradient(0.16deg, #29ABE2 -5.74%, #2CAADF 17.77%, #36A8D5 36.85%, #46A4C4 54.4%, #5E9EAC 71.02%, #D9C43F 86.99%, #D9C43F 102.66%, #D9C43F 117.12%)",

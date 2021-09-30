@@ -37,6 +37,7 @@ const Flex: React.FC<FlexProps> = ({
       classes.push(className);
     }
     return classes.join(" ");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [className]);
 
   return (
