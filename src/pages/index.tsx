@@ -12,18 +12,6 @@ import {
   TravelWithZo,
   Welcome,
 } from "../components/page-sections/index";
-import {
-  FemaleFull1,
-  FemaleLeftFull1,
-  MaleFull1,
-  MaleFull2,
-  MaleRightFull1,
-  MultipleFull1,
-} from "./../assets/avatars";
-import { ClifSunset, DayCampfire } from "./../assets/backgrounds";
-import { BuildingZo, Cuisines, Globe, Monuments, Sky } from "./../assets/props";
-import Flex from "./../components/structure/Flex";
-import { Button } from "./../components/ui";
 
 gsap.registerPlugin(ScrollTrigger);
 
