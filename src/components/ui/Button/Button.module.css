@@ -1,0 +1,18 @@
+.button {
+  @apply text-center px-8 py-3 text-lg left-0 top-0 text-white rounded-2xl relative;
+  background: #ea5f52;
+  box-shadow: -4px 4px #be392c;
+}
+.button:hover {
+  background: #f16e62;
+}
+.button:active {
+  top: 4px;
+  left: -4px;
+  box-shadow: none;
+}
+.button:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  background: #ea5f52;
+}
