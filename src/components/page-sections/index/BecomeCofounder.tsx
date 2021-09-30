@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import {
   FemaleLeftFull1,
@@ -7,6 +8,7 @@ import {
   MaleSittingWithCards,
 } from "../../../assets/avatars";
 import { Button } from "../../ui";
+import nftCard from "./../../../../public/assets/props/nft-card-melinda.png";
 
 interface BecomeCofounderProps {}
 
@@ -70,6 +72,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
         className="absolute z-1"
         style={{ height: "30vh", bottom: "-6vh" }}
       />
+      <Image src={nftCard} alt="ss" />
     </section>
   );
 };

@@ -8,6 +8,7 @@ import MaleFull2 from "./MaleFull2";
 import MaleRightFull1 from "./MaleRightFull1";
 import MaleSittingWithCards from "./MaleSittingWithCards";
 import MultipleFull1 from "./MultipleFull1";
+import MultipleFull2 from "./MultipleFull2";
 
 export {
   FemaleFull1,
@@ -19,5 +20,6 @@ export {
   GeekyMale1,
   MaleRightFull1,
   MultipleFull1,
+  MultipleFull2,
   MaleSittingWithCards,
 };

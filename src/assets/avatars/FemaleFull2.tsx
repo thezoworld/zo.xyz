@@ -6,8 +6,7 @@ function SvgComponent(
 ) {
   return (
     <svg
-      width={208}
-      height={264}
+      viewBox="80 0 130 264"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       ref={svgRef}

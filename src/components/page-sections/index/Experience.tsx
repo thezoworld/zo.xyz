@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
-import { MultipleFull1 } from "../../../assets/avatars";
+import { MultipleFull1, MultipleFull2 } from "../../../assets/avatars";
 import { Cuisines, Monuments } from "../../../assets/props";
 import { Flex } from "../../structure";
 
@@ -100,7 +100,7 @@ const Experience: React.FC<ExperienceProps> = () => {
         className="bg-white h-screen w-screen overflow-hidden relative px-4 flex flex-col items-center justify-start"
       >
         <section
-          className="w-full relative"
+          className="w-full relative flex flex-col justify-start items-center text-white overflow-hidden"
           style={{
             width: "180vw",
             height: "80vh",
@@ -109,7 +109,21 @@ const Experience: React.FC<ExperienceProps> = () => {
             background:
               "radial-gradient(34.57% 34.57% at 50% 68.22%, #EAC952 0%, #EFCE58 48.96%, #C7A324 100%)",
           }}
-        ></section>
+        >
+          <span
+            className="mb-8 font-normal text-lg"
+            style={{ marginTop: "20vh" }}
+          >
+            Experience
+          </span>
+          <span className="font-semibold text-xl relative z-1">
+            and much more...
+          </span>
+          <MultipleFull2
+            className="absolute"
+            style={{ height: "50vh", bottom: "-20vh" }}
+          />
+        </section>
         <span className="font-normal text-lg text-center mt-12">
           as you complete quests along with earning collectables as NFTs.
         </span>
