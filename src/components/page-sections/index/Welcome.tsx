@@ -24,6 +24,8 @@ const Welcome: React.FC<WelcomeProps> = () => {
   const male2 = useRef<SVGSVGElement>(null);
   const male3 = useRef<SVGSVGElement>(null);
   const circle = useRef<SVGSVGElement>(null);
+  const leavesLeft = useRef<SVGSVGElement>(null);
+  const leavesRight = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -74,6 +76,22 @@ const Welcome: React.FC<WelcomeProps> = () => {
       },
       scale: 100,
     });
+    gsap.to(leavesLeft.current, {
+      scrollTrigger: {
+        scrub: true,
+        trigger: leavesLeft.current,
+        start: 10,
+      },
+      scale: 1.5,
+    });
+    gsap.to(leavesRight.current, {
+      scrollTrigger: {
+        scrub: true,
+        trigger: leavesRight.current,
+        start: 10,
+      },
+      scale: 1.5,
+    });
   }, []);
 
   return (
@@ -87,18 +105,24 @@ const Welcome: React.FC<WelcomeProps> = () => {
       {width <= 768 ? (
         <ClifSunset className="absolute inset-0 z-0 h-screen" />
       ) : (
-        <>
-          <SunsetDesktop className="absolute inset-0 w-full z-0 h-screen" />
-          <LeavesLeft2
-            className="absolute left-0 z-2 bottom-0"
-            style={{ width: "20vw" }}
-          />
-          <LeavesRight2
-            className="absolute right-0 z-2 bottom-0"
-            style={{ width: "20vw" }}
-          />
-        </>
+        <SunsetDesktop className="absolute inset-0 w-full z-0 h-screen" />
       )}
+      <LeavesLeft2
+        ref={leavesLeft}
+        className="absolute left-0 z-3 bottom-0"
+        style={{
+          width: width <= 768 ? "auto" : "20vw",
+          height: width <= 768 ? "12vh" : "auto",
+        }}
+      />
+      <LeavesRight2
+        ref={leavesRight}
+        className="absolute right-0 z-3 bottom-0"
+        style={{
+          width: width <= 768 ? "auto" : "20vw",
+          height: width <= 768 ? "12vh" : "auto",
+        }}
+      />
       <div />
       <Flex col items="center" className="relative z-3">
         <span className="font-semibold text-2xl" style={{ color: "#D32328" }}>
