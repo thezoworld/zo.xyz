@@ -29,6 +29,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       scrollTrigger: {
         scrub: true,
         trigger: female1.current,
+        start: 10,
       },
       x: "-20vw",
     });
@@ -36,6 +37,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       scrollTrigger: {
         scrub: true,
         trigger: female2.current,
+        start: 10,
       },
       x: "15vw",
     });
@@ -43,6 +45,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       scrollTrigger: {
         scrub: true,
         trigger: male2.current,
+        start: 10,
       },
       x: "20vw",
     });
@@ -50,6 +53,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       scrollTrigger: {
         scrub: true,
         trigger: male3.current,
+        start: 10,
       },
       x: "-15vw",
     });
@@ -57,6 +61,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       scrollTrigger: {
         scrub: true,
         trigger: male1.current,
+        start: 10,
       },
       y: "-20vh",
     });

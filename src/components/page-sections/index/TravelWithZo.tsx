@@ -27,14 +27,14 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
         scrub: true,
         trigger: male1.current,
       },
-      x: "-10vw",
+      x: "-5vw",
     });
     gsap.to(female1.current, {
       scrollTrigger: {
         scrub: true,
         trigger: female1.current,
       },
-      x: "10vw",
+      x: "5vw",
     });
     gsap.to(female2.current, {
       scrollTrigger: {
