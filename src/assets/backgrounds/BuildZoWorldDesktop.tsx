@@ -8,6 +8,7 @@ function SvgComponent(
     <svg
       viewBox="0 0 1440 564"
       fill="none"
+      preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
       ref={svgRef}
       {...props}

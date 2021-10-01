@@ -6,7 +6,7 @@ import {
   FemaleFull2,
   GeekyMale1,
 } from "../../../assets/avatars";
-import { Fields1, MasterPlan as MS } from "../../../assets/backgrounds";
+import { Fields1, Fields1Desktop } from "../../../assets/backgrounds";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import { Button } from "../../ui";
@@ -65,7 +65,7 @@ const MasterPlan: React.FC<MasterPlanProps> = () => {
       {width <= 768 ? (
         <Fields1 className="absolute bottom-0 z-1 w-full" />
       ) : (
-        <MS className="absolute inset-0 z-1 h-screen" />
+        <Fields1Desktop className="absolute inset-0 w-full z-1 h-screen" />
       )}
       <Flex items="end" className="absolute bottom-0 z-2">
         <ConfusedMale1 ref={male1} style={{ height: "30vh" }} />
