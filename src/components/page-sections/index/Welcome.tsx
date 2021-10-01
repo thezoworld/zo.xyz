@@ -103,7 +103,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       }}
     >
       {width <= 768 ? (
-        <ClifSunset className="absolute inset-0 z-0 h-screen" />
+        <ClifSunset className="absolute inset-0 z-0 h-screen w-full" />
       ) : (
         <SunsetDesktop className="absolute inset-0 w-full z-0 h-screen" />
       )}
