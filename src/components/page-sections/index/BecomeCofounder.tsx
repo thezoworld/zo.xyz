@@ -119,10 +119,10 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
         className="max-w-5xl md:flex-row flex-col w-full mx-auto"
       >
         <Flex col className="items-center md:items-start max-w-lg">
-          <h2 className="text-xl font-semibold text-center">
+          <h2 className="text-xl md:text-3xl font-semibold text-center">
             Become a Cofounder
           </h2>
-          <span className="mt-6 text-center md:text-left relative z-2">
+          <span className="mt-6 md:text-lg text-center md:text-left relative z-2">
             Mint or buy one of the only thousand genesis country cards of the Zo
             World.
           </span>

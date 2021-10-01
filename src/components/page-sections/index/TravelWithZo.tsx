@@ -59,7 +59,7 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
 
   return (
     <section
-      className="h-screen relative px-4 flex text-white flex-col items-center justify-center overflow-hidden"
+      className="h-screen relative px-4 flex md:flex-row text-white flex-col items-center justify-center overflow-hidden"
       style={{
         background:
           "linear-gradient(0.16deg, #29ABE2 -5.74%, #2CAADF 17.77%, #36A8D5 36.85%, #46A4C4 54.4%, #5E9EAC 71.02%, #D9C43F 86.99%, #D9C43F 102.66%, #D9C43F 117.12%)",
@@ -70,29 +70,44 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
       ) : (
         <Fields2Desktop className="absolute bottom-0 z-1 w-full" />
       )}
-      <h2 className="text-xl font-semibold text-center relative z-1">
-        Travel with the Zo Club
-      </h2>
-      <span className="mt-6 text-center relative z-1">
-        Are you one of the crazy ones who’s willing to work with early-stage
-        teams with broken products, fire in the hole and soul? Then, buy a
-        $6,000 month-long all you can adventure trip across India. Coming soon
-        across the world
-      </span>
-      <Button className="mt-8 mb-40 relative z-4">Learn More</Button>
-      <Bonfire1
-        ref={fire}
-        className="absolute bottom-0 z-3"
-        style={{ height: "16vh" }}
-      />
-      <Flex items="end" className="absolute bottom-0 z-2">
-        <FemaleSittingLog ref={female1} style={{ height: "30vh" }} />
-        <FemaleWithMarshmellow
-          ref={female2}
-          className="relative"
-          style={{ height: "30vh", bottom: "10vh" }}
-        />
-        <MaleSittingLog ref={male1} style={{ height: "30vh" }} />
+      <Flex
+        className="w-full max-w-5xl mx-auto"
+        style={{ marginTop: width <= 768 ? "" : "40vh" }}
+      >
+        <div className="absolute bottom-0 w-full md:flex-grow flex justify-center md:-left-12 md:relative">
+          <Bonfire1
+            ref={fire}
+            className="absolute bottom-0 z-3"
+            style={{ height: width <= 768 ? "16vh" : "24vh" }}
+          />
+          <Flex items="end" className="absolute bottom-0 z-2">
+            <FemaleSittingLog
+              ref={female1}
+              style={{ height: width <= 768 ? "30vh" : "40vh" }}
+            />
+            <FemaleWithMarshmellow
+              ref={female2}
+              className="relative"
+              style={{ height: width <= 768 ? "30vh" : "40vh", bottom: "10vh" }}
+            />
+            <MaleSittingLog
+              ref={male1}
+              style={{ height: width <= 768 ? "30vh" : "40vh" }}
+            />
+          </Flex>
+        </div>
+        <Flex col className="items-center md:items-start max-w-lg">
+          <h2 className="text-xl md:text-3xl font-semibold text-center relative z-1">
+            Travel with the Zo Club
+          </h2>
+          <span className="mt-6 text-center md:text-left md:text-lg relative z-1">
+            Are you one of the crazy ones who’s willing to work with early-stage
+            teams with broken products, fire in the hole and soul? Then, buy a
+            $6,000 month-long all you can adventure trip across India. Coming
+            soon across the world
+          </span>
+          <Button className="mt-8 mb-40 relative z-4">Learn More</Button>
+        </Flex>
       </Flex>
     </section>
   );
