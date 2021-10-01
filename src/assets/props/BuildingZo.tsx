@@ -5,6 +5,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
     <svg
       viewBox="0 320 360 320"
       fill="none"
+      preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

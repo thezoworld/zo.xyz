@@ -26,9 +26,9 @@ const BuildZoWorld: React.FC<BuildZoWorldProps> = () => {
       </span>
       <Button className="mt-8 mb-40">Watch Video</Button>
       {width <= 768 ? (
-        <BuildingZo className="absolute bottom-0" />
+        <BuildingZo className="absolute bottom-0 w-full" />
       ) : (
-        <BuildZoWorldDesktop className="absolute bottom-0" />
+        <BuildZoWorldDesktop className="absolute bottom-0 w-full" />
       )}
     </section>
   );
