@@ -7,6 +7,7 @@ import {
   MaleRightFull1,
   MaleSittingWithCards,
 } from "../../../assets/avatars";
+import { CardBack } from "../../../assets/props";
 import { Button } from "../../ui";
 
 interface BecomeCofounderProps {}
@@ -15,6 +16,12 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
   const female1 = useRef<SVGSVGElement>(null);
   const male1 = useRef<SVGSVGElement>(null);
   const male2 = useRef<SVGSVGElement>(null);
+  const cardLeft1 = useRef<SVGSVGElement>(null);
+  const cardLeft2 = useRef<SVGSVGElement>(null);
+  const cardLeft3 = useRef<SVGSVGElement>(null);
+  const cardRight1 = useRef<SVGSVGElement>(null);
+  const cardRight2 = useRef<SVGSVGElement>(null);
+  const cardRight3 = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -39,6 +46,60 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
         scrub: true,
       },
       y: "-10vh",
+    });
+    gsap.to(cardLeft1.current, {
+      scrollTrigger: {
+        trigger: cardLeft1.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "-5vw",
+      rotation: "-60deg",
+    });
+    gsap.to(cardLeft2.current, {
+      scrollTrigger: {
+        trigger: cardLeft2.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "-3vw",
+      rotation: "-55deg",
+    });
+    gsap.to(cardLeft3.current, {
+      scrollTrigger: {
+        trigger: cardLeft3.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "-1vw",
+      rotation: "-50deg",
+    });
+    gsap.to(cardRight1.current, {
+      scrollTrigger: {
+        trigger: cardRight1.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "5vw",
+      rotation: "60deg",
+    });
+    gsap.to(cardRight2.current, {
+      scrollTrigger: {
+        trigger: cardRight2.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "3vw",
+      rotation: "55deg",
+    });
+    gsap.to(cardRight3.current, {
+      scrollTrigger: {
+        trigger: cardRight3.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "1vw",
+      rotation: "50deg",
     });
   });
 
@@ -70,6 +131,66 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
         ref={male2}
         className="absolute z-1"
         style={{ height: "30vh", bottom: "-6vh" }}
+      />
+      <CardBack
+        ref={cardLeft1}
+        className="absolute z-1 shadow-md"
+        style={{
+          height: "5vh",
+          transform: "rotate(-45deg)",
+          bottom: "10vh",
+          left: "20vw",
+        }}
+      />
+      <CardBack
+        ref={cardLeft2}
+        className="absolute z-1 shadow-md"
+        style={{
+          height: "5vh",
+          transform: "rotate(-45deg)",
+          bottom: "20vh",
+          left: "18vw",
+        }}
+      />
+      <CardBack
+        ref={cardLeft3}
+        className="absolute z-1 shadow-md"
+        style={{
+          height: "5vh",
+          transform: "rotate(-35deg)",
+          bottom: "30vh",
+          left: "24vw",
+        }}
+      />
+      <CardBack
+        ref={cardRight1}
+        className="absolute z-1 shadow-md"
+        style={{
+          height: "5vh",
+          transform: "rotate(45deg)",
+          bottom: "10vh",
+          right: "24vw",
+        }}
+      />
+      <CardBack
+        ref={cardRight2}
+        className="absolute z-1 shadow-md"
+        style={{
+          height: "5vh",
+          transform: "rotate(45deg)",
+          bottom: "20vh",
+          right: "22vw",
+        }}
+      />
+      <CardBack
+        ref={cardRight3}
+        className="absolute z-1 shadow-md"
+        style={{
+          height: "5vh",
+          transform: "rotate(35deg)",
+          bottom: "30vh",
+          right: "28vw",
+        }}
       />
     </section>
   );
