@@ -9,7 +9,7 @@ import {
   MaleWithMap,
 } from "../../../assets/avatars";
 import { ClifSunset, SunsetDesktop } from "../../../assets/backgrounds";
-import { OrangeCircle } from "../../../assets/props";
+import { LeavesLeft2, LeavesRight2, OrangeCircle } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 
@@ -87,7 +87,17 @@ const Welcome: React.FC<WelcomeProps> = () => {
       {width <= 768 ? (
         <ClifSunset className="absolute inset-0 z-0 h-screen" />
       ) : (
-        <SunsetDesktop className="absolute inset-0 z-0 h-screen" />
+        <>
+          <SunsetDesktop className="absolute inset-0 w-full z-0 h-screen" />
+          <LeavesLeft2
+            className="absolute left-0 z-2 bottom-0"
+            style={{ width: "20vw" }}
+          />
+          <LeavesRight2
+            className="absolute right-0 z-2 bottom-0"
+            style={{ width: "20vw" }}
+          />
+        </>
       )}
       <div />
       <Flex col items="center" className="relative z-3">

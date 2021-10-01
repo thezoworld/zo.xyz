@@ -1,7 +1,11 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
-import { FemaleLeftFull1, MaleRightFull1 } from "../../../assets/avatars";
+import {
+  FemaleBottom1,
+  FemaleLeftFull1,
+  MaleRightFull1,
+} from "../../../assets/avatars";
 import { Globe, Sky } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 
@@ -13,6 +17,7 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
   const globe = useRef<SVGSVGElement>(null);
   const sky = useRef<SVGSVGElement>(null);
   const female1 = useRef<SVGSVGElement>(null);
+  const female2 = useRef<SVGSVGElement>(null);
   const male1 = useRef<SVGSVGElement>(null);
   const text = useRef<HTMLHeadingElement>(null);
 
@@ -46,6 +51,13 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
         scrub: true,
       },
       y: "20vh",
+    });
+    gsap.to(female2.current, {
+      scrollTrigger: {
+        trigger: female2.current,
+        scrub: true,
+      },
+      y: "5vh",
     });
     gsap.to(male1.current, {
       scrollTrigger: {
@@ -92,6 +104,11 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
         ref={female1}
         className="absolute left-0 z-1 md:hidden block"
         style={{ width: "25vw", bottom: "10vh" }}
+      />
+      <FemaleBottom1
+        ref={female2}
+        className="absolute bottom-0 z-1 hidden md:block"
+        style={{ height: "50vh", right: "10vh" }}
       />
       <MaleRightFull1
         ref={male1}

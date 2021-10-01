@@ -4,7 +4,9 @@ import CardBack from "./CardBack";
 import Cuisines from "./Cuisines";
 import Globe from "./Globe";
 import LeavesLeft1 from "./LeavesLeft1";
+import LeavesLeft2 from "./LeavesLeft2";
 import LeavesRight1 from "./LeavesRight1";
+import LeavesRight2 from "./LeavesRight2";
 import Monuments from "./Monuments";
 import OrangeCircle from "./OrangeCircle";
 import Sky from "./Sky";
@@ -14,6 +16,8 @@ export {
   Cuisines,
   LeavesLeft1,
   LeavesRight1,
+  LeavesLeft2,
+  LeavesRight2,
   CardBack,
   OrangeCircle,
   Monuments,

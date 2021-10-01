@@ -1,5 +1,6 @@
 import ConfusedMale1 from "./ConfusedMale1";
 import FemaleBoarding from "./FemaleBoarding";
+import FemaleBottom1 from "./FemaleBottom1";
 import FemaleFull1 from "./FemaleFull1";
 import FemaleFull2 from "./FemaleFull2";
 import FemaleLeftFull1 from "./FemaleLeftFull1";
@@ -19,6 +20,7 @@ export {
   FemaleFull1,
   MaleFull1,
   MaleFull2,
+  FemaleBottom1,
   FemaleLeftFull1,
   ConfusedMale1,
   FemaleBoarding,
