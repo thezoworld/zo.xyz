@@ -9,6 +9,7 @@ import FemaleWithMarshmellow from "./FemaleWithMarshmellow";
 import GeekyMale1 from "./GeekyMale1";
 import MaleFull1 from "./MaleFull1";
 import MaleFull2 from "./MaleFull2";
+import MaleFullThumbs1 from "./MaleFullThumbs1";
 import MaleRightFull1 from "./MaleRightFull1";
 import MaleSittingLog from "./MaleSittingLog";
 import MaleSittingWithCards from "./MaleSittingWithCards";
@@ -27,6 +28,7 @@ export {
   MaleWithMap,
   FemaleSittingLog,
   FemaleWithMarshmellow,
+  MaleFullThumbs1,
   MaleSittingLog,
   FemaleFull2,
   GeekyMale1,
