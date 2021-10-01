@@ -11,6 +11,8 @@ import LeavesRight2 from "./LeavesRight2";
 import Monuments from "./Monuments";
 import OrangeCircle from "./OrangeCircle";
 import Sky from "./Sky";
+import TreesLeft from "./TreesLeft";
+import TreesRight from "./TreesRight";
 
 export {
   Bonfire1,
@@ -21,6 +23,8 @@ export {
   HelpDesk,
   LeavesRight2,
   CardBack,
+  TreesLeft,
+  TreesRight,
   OrangeCircle,
   Monuments,
   Globe,
