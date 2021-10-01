@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {
       fontFamily: {
@@ -15,6 +15,9 @@ module.exports = {
         3: 3,
         4: 4,
         5: 5,
+      },
+      spacing: {
+        108: "27rem",
       },
     },
   },

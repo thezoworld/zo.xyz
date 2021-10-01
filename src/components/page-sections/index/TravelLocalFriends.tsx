@@ -82,7 +82,7 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
       </div>
       <h2
         ref={text}
-        className="text-white text-xl tracking-wide text-center flex flex-col"
+        className="text-white text-xl md:text-2xl md:ml-12 tracking-wide text-center flex flex-col"
         style={{ marginBottom: width <= 768 ? "30vh" : "0" }}
       >
         <span className="mb-2">Travel with the help of</span>

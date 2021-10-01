@@ -106,39 +106,71 @@ const Experience: React.FC<ExperienceProps> = () => {
           </Flex>
         </section>
       </Flex>
-      <section
-        ref={more}
-        className="bg-white h-screen w-screen overflow-hidden relative px-4 flex flex-col items-center justify-start"
-      >
+      {width <= 768 ? (
         <section
-          className="w-full relative flex flex-col justify-start items-center text-white overflow-hidden"
-          style={{
-            width: "180vw",
-            height: "80vh",
-            borderBottomLeftRadius: "40vh",
-            borderBottomRightRadius: "40vh",
-            background:
-              "radial-gradient(34.57% 34.57% at 50% 68.22%, #EAC952 0%, #EFCE58 48.96%, #C7A324 100%)",
-          }}
+          ref={more}
+          className="bg-white h-screen w-screen overflow-hidden relative px-4 flex flex-col items-center justify-start"
         >
-          <span
-            className="mb-8 font-normal text-lg"
-            style={{ marginTop: "20vh" }}
+          <section
+            className="w-full relative flex flex-col justify-start items-center text-white overflow-hidden"
+            style={{
+              width: "180vw",
+              height: "80vh",
+              borderBottomLeftRadius: "40vh",
+              borderBottomRightRadius: "40vh",
+              background:
+                "radial-gradient(34.57% 34.57% at 50% 68.22%, #EAC952 0%, #EFCE58 48.96%, #C7A324 100%)",
+            }}
           >
-            Experience
+            <span
+              className="mb-8 font-normal text-lg"
+              style={{ marginTop: "20vh" }}
+            >
+              Experience
+            </span>
+            <span className="font-semibold text-xl relative z-1">
+              and much more...
+            </span>
+            <MultipleFull2
+              className="absolute"
+              style={{ height: "50vh", bottom: "-20vh" }}
+            />
+          </section>
+          <span className="font-normal text-lg text-center mt-12">
+            as you complete quests along with earning collectables as NFTs.
           </span>
-          <span className="font-semibold text-xl relative z-1">
-            and much more...
-          </span>
-          <MultipleFull2
-            className="absolute"
-            style={{ height: "50vh", bottom: "-20vh" }}
-          />
         </section>
-        <span className="font-normal text-lg text-center mt-12">
-          as you complete quests along with earning collectables as NFTs.
-        </span>
-      </section>
+      ) : (
+        <section
+          ref={more}
+          className="bg-white h-screen w-screen overflow-hidden relative px-4 flex items-center justify-start"
+        >
+          <section
+            className="w-full relative flex flex-col justify-start items-center text-white overflow-hidden"
+            style={{
+              width: "50vw",
+              height: "50vw",
+              borderRadius: "100%",
+              background:
+                "radial-gradient(34.57% 34.57% at 50% 68.22%, #EAC952 0%, #EFCE58 48.96%, #C7A324 100%)",
+            }}
+          >
+            <MultipleFull2
+              className="absolute"
+              style={{ height: "50vh", bottom: "-16vh" }}
+            />
+          </section>
+          <Flex col items="center" className="ml-12">
+            <span className="mb-8 font-normal text-3xl">Experience</span>
+            <span className="font-semibold text-2xl relative z-1">
+              and much more...
+            </span>
+            <span className="font-normal text-xl text-center mt-12">
+              as you complete quests along with earning collectables as NFTs.
+            </span>
+          </Flex>
+        </section>
+      )}
     </>
   );
 };

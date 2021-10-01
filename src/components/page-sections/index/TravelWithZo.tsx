@@ -6,14 +6,17 @@ import {
   FemaleWithMarshmellow,
   MaleSittingLog,
 } from "../../../assets/avatars";
-import { Fields2 } from "../../../assets/backgrounds";
+import { Fields2, Fields2Desktop } from "../../../assets/backgrounds";
 import { Bonfire1 } from "../../../assets/props";
+import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import { Button } from "../../ui";
 
 interface TravelWithZoProps {}
 
 const TravelWithZo: React.FC<TravelWithZoProps> = () => {
+  const { width } = useWindowSize();
+
   const male1 = useRef<SVGSVGElement>(null);
   const female1 = useRef<SVGSVGElement>(null);
   const female2 = useRef<SVGSVGElement>(null);
@@ -62,7 +65,11 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
           "linear-gradient(0.16deg, #29ABE2 -5.74%, #2CAADF 17.77%, #36A8D5 36.85%, #46A4C4 54.4%, #5E9EAC 71.02%, #D9C43F 86.99%, #D9C43F 102.66%, #D9C43F 117.12%)",
       }}
     >
-      <Fields2 className="absolute inset-0 z-1 h-screen" />
+      {width <= 768 ? (
+        <Fields2 className="absolute inset-0 z-1 h-screen" />
+      ) : (
+        <Fields2Desktop className="absolute bottom-0 z-1 w-full" />
+      )}
       <h2 className="text-xl font-semibold text-center relative z-1">
         Travel with the Zo Club
       </h2>

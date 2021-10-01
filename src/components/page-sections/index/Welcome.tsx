@@ -8,13 +8,16 @@ import {
   MaleFull2,
   MaleWithMap,
 } from "../../../assets/avatars";
-import { ClifSunset } from "../../../assets/backgrounds";
+import { ClifSunset, SunsetDesktop } from "../../../assets/backgrounds";
 import { OrangeCircle } from "../../../assets/props";
+import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 
 interface WelcomeProps {}
 
 const Welcome: React.FC<WelcomeProps> = () => {
+  const { width } = useWindowSize();
+
   const female1 = useRef<SVGSVGElement>(null);
   const female2 = useRef<SVGSVGElement>(null);
   const male1 = useRef<SVGSVGElement>(null);
@@ -81,7 +84,11 @@ const Welcome: React.FC<WelcomeProps> = () => {
           "linear-gradient(23.45deg, #F5D928 0.53%, #F6D129 15.58%, #F8B92D 39.57%, #FB9434 69.49%, #FF663C 100%)",
       }}
     >
-      <ClifSunset className="absolute inset-0 z-0 h-screen" />
+      {width <= 768 ? (
+        <ClifSunset className="absolute inset-0 z-0 h-screen" />
+      ) : (
+        <SunsetDesktop className="absolute inset-0 z-0 h-screen" />
+      )}
       <div />
       <Flex col items="center" className="relative z-3">
         <span className="font-semibold text-2xl" style={{ color: "#D32328" }}>

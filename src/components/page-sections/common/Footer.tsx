@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = () => {
     >
       <Flex col items="center" className="mx-4 w-full mt-12">
         <h3 className="font-semibold text-lg">Join our community</h3>
-        <Flex items="center" className="mt-4 mb-8">
+        <Flex items="center" className="mt-4 mb-8 md:mb-16">
           <a
             href="https://discord.zo.xyz/"
             target="_blank"
@@ -37,7 +37,7 @@ const Footer: React.FC<FooterProps> = () => {
           </a>
         </Flex>
       </Flex>
-      <Fields3 className="w-full" />
+      <Fields3 className="w-full md:hidden" />
       <Flex
         items="center"
         justify="center"
