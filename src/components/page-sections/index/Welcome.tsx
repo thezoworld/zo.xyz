@@ -102,11 +102,13 @@ const Welcome: React.FC<WelcomeProps> = () => {
           "linear-gradient(23.45deg, #F5D928 0.53%, #F6D129 15.58%, #F8B92D 39.57%, #FB9434 69.49%, #FF663C 100%)",
       }}
     >
-      {width <= 768 ? (
-        <ClifSunset className="absolute inset-0 z-0 h-screen w-full" />
-      ) : (
-        <SunsetDesktop className="absolute inset-0 w-full z-0 h-screen" />
-      )}
+      {width > 0 ? (
+        width <= 768 ? (
+          <ClifSunset className="absolute inset-0 z-0 h-screen w-full" />
+        ) : (
+          <SunsetDesktop className="absolute inset-0 w-full z-0 h-screen" />
+        )
+      ) : null}
       <LeavesLeft2
         ref={leavesLeft}
         className="absolute left-0 z-3 bottom-0"
