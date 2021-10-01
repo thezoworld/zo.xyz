@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = () => {
         </Flex>
       </Flex>
       <Fields3 className="w-full md:hidden" />
-      <Flex items="end" justify="between" className="w-full hidden md:block">
+      <Flex items="end" justify="between" className="w-full hidden md:flex">
         <TreesLeft style={{ width: "20vw" }} />
         <TreesRight
           className="relative"
@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = () => {
       <Flex
         items="center"
         justify="center"
-        className="p-6 font-semibold text-sm w-full text-white -mt-1"
+        className="p-6 font-semibold relative z-1 text-sm w-full text-white -mt-1"
         style={{
           background:
             "linear-gradient(321.24deg, #47C14A -9.98%, #46BF49 -9.98%, #36A03E 22.01%, #2A8735 53.96%, #21762F 87.34%, #1C6B2B 123.09%, #1A682A 165.32%)",
