@@ -6,12 +6,15 @@ type ButtonProps = React.DetailedHTMLProps<
   HTMLButtonElement
 >;
 
-const Button: React.FC<ButtonProps> = (props) => {
+const Button = (props: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
   return (
-    <button {...props} className={`${styles.button} ${props.className || ""}`}>
+    <button
+      ref={ref}
+      {...props}
+      className={`${styles.button} ${props.className || ""}`}
+    >
       {props.children}
     </button>
   );
 };
-
-export default Button;
+export default React.forwardRef(Button);
