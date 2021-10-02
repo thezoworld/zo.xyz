@@ -14,6 +14,7 @@
 
 # production
 /build
+deploy-staging.sh
 
 # misc
 .DS_Store
