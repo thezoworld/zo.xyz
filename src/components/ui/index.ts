@@ -1,3 +1,4 @@
+import BlogCard from "./BlogCard";
 import Button from "./Button";
 
-export { Button };
+export { Button, BlogCard };
