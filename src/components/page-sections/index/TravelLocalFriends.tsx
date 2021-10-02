@@ -72,7 +72,7 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
     <section
       className="h-screen relative px-4 flex flex-col md:flex-row items-center justify-center md:justify-start w-full overflow-hidden"
       style={{
-        background: "#DC5347",
+        background: "#28735D",
       }}
     >
       <div className="md:relative md:w-1/2 flex flex-col items-center justify-center">

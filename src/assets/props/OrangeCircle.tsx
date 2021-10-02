@@ -12,7 +12,7 @@ function SvgComponent(
       ref={svgRef}
       {...props}
     >
-      <circle cx={157} cy={157} r={157} fill={props.fill || "#DD5447"} />
+      <circle cx={157} cy={157} r={157} fill={props.fill || "#28735D"} />
     </svg>
   );
 }
