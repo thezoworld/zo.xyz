@@ -7,7 +7,7 @@ const TravelWithZoClub: NextPage = () => {
   return (
     <section className="bg-white w-full">
       <Head>
-        <title>Travel with Zo Club</title>
+        <title>Travel with Zo Club | The Zo World</title>
       </Head>
       <Introduction />
     </section>

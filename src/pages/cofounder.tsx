@@ -10,7 +10,7 @@ const becomeCofounder: NextPage = () => {
   return (
     <section className="bg-white w-full">
       <Head>
-        <title>Become a Cofounder</title>
+        <title>Become a Cofounder | The Zo World</title>
       </Head>
       <Introduction />
       <Details />

@@ -10,7 +10,7 @@ const buildZoWorld: NextPage = () => {
   return (
     <section className="bg-white w-full">
       <Head>
-        <title>Build Zo World</title>
+        <title>Build Zo World | The Zo World</title>
       </Head>
       <Introduction />
       <Details />

@@ -30,7 +30,7 @@ const Home: NextPage = () => {
   return (
     <section className="overflow-x-hidden w-full h-full">
       <Head>
-        <title>Zo World</title>
+        <title>Zo World | The Game of Life</title>
       </Head>
       <Welcome />
       <TravelLocalFriends />
