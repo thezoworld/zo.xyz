@@ -12,6 +12,7 @@ import { ClifSunset, SunsetDesktop } from "../../../assets/backgrounds";
 import { LeavesLeft2, LeavesRight2, OrangeCircle } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
+import { Button } from "../../ui";
 
 interface WelcomeProps {}
 
@@ -136,6 +137,9 @@ const Welcome: React.FC<WelcomeProps> = () => {
         <h1 className="font-bold mt-2 text-white text-4xl md:text-5xl md:mt-6">
           The Zo World
         </h1>
+        <a href="https://youtu.be/0gijEkpRdAU" target="_blank" rel="noreferrer">
+          <Button className="mt-8">Watch our video</Button>
+        </a>
       </Flex>
       <Flex className="mb-12 md:px-32 px-0 justify-around w-full items-end">
         <MaleWithMap
