@@ -127,10 +127,15 @@ const Welcome: React.FC<WelcomeProps> = () => {
       />
       <div />
       <Flex col items="center" className="relative z-3">
-        <span className="font-semibold text-2xl" style={{ color: "#D32328" }}>
+        <span
+          className="font-semibold text-2xl md:text-4xl"
+          style={{ color: "#D32328" }}
+        >
           Welcome to
         </span>
-        <h1 className="font-bold mt-2 text-white text-4xl">The Zo World</h1>
+        <h1 className="font-bold mt-2 text-white text-4xl md:text-5xl md:mt-6">
+          The Zo World
+        </h1>
       </Flex>
       <Flex className="mb-12 md:px-32 px-0 justify-around w-full items-end">
         <MaleWithMap
