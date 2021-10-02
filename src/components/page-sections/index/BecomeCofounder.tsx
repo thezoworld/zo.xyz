@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import {
   FemaleLeftFull1,
@@ -126,7 +126,9 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
             Mint or buy one of the only thousand genesis country cards of the Zo
             World.
           </span>
-          <Button className="mt-8 mb-16">Learn Benefits and Buy now</Button>
+          <Link href="/cofounder">
+            <Button className="mt-8 mb-16">Learn Benefits and Buy now</Button>
+          </Link>
         </Flex>
         <Flex
           col

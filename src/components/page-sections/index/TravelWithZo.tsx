@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import {
   FemaleSittingLog,
@@ -11,7 +12,6 @@ import { Bonfire1 } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import { Button } from "../../ui";
-import Link from "next/link";
 
 interface TravelWithZoProps {}
 
@@ -107,7 +107,9 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
             $6,000 month-long all you can adventure trip across India. Coming
             soon across the world
           </span>
-          <Button className="mt-8 mb-40 relative z-4">Learn More</Button>
+          <Link href="/travel-with-zo" passHref>
+            <Button className="mt-8 mb-40 relative z-4">Learn More</Button>
+          </Link>
         </Flex>
       </Flex>
     </section>
