@@ -1,5 +1,6 @@
 import Bonfire1 from "./Bonfire1";
 import BuildingZo from "./BuildingZo";
+import BuildingZo2 from "./BuildingZo2";
 import CardBack from "./CardBack";
 import Cuisines from "./Cuisines";
 import DoubleArrowDown from "./DoubleArrowDown";
@@ -20,6 +21,7 @@ export {
   Cuisines,
   LeavesLeft1,
   LeavesRight1,
+  BuildingZo2,
   LeavesLeft2,
   HelpDesk,
   LeavesRight2,
