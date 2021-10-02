@@ -99,16 +99,14 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
         </div>
         <Flex col className="items-center md:items-start max-w-lg">
           <h2 className="text-xl md:text-3xl font-semibold text-center relative z-1">
-            Travel with the Zo Club
+            Experience India with Zo
           </h2>
           <span className="mt-6 text-center md:text-left md:text-lg relative z-1">
-            Are you one of the crazy ones who’s willing to work with early-stage
-            teams with broken products, fire in the hole and soul? Then, buy a
-            $6,000 month-long all you can adventure trip across India. Coming
-            soon across the world
+            Backpacking or Digital Zomad lifestyle? Travel and live across India
+            like never before, anywhere, anytime and we’ll be there for you.
           </span>
           <Link href="/travel-with-zo" passHref>
-            <Button className="mt-8 mb-40 relative z-4">Learn More</Button>
+            <Button className="mt-8 mb-40 relative z-4">Start Traveling</Button>
           </Link>
         </Flex>
       </Flex>
