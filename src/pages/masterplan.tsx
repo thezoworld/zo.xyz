@@ -10,15 +10,12 @@ const MasterplanPage: NextPage = () => {
         <title>Masterplan | The Zo World</title>
       </Head>
       <section className="flex items-center h-72 relative overflow-hidden justify-center">
-        <Fields1Desktop
-          className="w-full absolute inset-0"
-          preserveAspectRatio="none"
-        />
-        <h1 className="text-3xl font-bold relative z-1 text-white">
-          Masterplan
+        <Fields1Desktop className="w-full absolute inset-0 h-72" />
+        <h1 className="text-3xl md:text-4xl font-bold relative z-1 text-white">
+          Zo World Masterplan
         </h1>
       </section>
-      <article className="max-w-4xl mt-8 mx-auto">
+      <article className="max-w-4xl mt-8 mx-auto px-4">
         <p className="text-lg mb-8">
           We believe all you need are a group of friends to travel anywhere in
           the world. We have this insight after hosting more than 1 million
