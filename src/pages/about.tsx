@@ -1,12 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import React from "react";
-import {
-  Hiring,
-  Mission,
-  Story,
-  Team,
-} from "../components/page-sections/about";
+import { Mission, Team } from "../components/page-sections/about";
 
 const About: NextPage = () => {
   return (
@@ -15,9 +10,7 @@ const About: NextPage = () => {
         <title>About Zo World | The Zo World</title>
       </Head>
       <Mission />
-      <Story />
       <Team />
-      <Hiring />
     </section>
   );
 };
