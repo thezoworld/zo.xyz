@@ -67,7 +67,7 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
       }}
     >
       {width <= 768 ? (
-        <Fields2 className="absolute inset-0 z-1 h-screen" />
+        <Fields2 className="absolute inset-0 z-1 h-screen w-full" />
       ) : (
         <Fields2Desktop className="absolute bottom-0 z-1 w-full" />
       )}
