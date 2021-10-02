@@ -14,10 +14,10 @@ const Header: React.FC<HeaderProps> = () => {
       </Link>
       <nav className="flex items-center flex-grow justify-end">
         <Link href="/about">
-          <a className="font-semibold ml-4 md:ml-12 text-base">About</a>
+          <a className="font-semibold ml-8 md:ml-12 text-base">About</a>
         </Link>
         <Link href="/blog">
-          <a className="font-semibold ml-4 md:ml-12 text-base">Blog</a>
+          <a className="font-semibold ml-8 md:ml-12 text-base">Blog</a>
         </Link>
       </nav>
     </header>
