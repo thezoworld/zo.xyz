@@ -17,10 +17,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
   },
 }) => {
   return (
-    <>
-      <Link href="/blog">
-        <a className="btn btn-back">Go Back</a>
-      </Link>
+    <section className="max-w-4xl mx-auto p-4">
       <div className="card card-page">
         <h1 className="post-title">{title}</h1>
         <div className="post-date">Posted on {date}</div>
@@ -29,7 +26,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
