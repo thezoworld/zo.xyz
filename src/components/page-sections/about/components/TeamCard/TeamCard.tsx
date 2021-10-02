@@ -17,11 +17,15 @@ const TeamCard: React.FC<TeamCardProps> = ({
 }) => {
   return (
     <div className="h-88 md:mx-0 mx-auto my-5">
-      <Avatar svg={avatar} className="w-32 mx-auto" />
+      <Avatar
+        svg={avatar}
+        className="w-32 mx-auto"
+        style={{ backgroundColor: "rgba(15, 122, 156, 0.13)" }}
+      />
       <p className="font-bold text-xl pt-2 text-center">{name}</p>
-      <Flex items="center" justify="center">
-        <p className="text-md text-gray-600">{department}</p>
-        {twitter && (
+      <Flex items="center" justify="center" className="mt-1">
+        <p className="text-gray-600">{department}</p>
+        {twitter && twitter !== "" && (
           <a href={twitter} target="_blank" rel="noreferrer">
             <svg className="w-4 ml-2" viewBox="0 0 512 512">
               <path

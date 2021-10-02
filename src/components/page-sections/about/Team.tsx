@@ -9,7 +9,7 @@ interface TeamProps {}
 const Team: React.FC<TeamProps> = () => {
   return (
     <Container className="h-auto">
-      <Flex items="center" col className="h-full pb-24 md:mx-0 mx-3 mt-16">
+      <Flex items="center" col className="h-full pb-12 md:mx-0 mx-3 mt-16">
         <h1
           style={{ color: "#BE392C" }}
           className="md:text-5xl text-3xl font-bold"
