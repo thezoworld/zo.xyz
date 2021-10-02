@@ -18,7 +18,7 @@ const BuildZoWorld: React.FC<BuildZoWorldProps> = () => {
           "linear-gradient(359.84deg, #FFFFFF -66.78%, #F6FCFC -56.46%, #DFF2F5 -39.9%, #B9E2E8 -19.17%, #84CDD7 4.88%, #CEEBEF 57.8%, #FFFFFF 96.43%)",
       }}
     >
-      <h2 className="text-xl md:text-3xl font-semibold text-center md:-mt-72">
+      <h2 className="text-xl md:text-3xl font-semibold text-center -mt-56 md:-mt-72">
         Build Zo World
       </h2>
       <span className="mt-6 text-center md:text-lg md:w-108">
