@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import {
   ConfusedMale1,
@@ -89,7 +90,9 @@ const MasterPlan: React.FC<MasterPlanProps> = () => {
             fearlessly anywhere in the world? First, understand our world view,
             strategy, master plan, roadmap, economy and more.
           </span>
-          <Button className="mt-8 mb-40">View our Secret Masterplan</Button>
+          <Link href="/masterplan" passHref>
+            <Button className="mt-8 mb-40">View our Secret Masterplan</Button>
+          </Link>
         </Flex>
         <Flex items="end" className="absolute md:relative bottom-0 z-2">
           <ConfusedMale1 ref={male1} style={{ height: "30vh" }} />
