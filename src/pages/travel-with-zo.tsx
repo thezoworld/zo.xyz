@@ -1,7 +1,7 @@
+import { Widget } from "@typeform/embed-react";
 import { NextPage } from "next";
 import Head from "next/head";
 import React from "react";
-import { Introduction } from "../components/page-sections/travelWithZoClub";
 
 const TravelWithZoClub: NextPage = () => {
   return (
@@ -9,7 +9,11 @@ const TravelWithZoClub: NextPage = () => {
       <Head>
         <title>Travel with Zo Club | The Zo World</title>
       </Head>
-      <Introduction />
+      <Widget
+        id="fctEvmR6"
+        className="w-full"
+        style={{ height: "calc(100vh - 5rem)" }}
+      />
     </section>
   );
 };
