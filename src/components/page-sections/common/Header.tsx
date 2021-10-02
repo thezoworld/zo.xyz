@@ -25,9 +25,6 @@ const Header: React.FC<HeaderProps> = () => {
         <Link href="/about">
           <a className="font-semibold ml-8 md:ml-12 text-base">About</a>
         </Link>
-        <Link href="/blog">
-          <a className="font-semibold ml-8 md:ml-12 text-base">Blog</a>
-        </Link>
       </nav>
     </header>
   );
