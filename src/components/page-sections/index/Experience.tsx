@@ -122,13 +122,7 @@ const Experience: React.FC<ExperienceProps> = () => {
                 "radial-gradient(34.57% 34.57% at 50% 68.22%, #EAC952 0%, #EFCE58 48.96%, #C7A324 100%)",
             }}
           >
-            <span
-              className="mb-8 font-normal text-lg"
-              style={{ marginTop: "20vh" }}
-            >
-              Experience
-            </span>
-            <span className="font-semibold text-xl relative z-1">
+            <span className="font-semibold text-xl relative z-1 mt-32">
               and much more...
             </span>
             <MultipleFull2
@@ -161,7 +155,6 @@ const Experience: React.FC<ExperienceProps> = () => {
             />
           </section>
           <Flex col items="center" className="ml-12">
-            <span className="mb-8 font-normal text-3xl">Experience</span>
             <span className="font-semibold text-2xl relative z-1">
               and much more...
             </span>
