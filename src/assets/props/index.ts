@@ -2,6 +2,7 @@ import Bonfire1 from "./Bonfire1";
 import BuildingZo from "./BuildingZo";
 import CardBack from "./CardBack";
 import Cuisines from "./Cuisines";
+import DoubleArrowDown from "./DoubleArrowDown";
 import Globe from "./Globe";
 import HelpDesk from "./HelpDesk";
 import LeavesLeft1 from "./LeavesLeft1";
@@ -23,6 +24,7 @@ export {
   HelpDesk,
   LeavesRight2,
   CardBack,
+  DoubleArrowDown,
   TreesLeft,
   TreesRight,
   OrangeCircle,
