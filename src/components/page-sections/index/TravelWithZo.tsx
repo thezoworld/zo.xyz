@@ -11,6 +11,7 @@ import { Bonfire1 } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import { Button } from "../../ui";
+import Link from "next/link";
 
 interface TravelWithZoProps {}
 

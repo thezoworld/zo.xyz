@@ -1,4 +1,5 @@
 import BlogCard from "./BlogCard";
 import Button from "./Button";
+import { Container } from "./Container";
 
-export { Button, BlogCard };
+export { Button, Container, BlogCard };
