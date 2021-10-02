@@ -9,6 +9,7 @@ import {
 } from "../../../assets/avatars";
 import { Button } from "../../ui";
 import nftCard from "./../../../../public/assets/props/nft-card-melinda.png";
+import Link from "next/link";
 
 interface BecomeCofounderProps {}
 
@@ -56,7 +57,9 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
         Mint or buy one of the only thousand genesis country cards of the Zo
         World.
       </span>
-      <Button className="mt-8 mb-16">Learn Benefits and Buy now</Button>
+      <Link href="/becomeCofounder" passHref={true}>
+        <Button className="mt-8 mb-16">Learn Benefits and Buy now</Button>
+      </Link>
       <FemaleLeftFull1
         ref={female1}
         className="absolute left-0 z-1"

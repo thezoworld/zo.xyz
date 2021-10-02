@@ -1,6 +1,7 @@
 import React from "react";
 import { Fields2 } from "../../../assets/backgrounds";
 import { Button } from "../../ui";
+import Link from "next/link";
 
 interface TravelWithZoProps {}
 
@@ -23,7 +24,9 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
         $6,000 month-long all you can adventure trip across India. Coming soon
         across the world
       </span>
-      <Button className="mt-8 mb-40 relative z-1">Learn More</Button>
+      <Link href="/travelWithZoClub" passHref={true}>
+        <Button className="mt-8 mb-40 relative z-1">Learn More</Button>
+      </Link>
     </section>
   );
 };
