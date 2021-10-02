@@ -115,19 +115,19 @@ const Experience: React.FC<ExperienceProps> = () => {
           className="w-full relative flex flex-col justify-start items-center text-white overflow-hidden"
           style={{
             width: width <= 768 ? "180vw" : "100vw",
-            height: "80vh",
+            height: "70vh",
             borderBottomLeftRadius: "88vw",
             borderBottomRightRadius: "88vw",
             background:
               "radial-gradient(34.57% 34.57% at 50% 68.22%, #EAC952 0%, #EFCE58 48.96%, #C7A324 100%)",
           }}
         >
-          <span className="font-semibold text-xl relative z-1 mt-32">
+          <span className="font-semibold text-2xl relative z-1 mt-32">
             and much more...
           </span>
           <MultipleFull2
             className="absolute"
-            style={{ height: "50vh", bottom: "-20vh" }}
+            style={{ height: width <= 768 ? "50vh" : "60vh", bottom: "-20vh" }}
           />
         </section>
         <span className="font-normal text-lg text-center mt-12">
