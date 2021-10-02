@@ -17,7 +17,7 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
   const globe = useRef<SVGSVGElement>(null);
   const sky = useRef<SVGSVGElement>(null);
   const female1 = useRef<SVGSVGElement>(null);
-  const female2 = useRef<SVGSVGElement>(null);
+  // const female2 = useRef<SVGSVGElement>(null);
   const male1 = useRef<SVGSVGElement>(null);
   const text = useRef<HTMLHeadingElement>(null);
 
@@ -52,13 +52,13 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
       },
       y: "20vh",
     });
-    gsap.to(female2.current, {
-      scrollTrigger: {
-        trigger: female2.current,
-        scrub: true,
-      },
-      y: "5vh",
-    });
+    // gsap.to(female2.current, {
+    //   scrollTrigger: {
+    //     trigger: female2.current,
+    //     scrub: true,
+    //   },
+    //   y: "5vh",
+    // });
     gsap.to(male1.current, {
       scrollTrigger: {
         trigger: male1.current,
@@ -106,7 +106,6 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
         style={{ width: "25vw", bottom: "10vh" }}
       />
       <FemaleBottom1
-        ref={female2}
         className="absolute bottom-0 z-1 hidden md:block"
         style={{ height: "50vh", right: "10vh" }}
       />
