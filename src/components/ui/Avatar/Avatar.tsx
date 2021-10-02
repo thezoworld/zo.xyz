@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const DEFAULT_ZOBU = "https://cdn.zostel.com/avatar/zobu.svg";
 
@@ -28,7 +28,8 @@ const Avatar: React.FC<AvatarProps> = ({
     } else {
       try {
         const response = await Axios.get(url);
-        const svgResponse = response.data.replace(/<\/?svg.*?>/g, "");
+        const res: any = response;
+        const svgResponse = res.data.replace(/<\/?svg.*?>/g, "");
         try {
           sessionStorage.setItem(url, svgResponse);
         } catch (error) {
