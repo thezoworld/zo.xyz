@@ -22,7 +22,7 @@ const Container: React.FC<ContainerProps> = ({
       style={style}
     >
       {backgroundLayer}
-      <div className="max-w-6xl px-4 mx-auto h-full relative w-full">
+      <div className="max-w-5xl px-4 mx-auto h-full relative w-full">
         {children}
       </div>
     </section>

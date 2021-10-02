@@ -28,14 +28,14 @@ const BuildZo: React.FC<BuildZoProps> = () => {
           className="max-w-5xl mx-auto items-center md:items-start text-white"
           col
         >
-          <h1 className="text-xl font-semibold text-center md:text-left md:text-3xl">
+          <h1 className="text-white md:text-4xl text-2xl font-bold">
             Build Zo World
           </h1>
-          <span className="mt-6 text-center md:text-left max-w-lg md:text-lg">
+          <h1 className="text-white md:text-2xl mt-8 text-center max-w-lg md:text-left md:leading-10 leading-7 text-lg md:mt-8">
             5,555 builders will become Zo World Co-founders and earn Zo-founders
             country NFTs. We are looking for passionate people who follow their
             hearts.
-          </span>
+          </h1>
         </Flex>
         <BuildingZo2
           className="absolute right-0 bottom-5"
@@ -51,11 +51,7 @@ const BuildZo: React.FC<BuildZoProps> = () => {
       </section>
       <section className="w-full overflow-hidden">
         <Flex justify="center" className="w-full">
-          <Image
-            src={multipleZobu}
-            alt=""
-            className="h-48 object-cover object-center"
-          />
+          <Image src={multipleZobu} alt="" className="h-48 w-full" />
         </Flex>
         <div
           className="w-full h-16 relative -mt-24 z-1"
@@ -69,7 +65,7 @@ const BuildZo: React.FC<BuildZoProps> = () => {
       <Flex
         col
         items="center"
-        className="w-full -mt-7 h-4 relative z-1"
+        className="w-full md:-mt-7 -mt-12 h-4 relative z-1"
         style={{
           background:
             "linear-gradient(90deg, #317ED8 0%, #2162AE 23.96%, #063F82 50%)",
