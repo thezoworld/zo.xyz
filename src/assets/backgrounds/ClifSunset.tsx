@@ -8,6 +8,7 @@ function SvgComponent(
     <svg
       viewBox="0 0 360 640"
       fill="none"
+      preserveAspectRatio="xMidYMax slice"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       ref={svgRef}
