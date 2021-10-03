@@ -18,10 +18,10 @@ const Team: React.FC<TeamProps> = () => {
         </h1>
         <Flex
           items="center"
-          className="grid grid-cols-1 md:grid-cols-4 gap-4 my-10 w-full"
+          className="grid grid-cols-1 md:grid-cols-2 gap-1 my-10 w-full"
         >
           {TeamMembers.map((item, index: number) => {
-            return (
+            return index < 2 ? (
               <TeamCard
                 key={index}
                 avatar={item.avatarUrl}
@@ -29,7 +29,23 @@ const Team: React.FC<TeamProps> = () => {
                 department={item.department}
                 twitter={item.twitter}
               />
-            );
+            ) : null;
+          })}
+        </Flex>
+        <Flex
+          items="center"
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 my-10 w-full"
+        >
+          {TeamMembers.map((item, index: number) => {
+            return index > 1 ? (
+              <TeamCard
+                key={index}
+                avatar={item.avatarUrl}
+                name={item.name}
+                department={item.department}
+                twitter={item.twitter}
+              />
+            ) : null;
           })}
         </Flex>
       </Flex>

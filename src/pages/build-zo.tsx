@@ -29,12 +29,13 @@ const BuildZo: React.FC<BuildZoProps> = () => {
           col
         >
           <h1 className="text-white md:text-4xl text-2xl font-bold">
-            Build Zo World
+            Build <span className="text-orangy">Zo</span> World
           </h1>
           <h1 className="text-white md:text-2xl mt-8 text-center max-w-lg md:text-left md:leading-10 leading-7 text-lg md:mt-8">
-            5,555 builders will become Zo World Co-founders and earn Zo-founders
-            country NFTs. We are looking for passionate people who follow their
-            hearts.
+            5,555 builders will become <span className="text-orangy">Zo</span>{" "}
+            World Co-founders and earn <span className="text-orangy">Zo</span>
+            -founders country NFTs. We are looking for passionate people who
+            follow their hearts.
           </h1>
         </Flex>
         <BuildingZo2

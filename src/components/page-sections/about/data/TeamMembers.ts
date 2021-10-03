@@ -20,17 +20,10 @@ const TeamMembersData: {
   },
   {
     avatarUrl:
-      "https://cdn.zo.xyz/profile/17401/assets/1/4b45d857-d5c6-4755-8eee-109382d70df0/20210526122314.svg",
-    name: "Gaurav Goyal",
+      "https://cdn.zo.xyz/profile/276444/assets/1/c619f764-214f-4177-b968-936be7f19126/20210923060138.svg",
+    name: "Anant Dev Dubey",
     department: "Engineering",
-    twitter: "https://twitter.com/GoyalGaurav",
-  },
-  {
-    avatarUrl:
-      "https://cdn.zo.xyz/profile/3/assets/1/9ae5395e-7c13-4ca3-8dba-266157b3acc4/20200817030229.svg",
-    name: "Aviral Gupta",
-    department: "Product",
-    twitter: "https://twitter.com/A_VIRAL_FEVER",
+    twitter: "",
   },
   {
     avatarUrl:
@@ -41,10 +34,10 @@ const TeamMembersData: {
   },
   {
     avatarUrl:
-      "https://cdn.zo.xyz/profile/276444/assets/1/c619f764-214f-4177-b968-936be7f19126/20210923060138.svg",
-    name: "Anant Dev Dubey",
-    department: "Engineering",
-    twitter: "",
+      "https://cdn.zo.xyz/profile/3/assets/1/9ae5395e-7c13-4ca3-8dba-266157b3acc4/20200817030229.svg",
+    name: "Aviral Gupta",
+    department: "Product",
+    twitter: "https://twitter.com/A_VIRAL_FEVER",
   },
   {
     avatarUrl:
@@ -52,6 +45,13 @@ const TeamMembersData: {
     name: "Christopher Nazareth",
     department: "Design",
     twitter: "",
+  },
+  {
+    avatarUrl:
+      "https://cdn.zo.xyz/profile/17401/assets/1/4b45d857-d5c6-4755-8eee-109382d70df0/20210526122314.svg",
+    name: "Gaurav Goyal",
+    department: "Engineering",
+    twitter: "https://twitter.com/GoyalGaurav",
   },
   {
     avatarUrl:
@@ -69,6 +69,13 @@ const TeamMembersData: {
   },
   {
     avatarUrl:
+      "https://cdn.zo.xyz/profile/304834/assets/1/d6e62e03-9f2d-47b2-8bfc-56094a2c9cfd/20210806122847.svg",
+    name: "Kushal Agarwal",
+    department: "Engineering",
+    twitter: "",
+  },
+  {
+    avatarUrl:
       "https://cdn.zo.xyz/profile/319352/assets/1/16535ae3-3cd7-4912-aa3a-bb1313a97d93/20210630142705.svg",
     name: "Manas Choubal",
     department: "Engineering",
@@ -76,10 +83,10 @@ const TeamMembersData: {
   },
   {
     avatarUrl:
-      "https://cdn.zo.xyz/profile/304834/assets/1/d6e62e03-9f2d-47b2-8bfc-56094a2c9cfd/20210806122847.svg",
-    name: "Kushal Agarwal",
-    department: "Engineering",
-    twitter: "",
+      "https://cdn.zo.xyz/profile/212463/assets/1/be3962d7-aa24-445b-8ccf-5e17daf1feb7/20210629105637.svg",
+    name: "Sakshi Shah",
+    department: "Design",
+    twitter: "https://twitter.com/sakshii_shah",
   },
   {
     avatarUrl:
@@ -94,13 +101,6 @@ const TeamMembersData: {
     name: "Satyadev Pius",
     department: "Design",
     twitter: "",
-  },
-  {
-    avatarUrl:
-      "https://cdn.zo.xyz/profile/212463/assets/1/be3962d7-aa24-445b-8ccf-5e17daf1feb7/20210629105637.svg",
-    name: "Sakshi Shah",
-    department: "Design",
-    twitter: "https://twitter.com/sakshii_shah",
   },
   {
     avatarUrl:
