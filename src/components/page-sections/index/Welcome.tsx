@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   FemaleBoarding,
   FemaleFull1,
@@ -17,6 +17,8 @@ import { Button } from "../../ui";
 interface WelcomeProps {}
 
 const Welcome: React.FC<WelcomeProps> = () => {
+  const [showLaunchVideo, setshowLaunchVideo] = useState<boolean>(false);
+
   const { width } = useWindowSize();
 
   const female1 = useRef<SVGSVGElement>(null);
@@ -110,6 +112,36 @@ const Welcome: React.FC<WelcomeProps> = () => {
           <SunsetDesktop className="absolute inset-0 w-full z-0 h-screen" />
         )
       ) : null}
+      {showLaunchVideo && (
+        <Flex
+          col
+          style={{
+            backdropFilter: "blur(0.5rem)",
+            backgroundColor: "rgba(255, 255, 255, 0.6)",
+          }}
+          className="fixed w-screen md:h-full overflow-auto md:max-h-screen z-50 md:pt-5 md:items-end items-center"
+        >
+          <Button
+            onClick={() => setshowLaunchVideo(false)}
+            className="md:mr-10"
+          >
+            Close
+          </Button>
+          <Flex
+            items="center"
+            className="self-center w-screen h-screen px-10 pt-4 pb-10"
+          >
+            <iframe
+              src="https://www.youtube.com/embed/0gijEkpRdAU"
+              title="Zo World | Launch Video"
+              frameBorder="0"
+              className="md:w-full md:h-full w-auto"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </Flex>
+        </Flex>
+      )}
       <LeavesLeft2
         ref={leavesLeft}
         className="absolute left-0 z-3 bottom-0"
@@ -135,11 +167,11 @@ const Welcome: React.FC<WelcomeProps> = () => {
           Welcome to
         </span>
         <h1 className="font-bold mt-2 text-white text-4xl md:text-5xl md:mt-6">
-          The Zo World
+          The <span className="text-orangy">Zo</span> World
         </h1>
-        <a href="https://youtu.be/0gijEkpRdAU" target="_blank" rel="noreferrer">
-          <Button className="mt-8">Watch our video</Button>
-        </a>
+        <Button className="mt-8" onClick={() => setshowLaunchVideo(true)}>
+          Watch our video
+        </Button>
       </Flex>
       <Flex className="mb-12 md:px-32 px-0 justify-around w-full items-end">
         <MaleWithMap

@@ -19,11 +19,12 @@ const BuildZoWorld: React.FC<BuildZoWorldProps> = () => {
       }}
     >
       <h2 className="text-xl md:text-3xl font-semibold text-center md:-mt-72">
-        Build Zo World
+        Build <span className="text-orangy">Zo</span> World
       </h2>
       <span className="mt-6 text-center md:text-lg md:w-108">
-        Become an early builder in your region and help the Zomads explore your
-        country, culture while empowering local communities.
+        Become an early builder in your region and help the{" "}
+        <span className="text-orangy">Zo</span>mads explore your country,
+        culture while empowering local communities.
       </span>
       <Link href="/build-zo" passHref>
         <Button className="mt-8 mb-40 relative z-2">Learn more</Button>
