@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { Zo } from "../../../assets/icons";
+import { Discord, TwitterFilled, Zo } from "../../../assets/icons";
 
 interface HeaderProps {}
 
@@ -22,8 +22,20 @@ const Header: React.FC<HeaderProps> = () => {
         </a>
       </Link>
       <nav className="flex items-center flex-grow justify-end">
+        <a href="https://discord.zo.xyz/" target="_blank" rel="noreferrer">
+          <Discord
+            className="w-6 h-6 mr-3 md:w-6 md:h-6 md:mr-5"
+            fill="white"
+          />
+        </a>
+        <a href="https://twitter.zo.xyz/" target="_blank" rel="noreferrer">
+          <TwitterFilled
+            className="w-6 h-6 mr-3 md:w-6 md:h-6 md:mr-5"
+            fill="white"
+          />
+        </a>
         <Link href="/about">
-          <a className="font-semibold ml-8 md:ml-12 text-base">About</a>
+          <a className="font-semibold text-base">About</a>
         </Link>
       </nav>
     </header>
