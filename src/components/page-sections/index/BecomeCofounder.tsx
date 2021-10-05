@@ -120,11 +120,11 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
       >
         <Flex col className="items-center md:items-start max-w-lg">
           <h2 className="text-xl md:text-3xl font-semibold text-center">
-            Become a <span className="text-orangy">Zo</span>-founder
+            Become a founder
           </h2>
           <span className="mt-6 md:text-lg text-center md:text-left relative z-2">
-            Mint or buy one of the only thousand genesis country cards of the{" "}
-            <span className="text-orangy">Zo</span> World.
+            Mint or buy one of the only thousand genesis country cards of the Zo
+            World.
           </span>
           <Link href="/build-zo" passHref>
             <Button className="mt-8 mb-16">Learn Benefits and Buy now</Button>

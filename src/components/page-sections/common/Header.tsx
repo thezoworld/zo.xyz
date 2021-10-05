@@ -23,16 +23,10 @@ const Header: React.FC<HeaderProps> = () => {
       </Link>
       <nav className="flex items-center flex-grow justify-end">
         <a href="https://discord.zo.xyz/" target="_blank" rel="noreferrer">
-          <Discord
-            className="w-6 h-6 mr-3 md:w-6 md:h-6 md:mr-5"
-            fill="white"
-          />
+          <Discord className="w-6 h-6 mr-3 md:w-6 md:h-6 md:mr-5 fill-current" />
         </a>
         <a href="https://twitter.zo.xyz/" target="_blank" rel="noreferrer">
-          <TwitterFilled
-            className="w-6 h-6 mr-3 md:w-6 md:h-6 md:mr-5"
-            fill="white"
-          />
+          <TwitterFilled className="w-6 h-6 mr-3 md:w-6 md:h-6 md:mr-5 fill-current" />
         </a>
         <Link href="/about">
           <a className="font-semibold text-base">About</a>

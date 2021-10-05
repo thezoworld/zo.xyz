@@ -99,12 +99,11 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
         </div>
         <Flex col className="items-center md:items-start max-w-lg">
           <h2 className="text-xl md:text-3xl font-semibold text-center relative z-1">
-            Experience India with <span className="text-orangy">Zo</span>
+            Experience India with Zo
           </h2>
           <span className="mt-6 text-center md:text-left md:text-lg relative z-1">
-            Backpacking or Digital <span className="text-orangy">Zo</span>mad
-            lifestyle? Travel and live across India like never before, anywhere,
-            anytime and we’ll be there for you.
+            Backpacking or Digital Zomad lifestyle? Travel and live across India
+            like never before, anywhere, anytime and we’ll be there for you.
           </span>
           <Link href="/travel-with-zo" passHref>
             <Button className="mt-8 mb-40 relative z-4">Start Traveling</Button>

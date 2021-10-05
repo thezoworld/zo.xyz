@@ -167,7 +167,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
           Welcome to
         </span>
         <h1 className="font-bold mt-2 text-white text-4xl md:text-5xl md:mt-6">
-          The <span className="text-orangy">Zo</span> World
+          The Zo World
         </h1>
         <Button className="mt-8" onClick={() => setshowLaunchVideo(true)}>
           Watch our video
