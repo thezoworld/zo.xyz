@@ -15,6 +15,16 @@ import OrangeCircle from "./OrangeCircle";
 import Sky from "./Sky";
 import TreesLeft from "./TreesLeft";
 import TreesRight from "./TreesRight";
+import ThreeZobuStanding from "./ThreeZobuStanding"
+import ThreeZobuStanding2 from "./ThreeZobuStanding2"
+import ZobuDancing from "./ZobuDancing"
+import ZobuWithGlobe from "./ZobuWithGlobe"
+import ZobuWithGlobe2 from "./ZobuWithGlobe2"
+import ZoAppOnPhone from "./ZoAppOnPhone"
+import ZobuPLayingCards from "./ZobuPLayingCards"
+import ZobuExcited1 from "./ZobuExcited1"
+import ZobuExcited2 from "./ZobuExcited2"
+import SocialMediaAnnouncement from "./SocialMediaAnnouncement"
 
 export {
   Bonfire1,
@@ -34,4 +44,14 @@ export {
   Globe,
   Sky,
   BuildingZo,
+  ThreeZobuStanding,
+  ThreeZobuStanding2,
+  ZobuDancing,
+  ZobuWithGlobe,
+  ZobuWithGlobe2,
+  ZoAppOnPhone,
+  ZobuPLayingCards,
+  ZobuExcited1,
+  ZobuExcited2,
+  SocialMediaAnnouncement
 };

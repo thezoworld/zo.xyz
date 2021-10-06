@@ -8,7 +8,7 @@ import {
 
 const becomeCofounder: NextPage = () => {
   return (
-    <section className="bg-white w-full">
+    <section className="bg-white max-w-full overflow-hidden">
       <Head>
         <title>Become a Cofounder | The Zo World</title>
       </Head>
