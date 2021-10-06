@@ -1,7 +1,7 @@
 import React from "react";
+import { ZobuExcited1, ZobuExcited2 } from "../../../assets/props";
 import { Flex } from "../../structure";
 import { Container } from "../../ui";
-import { ZobuExcited1, ZobuExcited2 } from "../../../assets/props";
 
 interface IntroductionProps {}
 
@@ -28,7 +28,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
               We realize that when we build something of our own, work is far
               superior. Ownership, responsibility and self-driven culture are at
               the core of Zo World philosophy. And Web3 enables us to have not
-              just 2, 7 or 30 but thousands of co-founders for our vision.
+              just 2, 7 or 30 but thousands of founders for our vision.
             </p>
           </Flex>
           <Flex>

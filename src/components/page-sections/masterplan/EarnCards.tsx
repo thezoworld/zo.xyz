@@ -1,8 +1,8 @@
+import Link from "next/link";
 import React from "react";
+import { ZobuWithGlobe, ZobuWithGlobe2 } from "../../../assets/props";
 import { Flex } from "../../structure";
 import { Button, Container } from "../../ui";
-import { ZobuWithGlobe, ZobuWithGlobe2 } from "../../../assets/props";
-import Link from "next/link";
 
 interface EarnCardsProps {}
 
@@ -28,7 +28,7 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
             Zo community will build the Zo World with us and earn the rest of
             the 5555 cards.
           </p>
-          <Link href="/co-founder" passHref>
+          <Link href="/become-a-founder" passHref>
             <Button className="mt-8">Read More</Button>
           </Link>
         </Flex>
