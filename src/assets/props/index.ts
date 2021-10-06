@@ -25,6 +25,7 @@ import ZobuPLayingCards from "./ZobuPLayingCards"
 import ZobuExcited1 from "./ZobuExcited1"
 import ZobuExcited2 from "./ZobuExcited2"
 import SocialMediaAnnouncement from "./SocialMediaAnnouncement"
+import FourZobusWithDesk from "./FourZobusWithDesk"
 
 export {
   Bonfire1,
@@ -53,5 +54,6 @@ export {
   ZobuPLayingCards,
   ZobuExcited1,
   ZobuExcited2,
-  SocialMediaAnnouncement
+  SocialMediaAnnouncement,
+  FourZobusWithDesk
 };

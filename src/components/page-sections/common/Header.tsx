@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <header
-      className={`w-full max-w-5xl mx-auto ${
+      className={`w-full max-w-7xl mx-auto ${
         isHome ? "fixed text-white" : ""
       } z-10 top-0 left-0 right-0 flex items-center p-4 justify-between`}
     >

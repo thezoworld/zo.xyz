@@ -107,7 +107,7 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
       />
       <FemaleBottom1
         className="absolute bottom-0 z-1 hidden md:block"
-        style={{ height: "50vh", right: "10vh" }}
+        style={{ height: "40vh", right: "10vh" }}
       />
       <MaleRightFull1
         ref={male1}

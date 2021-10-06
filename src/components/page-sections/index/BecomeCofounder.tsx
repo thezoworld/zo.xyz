@@ -2,11 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-import {
-  FemaleLeftFull1,
-  MaleRightFull1,
-  MaleSittingWithCards,
-} from "../../../assets/avatars";
+import { MaleSittingWithCards } from "../../../assets/avatars";
 import { CardBack } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
@@ -16,8 +12,8 @@ interface BecomeCofounderProps {}
 
 const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
   const { width } = useWindowSize();
-  const female1 = useRef<SVGSVGElement>(null);
-  const male1 = useRef<SVGSVGElement>(null);
+  // const female1 = useRef<SVGSVGElement>(null);
+  // const male1 = useRef<SVGSVGElement>(null);
   const male2 = useRef<SVGSVGElement>(null);
   const cardLeft1 = useRef<SVGSVGElement>(null);
   const cardLeft2 = useRef<SVGSVGElement>(null);
@@ -29,20 +25,20 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(female1.current, {
-      scrollTrigger: {
-        trigger: female1.current,
-        scrub: true,
-      },
-      y: "8vh",
-    });
-    gsap.to(male1.current, {
-      scrollTrigger: {
-        trigger: male1.current,
-        scrub: true,
-      },
-      y: "-10vh",
-    });
+    // gsap.to(female1.current, {
+    //   scrollTrigger: {
+    //     trigger: female1.current,
+    //     scrub: true,
+    //   },
+    //   y: "8vh",
+    // });
+    // gsap.to(male1.current, {
+    //   scrollTrigger: {
+    //     trigger: male1.current,
+    //     scrub: true,
+    //   },
+    //   y: "-10vh",
+    // });
     gsap.to(male2.current, {
       scrollTrigger: {
         trigger: male2.current,
@@ -206,7 +202,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
           />
         </Flex>
       </Flex>
-      <FemaleLeftFull1
+      {/* <FemaleLeftFull1
         ref={female1}
         className="absolute left-0 z-1"
         style={{
@@ -221,7 +217,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
           width: width < 768 ? "35vw" : "10vw",
           top: width < 768 ? "8vh" : "20vh",
         }}
-      />
+      /> */}
     </section>
   );
 };

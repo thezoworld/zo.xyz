@@ -9,7 +9,7 @@ import {
   MaleFullThumbs1,
 } from "../../../assets/avatars";
 import { Fields1, Fields1Desktop } from "../../../assets/backgrounds";
-import { HelpDesk } from "../../../assets/props";
+import { FourZobusWithDesk, HelpDesk } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import { Button } from "../../ui";
@@ -94,20 +94,8 @@ const MasterPlan: React.FC<MasterPlanProps> = () => {
             <Button className="mt-8 mb-40">View our Secret Masterplan</Button>
           </Link>
         </Flex>
-        <Flex items="end" className="absolute md:relative bottom-0 z-2">
-          <ConfusedMale1 ref={male1} style={{ height: "30vh" }} />
-          <GeekyMale1 ref={male2} style={{ height: "30vh" }} />
-          <FemaleFull2 ref={female1} style={{ height: "30vh" }} />
-          <MaleFullThumbs1
-            ref={male3}
-            className="md:block relative hidden"
-            style={{ height: "40vh", top: "10vh", left: "-5vh" }}
-          />
-          <HelpDesk
-            ref={desk}
-            className="md:block absolute bottom-0 hidden"
-            style={{ height: "22vh", top: "35vh", left: "-5vh" }}
-          />
+        <Flex className="absolute md:relative bottom-0 z-2 pt-32 md:items-end items-center">
+          <FourZobusWithDesk className="md:h-96 md:w-auto w-screen mx-auto" />
         </Flex>
       </Flex>
     </section>

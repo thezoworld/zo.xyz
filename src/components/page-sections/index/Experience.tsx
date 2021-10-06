@@ -40,27 +40,6 @@ const Experience: React.FC<ExperienceProps> = () => {
     <>
       <Flex className="md:flex-row flex-col w-full">
         <section
-          ref={culture}
-          className="pin h-screen md:w-1/3 w-screen relative px-4 flex flex-col items-center justify-center"
-          style={{
-            background:
-              "radial-gradient(50% 50% at 50% 50%, #317ED8 0%, #2162AE 47.92%, #063F82 100%)",
-          }}
-        >
-          <Flex
-            col
-            items="center"
-            className="w-full text-white justify-between md:justify-end"
-            style={{ height: width <= 768 ? "auto" : "50vh" }}
-          >
-            <span className="mb-12 font-normal text-lg md:hidden block">
-              Experience
-            </span>
-            <MultipleFull1 style={{ width: width <= 768 ? "80vw" : "20vw" }} />
-            <span className="font-semibold mt-12 text-xl">Local Culture</span>
-          </Flex>
-        </section>
-        <section
           ref={cuisines}
           className="pin h-screen md:w-1/3 w-screen relative px-4 flex flex-col items-center justify-center"
           style={{
@@ -68,9 +47,6 @@ const Experience: React.FC<ExperienceProps> = () => {
               "radial-gradient(102.34% 102.34% at 50% 50%, #025F5F 0%, #014040 48.96%, #013434 100%)",
           }}
         >
-          <span className="text-3xl md:block hidden -mt-8 relative -top-2 text-white">
-            Experience
-          </span>
           <Flex
             col
             items="center"
@@ -82,6 +58,30 @@ const Experience: React.FC<ExperienceProps> = () => {
             </span>
             <Cuisines style={{ width: width <= 768 ? "80vw" : "20vw" }} />
             <span className="font-semibold mt-12 text-xl">Cuisines</span>
+          </Flex>
+        </section>
+        <section
+          ref={culture}
+          className="pin h-screen md:w-1/3 w-screen relative px-4 flex flex-col items-center justify-center"
+          style={{
+            background:
+              "radial-gradient(50% 50% at 50% 50%, #317ED8 0%, #2162AE 47.92%, #063F82 100%)",
+          }}
+        >
+          <span className="text-3xl md:block hidden -mt-8 relative -top-12 text-white">
+            Experience
+          </span>
+          <Flex
+            col
+            items="center"
+            className="w-full text-white justify-between md:justify-end"
+            style={{ height: width <= 768 ? "auto" : "50vh" }}
+          >
+            <span className="mb-12 font-normal text-lg md:hidden block">
+              Experience
+            </span>
+            <MultipleFull1 style={{ width: width <= 768 ? "80vw" : "20vw" }} />
+            <span className="font-semibold mt-12 text-xl">Local Culture</span>
           </Flex>
         </section>
         <section
@@ -126,7 +126,7 @@ const Experience: React.FC<ExperienceProps> = () => {
             and much more...
           </span>
           <MultipleFull2
-            className="absolute"
+            className="absolute w-full"
             style={{ height: width <= 768 ? "50vh" : "60vh", bottom: "-20vh" }}
           />
         </section>
