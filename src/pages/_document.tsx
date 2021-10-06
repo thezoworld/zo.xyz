@@ -53,7 +53,7 @@ class MyDocument extends Document {
         <body className="font-sans h-full w-full">
           <noscript
             dangerouslySetInnerHTML={{
-              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTMS2ZQ"
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWPM6Z8"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
             }}
           ></noscript>
