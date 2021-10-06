@@ -1,9 +1,9 @@
-import React from "react";
-import { Flex } from "../../structure";
-import { Container } from "../../ui";
 import Image from "next/image";
+import React from "react";
 import CountryCards from "../../../../public/assets/country-cards.png";
 import { SocialMediaAnnouncement } from "../../../assets/props";
+import { Flex } from "../../structure";
+import { Container } from "../../ui";
 
 interface StoryProps {}
 
@@ -25,13 +25,12 @@ const Story: React.FC<StoryProps> = () => {
               available for public minting at the price of 0.1 Ether. The Zo
               community will earn the rest of the genesis cards through their
               contributions. We will forever acknowledge for decades to come to
-              these co-founders through our discussions, services and other
+              these founders through our discussions, services and other
               developments.
             </p>
             <p>
-              We will forever acknowledge for decades to come to these
-              co-founders through our discussions, services and other
-              developments.
+              We will forever acknowledge for decades to come to these founders
+              through our discussions, services and other developments.
             </p>
           </div>
         </Flex>

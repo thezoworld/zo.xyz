@@ -122,7 +122,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
             Mint or buy one of the only thousand genesis country cards of the Zo
             World.
           </span>
-          <Link href="/build-zo" passHref>
+          <Link href="/become-a-founder" passHref>
             <Button className="mt-8 mb-16">Learn Benefits and Buy now</Button>
           </Link>
         </Flex>

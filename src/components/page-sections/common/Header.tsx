@@ -12,9 +12,9 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <header
-      className={`w-full max-w-7xl mx-auto ${
+      className={`w-full mx-auto ${
         isHome ? "fixed text-white" : ""
-      } z-10 top-0 left-0 right-0 flex items-center p-4 justify-between`}
+      } z-10 top-0 left-0 right-0 flex items-center p-4 md:px-8 justify-between`}
     >
       <Link href="/" passHref>
         <a>
@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = () => {
           <TwitterFilled className="w-6 h-6 mr-3 md:w-6 md:h-6 md:mr-5 fill-current" />
         </a>
         <Link href="/about">
-          <a className="font-semibold text-base">About</a>
+          <a className="font-bold text-base">About</a>
         </Link>
       </nav>
     </header>
