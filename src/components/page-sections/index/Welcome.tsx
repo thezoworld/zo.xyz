@@ -173,7 +173,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
           Watch our video
         </Button>
       </Flex>
-      <Flex className="mb-12 md:px-32 px-0 justify-around w-full items-end">
+      <Flex items="end" justify="around" className="mb-12 md:px-32 px-0 w-full">
         <MaleWithMap
           ref={male3}
           className="relative z-1 md:block hidden mb-8"
@@ -186,7 +186,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
         />
         <MaleFull1
           ref={male1}
-          className="relative z-2 mb-12"
+          className="relative z-2 mb-12 md:pl-24"
           style={{ height: "40vh" }}
         />
         <MaleFull2

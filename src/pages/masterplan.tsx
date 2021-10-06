@@ -13,7 +13,7 @@ import {
 
 const MasterplanPage: NextPage = () => {
   return (
-    <section className="bg-white max-w-full  overflow-hidden">
+    <section className="bg-white max-w-full overflow-hidden">
       <Head>
         <title>Masterplan | The Zo World</title>
       </Head>
