@@ -35,8 +35,8 @@ const Home: NextPage = () => {
       <Welcome />
       <TravelLocalFriends />
       <Experience />
-      <BuildZoWorld />
       <BecomeCofounder />
+      <BuildZoWorld />
       <TravelWithZo />
       <MasterPlan />
     </section>

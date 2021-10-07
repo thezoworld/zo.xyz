@@ -1,12 +1,19 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { MaleSittingWithCards } from "../../../assets/avatars";
 import { CardBack } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import { Button } from "../../ui";
+import CountryCardIndia from "../../../../public/assets/Country-card_India.gif";
+import CountryCardSpain from "../../../../public/assets/Country-Cards_Spain.gif";
+import CountryCardRussia from "../../../../public/assets/Country-Cards_Russia.gif";
+import CountryCardJapan from "../../../../public/assets/Country-Cards_Japan.gif";
+import CountryCardFrance from "../../../../public/assets/Country-Cards_France.gif";
+import CountryCardElSalvador from "../../../../public/assets/Country-Cards_El-Salvador.gif";
 
 interface BecomeCofounderProps {}
 
@@ -39,6 +46,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
     //   },
     //   y: "-10vh",
     // });
+
     gsap.to(male2.current, {
       scrollTrigger: {
         trigger: male2.current,
@@ -46,68 +54,68 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
       },
       y: "-10vh",
     });
-    gsap.to(cardLeft1.current, {
-      scrollTrigger: {
-        trigger: cardLeft1.current,
-        scrub: true,
-      },
-      y: "-5vh",
-      x: "-5vw",
-      rotation: "-60deg",
-    });
-    gsap.to(cardLeft2.current, {
-      scrollTrigger: {
-        trigger: cardLeft2.current,
-        scrub: true,
-      },
-      y: "-5vh",
-      x: "-3vw",
-      rotation: "-55deg",
-    });
-    gsap.to(cardLeft3.current, {
-      scrollTrigger: {
-        trigger: cardLeft3.current,
-        scrub: true,
-      },
-      y: "-5vh",
-      x: "-1vw",
-      rotation: "-50deg",
-    });
-    gsap.to(cardRight1.current, {
-      scrollTrigger: {
-        trigger: cardRight1.current,
-        scrub: true,
-      },
-      y: "-5vh",
-      x: "5vw",
-      rotation: "60deg",
-    });
-    gsap.to(cardRight2.current, {
-      scrollTrigger: {
-        trigger: cardRight2.current,
-        scrub: true,
-      },
-      y: "-5vh",
-      x: "3vw",
-      rotation: "55deg",
-    });
-    gsap.to(cardRight3.current, {
-      scrollTrigger: {
-        trigger: cardRight3.current,
-        scrub: true,
-      },
-      y: "-5vh",
-      x: "1vw",
-      rotation: "50deg",
-    });
+    // gsap.to(cardLeft1.current, {
+    //   scrollTrigger: {
+    //     trigger: cardLeft1.current,
+    //     scrub: true,
+    //   },
+    //   y: "-5vh",
+    //   x: "-5vw",
+    //   rotation: "-60deg",
+    // });
+    // gsap.to(cardLeft2.current, {
+    //   scrollTrigger: {
+    //     trigger: cardLeft2.current,
+    //     scrub: true,
+    //   },
+    //   y: "-5vh",
+    //   x: "-3vw",
+    //   rotation: "-55deg",
+    // });
+    // gsap.to(cardLeft3.current, {
+    //   scrollTrigger: {
+    //     trigger: cardLeft3.current,
+    //     scrub: true,
+    //   },
+    //   y: "-5vh",
+    //   x: "-1vw",
+    //   rotation: "-50deg",
+    // });
+    // gsap.to(cardRight1.current, {
+    //   scrollTrigger: {
+    //     trigger: cardRight1.current,
+    //     scrub: true,
+    //   },
+    //   y: "-5vh",
+    //   x: "5vw",
+    //   rotation: "60deg",
+    // });
+    // gsap.to(cardRight2.current, {
+    //   scrollTrigger: {
+    //     trigger: cardRight2.current,
+    //     scrub: true,
+    //   },
+    //   y: "-5vh",
+    //   x: "3vw",
+    //   rotation: "55deg",
+    // });
+    // gsap.to(cardRight3.current, {
+    //   scrollTrigger: {
+    //     trigger: cardRight3.current,
+    //     scrub: true,
+    //   },
+    //   y: "-5vh",
+    //   x: "1vw",
+    //   rotation: "50deg",
+    // });
   });
 
   return (
     <section
-      className="h-screen relative px-4 flex flex-col md:flex-row items-center text-white justify-center overflow-hidden"
+      className="h-screen relative px-4 flex flex-col md:flex-row items-center text-black justify-center overflow-hidden md:-mt-0 -mt-20"
       style={{
         background:
-          "linear-gradient(360deg, #FCC521 -63.02%, #F6C526 -37.85%, #E6C433 -16.32%, #CAC34A 17.64%, #A4C269 50.75%, #88C180 66.22%, #0A7F3F 91.76%, #0A7F3F 100%)",
+          "linear-gradient(359.84deg, #FFFFFF -66.78%, #F6FCFC -56.46%, #DFF2F5 -39.9%, #B9E2E8 -19.17%, #84CDD7 4.88%, #CEEBEF 57.8%, #FFFFFF 96.43%)",
       }}
     >
       <Flex
@@ -150,6 +158,19 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
               left: width <= 768 ? "20vw" : "10vw",
             }}
           />
+          {/* <Image
+            ref={cardLeft1}
+            className="absolute z-1"
+            style={{
+              height: width <= 768 ? "5vh" : "10vh",
+              // transform: "rotate(-45deg)",
+              bottom: width <= 768 ? "10vh" : "-25vh",
+              left: width <= 768 ? "20vw" : "10vw",
+            }}
+            src={CountryCardIndia}
+            alt=""
+            className="absolute z-1"
+          /> */}
           <CardBack
             ref={cardLeft2}
             className="absolute z-1"

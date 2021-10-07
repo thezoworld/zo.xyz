@@ -12,13 +12,12 @@ const BuildZoWorld: React.FC<BuildZoWorldProps> = () => {
 
   return (
     <section
-      className="h-screen relative px-4 flex flex-col items-center justify-center"
+      className="h-screen relative px-4 flex flex-col items-center justify-center pb-10"
       style={{
-        background:
-          "linear-gradient(359.84deg, #FFFFFF -66.78%, #F6FCFC -56.46%, #DFF2F5 -39.9%, #B9E2E8 -19.17%, #84CDD7 4.88%, #CEEBEF 57.8%, #FFFFFF 96.43%)",
+        background: "#8ED1DA",
       }}
     >
-      <h2 className="text-xl md:text-3xl font-semibold text-center -mt-56 md:-mt-72">
+      <h2 className="text-xl md:text-3xl font-semibold text-center -mt-56 md:-mt-108">
         Build Zo World
       </h2>
       <span className="mt-6 text-center md:text-lg md:w-108">
@@ -26,7 +25,7 @@ const BuildZoWorld: React.FC<BuildZoWorldProps> = () => {
         country, culture while empowering local communities.
       </span>
       <Link href="/build-zo" passHref>
-        <Button className="mt-8 mb-40 relative z-2">Learn more</Button>
+        <Button className="mt-8 md:mb-40 relative z-2">Learn more</Button>
       </Link>
       {width <= 768 ? (
         <BuildingZo className="absolute bottom-0 w-full" />

@@ -115,7 +115,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       {showLaunchVideo && (
         <Flex
           col
-          className="fixed w-screen md:h-full overflow-auto md:max-h-screen z-50 md:pt-5 md:items-end items-center md:bg-gray-100 bg-black md:bg-opacity-70"
+          className="fixed w-screen md:h-full overflow-auto md:max-h-screen z-50 md:pt-5 items-end md:bg-gray-100 bg-black md:bg-opacity-70"
         >
           <Button
             onClick={() => setshowLaunchVideo(false)}
@@ -125,7 +125,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
           </Button>
           <Flex
             items="center"
-            className="self-center w-screen h-screen md:px-10 px-0 pt-4 pb-10"
+            className="self-center w-screen h-screen md:px-10 px-0 md:pt-4 md:pb-10"
           >
             <iframe
               src="https://www.youtube.com/embed/0gijEkpRdAU"

@@ -26,6 +26,7 @@ import ZobuExcited1 from "./ZobuExcited1"
 import ZobuExcited2 from "./ZobuExcited2"
 import SocialMediaAnnouncement from "./SocialMediaAnnouncement"
 import FourZobusWithDesk from "./FourZobusWithDesk"
+import GandhiJiStanding from "./GandhiJiStanding"
 
 export {
   Bonfire1,
@@ -55,5 +56,6 @@ export {
   ZobuExcited1,
   ZobuExcited2,
   SocialMediaAnnouncement,
-  FourZobusWithDesk
+  FourZobusWithDesk,
+  GandhiJiStanding
 };

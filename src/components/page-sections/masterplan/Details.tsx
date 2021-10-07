@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "../../structure";
 import { Container } from "../../ui";
-import { ZobuDancing } from "../../../assets/props";
+import { GandhiJiStanding } from "../../../assets/props";
 
 interface DetailsProps {}
 
@@ -13,7 +13,7 @@ const Details: React.FC<DetailsProps> = () => {
           col
           className="h-full md:pt-40 pt-0 pb-32 md:items-start items-center md:w-1/3 md:order-1 order-2"
         >
-          <ZobuDancing className="md:absolute md:-left-48 md:bottom-0 md:w-1/3 w-4/5" />
+          <GandhiJiStanding className="md:absolute md:-left-48 md:bottom-0 md:w-1/5 w-1/2" />
         </Flex>
         <Flex
           col

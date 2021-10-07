@@ -19,17 +19,24 @@ const Mission: React.FC<MissionProps> = () => {
           col
           className="h-full md:pt-40 pt-24 pb-32 md:items-start items-center md:mx-0 mx-3 md:w-1/2"
         >
-          <h1 className="text-white md:text-4xl text-2xl font-bold">
+          <h1 className="text-white md:text-3xl text-2xl font-bold">
             About Zo World
           </h1>
-          <h1 className="text-white md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8">
-            Go on adventures in real life, complete quests with the local Zo
-            community, earn collectibles and follow your heart in the Zo World.
+          <h1 className="text-white md:text-xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8">
+            We are building the Zo World as a community led travel ecosystem
+            that enables everyone to travel anywhere in the world. We are using
+            web3 network effects for working with individuals all across the
+            world.
+            <br />
+            <br />
+            We have launched Zo World genesis country set comprising of 11,111
+            NFTs. Join our Discord, Twitter for further updates and detailed
+            conversations.
           </h1>
         </Flex>
         <Flex
           col
-          className="h-full md:pt-40 pb-32 md:items-start md:mx-0 mx-3 md:w-1/2"
+          className="h-full md:pt-56 pb-32 md:items-start md:mx-0 mx-3 md:w-1/2"
         >
           <Image src={Background} alt="" />
         </Flex>

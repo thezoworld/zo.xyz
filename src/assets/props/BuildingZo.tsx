@@ -9,15 +9,15 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clipPath="url(#prefix__clip0)">
+      <g clipPath="url(#dsaddssad__clip0)">
         <path d="M360 417H0v223h360V417z" fill="#0A7F3F" />
         <path
           d="M87.188 429.857c-8.117-5.532-10.665 4.769-10.665 4.769s1.856-11.43-2.22-13.614c-2.512-1.383-3.167 2.075-3.313 4.878.073 1.893 0 3.203 0 3.203s-.11-1.492 0-3.203c-.11-3.131-.546-7.753-2.038-10.156a21.287 21.287 0 00-.51 1.966l-2.22 9.937 8.845 14.378 20.238 11.429s0-18.054-8.117-23.587z"
-          fill="url(#prefix__paint0_linear)"
+          fill="url(#dsaddssad__paint0_linear)"
         />
         <path
           d="M223.43 440.195c-1.929-3.822-4.914-1.893-7.098.218-1.164 1.165-2.111 2.366-2.475 2.73-1.092 1.092 3.313-4.805 1.456-9.937-1.747-4.914-7.534 1.237-8.044 1.82.437-.619 5.351-7.535 2.548-12.485-2.512-4.404-7.171 2.693-8.481 4.914 1.092-2.075 3.785-9.209-5.496-16.344-11.066-8.481-16.198 5.533-17.326 5.897-1.092.364 3.676-4.04 1.092-9.573a3.253 3.253 0 00-.51-.873c-2.584-3.568-6.188 4.222-7.244 4.549-1.091.364 2.84-6.406-1.637-9.427-.073-.036-.146-.109-.219-.146-4.805-2.948-6.261 8.482-6.261 8.482s.728-8.846-13.249-14.742c-13.977-5.897-27.227 8.481-27.227 8.481s1.092-13.613-7.352-13.613c-8.481 0-13.978 17.653-13.978 17.653s.728-8.117-5.532-8.117c-5.897 0-4.914 9.1-4.805 10.192-.145-.728-1.02-5.096-4.404-5.424-3.677-.364-2.949 5.533-2.949 5.533s-2.22-7.717-7.716-5.897c-4.077 1.347-6.552 8.117-7.571 11.575 0 .037 0 .037-.037.073 1.493 2.403 1.93 7.025 2.039 10.156.145-2.803.8-6.261 3.312-4.878 2.402 1.31 2.73 5.897 2.584 9.391a33.375 33.375 0 01-.4 4.186c.146-.546 2.803-10.119 10.665-4.768.218.145.473.327.655.509.11.073.219.182.328.255 7.061 6.297 6.697 23.186 6.697 23.186s.583.364 1.784.947c4.477 2.184 17.435 7.68 38.437 9.427 16.125 1.347 39.457 2.366 59.768 1.602 5.678-.219 10.993-.146 15.142-.037 5.46.182 8.991.474 8.991.474l4.695-13.541.109-4.004v-.073s.219-1.274.801-2.766c.037-1.784-.182-3.786-1.092-5.605zm-22.24-12.558z"
-          fill="url(#prefix__paint1_linear)"
+          fill="url(#dsaddssad__paint1_linear)"
         />
         <path
           opacity={0.2}
@@ -27,21 +27,21 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
         <path
           opacity={0.3}
           d="M170.251 401.648c-2.257 7.28-6.443 15.142-13.832 13.504-13.249-2.948-10.665-11.429-12.157-12.157-1.456-.728 2.584 13.249-4.769 12.521-7.352-.728-9.937-11.429-9.937-11.429s-4.804 12.885-13.977 13.613c-4.55.364-7.935-2.075-10.192-4.623.728 2.73-.036 6.043-5.641 8.663-9.246 4.332-16.926-4.04-19.765-7.826 1.638 2.585 3.822 7.208-1.201 7.462-6.99.364-8.846-7.716-8.846-7.716s0 .982-.91 2.002c1.02-3.458 3.495-10.192 7.572-11.575 5.532-1.857 7.716 5.896 7.716 5.896s-.728-5.896 2.948-5.532c3.386.327 4.296 4.695 4.405 5.423-.146-1.092-1.092-10.192 4.804-10.192 6.261 0 5.533 8.117 5.533 8.117s5.533-17.69 13.978-17.69c8.481 0 7.352 13.614 7.352 13.614s13.25-14.378 27.263-8.481c13.978 5.896 13.25 14.741 13.25 14.741s1.456-11.429 6.26-8.481c0 .073.073.11.146.146z"
-          fill="url(#prefix__paint2_linear)"
+          fill="url(#dsaddssad__paint2_linear)"
         />
         <path
           opacity={0.3}
           d="M93.703 416.389s-4.695-4.877-2.11-6.479c2.62-1.638 2.11 6.479 2.11 6.479z"
-          fill="url(#prefix__paint3_linear)"
+          fill="url(#dsaddssad__paint3_linear)"
         />
         <path
           opacity={0.3}
           d="M187.212 425.708s.255-9.828 2.949-9.318c2.693.473-2.949 9.318-2.949 9.318z"
-          fill="url(#prefix__paint4_linear)"
+          fill="url(#dsaddssad__paint4_linear)"
         />
         <path
           d="M91.794 435.645c-7.072-5.387-9.483 4.259-9.613 4.769a50.2 50.2 0 00.358-4.223c.13-3.494-.163-8.117-2.346-9.464-2.248-1.383-2.867 2.075-2.998 4.914.065 1.893 0 3.24 0 3.24s-.098-1.492 0-3.24c-.098-3.13-.489-7.789-1.825-10.228 0 0 0-.036-.032-.036a.778.778 0 00-.13-.219c-2.314-3.712-4.954-1.128-4.954-1.128s6.29-17.035-6.94-19.983c-11.21-2.512-13.654 9.828-14.143 14.341-.032 1.165-.097 1.784-.097 1.565 0-.182.032-.728.097-1.565.196-4.695.098-18.272-5.735-20.638-1.303-.51-2.411-.655-3.356-.51-3.682.546-4.92 5.314-5.181 6.77.326-1.929 1.499-10.228-1.727-12.157-3.454-2.111-5.116 4.696-5.28 5.46.131-.874 1.5-9.245-1.01-10.665-2.639-1.492-3.323 5.533-3.323 5.533s.652-18.491-5.963-21.476C10.98 363.757.032 379.299.032 379.299v79.278s27.503-.473 47.054.291c5.637.218 12.317.328 19.03.4h2.281c10.167.073 20.008.037 25.71 0 2.803-.036 4.986-2.766 4.66-5.896-.684-5.679-2.379-14.196-6.973-17.727zM34.8 400.484c0-.037 0-.11.033-.219 0 .109-.033.182-.033.219z"
-          fill="url(#prefix__paint5_linear)"
+          fill="url(#dsaddssad__paint5_linear)"
         />
         <path
           opacity={0.1}
@@ -51,25 +51,25 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
         <path
           opacity={0.3}
           d="M75.208 421.231c.032.072.065.145.13.218-.782.91-2.28 1.82-5.083 2.002-4.855.291-6.192-7.462-6.517-10.374.13 2.475-.359 8.299-7.397 8.882-8.929.728-10.917-8.882-10.917-8.882s-1.336 4.077-5.963-2.948c-3.486-5.278-1.173-12.886.62-16.78.944-.146 2.052-.037 3.356.509 5.865 2.366 5.93 15.943 5.735 20.639.489-4.514 2.9-16.853 14.142-14.342 13.262 2.949 6.94 19.984 6.94 19.984s2.64-2.621 4.954 1.092z"
-          fill="url(#prefix__paint6_linear)"
+          fill="url(#dsaddssad__paint6_linear)"
         />
         <path
           opacity={0.3}
           d="M56.34 414.424c-.227-.728-3.747-7.899-.879-7.135 2.868.728.88 7.135.88 7.135z"
-          fill="url(#prefix__paint7_linear)"
+          fill="url(#dsaddssad__paint7_linear)"
         />
         <path
           opacity={0.3}
           d="M12.122 381.81s-1.01-8.881 1.336-8.153c2.28.764-1.336 8.153-1.336 8.153z"
-          fill="url(#prefix__paint8_linear)"
+          fill="url(#dsaddssad__paint8_linear)"
         />
         <path
           opacity={0.3}
           d="M18.41 401.429s-.488-8.517 1.989-7.025c2.476 1.456-1.988 7.025-1.988 7.025z"
-          fill="url(#prefix__paint9_linear)"
+          fill="url(#dsaddssad__paint9_linear)"
         />
         <mask
-          id="prefix__a"
+          id="dsaddssad__a"
           style={{
             maskType: "alpha",
           }}
@@ -81,26 +81,26 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
         >
           <path
             d="M271.623 450.059c-.728 1.784-.837 3.276-.837 3.276l-.401 4.878h-1.456c-27.226.072-52.815.072-52.815.072s-1.747-1.783-4.004-4.55c-4.877-6.005-12.121-16.488-8.408-22.494 5.423-8.736 13.213-.255 13.213-.255s-2.148-11.43-.546-16.125c2.075-6.188 8.08-17.217 21.148-6.916 10.992 8.663 7.644 17.144 6.333 19.619-.218.328-.364.583-.4.692.073-.109.218-.328.4-.692 1.602-2.584 7.28-11.029 10.228-5.714 3.276 5.933-2.73 14.159-3.239 14.887.655-.655 7.644-7.935 9.682-2.002 2.111 6.188-3.276 13.177-1.929 11.866 1.347-1.31 8.081-10.446 11.502-3.349 1.019 2.148 1.42 4.55 1.529 6.807z"
-            fill="url(#prefix__paint10_linear)"
+            fill="url(#dsaddssad__paint10_linear)"
           />
         </mask>
-        <g mask="url(#prefix__a)">
+        <g mask="url(#dsaddssad__a)">
           <path
             d="M271.623 450.059c-.728 1.784-.837 3.276-.837 3.276l-.401 4.878h-1.456c-27.226.072-52.815.072-52.815.072s-1.747-1.783-4.004-4.55c-4.877-6.005-12.121-16.488-8.408-22.494 5.423-8.736 13.213-.255 13.213-.255s-2.148-11.43-.546-16.125c2.075-6.188 8.08-17.217 21.148-6.916 10.992 8.663 7.644 17.144 6.333 19.619-.218.328-.364.583-.4.692.073-.109.218-.328.4-.692 1.602-2.584 7.28-11.029 10.228-5.714 3.276 5.933-2.73 14.159-3.239 14.887.655-.655 7.644-7.935 9.682-2.002 2.111 6.188-3.276 13.177-1.929 11.866 1.347-1.31 8.081-10.446 11.502-3.349 1.019 2.148 1.42 4.55 1.529 6.807z"
-            fill="url(#prefix__paint11_linear)"
+            fill="url(#dsaddssad__paint11_linear)"
           />
           <path
             d="M412.488 458.577s-63.844-1.493-83.208-.874c-9.064.291-34.289.437-58.676.51.291-1.129.691-2.876.873-4.914.073-1.019.146-2.111.073-3.24.983-2.438 3.094-5.387 7.681-5.823 7.753-.765 15.724 10.665 16.124 11.211-.145-.546-3.64-14.56 1.092-14.924 4.841-.364 10.01 7.644 10.01 7.644s-4.659-12.413 8.554-14.414c12.74-1.93 15.542 7.389 15.724 8.117-.145-.983-2.584-18.928 5.133-18.819 7.68.109 9.937 2.621 10.082 2.767-.254-.437-6.26-11.685 1.602-19.802 6.042-6.188 18.163-4.113 23.841-2.693 1.893.473 3.058.873 3.058.873s-.728-11.902 10.192-4.695c10.556 6.952 14.086 14.632 20.019 31.522a907.704 907.704 0 007.826 27.554z"
-            fill="url(#prefix__paint12_linear)"
+            fill="url(#dsaddssad__paint12_linear)"
           />
           <path
             opacity={0.2}
             d="M375.543 426.217c-3.166 9.537-17.253-2.621-17.581-2.875.292.546 7.935 15.142-2.475 19.328-10.628 4.258-10.81-13.359-10.81-13.359s-.182 14.087-12.595 19.656c-9.063 4.04-14.232-2.184-16.343-5.824.91 2.548 1.383 6.588-3.494 9.1-7.353 3.749-14.05-7.499-14.414-8.117.255.436 3.64 6.806-2.366 11.393-6.224 4.768-17.508-6.407-17.508-6.407s-2.73 3.313-6.37 4.259a5.213 5.213 0 01-.728.146c-1.238.182-2.584.072-3.931-.583-3.677-1.747-5.315-5.314-5.242-9.5 2.621-2.475 6.261-4.732 8.481-.109 1.056 2.184 1.493 4.586 1.565 6.843.983-2.439 3.094-5.387 7.681-5.824 7.753-.764 15.724 10.665 16.125 11.211-.146-.546-3.64-14.56 1.092-14.924 4.841-.364 10.009 7.644 10.009 7.644s-4.659-12.412 8.554-14.414c12.74-1.929 15.543 7.389 15.725 8.117-.146-.983-2.585-18.928 5.132-18.818 7.68.109 9.937 2.62 10.083 2.766-.255-.437-6.261-11.684 1.601-19.801 6.042-6.188 18.163-4.113 23.842-2.694 4.55 7.644 5.787 17.29 3.967 22.786z"
-            fill="url(#prefix__paint13_linear)"
+            fill="url(#dsaddssad__paint13_linear)"
           />
         </g>
         <mask
-          id="prefix__b"
+          id="dsaddssad__b"
           style={{
             maskType: "alpha",
           }}
@@ -112,14 +112,14 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
         >
           <path
             d="M271.623 450.059c-.728 1.783-.837 3.276-.837 3.276l-.401 4.877h-1.456c-.254-2.766-1.055-6.006-3.021-7.498-3.822-2.839-8.299 5.205-8.299 5.205s-1.055-9.719-3.967-11.611c-2.803-1.82-7.28 3.967-7.608 4.368.146-.619 3.312-13.905 1.383-15.725-1.892-1.856-8.408 9.246-8.735 9.792.182-.692 3.749-15.215 1.419-17.072-2.366-1.892-4.259 1.82-4.259 1.82s-8.881-18.163-15.069-12.412c-6.188 5.751 1.784 25.225 1.784 25.225-5.242-5.096-14.451-9.355-16.671-3.422-1.347 3.604 2.802 11.32 6.26 16.89-4.877-6.006-12.121-16.489-8.408-22.495 5.424-8.736 13.213-.255 13.213-.255s-2.147-11.429-.546-16.125c2.075-6.188 8.081-17.217 21.148-6.916 10.993 8.663 7.644 17.144 6.334 19.619 1.601-2.584 7.279-11.029 10.228-5.714 3.276 5.933-2.73 14.159-3.24 14.887.655-.655 7.644-7.935 9.682-2.002 2.112 6.188-3.275 13.177-1.929 11.866 1.347-1.31 8.081-10.446 11.502-3.348.983 2.111 1.384 4.513 1.493 6.77z"
-            fill="url(#prefix__paint14_linear)"
+            fill="url(#dsaddssad__paint14_linear)"
           />
         </mask>
-        <g mask="url(#prefix__b)">
+        <g mask="url(#dsaddssad__b)">
           <path
             opacity={0.2}
             d="M271.623 450.059c-.728 1.783-.837 3.276-.837 3.276l-.401 4.877h-1.456c-.254-2.766-1.055-6.006-3.021-7.498-3.822-2.839-8.299 5.205-8.299 5.205s-1.055-9.719-3.967-11.611c-2.803-1.82-7.28 3.967-7.608 4.368.146-.619 3.312-13.905 1.383-15.725-1.892-1.856-8.408 9.246-8.735 9.792.182-.692 3.749-15.215 1.419-17.072-2.366-1.892-4.259 1.82-4.259 1.82s-8.881-18.163-15.069-12.412c-6.188 5.751 1.784 25.225 1.784 25.225-5.242-5.096-14.451-9.355-16.671-3.422-1.347 3.604 2.802 11.32 6.26 16.89-4.877-6.006-12.121-16.489-8.408-22.495 5.424-8.736 13.213-.255 13.213-.255s-2.147-11.429-.546-16.125c2.075-6.188 8.081-17.217 21.148-6.916 10.993 8.663 7.644 17.144 6.334 19.619 1.601-2.584 7.279-11.029 10.228-5.714 3.276 5.933-2.73 14.159-3.24 14.887.655-.655 7.644-7.935 9.682-2.002 2.112 6.188-3.275 13.177-1.929 11.866 1.347-1.31 8.081-10.446 11.502-3.348.983 2.111 1.384 4.513 1.493 6.77z"
-            fill="url(#prefix__paint15_linear)"
+            fill="url(#dsaddssad__paint15_linear)"
           />
         </g>
         <path
@@ -200,7 +200,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
         />
         <path
           d="M42.672 448.057l.546 3.166 3.749 1.056-.655-4.004-3.64-.218z"
-          fill="url(#prefix__paint16_linear)"
+          fill="url(#dsaddssad__paint16_linear)"
         />
         <path
           d="M48.574 439.853c.662-.041 1.131-1.18 1.047-2.544-.084-1.364-.688-2.437-1.35-2.397-.662.041-1.131 1.18-1.047 2.544.083 1.365.688 2.438 1.35 2.397z"
@@ -988,15 +988,15 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
         />
         <path
           d="M183.938 399.5h4.586l-.182 3.131-4.332-.874-.072-2.257z"
-          fill="url(#prefix__paint17_linear)"
+          fill="url(#dsaddssad__paint17_linear)"
         />
         <path
           d="M100.692 532.503s2.403 1.165 4.514.109v2.548l-4.332-.546-.182-2.111z"
-          fill="url(#prefix__paint18_linear)"
+          fill="url(#dsaddssad__paint18_linear)"
         />
         <path
           d="M321.6 509.354s2.475.764 4.477.072l.291 3.058-4.222-.655-.546-2.475z"
-          fill="url(#prefix__paint19_linear)"
+          fill="url(#dsaddssad__paint19_linear)"
         />
         <path
           d="M166.064 555.326c.292.291.51.619.692.947.182.327.364.691.437 1.092.109.4.182.8.109 1.237-.073.4-.291.874-.728 1.019.146-.4.146-.728.146-1.055a4.83 4.83 0 00-.11-1.019 8.863 8.863 0 00-.254-1.056c-.073-.4-.182-.764-.292-1.165zM183.828 395.897c.291.145.473.291.728.364.255.073.51.109.801.109.546 0 1.055-.146 1.601-.255a13.644 13.644 0 001.602-.546c.546-.218 1.056-.437 1.602-.655.036 0 .109 0 .109.036 0 .037 0 .073-.037.11-.218.182-.473.327-.691.509-.255.182-.51.291-.765.437a8.18 8.18 0 01-1.638.692c-.582.145-1.201.254-1.82.145a2.46 2.46 0 01-.873-.291c-.146-.073-.255-.182-.364-.291-.146-.073-.255-.219-.255-.364zM185.939 393.167h1.384l-.51.473a.286.286 0 01-.4 0l-.474-.473z"
@@ -1005,7 +1005,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
       </g>
       <defs>
         <linearGradient
-          id="prefix__paint0_linear"
+          id="dsaddssad__paint0_linear"
           x1={102.361}
           y1={381.064}
           x2={79.532}
@@ -1016,7 +1016,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={0.995} stopColor="#77831C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint1_linear"
+          id="dsaddssad__paint1_linear"
           x1={145.533}
           y1={382.881}
           x2={148.133}
@@ -1027,7 +1027,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={0.995} stopColor="#77831C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint2_linear"
+          id="dsaddssad__paint2_linear"
           x1={68.971}
           y1={406.548}
           x2={170.25}
@@ -1038,7 +1038,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#B2AE2C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint3_linear"
+          id="dsaddssad__paint3_linear"
           x1={90.826}
           y1={413.023}
           x2={93.745}
@@ -1049,7 +1049,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#B2AE2C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint4_linear"
+          id="dsaddssad__paint4_linear"
           x1={187.227}
           y1={421.028}
           x2={190.903}
@@ -1060,7 +1060,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#B2AE2C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint5_linear"
+          id="dsaddssad__paint5_linear"
           x1={46.151}
           y1={473.678}
           x2={51.567}
@@ -1071,7 +1071,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#95850D" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint6_linear"
+          id="dsaddssad__paint6_linear"
           x1={37.632}
           y1={408.365}
           x2={75.334}
@@ -1082,7 +1082,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#B2AE2C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint7_linear"
+          id="dsaddssad__paint7_linear"
           x1={54.33}
           y1={410.836}
           x2={57.003}
@@ -1093,7 +1093,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#B2AE2C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint8_linear"
+          id="dsaddssad__paint8_linear"
           x1={11.898}
           y1={377.724}
           x2={14.206}
@@ -1104,7 +1104,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#B2AE2C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint9_linear"
+          id="dsaddssad__paint9_linear"
           x1={18.363}
           y1={397.825}
           x2={21.142}
@@ -1115,7 +1115,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#B2AE2C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint10_linear"
+          id="dsaddssad__paint10_linear"
           x1={230.735}
           y1={399.921}
           x2={241.535}
@@ -1132,7 +1132,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#fff" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint11_linear"
+          id="dsaddssad__paint11_linear"
           x1={230.735}
           y1={399.921}
           x2={241.535}
@@ -1148,7 +1148,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#1A682A" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint12_linear"
+          id="dsaddssad__paint12_linear"
           x1={317.009}
           y1={399.336}
           x2={366.828}
@@ -1159,7 +1159,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={0.995} stopColor="#447118" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint13_linear"
+          id="dsaddssad__paint13_linear"
           x1={261.782}
           y1={428.313}
           x2={376.205}
@@ -1170,7 +1170,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#B2AE2C" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint14_linear"
+          id="dsaddssad__paint14_linear"
           x1={230.735}
           y1={399.921}
           x2={241.535}
@@ -1187,7 +1187,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#fff" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint15_linear"
+          id="dsaddssad__paint15_linear"
           x1={230.735}
           y1={399.921}
           x2={241.535}
@@ -1203,7 +1203,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={1} stopColor="#1A682A" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint16_linear"
+          id="dsaddssad__paint16_linear"
           x1={44.481}
           y1={452.756}
           x2={45.34}
@@ -1214,7 +1214,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={0.692} stopColor="#BC3D11" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint17_linear"
+          id="dsaddssad__paint17_linear"
           x1={185.743}
           y1={402.174}
           x2={187.28}
@@ -1225,7 +1225,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={0.692} stopColor="#BC3D11" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint18_linear"
+          id="dsaddssad__paint18_linear"
           x1={102.96}
           y1={535.181}
           x2={102.96}
@@ -1236,7 +1236,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop offset={0.692} stopColor="#BC3D11" />
         </linearGradient>
         <linearGradient
-          id="prefix__paint19_linear"
+          id="dsaddssad__paint19_linear"
           x1={324.057}
           y1={512.328}
           x2={323.789}
@@ -1246,7 +1246,7 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
           <stop stopColor="#EF6523" />
           <stop offset={0.692} stopColor="#BC3D11" />
         </linearGradient>
-        <clipPath id="prefix__clip0">
+        <clipPath id="dsaddssad__clip0">
           <path fill="#fff" d="M0 0h360v640H0z" />
         </clipPath>
       </defs>
