@@ -60,6 +60,13 @@ const BuildZo: React.FC<BuildZoProps> = () => {
       </section>
       <Flex items="end" justify="around" className="max-w-8xl px-4 mx-auto">
         <MaleHalf1 className="h-56" />
+        <div className="text-xl font-bold text-center my-auto">
+          <p className="text-black pb-5">
+            Five people to reach 100 invites on our Discord will have earned the
+            first Zo-founder countries NFTs.
+          </p>
+          <p className="text-orangy">Rest coming soon!</p>
+        </div>
         <FemaleHalf1 className="h-56" />
       </Flex>
       <Flex
