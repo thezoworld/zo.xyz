@@ -21,7 +21,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
           </Flex>
           <Flex
             col
-            className="h-full md:pt-32 md:pb-32 pb-72 pt-44 items-center md:w-full text-white text-center z-50"
+            className="h-full md:pt-32 md:pb-32 pb-72 pt-44 items-start md:w-full text-white text-left z-50 md:mr-0 mr-5"
           >
             <h1 className="md:text-4xl text-2xl font-bold">Become a Founder</h1>
             <p className="md:text-2xl text-lg mt-8 md:leading-10 leading-7 md:mt-8">

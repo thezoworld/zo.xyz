@@ -36,17 +36,20 @@ const Story: React.FC<StoryProps> = () => {
         </Flex>
       </Container>
       <Container
-        className="md:text-2xl md:pt-24 pt-10 md:pb-24 pb-10 text-lg md:text-left text-center text-white"
+        className="md:text-2xl md:pt-24 pt-10 md:pb-24 pb-40 text-lg text-left text-white"
         style={{ background: "#A3C550" }}
       >
         <Flex className="md:flex-row flex-col md:mx-0 mx-3">
           <p className="md:w-2/3">
-            Meanwhile, over the quarter, we expect to launch version 1 of our Zo
-            app, enabling everyone in the world to lay the first steps towards
-            becoming a destination manager, a local host for the community in
-            their region.
+            We will begin minting 48 hours after we have reached 5555 Discord
+            members. And, the first five people to invite 100 members to our
+            Discord community will be among the first few ones to earn country
+            NFTs.
+            <br />
+            <br />
+            So, hurry up!
           </p>
-          <SocialMediaAnnouncement className="md:absolute md:-right-108 md:ml-0 md:mt-0 mt-16 ml-2 md:-bottom-24 md:w-3/5 w-full" />
+          <SocialMediaAnnouncement className="absolute md:-right-108 -right-10 -bottom-40 md:ml-0 md:mt-0 ml-2 md:-bottom-24 md:w-3/5 w-2/3" />
         </Flex>
       </Container>
     </section>

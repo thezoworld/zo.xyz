@@ -115,11 +115,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       {showLaunchVideo && (
         <Flex
           col
-          style={{
-            backdropFilter: "blur(0.5rem)",
-            backgroundColor: "rgba(255, 255, 255, 0.6)",
-          }}
-          className="fixed w-screen md:h-full overflow-auto md:max-h-screen z-50 md:pt-5 md:items-end items-center"
+          className="fixed w-screen md:h-full overflow-auto md:max-h-screen z-50 md:pt-5 items-end md:bg-gray-100 bg-black md:bg-opacity-70"
         >
           <Button
             onClick={() => setshowLaunchVideo(false)}
@@ -129,13 +125,13 @@ const Welcome: React.FC<WelcomeProps> = () => {
           </Button>
           <Flex
             items="center"
-            className="self-center w-screen h-screen px-10 pt-4 pb-10"
+            className="self-center w-screen h-screen md:px-10 px-0 md:pt-4 md:pb-10"
           >
             <iframe
               src="https://www.youtube.com/embed/0gijEkpRdAU"
               title="Zo World | Launch Video"
               frameBorder="0"
-              className="md:w-full md:h-full w-auto"
+              className="md:w-full md:h-full w-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
@@ -166,7 +162,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
         >
           Welcome to
         </span>
-        <h1 className="font-bold mt-2 text-white text-4xl md:text-5xl md:mt-6">
+        <h1 className="mt-2 text-white text-4xl md:text-5xl md:mt-6 font-extrabold">
           The Zo World
         </h1>
         <Button className="mt-8" onClick={() => setshowLaunchVideo(true)}>
