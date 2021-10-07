@@ -51,7 +51,7 @@ function SvgComponent(
       />
       <path
         d="M94.2184 104.535L91.9688 118.295L110.646 127.974L116.087 109.819L94.2184 104.535Z"
-        fill="url(#paint0_linear)"
+        fill="url(#asdas--aasdasdasd0_linear)"
       />
       <path
         d="M30.078 100.035L60.0039 137.442L52.8886 149.946L21.7595 109.033C19.3529 105.842 18.0449 101.97 18.0449 97.9419L30.078 100.035Z"
@@ -131,7 +131,7 @@ function SvgComponent(
       />
       <defs>
         <linearGradient
-          id="paint0_linear"
+          id="asdas--aasdasdasd0_linear"
           x1="95.8762"
           y1="127.796"
           x2="109.502"
