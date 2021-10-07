@@ -91,11 +91,13 @@ const MasterPlan: React.FC<MasterPlanProps> = () => {
             strategy, master plan, roadmap, economy and more.
           </span>
           <Link href="/masterplan" passHref>
-            <Button className="mt-8 mb-40">View our Secret Masterplan</Button>
+            <Button className="mt-8 mb-40 relative z-3">
+              View our Secret Masterplan
+            </Button>
           </Link>
         </Flex>
-        <Flex className="absolute md:relative bottom-0 z-2 pt-32 md:items-end items-center">
-          <FourZobusWithDesk className="md:h-96 md:w-auto w-screen mx-auto" />
+        <Flex className="absolute md:relative pointer-events-none bottom-0 z-2 pt-32 md:items-end items-center">
+          <FourZobusWithDesk className="md:h-96 md:w-auto w-screen mx-auto pointer-events-none" />
         </Flex>
       </Flex>
     </section>

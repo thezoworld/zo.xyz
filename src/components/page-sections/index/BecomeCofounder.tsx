@@ -142,7 +142,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
           />
           <CardBack
             ref={cardLeft1}
-            className="absolute z-1 shadow-md"
+            className="absolute z-1"
             style={{
               height: width <= 768 ? "5vh" : "10vh",
               // transform: "rotate(-45deg)",
@@ -152,7 +152,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
           />
           <CardBack
             ref={cardLeft2}
-            className="absolute z-1 shadow-md"
+            className="absolute z-1"
             style={{
               height: width <= 768 ? "5vh" : "10vh",
               // transform: "rotate(-45deg)",
@@ -162,7 +162,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
           />
           <CardBack
             ref={cardLeft3}
-            className="absolute z-1 shadow-md"
+            className="absolute z-1"
             style={{
               height: width <= 768 ? "5vh" : "10vh",
               // transform: "rotate(-35deg)",
@@ -172,7 +172,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
           />
           <CardBack
             ref={cardRight1}
-            className="absolute z-1 shadow-md"
+            className="absolute z-1"
             style={{
               height: width <= 768 ? "5vh" : "10vh",
               // transform: "rotate(-45deg)",
@@ -182,7 +182,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
           />
           <CardBack
             ref={cardRight2}
-            className="absolute z-1 shadow-md"
+            className="absolute z-1"
             style={{
               height: width <= 768 ? "5vh" : "10vh",
               // transform: "rotate(-45deg)",
@@ -192,7 +192,7 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
           />
           <CardBack
             ref={cardRight3}
-            className="absolute z-1 shadow-md"
+            className="absolute z-1"
             style={{
               height: width <= 768 ? "5vh" : "10vh",
               // transform: "rotate(-35deg)",
