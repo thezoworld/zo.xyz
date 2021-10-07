@@ -118,7 +118,7 @@ const TeamMembersData: {
   },
   {
     avatarUrl:
-      "https://cdn.zo.xyz/profile/260023/assets/1/47053683-6440-46c6-8104-ca76f3664a38/20210915143112.svg",
+      "https://cdn.zo.xyz/profile/260023/assets/1/47053683-6440-46c6-8104-ca76f3664a38/20210722045158.svg",
     name: "Swapnil Srivastava",
     department: "Operations",
     twitter: "https://twitter.com/romi_on",
