@@ -1,19 +1,19 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
+import CountryCardElSalvador from "../../../../public/assets/Country-Cards_El-Salvador.gif";
+import CountryCardFrance from "../../../../public/assets/Country-Cards_France.gif";
+import CountryCardJapan from "../../../../public/assets/Country-Cards_Japan.gif";
+import CountryCardRussia from "../../../../public/assets/Country-Cards_Russia.gif";
+import CountryCardSpain from "../../../../public/assets/Country-Cards_Spain.gif";
+import CountryCardIndia from "../../../../public/assets/Country-card_India.gif";
 import { MaleSittingWithCards } from "../../../assets/avatars";
 import { CardBack } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import { Button } from "../../ui";
-import CountryCardIndia from "../../../../public/assets/Country-card_India.gif";
-import CountryCardSpain from "../../../../public/assets/Country-Cards_Spain.gif";
-import CountryCardRussia from "../../../../public/assets/Country-Cards_Russia.gif";
-import CountryCardJapan from "../../../../public/assets/Country-Cards_Japan.gif";
-import CountryCardFrance from "../../../../public/assets/Country-Cards_France.gif";
-import CountryCardElSalvador from "../../../../public/assets/Country-Cards_El-Salvador.gif";
 
 interface BecomeCofounderProps {}
 
@@ -54,60 +54,60 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
       },
       y: "-10vh",
     });
-    // gsap.to(cardLeft1.current, {
-    //   scrollTrigger: {
-    //     trigger: cardLeft1.current,
-    //     scrub: true,
-    //   },
-    //   y: "-5vh",
-    //   x: "-5vw",
-    //   rotation: "-60deg",
-    // });
-    // gsap.to(cardLeft2.current, {
-    //   scrollTrigger: {
-    //     trigger: cardLeft2.current,
-    //     scrub: true,
-    //   },
-    //   y: "-5vh",
-    //   x: "-3vw",
-    //   rotation: "-55deg",
-    // });
-    // gsap.to(cardLeft3.current, {
-    //   scrollTrigger: {
-    //     trigger: cardLeft3.current,
-    //     scrub: true,
-    //   },
-    //   y: "-5vh",
-    //   x: "-1vw",
-    //   rotation: "-50deg",
-    // });
-    // gsap.to(cardRight1.current, {
-    //   scrollTrigger: {
-    //     trigger: cardRight1.current,
-    //     scrub: true,
-    //   },
-    //   y: "-5vh",
-    //   x: "5vw",
-    //   rotation: "60deg",
-    // });
-    // gsap.to(cardRight2.current, {
-    //   scrollTrigger: {
-    //     trigger: cardRight2.current,
-    //     scrub: true,
-    //   },
-    //   y: "-5vh",
-    //   x: "3vw",
-    //   rotation: "55deg",
-    // });
-    // gsap.to(cardRight3.current, {
-    //   scrollTrigger: {
-    //     trigger: cardRight3.current,
-    //     scrub: true,
-    //   },
-    //   y: "-5vh",
-    //   x: "1vw",
-    //   rotation: "50deg",
-    // });
+    gsap.to(cardLeft1.current, {
+      scrollTrigger: {
+        trigger: cardLeft1.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "-5vw",
+      rotation: "-60deg",
+    });
+    gsap.to(cardLeft2.current, {
+      scrollTrigger: {
+        trigger: cardLeft2.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "-3vw",
+      rotation: "-55deg",
+    });
+    gsap.to(cardLeft3.current, {
+      scrollTrigger: {
+        trigger: cardLeft3.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "-1vw",
+      rotation: "-50deg",
+    });
+    gsap.to(cardRight1.current, {
+      scrollTrigger: {
+        trigger: cardRight1.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "5vw",
+      rotation: "60deg",
+    });
+    gsap.to(cardRight2.current, {
+      scrollTrigger: {
+        trigger: cardRight2.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "3vw",
+      rotation: "55deg",
+    });
+    gsap.to(cardRight3.current, {
+      scrollTrigger: {
+        trigger: cardRight3.current,
+        scrub: true,
+      },
+      y: "-5vh",
+      x: "1vw",
+      rotation: "50deg",
+    });
   });
 
   return (
