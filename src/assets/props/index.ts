@@ -18,7 +18,6 @@ import TreesRight from "./TreesRight";
 import ThreeZobuStanding from "./ThreeZobuStanding"
 import ThreeZobuStanding2 from "./ThreeZobuStanding2"
 import ZobuDancing from "./ZobuDancing"
-import ZobuWithGlobe from "./ZobuWithGlobe"
 import ZobuWithGlobe2 from "./ZobuWithGlobe2"
 import ZoAppOnPhone from "./ZoAppOnPhone"
 import ZobuPLayingCards from "./ZobuPLayingCards"
@@ -49,7 +48,6 @@ export {
   ThreeZobuStanding,
   ThreeZobuStanding2,
   ZobuDancing,
-  ZobuWithGlobe,
   ZobuWithGlobe2,
   ZoAppOnPhone,
   ZobuPLayingCards,

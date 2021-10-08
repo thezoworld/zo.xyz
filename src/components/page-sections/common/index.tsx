@@ -1,4 +1,5 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import BurgerMenu from "./BurgerMenu";
 
-export { Header, Footer };
+export { Header, Footer, BurgerMenu };

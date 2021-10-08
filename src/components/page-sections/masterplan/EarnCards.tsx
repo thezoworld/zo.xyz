@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { ZobuWithGlobe, ZobuWithGlobe2 } from "../../../assets/props";
+import { ZobuPLayingCards, ZobuWithGlobe2 } from "../../../assets/props";
 import { Flex } from "../../structure";
 import { Button, Container } from "../../ui";
 
@@ -9,7 +9,7 @@ interface EarnCardsProps {}
 const EarnCards: React.FC<EarnCardsProps> = () => {
   return (
     <Container
-      className="md:h-144 relative md:pt-56 pt-8 transform -skew-y-6"
+      className="md:h-144 relative md:pt-32 pt-8 transform -skew-y-6"
       style={{ background: "#A1C468" }}
     >
       <Flex className="md:flex-row flex-col md:mx-0 mx-3 transform skew-y-6 ">
@@ -17,8 +17,8 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
           col
           className="h-full md:pt-40 pt-0 md:pb-32 md:items-start items-center md:w-1/3 order-2 md:order-1"
         >
-          <ZobuWithGlobe className="md:block hidden absolute w-screen right-0 -bottom-108 px-20 pb-32" />
-          <ZobuWithGlobe2 className="block md:hidden w-screen" />
+          <ZobuPLayingCards className="md:block hidden md:absolute md:w-1/4 md:-top-full md:right-0 md:-mt-20" />
+          <ZobuWithGlobe2 className="w-screen md:w-3/4 md:absolute md:-left-3/4 md:-bottom-48 mr-8" />
         </Flex>
         <Flex
           col

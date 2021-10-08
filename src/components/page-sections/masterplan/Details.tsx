@@ -11,7 +11,7 @@ const Details: React.FC<DetailsProps> = () => {
       <Flex className="md:flex-row flex-col pt-10 md:mx-0 mx-3">
         <Flex
           col
-          className="h-full md:pt-40 pt-0 pb-32 md:items-start items-center md:w-1/3 md:order-1 order-2"
+          className="h-full md:pt-40 pt-0 md:pb-32 pb-12 md:items-start items-center md:w-1/3 md:order-1 order-2"
         >
           <GandhiJiStanding className="md:absolute md:-left-48 md:bottom-0 md:w-1/5 w-1/2" />
         </Flex>
