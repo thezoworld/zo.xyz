@@ -28,17 +28,36 @@ const Flex: React.FC<FlexProps> = ({
       classes.push("flex-col");
     }
     if (items) {
-      classes.push(`items-${items}`);
+      if (items === "center") {
+        classes.push(`items-center`);
+      } else if (items === "start") {
+        classes.push(`items-start`);
+      } else if (items === "end") {
+        classes.push(`items-end`);
+      } else if (items === "baseline") {
+        classes.push(`items-baseline`);
+      }
     }
     if (justify) {
-      classes.push(`justify-${justify}`);
+      if (justify === "center") {
+        classes.push(`justify-center`);
+      } else if (justify === "start") {
+        classes.push(`justify-start`);
+      } else if (justify === "end") {
+        classes.push(`justify-end`);
+      } else if (justify === "between") {
+        classes.push(`justify-between`);
+      } else if (justify === "around") {
+        classes.push(`justify-around`);
+      } else if (justify === "evenly") {
+        classes.push(`justify-evenly`);
+      }
     }
     if (className) {
       classes.push(className);
     }
     return classes.join(" ");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [className]);
+  }, [className, col, inline, items, justify]);
 
   return (
     <div className={classNames} style={style} onBlur={onBlur} onClick={onClick}>
