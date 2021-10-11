@@ -14,20 +14,16 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <section>
-      <header
-        className={`w-full mx-auto ${
-          isHome ? "fixed text-white" : ""
-        } z-10 top-0 left-0 right-0 flex items-center p-4 md:px-8 justify-between`}
-      >
+      <header className="w-full max-w-7xl mx-auto absolute text-white z-10 top-0 left-0 right-0 flex items-center p-4 md:px-8 justify-between">
         <Link href="/" passHref>
           <a>
-            <Zo className="w-10 h-10" fill={isHome ? "white" : "#f15824"} />
+            <Zo className="w-10 h-10" fill="white" />
           </a>
         </Link>
         <nav className="flex items-center flex-grow justify-end">
           <Menu
             className="h-6 w-6 cursor-pointer"
-            stroke={isHome ? "white" : "#f15824"}
+            stroke="white"
             onClick={() => setMenuOpen(true)}
           />
         </nav>
