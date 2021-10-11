@@ -15,13 +15,15 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
     >
       <Flex
         col
-        className="md:max-w-sm w-screen h-screen md:px-10 px-0 pt-4 md:pb-10 bg-orangy text-white"
+        className="md:max-w-sm w-screen h-screen md:px-10 px-4 pt-4 md:pb-10 bg-orangy text-white"
       >
-        <Close
-          className="h-6 w-6 md:ml-72 ml-80 cursor-pointer"
-          stroke="white"
-          onClick={closeMenu}
-        />
+        <Flex justify="end">
+          <Close
+            className="h-6 w-6 cursor-pointer"
+            stroke="white"
+            onClick={closeMenu}
+          />
+        </Flex>
         <Link href="/" passHref>
           <Zo
             className="w-16 h-16 mx-auto my-5 cursor-pointer"
