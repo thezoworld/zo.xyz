@@ -87,8 +87,10 @@ const MasterPlan: React.FC<MasterPlanProps> = () => {
           </h2>
           <span className="mt-6 text-center md:text-left max-w-lg md:text-lg">
             How will we build a future where anyone can live, work, and travel
-            fearlessly anywhere in the world? First, understand our world view,
-            strategy, master plan, roadmap, economy and more.
+            fearlessly anywhere in the world?
+            <br />
+            Understand our world view, strategy, master plan, roadmap, economy
+            and more.
           </span>
           <Link href="/masterplan" passHref>
             <Button className="mt-8 mb-40 relative z-3">
