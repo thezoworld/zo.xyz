@@ -106,7 +106,6 @@ const Experience: React.FC<ExperienceProps> = () => {
           </Flex>
         </section>
       </Flex>
-
       <section
         ref={more}
         className="bg-white h-screen w-screen overflow-hidden relative px-4 flex flex-col items-center justify-start"
