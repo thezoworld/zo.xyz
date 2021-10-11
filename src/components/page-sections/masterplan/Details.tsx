@@ -11,13 +11,13 @@ const Details: React.FC<DetailsProps> = () => {
       <Flex className="md:flex-row flex-col pt-10 md:mx-0 mx-3">
         <Flex
           col
-          className="h-full md:pt-40 pt-0 md:pb-32 pb-12 md:items-start items-center md:w-1/3 md:order-1 order-2"
+          className="h-full md:pt-40 pt-0 md:pb-32 md:items-start items-center md:w-1/3"
         >
           <GandhiJiStanding className="md:absolute md:-left-48 md:bottom-0 md:w-1/5 w-1/2" />
         </Flex>
         <Flex
           col
-          className="h-full md:pt-32 pb-12 pt-0 md:items-start items-center md:w-2/3 text-black md:order-2 order-1"
+          className="h-full md:pt-32 pb-12 pt-0 md:items-start items-center md:w-2/3 text-black"
         >
           <p className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8">
             With web3, we are confident we can build a community-led travel
