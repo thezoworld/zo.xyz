@@ -24,12 +24,17 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
           col
           className="h-full md:pt-20 md:pb-40 pb-20 pt-0 md:items-start items-center md:w-2/3 text-white"
         >
+          <h1 className="md:text-2xl text-center md:text-left md:leading-10 leading-7 font-bold text-lg md:mt-8">
+            Builders
+          </h1>
           <p className="md:text-2xl text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8">
             Zo community will build the Zo World with us and earn the rest of
-            the 5555 cards.
+            the cards.
           </p>
-          <Link href="/become-a-founder" passHref>
-            <Button className="mt-8">Read More</Button>
+          <Link href="/build-zo" passHref>
+            <p className="mt-8 text-orangy cursor-pointer md:text-2xl text-lg">
+              Know More
+            </p>
           </Link>
         </Flex>
       </Flex>
