@@ -1,26 +1,32 @@
 import React from "react";
+import { FourZobusWorking } from "../../../assets/props";
+import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import { Container } from "../../ui";
-import { FourZobusWorking } from "../../../assets/props";
 
 interface IntroductionProps {}
 
 const Introduction: React.FC<IntroductionProps> = () => {
+  const { width } = useWindowSize();
+
   return (
     <Container
       style={{
         background:
           "linear-gradient(356.51deg, #C3FCF1 -55.46%, #C2FBF4 -35.5%, #BFF6E9 -19.45%, #BBEFD7 -6.43%, #B5E5BC 11.36%, #ADD79B 25.24%, #A3C771 43.03%, #97B441 55.17%, #8BA00D 120.27%)",
       }}
-      className="md:h-144 relative"
+      className="relative"
     >
-      <Flex className="md:flex-row flex-col md:mx-0 mx-3">
+      <Flex
+        className="md:flex-row flex-col md:mx-0 mx-3"
+        style={{ height: width > 768 ? "70vh" : "auto" }}
+      >
         <Flex
           col
-          className="h-full md:pt-32 pb-32 pt-24 md:items-start items-center md:w-2/3 text-white"
+          className="h-full md:pt-32 pb-32 pt-24 md:items-start items-center text-white"
         >
-          <h1 className="md:text-4xl text-2xl font-bold">Masterplan</h1>
-          <h1 className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8">
+          <h1 className="md:text-3xl text-2xl font-bold">Masterplan</h1>
+          <h1 className="mt-8 text-center md:text-left text-lg md:mt-8 max-w-xl">
             We believe all you need are a group of friends to travel anywhere in
             the world. We have this insight after hosting more than 1 million
             travellers from over 150 countries in our past work with Zo, the
@@ -29,9 +35,12 @@ const Introduction: React.FC<IntroductionProps> = () => {
         </Flex>
         <Flex
           col
-          className="h-full md:pt-40 pt-8 pb-32 md:items-start items-center md:w-1/3"
+          className="h-full md:pt-40 pt-8 pb-32 md:items-start items-center"
         >
-          <FourZobusWorking className="absolute md:-right-48 bottom-0 md:w-1/2 w-4/5" />
+          <FourZobusWorking
+            className="absolute bottom-0"
+            style={{ width: "60vh" }}
+          />
         </Flex>
       </Flex>
     </Container>
