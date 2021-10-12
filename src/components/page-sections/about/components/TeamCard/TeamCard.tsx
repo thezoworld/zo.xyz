@@ -23,9 +23,9 @@ const TeamCard: React.FC<TeamCardProps> = ({
         className="w-32 mx-auto"
         style={{ backgroundColor: "rgba(15, 122, 156, 0.13)" }}
       />
-      <p className="font-bold text-xl pt-2 text-center">{name}</p>
+      <p className="font-bold md:text-xl pt-2 text-center">{name}</p>
       <Flex items="center" justify="center" className="mt-1">
-        <p className="text-gray-600">{department}</p>
+        <p className="text-gray-600 text-sm md:text-base">{department}</p>
         {twitter && twitter !== "" && (
           <a href={twitter} target="_blank" rel="noreferrer">
             <TwitterCircle className="w-5 h-5 ml-2" />

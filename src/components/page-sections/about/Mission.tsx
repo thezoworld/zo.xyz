@@ -23,14 +23,14 @@ const Mission: React.FC<MissionProps> = () => {
         className="text-center flex-grow md:mx-0 mx-3 md:text-white text-black md:justify-between"
       >
         <h1
-          className="md:text-7xl text-xl font-extrabold z-10"
-          style={{ paddingTop: width <= 768 ? "10vh" : "14vh" }}
+          className="md:text-5xl text-2xl font-extrabold z-10"
+          style={{ paddingTop: width <= 768 ? "10vh" : "20vh" }}
         >
           About Zo World
         </h1>
         <p
           className="md:text-xl max-w-3xl mx-auto text-md leading-relaxed z-10 pt-8 md:pt-0"
-          style={{ paddingBottom: width > 768 ? "12vh" : "" }}
+          style={{ paddingBottom: width > 768 ? "8vh" : "" }}
         >
           We are building the Zo World as a community led travel ecosystem that
           enables everyone to travel anywhere in the world. We are using web3

@@ -80,7 +80,7 @@ const BuildZo: React.FC<BuildZoProps> = () => {
           <BuildZoWorldDesktop className="absolute bottom-0 w-full z-5" />
         )}
         <Flex items="center" className="mx-auto text-black px-4" col>
-          <h1 className="md:text-3xl text-xl font-bold z-10 mt-12">
+          <h1 className="md:text-3xl text-2xl font-bold z-10 mt-12">
             Build Zo World
           </h1>
           <h1 className="md:text-xl text-md  leading-relaxed md:leading-relaxed mt-8 text-center md:mt-8 z-10">
@@ -173,7 +173,7 @@ const BuildZo: React.FC<BuildZoProps> = () => {
           <Image src={founderCards1} alt="" className="h-64" />
         </Flex>
       </Container>
-      <section className="max-w-4xl mx-auto px-4 pt-24 pb-10 text-lg text-center">
+      <section className="max-w-4xl mx-auto px-4 pt-14 md:pt-24 pb-10 md:text-lg text-center">
         We’ll soon open opportunties for even more community members across a
         range of challenges we come across towards building the Zo World.
       </section>
