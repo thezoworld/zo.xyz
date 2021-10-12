@@ -5,10 +5,60 @@ import { FemaleHalf1, MaleHalf1 } from "../assets/avatars";
 import { BuildZoWorldDesktop, BuildZoWorldMob } from "../assets/backgrounds";
 import { BuildingZo2 } from "../assets/props";
 import { useWindowSize } from "../components/hooks";
+import DistributionCard from "../components/page-sections/buildZoWorld/components/DistributionCard";
 import { Flex } from "../components/structure";
+import { Container } from "../components/ui";
+import distcommunity from "./../../public/assets/dist-community.png";
+import distcreators from "./../../public/assets/dist-creators.png";
+import distgiveaways from "./../../public/assets/dist-giveaways.png";
+import disthq from "./../../public/assets/dist-hq.png";
+import distinfluencer from "./../../public/assets/dist-influencer.png";
+import distmarketing from "./../../public/assets/dist-marketing.png";
+import distreserved from "./../../public/assets/dist-reserved.png";
+import founderCards1 from "./../../public/assets/founder-cards-1.png";
 import multipleZobu from "./../../public/assets/multiple-zobu.png";
 
 interface BuildZoProps {}
+
+const DISTRIBUTION = [
+  {
+    image: disthq,
+    category: "HQ Team",
+    count: "445",
+  },
+  {
+    image: distinfluencer,
+    category: "Travel Influencers",
+    count: "500",
+  },
+  {
+    image: distmarketing,
+    category: "Influencers",
+    count: "500",
+  },
+  {
+    image: distgiveaways,
+    category: "Online Community, Giveaways",
+    count: "500",
+  },
+  {
+    image: distcreators,
+    category:
+      "Creators (Developers, Designers, Musician, Architects, Photographer)",
+    count: "500",
+  },
+  {
+    image: distcommunity,
+    category:
+      "Travel Community (includes Trip Host, Destination Host, Property Owner, Experience Organisers, Early Explorers etc.)",
+    count: "2,000",
+  },
+  {
+    image: distreserved,
+    category: "Reserved for future use",
+    count: "1,111",
+  },
+];
 
 const BuildZo: React.FC<BuildZoProps> = () => {
   const { width } = useWindowSize();
@@ -21,18 +71,23 @@ const BuildZo: React.FC<BuildZoProps> = () => {
       <section
         className="w-full h-screen py-20 relative overflow-hidden"
         style={{
-          background:
-            "linear-gradient(180.57deg, #FFFFFF -20.51%, #FBFDFE -4.28%, #EEF8FA 12.85%, #D9F0F3 30.41%, #BBE4E9 48.26%, #95D4DD 66.34%, #81DFED 84.59%, #3FD1E6 102.66%, #2BE0FA 116.66%)",
+          background: "#f7fbfd",
         }}
       >
+        <header
+          className="absolute top-0 h-18 w-full"
+          style={{ backgroundColor: "#d7d7d7" }}
+        />
         {width <= 768 ? (
           <BuildZoWorldMob className="absolute bottom-0 w-full z-5" />
         ) : (
           <BuildZoWorldDesktop className="absolute bottom-0 w-full z-5" />
         )}
-        <Flex items="center" className="mx-auto text-black md:px-0 px-4" col>
-          <h1 className="md:text-5xl text-xl font-bold z-10">Build Zo World</h1>
-          <h1 className="md:text-2xl text-md mt-8 text-center font-bold md:leading-10 leading-7 md:mt-8 z-10">
+        <Flex items="center" className="mx-auto text-black px-4" col>
+          <h1 className="md:text-3xl text-xl font-bold z-10 mt-12">
+            Build Zo World
+          </h1>
+          <h1 className="md:text-xl text-md  leading-relaxed md:leading-relaxed mt-8 text-center md:mt-8 z-10">
             5,555 builders will become Zo World founders and earn country NFTs.
             <br />
             We are looking for passionate people who believe in a world where
@@ -42,23 +97,8 @@ const BuildZo: React.FC<BuildZoProps> = () => {
           </h1>
         </Flex>
       </section>
-      <section className="max-w-4xl mx-auto px-4 pt-24 pb-12 text-lg text-center">
-        We’ll soon open opportunties for everyone from community managers,
-        designers, destination managers, trip managers, influencers, artists, HQ
-        team, accommodation & transport providers, experience hosts and everyone
-        who would help us build a world where anyone can travel and live
-        anywhere.
-      </section>
-      <section className="w-full overflow-hidden">
-        <Flex justify="center" className="w-full">
-          <Image src={multipleZobu} alt="" className="h-48 w-full" />
-        </Flex>
-        <div
-          className="w-full h-16 relative -mt-24 z-1"
-          style={{ backgroundColor: "#0B8040" }}
-        ></div>
-      </section>
-      <Flex
+
+      {/* <Flex
         items="end"
         justify="around"
         className="max-w-8xl px-4 mx-auto md:pt-0 pt-20 md:pb-0 pb-24"
@@ -81,7 +121,75 @@ const BuildZo: React.FC<BuildZoProps> = () => {
           background:
             "linear-gradient(90deg, #317ED8 0%, #2162AE 23.96%, #063F82 50%)",
         }}
-      ></Flex>
+      ></Flex> */}
+      <Container className="py-16">
+        <h2 className="font-semibold text-2xl mb-6 text-center">
+          Distribution
+        </h2>
+        <Flex col items="center" className="max-w-3xl w-full mx-auto px-4">
+          <table className="table-fixed w-full">
+            <thead>
+              <tr>
+                <th className="text-left w-3/4 py-2 pl-14 md:pl-18">
+                  Category
+                </th>
+                <th className="text-right w-1/4"># of Founder Cards</th>
+              </tr>
+            </thead>
+            <tbody>
+              {DISTRIBUTION.map((d) => (
+                <tr key={d.category}>
+                  <td className="w-3/4 py-2">
+                    <Flex items="start">
+                      <div className="w-12 h-12 flex-shrink-0 bg-gray-100 rounded-full mr-2 md:mr-6">
+                        <Image width={48} height={48} src={d.image} alt="" />
+                      </div>
+                      <span className="pt-3">{d.category}</span>
+                    </Flex>
+                  </td>
+                  <td className="text-right w-1/4 align-top pt-1">{d.count}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Flex>
+      </Container>
+      <Container style={{ backgroundColor: "#B3E1E7" }} className="px-4">
+        <Flex
+          items="center"
+          className="md:flex-row flex-col py-16"
+          justify="between"
+        >
+          <div className="max-w-2xl w-full">
+            <h2 className="font-semibold text-2xl mb-6 text-center md:text-left">
+              Allocation
+            </h2>
+            <p className="text-center md:text-left pb-6 md:pb-0">
+              As the minting of first 5555 NFTs is ongoing we have started
+              allocation of the rest of the (5555) NFTs via separate contracts
+              which will reserve your spot and be allocated post minting is
+              complete.
+              <br />
+              If any of you have any suggestions/questions on the distribution
+              we would love to have your inputs.
+            </p>
+          </div>
+          <Image src={founderCards1} alt="" className="h-64" />
+        </Flex>
+      </Container>
+      <section className="max-w-4xl mx-auto px-4 pt-24 pb-10 text-lg text-center">
+        We’ll soon open opportunties for even more community members across a
+        range of challenges we come across towards building the Zo World.
+      </section>
+      <section className="w-full overflow-hidden">
+        <Flex justify="center" className="w-full">
+          <Image src={multipleZobu} alt="" className="h-48 w-full" />
+        </Flex>
+        <div
+          className="w-full h-16 relative -mt-24 z-1"
+          style={{ backgroundColor: "#0B8040" }}
+        ></div>
+      </section>
     </section>
   );
 };
