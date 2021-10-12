@@ -8,14 +8,14 @@ const TeamMembersData: {
     avatarUrl:
       "https://cdn.zo.xyz/profile/268395/assets/1/5259b2e3-fd13-460b-93de-c4e9417e732f/20201230064226.svg",
     name: "Dharamveer Singh Chouhan",
-    department: "Co-founder",
+    department: "CEO",
     twitter: "https://twitter.com/dvcoolster",
   },
   {
     avatarUrl:
       "https://cdn.zo.xyz/profile/141707/assets/1/acc1d43e-e9f8-40df-934d-7ca09ba59a0b/20210917070645.svg",
     name: "Chetan Singh Chouhan",
-    department: "Co-founder",
+    department: "CEO",
     twitter: "https://twitter.com/pofunder",
   },
   {
@@ -99,13 +99,6 @@ const TeamMembersData: {
     avatarUrl:
       "https://cdn.zo.xyz/profile/289292/assets/1/9fd3d845-555a-4b17-ae9b-bb23e4a29330/20201212112641.svg",
     name: "Satyadev Pius",
-    department: "Design",
-    twitter: "",
-  },
-  {
-    avatarUrl:
-      "https://cdn.zo.xyz/profile/268391/assets/1/233d8b35-1484-49d9-b52d-e460a312554b/20210115090847.svg",
-    name: "Shriya Manaktala",
     department: "Design",
     twitter: "",
   },
