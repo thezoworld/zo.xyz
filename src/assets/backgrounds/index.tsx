@@ -8,6 +8,8 @@ import Fields2Desktop from "./Fields2Desktop";
 import Fields3 from "./Fields3";
 import SunsetDesktop from "./SunsetDesktop";
 import Wardrobe from "./Wardrobe";
+import AboutZoMob from "./AboutZoMob";
+import AboutZoDesktop from "./AboutZoDesktop";
 
 export {
   ClifSunset,
@@ -20,4 +22,6 @@ export {
   Fields1Desktop,
   Wardrobe,
   SunsetDesktop,
+  AboutZoMob,
+  AboutZoDesktop,
 };
