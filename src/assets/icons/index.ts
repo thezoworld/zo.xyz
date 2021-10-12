@@ -1,8 +1,21 @@
-import Discord from "./Discord";
-import Menu from "./Menu";
-import TwitterFilled from "./TwitterFilled";
-import TwitterCircle from "./TwitterCircle";
-import Zo from "./Zo";
+import ArrowLeft from "./ArrowLeft";
 import Close from "./Close";
+import Discord from "./Discord";
+import Download from "./Download";
+import Menu from "./Menu";
+import TwitterCircle from "./TwitterCircle";
+import TwitterFilled from "./TwitterFilled";
+import Zap from "./Zap";
+import Zo from "./Zo";
 
-export { Menu, Zo, Discord, TwitterFilled, Close, TwitterCircle };
+export {
+  Menu,
+  Zo,
+  Discord,
+  TwitterFilled,
+  Close,
+  TwitterCircle,
+  ArrowLeft,
+  Download,
+  Zap,
+};

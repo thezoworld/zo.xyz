@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 
 interface FlexProps {
   col?: boolean;
-  items?: "center" | "start" | "end" | "baseline";
+  items?: "center" | "start" | "end" | "baseline" | "stretch";
   justify?: "center" | "start" | "end" | "between" | "around" | "evenly";
   className?: string;
   style?: React.CSSProperties;
@@ -36,6 +36,8 @@ const Flex: React.FC<FlexProps> = ({
         classes.push(`items-end`);
       } else if (items === "baseline") {
         classes.push(`items-baseline`);
+      } else if (items === "stretch") {
+        classes.push(`items-stretch`);
       }
     }
     if (justify) {

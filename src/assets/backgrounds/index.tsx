@@ -7,6 +7,7 @@ import Fields2 from "./Fields2";
 import Fields2Desktop from "./Fields2Desktop";
 import Fields3 from "./Fields3";
 import SunsetDesktop from "./SunsetDesktop";
+import Wardrobe from "./Wardrobe";
 
 export {
   ClifSunset,
@@ -17,5 +18,6 @@ export {
   Fields3,
   BuildZoWorldDesktop,
   Fields1Desktop,
+  Wardrobe,
   SunsetDesktop,
 };
