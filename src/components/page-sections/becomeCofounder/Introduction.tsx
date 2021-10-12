@@ -26,10 +26,10 @@ const Introduction: React.FC<IntroductionProps> = () => {
         className="text-black md:text-white text-center py-24 md:p-0 md:px-0 px-3"
         justify="center"
       >
-        <h1 className="md:text-7xl text-xl font-bold z-10 md:pt-56 mt-10">
+        <h1 className="md:text-5xl text-xl font-bold z-10 md:pt-56 mt-10">
           Become a Founder
         </h1>
-        <p className="md:text-2xl text-md md:pt-40 pt-10 md:leading-10 leading-7 z-10">
+        <p className="md:text-lg pt-10 md:leading-10 leading-7 z-10">
           We realize that when we build something of our own, work is far
           superior. Ownership,
           <br />

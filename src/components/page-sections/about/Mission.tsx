@@ -29,7 +29,7 @@ const Mission: React.FC<MissionProps> = () => {
           About Zo World
         </h1>
         <p
-          className="md:text-xl max-w-3xl mx-auto text-md leading-relaxed z-10 pt-8 md:pt-0"
+          className="max-w-2xl mx-auto leading-relaxed z-10 pt-8 md:pt-0"
           style={{ paddingBottom: width > 768 ? "8vh" : "" }}
         >
           We are building the Zo World as a community led travel ecosystem that

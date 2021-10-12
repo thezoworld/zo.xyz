@@ -16,17 +16,13 @@ const Story: React.FC<StoryProps> = () => {
           className="h-full md:pt-32 pt-10 md:pb-24 pb-12 md:pr-84 md:mx-0 mx-3 md:flex-row flex-col md:text-left text-center "
         >
           <div className=" md:order-1 order-2 md:pt-0 pt-10">
-            <Image
-              src={CountryCards}
-              alt=""
-              className="md:w-1/3 md:text-2xl text-lg"
-            />
+            <Image src={CountryCards} alt="" className="md:w-1/3 md:text-2xl" />
             <p className="block md:hidden pt-10">
               We will forever acknowledge for decades to come to these founders
               through our discussions, services and other developments.
             </p>
           </div>
-          <div className="md:text-2xl text-lg md:pt-6 pt-8 md:w-2/3 md:ml-20 md:order-2 order-1">
+          <div className="md:pt-6 pt-8 md:w-2/3 md:ml-20 md:order-2 order-1">
             <p className="pb-10">
               We are launching Zo World Genesis Country set comprising 11,111
               NFTs. Five thousand five hundred fifty-five of these will be
@@ -44,7 +40,7 @@ const Story: React.FC<StoryProps> = () => {
         </Flex>
       </Container>
       <Container
-        className="md:text-2xl md:pt-24 pt-10 md:pb-24 pb-40 text-lg text-left text-white"
+        className="md:pt-24 pt-10 md:pb-24 pb-40 text-left text-white"
         style={{ background: "#A3C550" }}
       >
         <Flex className="md:flex-row flex-col md:mx-0 mx-3">
