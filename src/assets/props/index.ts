@@ -26,6 +26,11 @@ import ZobuExcited2 from "./ZobuExcited2"
 import SocialMediaAnnouncement from "./SocialMediaAnnouncement"
 import FourZobusWithDesk from "./FourZobusWithDesk"
 import GandhiJiStanding from "./GandhiJiStanding"
+import FourZobusWorking from "./FourZobusWorking"
+import BitcoinZobu from "./BitcoinZobu"
+import Church from "./Church"
+import ThreeZobuStanding1 from "./ThreeZobuStanding1"
+import ZobuRajasthan from "./ZobuRajasthan"
 
 export {
   Bonfire1,
@@ -55,5 +60,10 @@ export {
   ZobuExcited2,
   SocialMediaAnnouncement,
   FourZobusWithDesk,
-  GandhiJiStanding
+  GandhiJiStanding,
+  FourZobusWorking,
+  BitcoinZobu,
+  Church,
+  ThreeZobuStanding1,
+  ZobuRajasthan,
 };

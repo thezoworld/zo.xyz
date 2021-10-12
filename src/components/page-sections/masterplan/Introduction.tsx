@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "../../structure";
 import { Container } from "../../ui";
-import { ThreeZobuStanding } from "../../../assets/props";
+import { FourZobusWorking } from "../../../assets/props";
 
 interface IntroductionProps {}
 
@@ -31,7 +31,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
           col
           className="h-full md:pt-40 pt-8 pb-32 md:items-start items-center md:w-1/3"
         >
-          <ThreeZobuStanding className="absolute md:-right-48 bottom-0 md:w-1/2 w-4/5" />
+          <FourZobusWorking className="absolute md:-right-48 bottom-0 md:w-1/2 w-4/5" />
         </Flex>
       </Flex>
     </Container>
