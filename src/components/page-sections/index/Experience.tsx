@@ -1,7 +1,7 @@
-import { gsap } from "gsap";
+/* eslint-disable @next/next/no-img-element */
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
-import { MultipleFull1, MultipleFull2 } from "../../../assets/avatars";
+import { MultipleFull2, MultipleFull3 } from "../../../assets/avatars";
 import { Cuisines, DoubleArrowDown, Monuments } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
@@ -80,7 +80,7 @@ const Experience: React.FC<ExperienceProps> = () => {
             <span className="mb-12 font-normal text-lg md:hidden block">
               Experience
             </span>
-            <MultipleFull1 style={{ width: width <= 768 ? "80vw" : "20vw" }} />
+            <MultipleFull3 style={{ width: width <= 768 ? "80vw" : "20vw" }} />
             <span className="font-semibold mt-12 text-xl">Local Culture</span>
           </Flex>
         </section>
@@ -106,7 +106,6 @@ const Experience: React.FC<ExperienceProps> = () => {
           </Flex>
         </section>
       </Flex>
-
       <section
         ref={more}
         className="bg-white h-screen w-screen overflow-hidden relative px-4 flex flex-col items-center justify-start"

@@ -18,6 +18,7 @@ import MaleSittingWithCards from "./MaleSittingWithCards";
 import MaleWithMap from "./MaleWithMap";
 import MultipleFull1 from "./MultipleFull1";
 import MultipleFull2 from "./MultipleFull2";
+import MultipleFull3 from "./MultipleFull3";
 
 export {
   FemaleFull1,
@@ -39,5 +40,6 @@ export {
   MaleRightFull1,
   MultipleFull1,
   MultipleFull2,
+  MultipleFull3,
   MaleSittingWithCards,
 };
