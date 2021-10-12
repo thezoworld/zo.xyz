@@ -12,11 +12,11 @@ const Introduction: React.FC<IntroductionProps> = () => {
   const { width } = useWindowSize();
   return (
     <section
-      className="md:h-screen w-full relative"
-      style={{ height: width <= 768 ? "60vh" : "100vh" }}
+      className="md:h-screen w-full relative h-screen"
+      style={{ backgroundColor: "#a5daf3" }}
     >
       {width <= 768 ? (
-        <BecomeFounderMob className="absolute inset-0 z-5" />
+        <BecomeFounderMob className="absolute bottom-0 z-5" />
       ) : (
         <BecomeFounderDesktop className="absolute bottom-0 z-5" />
       )}
