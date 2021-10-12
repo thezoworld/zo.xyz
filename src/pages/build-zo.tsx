@@ -71,13 +71,9 @@ const BuildZo: React.FC<BuildZoProps> = () => {
       <section
         className="w-full h-screen py-20 relative overflow-hidden"
         style={{
-          background: "#f7fbfd",
+          background: "#8ed1da",
         }}
       >
-        <header
-          className="absolute top-0 h-18 w-full"
-          style={{ backgroundColor: "#d7d7d7" }}
-        />
         {width <= 768 ? (
           <BuildZoWorldMob className="absolute bottom-0 w-full z-5" />
         ) : (
