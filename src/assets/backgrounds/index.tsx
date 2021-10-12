@@ -1,4 +1,5 @@
 import BuildZoWorldDesktop from "./BuildZoWorldDesktop";
+import BuildZoWorldMob from "./BuildZoWorldMob";
 import ClifSunset from "./ClifSunset";
 import DayCampfire from "./DayCampfire";
 import Fields1 from "./Fields1";
@@ -19,6 +20,7 @@ export {
   Fields2Desktop,
   Fields3,
   BuildZoWorldDesktop,
+  BuildZoWorldMob,
   Fields1Desktop,
   Wardrobe,
   SunsetDesktop,
