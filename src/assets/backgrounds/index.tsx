@@ -11,6 +11,8 @@ import SunsetDesktop from "./SunsetDesktop";
 import Wardrobe from "./Wardrobe";
 import AboutZoMob from "./AboutZoMob";
 import AboutZoDesktop from "./AboutZoDesktop";
+import BecomeFounderDesktop from "./BecomeFounderDesktop";
+import BecomeFounderMob from "./BecomeFounderMob";
 
 export {
   ClifSunset,
@@ -26,4 +28,6 @@ export {
   SunsetDesktop,
   AboutZoMob,
   AboutZoDesktop,
+  BecomeFounderDesktop,
+  BecomeFounderMob,
 };

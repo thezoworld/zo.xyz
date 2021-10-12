@@ -13,10 +13,18 @@ const Story: React.FC<StoryProps> = () => {
       <Container className="h-auto">
         <Flex
           items="start"
-          className="h-full md:pt-32 pt-16 md:pb-24 pb-12 md:pr-84 md:mx-0 mx-3 md:flex-row flex-col md:text-left text-center "
+          className="h-full md:pt-32 pt-10 md:pb-24 pb-12 md:pr-84 md:mx-0 mx-3 md:flex-row flex-col md:text-left text-center "
         >
           <div className=" md:order-1 order-2 md:pt-0 pt-10">
-            <Image src={CountryCards} alt="" className="md:w-1/3" />
+            <Image
+              src={CountryCards}
+              alt=""
+              className="md:w-1/3 md:text-2xl text-lg"
+            />
+            <p className="block md:hidden pt-10">
+              We will forever acknowledge for decades to come to these founders
+              through our discussions, services and other developments.
+            </p>
           </div>
           <div className="md:text-2xl text-lg md:pt-6 pt-8 md:w-2/3 md:ml-20 md:order-2 order-1">
             <p className="pb-10">
@@ -28,7 +36,7 @@ const Story: React.FC<StoryProps> = () => {
               these founders through our discussions, services and other
               developments.
             </p>
-            <p>
+            <p className="md:block hidden">
               We will forever acknowledge for decades to come to these founders
               through our discussions, services and other developments.
             </p>
