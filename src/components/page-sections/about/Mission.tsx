@@ -1,47 +1,34 @@
-import Image from "next/image";
 import React from "react";
-import Background from "../../../../public/assets/about_us.png";
+import { AboutZoDesktop, AboutZoMob } from "../../../assets/backgrounds";
+import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
-import { Container } from "../../ui";
 
 interface MissionProps {}
 
 const Mission: React.FC<MissionProps> = () => {
+  const { width } = useWindowSize();
   return (
-    <Container
-      style={{
-        background: "linear-gradient(180deg, #88C180 0%, #2FABA9 109.84%)",
-      }}
-      className="md:h-144"
-    >
-      <Flex className="md:flex-row flex-col">
-        <Flex
-          col
-          className="h-full md:pt-40 pt-24 pb-32 md:items-start items-center md:mx-0 mx-3 md:w-1/2"
-        >
-          <h1 className="text-white md:text-3xl text-2xl font-bold">
-            About Zo World
-          </h1>
-          <h1 className="text-white md:text-xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8">
-            We are building the Zo World as a community led travel ecosystem
-            that enables everyone to travel anywhere in the world. We are using
-            web3 network effects for working with individuals all across the
-            world.
-            <br />
-            <br />
-            We have launched Zo World genesis country set comprising of 11,111
-            NFTs. Join our Discord, Twitter for further updates and detailed
-            conversations.
-          </h1>
-        </Flex>
-        <Flex
-          col
-          className="h-full md:pt-56 pb-32 md:items-start md:mx-0 mx-3 md:w-1/2"
-        >
-          <Image src={Background} alt="" />
-        </Flex>
+    <section className="h-screen w-full">
+      {width <= 768 ? (
+        <AboutZoMob className="absolute top-0 w-full z-5" />
+      ) : (
+        <AboutZoDesktop className="absolute top-0 w-full z-5" />
+      )}
+      <Flex
+        col
+        items="center"
+        className="text-center md:pt-56 pt-40 md:mx-0 mx-3 md:text-white text-black "
+      >
+        <h1 className="md:text-7xl text-xl font-extrabold z-10">
+          About Zo World
+        </h1>
+        <h1 className="md:text-2xl text-md font-bold z-10 md:mt-20 md:pt-108 pt-5">
+          Go on adventures in real life, complete quests with the local Zo
+          community,
+          <br /> earn collectibles and follow your heart in the Zo World.
+        </h1>
       </Flex>
-    </Container>
+    </section>
   );
 };
 

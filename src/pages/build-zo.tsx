@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import { FemaleHalf1, MaleHalf1 } from "../assets/avatars";
+import { BuildZoWorldDesktop, BuildZoWorldMob } from "../assets/backgrounds";
 import { BuildingZo2 } from "../assets/props";
 import { useWindowSize } from "../components/hooks";
 import { Flex } from "../components/structure";
@@ -18,29 +19,28 @@ const BuildZo: React.FC<BuildZoProps> = () => {
         <title>Build Zo World | The Zo World</title>
       </Head>
       <section
-        className="w-full h-screen md:h-auto pt-12 md:py-40 px-4 relative overflow-hidden"
+        className="w-full h-screen py-20 relative overflow-hidden"
         style={{
           background:
-            "linear-gradient(359.93deg, #FCC521 -163.6%, #F6C526 -122.91%, #E6C433 -88.11%, #CAC34A -33.2%, #A4C269 20.33%, #0A7F3F 86.22%, #0A7F3F 99.94%)",
+            "linear-gradient(180.57deg, #FFFFFF -20.51%, #FBFDFE -4.28%, #EEF8FA 12.85%, #D9F0F3 30.41%, #BBE4E9 48.26%, #95D4DD 66.34%, #81DFED 84.59%, #3FD1E6 102.66%, #2BE0FA 116.66%)",
         }}
       >
-        <Flex
-          className="max-w-5xl mx-auto items-center md:items-start text-white"
-          col
-        >
-          <h1 className="text-white md:text-4xl text-2xl font-bold">
-            Build Zo World
-          </h1>
-          <h1 className="text-white md:text-2xl mt-8 text-center max-w-lg md:text-left md:leading-10 leading-7 text-lg md:mt-8">
-            5,555 builders will become Zo World Founders and earn Founders
-            country NFTs. We are looking for passionate people who follow their
-            hearts.
+        {width <= 768 ? (
+          <BuildZoWorldMob className="absolute bottom-0 w-full z-5" />
+        ) : (
+          <BuildZoWorldDesktop className="absolute bottom-0 w-full z-5" />
+        )}
+        <Flex items="center" className="mx-auto text-black md:px-0 px-4" col>
+          <h1 className="md:text-5xl text-xl font-bold z-10">Build Zo World</h1>
+          <h1 className="md:text-2xl text-md mt-8 text-center font-bold md:leading-10 leading-7 md:mt-8 z-10">
+            5,555 builders will become Zo World founders and earn country NFTs.
+            <br />
+            We are looking for passionate people who believe in a world where
+            anyone
+            <br />
+            can travel anywhere fearlessly.
           </h1>
         </Flex>
-        <BuildingZo2
-          className="absolute right-0 bottom-5"
-          style={{ height: width <= 768 ? "50vh" : "60vh" }}
-        />
       </section>
       <section className="max-w-4xl mx-auto px-4 pt-24 pb-12 text-lg text-center">
         We’ll soon open opportunties for everyone from community managers,
