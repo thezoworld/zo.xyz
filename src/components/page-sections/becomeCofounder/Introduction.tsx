@@ -11,16 +11,20 @@ interface IntroductionProps {}
 const Introduction: React.FC<IntroductionProps> = () => {
   const { width } = useWindowSize();
   return (
-    <section className="md:h-screen h-auto w-full">
+    <section
+      className="md:h-screen w-full relative"
+      style={{ height: width <= 768 ? "60vh" : "100vh" }}
+    >
       {width <= 768 ? (
-        <BecomeFounderMob className="absolute top-0 w-full z-5" />
+        <BecomeFounderMob className="absolute inset-0 z-5" />
       ) : (
-        <BecomeFounderDesktop className="absolute bottom-0 w-full z-5" />
+        <BecomeFounderDesktop className="absolute bottom-0 z-5" />
       )}
       <Flex
         col
         items="center"
-        className="text-white text-center md:py-40 py-20 md:px-0 px-3"
+        className="text-white text-center py-24 md:p-0 md:px-0 px-3"
+        justify="center"
       >
         <h1 className="md:text-7xl text-xl font-bold z-10 md:pt-56 mt-10">
           Become a Founder
