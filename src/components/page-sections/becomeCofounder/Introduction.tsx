@@ -23,7 +23,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
       <Flex
         col
         items="center"
-        className="text-white text-center py-24 md:p-0 md:px-0 px-3"
+        className="text-black md:text-white text-center py-24 md:p-0 md:px-0 px-3"
         justify="center"
       >
         <h1 className="md:text-7xl text-xl font-bold z-10 md:pt-56 mt-10">
