@@ -5,7 +5,7 @@ interface ZomadAvatarProps {}
 
 const ZomadAvatar: React.FC<ZomadAvatarProps> = () => {
   return (
-    <Container className="md:text-2xl md:pt-40 pt-24 pb-20 text-lg md:text-left text-center md:px-0 px-3">
+    <Container className="md:pt-40 pt-24 pb-20 md:text-left text-center md:px-0 px-3">
       <p className="pb-12">
         Post the launch of our Genesis set. After that, we’ll finish our work
         with the OG Zomads avatar set. We have exciting things planned with

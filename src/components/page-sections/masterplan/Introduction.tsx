@@ -19,7 +19,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
     >
       <Flex
         className="md:flex-row flex-col md:mx-0 mx-3"
-        style={{ height: width > 768 ? "70vh" : "auto" }}
+        style={{ height: width > 768 ? "70vh" : "100vh" }}
       >
         <Flex
           col

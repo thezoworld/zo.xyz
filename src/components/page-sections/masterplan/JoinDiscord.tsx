@@ -1,8 +1,8 @@
+import Link from "next/link";
 import React from "react";
+import { ZobuPLayingCards } from "../../../assets/props";
 import { Flex } from "../../structure";
 import { Button, Container } from "../../ui";
-import { ZobuPLayingCards } from "../../../assets/props";
-import Link from "next/link";
 
 interface JoinDiscordProps {}
 
@@ -22,12 +22,12 @@ const JoinDiscord: React.FC<JoinDiscordProps> = () => {
             <h1 className="md:text-2xl mt-8 md:text-left text-center md:leading-10 leading-7 text-lg md:mt-0 font-bold">
               Believers
             </h1>
-            <p className="md:text-2xl mt-8 md:text-left text-center md:leading-10 leading-7 text-lg md:mt-8">
+            <p className="mt-8 md:text-left text-center md:mt-8">
               Half of the 11K founder NFTs will be available for public minting
               after reaching 5000 Discord members.
             </p>
             <div
-              className="shadow w-full rounded-3xl h-6"
+              className="shadow w-full rounded-3xl h-6 mt-8"
               style={{ background: "rgba(226, 93, 29, 1)" }}
             >
               <div
@@ -38,9 +38,7 @@ const JoinDiscord: React.FC<JoinDiscordProps> = () => {
               </div>
             </div>
             <Link href="https://discord.zo.xyz/" passHref>
-              <p className="mt-8 text-orangy cursor-pointer md:text-2xl text-lg">
-                Know More
-              </p>
+              <p className="mt-8 text-orangy cursor-pointer">Know More</p>
             </Link>
           </Flex>
         </Flex>

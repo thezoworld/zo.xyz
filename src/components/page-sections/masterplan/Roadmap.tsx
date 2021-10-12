@@ -1,7 +1,7 @@
 import React from "react";
+import { ThreeZobuStanding1, ZobuRajasthan } from "../../../assets/props";
 import { Flex } from "../../structure";
 import { Container } from "../../ui";
-import { ThreeZobuStanding1, ZobuRajasthan } from "../../../assets/props";
 
 interface RoadmapProps {}
 
@@ -14,7 +14,7 @@ const Roadmap: React.FC<RoadmapProps> = () => {
         className="w-full text-white z-10 h-20 text-center"
         style={{ background: "rgba(148, 174, 49, 1)" }}
       >
-        <h1 className="md:text-4xl text-2xl">Roadmap Forward</h1>
+        <h1 className="md:text-2xl text-xl">Roadmap Forward</h1>
       </Flex>
       <Container className="md:h-144 h-auto relative">
         <Flex className="md:flex-row flex-col pt-10 md:mx-0 mx-3">
@@ -25,7 +25,7 @@ const Roadmap: React.FC<RoadmapProps> = () => {
             <h1 className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8 font-bold">
               Zomad Avatars
             </h1>
-            <p className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8">
+            <p className="mt-8 text-center md:text-left md:mt-8">
               We’ll launch our work with the OG Zomads avatar set. We have
               exciting things planned with animations, custom stickers, Display
               Pictures, Cover images, and all things cool to flex your Zo
@@ -58,7 +58,7 @@ const Roadmap: React.FC<RoadmapProps> = () => {
             <h1 className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8 font-bold">
               Country Adventures
             </h1>
-            <p className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8">
+            <p className="mt-8 text-center md:text-left md:mt-8">
               In parallel, we’re launching complete India trips, the way we love
               it, with the locals, safe and serendipitous. All things taken care
               of
