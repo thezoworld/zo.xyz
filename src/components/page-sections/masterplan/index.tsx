@@ -5,6 +5,7 @@ import EarnCards from "./EarnCards";
 import JoinDiscord from "./JoinDiscord";
 import ZoApp from "./ZoApp";
 import ZomadAvatar from "./ZomadAvatar";
+import Roadmap from "./Roadmap";
 
 export {
   Introduction,

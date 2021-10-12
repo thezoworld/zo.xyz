@@ -8,8 +8,8 @@ import {
   Introduction,
   JoinDiscord,
   ZoApp,
-  ZomadAvatar,
 } from "../components/page-sections/masterplan";
+import Roadmap from "../components/page-sections/masterplan/Roadmap";
 
 const MasterplanPage: NextPage = () => {
   return (
@@ -21,7 +21,7 @@ const MasterplanPage: NextPage = () => {
       <Details />
       <JoinDiscord />
       <EarnCards />
-      <ZomadAvatar />
+      <Roadmap />
       <ZoApp />
       <Conclusion />
     </section>
