@@ -32,7 +32,9 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
             the cards.
           </p>
           <Link href="/build-zo" passHref>
-            <p className="mt-8 text-orangy cursor-pointer">Know More</p>
+            <p className="mt-8 cursor-pointer" style={{ color: "#D32328" }}>
+              Know More
+            </p>
           </Link>
         </Flex>
       </Flex>
