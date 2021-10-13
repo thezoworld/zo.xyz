@@ -18,12 +18,14 @@ const Introduction: React.FC<IntroductionProps> = () => {
       className="relative"
     >
       <Flex
+        items="center"
         className="md:flex-row flex-col md:mx-0 mx-3"
         style={{ height: width > 768 ? "70vh" : "100vh" }}
       >
         <Flex
           col
-          className="h-full md:pt-32 pb-32 pt-24 md:items-start items-center text-white"
+          justify="center"
+          className="h-full md:items-start items-center text-white"
         >
           <h1 className="md:text-3xl text-2xl font-bold">Masterplan</h1>
           <h1 className="mt-8 text-center md:text-left text-lg md:mt-8 max-w-xl">
