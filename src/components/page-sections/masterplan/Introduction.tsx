@@ -27,10 +27,28 @@ const Introduction: React.FC<IntroductionProps> = () => {
         >
           <h1 className="md:text-3xl text-2xl font-bold">Masterplan</h1>
           <h1 className="mt-8 text-center md:text-left text-lg md:mt-8 max-w-xl">
-            We believe all you need are a group of friends to travel anywhere in
-            the world. We have this insight after hosting more than 1 million
-            travellers from over 150 countries in our past work with Zo, the
-            world’s largest backpacker hostel chain.
+            All you need to travel anywhere are local friends.
+            <br />
+            <br />
+            We realized this{" "}
+            <a
+              className="underline"
+              href="http://www.paulgraham.com/sun.html"
+              target="_blank"
+            >
+              general and surprising
+            </a>{" "}
+            truth, building{" "}
+            <a
+              className="underline"
+              href="https://www.instagram.com/zostel/"
+              target="_blank"
+            >
+              Zostel
+            </a>
+            , the World's largest backpacker hostel chain.
+            <br />
+            <br />
           </h1>
         </Flex>
         <Flex
