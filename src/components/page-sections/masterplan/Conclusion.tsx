@@ -12,23 +12,27 @@ interface EarnCardsProps {}
 const EarnCards: React.FC<EarnCardsProps> = () => {
   return (
     <section>
-      <Container className="md:h-144 h-auto relative">
+      <Container className="md:h-144 h-auto relative px-4">
         <Flex
           col
-          items="center"
           justify="center"
-          className="h-full md:pt-24 md:pb-12 pb-0 pt-0 w-full text-black md:ml-10"
+          className="h-full md:pt-24 md:pb-12 items-start md:items-center pb-0 pt-0 px-8 md:px-0 w-full text-black md:ml-10"
         >
-          <h1 className="md:text-2xl mt-8 text-center md:leading-10 leading-7 text-lg md:mt-8 font-bold">
+          <h1 className="md:text-2xl mt-8 md:text-center text-left w-full md:leading-10 leading-7 text-lg md:mt-8 font-bold">
             Tokenomics
           </h1>
-          <p className="mt-8 text-center md:mt-8">
+          <p className="mt-8 md:text-center md:mt-8">
             As we learn to work deeper with partners and service providers,
-            we’ll launch a draft of our tokenomics. We’ll work with the
-            community to take the best foot forward for building a future where
-            Decentralized Operations, or as we like to call it, DOPE, enables
-            individuals to efficiently work and contribute towards building a
-            healthy travel and lifestyle ecosystem.
+            we’ll launch the first draft paper for Zoconomics of the Zo World.
+            <br />
+            <br />
+            We’ll work with fellow founders as we build Decentralized Operations
+            (DOPE). Incentives, feedbacks and penalties will help establish the
+            Zo brand as symbol of trust.
+            <br />
+            <br />
+            Web3 will enable individuals and businesses to easily trust, work
+            and earn building the the Zo World.
           </p>
           {/* <Link href="https://discord.zo.xyz">
               <p className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8 text-orangy cursor-pointer">
@@ -36,27 +40,28 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
               </p>
             </Link> */}
         </Flex>
-        <Flex className="md:flex-row flex-col md:pt-12 pt-32 md:mx-0 mx-3">
+        <Flex className="md:flex-row flex-col md:pt-12 pt-8 md:mx-0">
           <Flex
             col
-            className="h-full md:pt-20 pt-0 md:pb-24 md:items-start items-center md:w-1/2 overflow-hidden"
+            className="h-full md:pt-20 pt-0 md:pb-24 md:items-start items-center md:w-1/2 overflow-hidden order-2 md:order-1"
           >
             <Church className="md:absolute md:-left-0 md:-bottom-0 md:w-2/3 w-1/2" />
           </Flex>
           <Flex
             col
-            className="h-full md:pt-0 pb-10 pt-0 md:items-start items-center md:w-1/2 text-black md:ml-10"
+            className="h-full md:pt-0 pb-10 pt-0 md:px-0 px-8 items-start md:w-1/2 text-black md:ml-10 order-1 md:order-2"
           >
-            <h1 className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8 font-bold">
-              AR & Collectables
+            <h1 className="md:text-2xl mt-8 text-left md:leading-10 leading-7 text-lg md:mt-8 font-bold">
+              AR & much more
             </h1>
-            <p className="mt-8 text-center md:text-left  md:mt-8">
-              We’ve also finished more than 500 quests directed towards helping
-              us travel and complete challenges in real life. In addition, we’re
-              building our location and AR expertise for helping all projects
-              make the most of the natural world by creating experiences on the
-              Zo ecosystem across the globe, starting with Zo-founders Country
-              NFTs.
+            <p className="mt-8 text-left  md:mt-8">
+              We’re building our location and AR expertise for helping all NFT
+              and Web3 projects make the most of the real world by creating
+              experiences on the Zo ecosystem across the globe.
+              <br />
+              <br />
+              We'll be building quests and real life challenges along the way
+              for zomads to earn collectables and follow their heart.
             </p>
             {/* <Link href="https://discord.zo.xyz">
               <p className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8 text-orangy cursor-pointer">
@@ -67,15 +72,17 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
         </Flex>
       </Container>
       <Container
-        className="pt-24 pb-24 text-center md:px-0 px-3 text-white"
+        className="pt-24 mt-8 md:mt-0 pb-24 text-left px-12 md:text-center md:px-0 text-white"
         style={{ background: "#A3C550" }}
       >
+        <h1 className="md:text-2xl md:text-center text-left w-full md:leading-10 leading-7 text-lg mb-8 font-bold">
+          Follow your heart
+        </h1>
         <p>
-          Above all, we are having fun building our vision. Thanks to the
-          possibilities enabled by current times. If you believe creating a
-          future where anyone can travel anywhere fearlessly, is following your
-          heart, please join us on our discord and let’s build the Zo World
-          together \z/
+          If being a founder in unlocking the world for everyone to travel
+          anywhere fearlessly might be the calling from your heart? <br />
+          <br />
+          Check us out right now. Be early. It’s easier.
         </p>
       </Container>
     </section>

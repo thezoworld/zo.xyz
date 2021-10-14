@@ -24,13 +24,13 @@ const Introduction: React.FC<IntroductionProps> = () => {
         <Flex
           col
           justify="center"
-          className="h-full md:items-start items-center text-white text-center md:text-left md:w-1/2 md:pt-0 pt-20"
+          className="h-full md:items-start px-8 md:px-0 text-white text-center md:text-left md:w-1/2 md:pt-0 pt-20"
         >
           <h1 className="md:text-3xl text-2xl font-bold">Masterplan</h1>
-         <h2 className="md:text-2xl text-center md:text-left text-lg mt-12 font-bold">
+          <h2 className="md:text-2xl text-left text-lg mt-12 font-bold">
             Insight
           </h2>
-          <p className="mt-4 text-center md:text-left md:mt-8 max-w-xl">
+          <p className="mt-4 text-left md:mt-8 max-w-xl">
             All you need to travel anywhere are local friends.
             <br />
             <br />

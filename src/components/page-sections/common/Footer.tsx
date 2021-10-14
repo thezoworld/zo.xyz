@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Fields3 } from "../../../assets/backgrounds";
 import { Discord, TwitterFilled } from "../../../assets/icons";
 import { TreesLeft, TreesRight } from "../../../assets/props";
@@ -6,7 +6,23 @@ import { Flex } from "../../structure";
 
 interface FooterProps {}
 
+const MISS_TEXT = [
+  "the latest updates",
+  "the free giveaways",
+  "being a founder",
+];
+
 const Footer: React.FC<FooterProps> = () => {
+  const [index, setIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const nextIndex = (index + 1) % MISS_TEXT.length;
+
+    setTimeout(() => {
+      setIndex(nextIndex);
+    }, 2000);
+  }, [index]);
+
   return (
     <section
       className="w-full flex flex-col items-center text-white"
@@ -16,8 +32,11 @@ const Footer: React.FC<FooterProps> = () => {
       }}
     >
       <Flex col items="center" className="mx-4 w-full mt-12">
-        <h3 className="font-semibold text-2xl">Join our community</h3>
-        <h4 className="font-semibold text-xl mt-2 mb-4">for latest updates</h4>
+        <h3 className="font-semibold text-2xl">Don't miss out</h3>
+        <h4 className="font-semibold text-xl mt-2 mb-4">
+          on {MISS_TEXT[index]}
+        </h4>
+
         <Flex items="center" className="mt-4 mb-8 md:mb-0">
           <a
             href="https://discord.zo.xyz/"
