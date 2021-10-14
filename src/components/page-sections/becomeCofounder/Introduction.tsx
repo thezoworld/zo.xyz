@@ -22,22 +22,20 @@ const Introduction: React.FC<IntroductionProps> = () => {
       )}
       <Flex
         col
-        items="center"
-        className="text-black md:text-white text-center py-24 md:p-0 md:px-0 px-3"
+        className="text-black md:text-white md:items-center items-start text-center py-24 md:p-0 px-12 md:px-0 px-3"
         justify="center"
       >
         <h1 className="md:text-5xl text-xl font-bold z-10 md:pt-56 mt-10">
           Become a Founder
         </h1>
-        <p className="md:text-lg pt-10 md:leading-10 leading-7 z-10">
+        <p className="md:text-lg pt-10 max-w-2xl md:leading-10 leading-7 z-10 text-left md:text-center w-full">
           We realize that when we build something of our own, work is far
-          superior. Ownership,
+          superior.
           <br />
-          responsibility and self-driven culture are at the core of Zo World
-          philosophy. And Web3
+          Ownership, responsibility and self-driven culture are at the core of
+          Zo World philosophy. <br />
           <br />
-          enables us to have not just 2, 7 or 30 but thousands of founders for
-          our vision.
+          And Web3 enables us to have thousands of founders for our vision.
         </p>
       </Flex>
     </section>
