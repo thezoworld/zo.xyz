@@ -15,18 +15,19 @@ const Introduction: React.FC<IntroductionProps> = () => {
         background:
           "linear-gradient(356.51deg, #C3FCF1 -55.46%, #C2FBF4 -35.5%, #BFF6E9 -19.45%, #BBEFD7 -6.43%, #B5E5BC 11.36%, #ADD79B 25.24%, #A3C771 43.03%, #97B441 55.17%, #8BA00D 120.27%)",
       }}
-      className="relative"
     >
       <Flex
+        items="center"
         className="md:flex-row flex-col md:mx-0 mx-3"
         style={{ height: width > 768 ? "70vh" : "100vh" }}
       >
         <Flex
           col
-          className="h-full md:pt-32 pb-32 pt-16 md:items-start items-center text-white"
+          justify="center"
+          className="h-full md:items-start items-center text-white text-center md:text-left md:w-1/2 md:pt-0 pt-20"
         >
           <h1 className="md:text-3xl text-2xl font-bold">Masterplan</h1>
-          <h2 className="md:text-2xl text-center md:text-left text-lg mt-12 font-bold">
+         <h2 className="md:text-2xl text-center md:text-left text-lg mt-12 font-bold">
             Insight
           </h2>
           <p className="mt-4 text-center md:text-left md:mt-8 max-w-xl">
@@ -56,11 +57,12 @@ const Introduction: React.FC<IntroductionProps> = () => {
         </Flex>
         <Flex
           col
-          className="h-full md:pt-40 pt-8 pb-32 md:items-start items-center"
+          justify="center"
+          className="h-full md:items-start items-center relative md:w-1/2 px-5"
         >
           <FourZobusWorking
-            className="absolute bottom-0"
-            style={{ width: "60vh" }}
+            className="absolute bottom-0 md:py-0 py-10"
+            style={{ width: width > 768 ? "60vh" : "40vh" }}
           />
         </Flex>
       </Flex>

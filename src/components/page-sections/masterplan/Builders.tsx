@@ -2,11 +2,11 @@ import Link from "next/link";
 import React from "react";
 import { ZobuPLayingCards, ZobuWithGlobe2 } from "../../../assets/props";
 import { Flex } from "../../structure";
-import { Button, Container } from "../../ui";
+import { Container } from "../../ui";
 
-interface EarnCardsProps {}
+interface BuildersProps {}
 
-const EarnCards: React.FC<EarnCardsProps> = () => {
+const Builders: React.FC<BuildersProps> = () => {
   return (
     <Container
       className="md:h-144 relative md:pt-32 pt-8 transform -skew-y-6"
@@ -32,7 +32,9 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
             the cards.
           </p>
           <Link href="/build-zo" passHref>
-            <p className="mt-8 text-orangy cursor-pointer">Know More</p>
+            <p className="mt-8 cursor-pointer" style={{ color: "#D32328" }}>
+              Know More
+            </p>
           </Link>
         </Flex>
       </Flex>
@@ -40,4 +42,4 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
   );
 };
 
-export default EarnCards;
+export default Builders;

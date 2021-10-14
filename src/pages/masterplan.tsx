@@ -4,12 +4,12 @@ import React from "react";
 import {
   Conclusion,
   Details,
-  EarnCards,
+  Builders,
   Introduction,
-  JoinDiscord,
+  Believers,
   ZoApp,
+  Roadmap,
 } from "../components/page-sections/masterplan";
-import Roadmap from "../components/page-sections/masterplan/Roadmap";
 
 const MasterplanPage: NextPage = () => {
   return (
@@ -19,8 +19,8 @@ const MasterplanPage: NextPage = () => {
       </Head>
       <Introduction />
       <Details />
-      <JoinDiscord />
-      <EarnCards />
+      <Believers />
+      <Builders />
       <Roadmap />
       <ZoApp />
       <Conclusion />

@@ -11,7 +11,8 @@ const Details: React.FC<DetailsProps> = () => {
       <Flex className="md:flex-row flex-col pt-10 md:mx-0 mx-3">
         <Flex
           col
-          className="h-full md:pt-32 pb-12 md:pb-40 pt-6 md:items-start items-center md:w-2/3 text-black md:order-1 order-2"
+          justify="center"
+          className="h-full md:items-start items-center md:w-2/3 text-black md:order-1 order-2"
         >
           <h1 className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8 font-bold">
             Decentralized Operations
@@ -25,21 +26,25 @@ const Details: React.FC<DetailsProps> = () => {
         </Flex>
         <Flex
           col
-          className="h-full md:pt-40 pt-0 md:pb-32 md:items-start items-center md:w-1/3 md:order-2 order-1"
+          justify="center"
+          className="h-full md:items-start items-center md:w-1/3 md:order-2 order-1 relative"
         >
-          <BitcoinZobu className="md:absolute md:-right-0 md:top-20 md:w-1/3 w-2/3" />
+          <BitcoinZobu className="md:absolute md:bottom-0 md:top-0 md:w-full w-2/3" />
         </Flex>
       </Flex>
-      <Flex className="md:flex-row flex-col pt-10 md:mx-0 mx-3">
+      <Flex className="md:flex-row flex-col md:pt-64 pt-10 md:pb-40 md:mx-0 mx-3">
         <Flex
           col
-          className="h-full md:pt-32 pt-0 md:pb-40 md:items-start items-center md:w-1/3"
+          justify="center"
+          // className="h-full md:pt-32 pt-0 md:pb-40 md:items-start items-center md:w-1/3"
+          className="h-full md:items-start items-center md:w-1/3 relative"
         >
-          <GandhiJiStanding className="md:absolute md:-left-0 md:bottom-0 md:w-40 w-32" />
+          <GandhiJiStanding className="md:absolute md:left-0 md:inset-y-0 md:w-40 w-32" />
         </Flex>
         <Flex
           col
-          className="h-full md:pt-16 pb-12 pt-0 md:items-start items-center md:w-2/3 text-black"
+          justify="center"
+          className="h-full md:items-start md:pt-0 pt-10 md:pb-0 pb-10 items-center md:w-2/3 text-black"
         >
           <h1 className="md:text-2xl text-center md:text-left md:leading-10 leading-7 text-lg font-bold">
             Community Led
