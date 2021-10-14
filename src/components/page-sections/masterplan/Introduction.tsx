@@ -23,10 +23,13 @@ const Introduction: React.FC<IntroductionProps> = () => {
       >
         <Flex
           col
-          className="h-full md:pt-32 pb-32 pt-24 md:items-start items-center text-white"
+          className="h-full md:pt-32 pb-32 pt-16 md:items-start items-center text-white"
         >
           <h1 className="md:text-3xl text-2xl font-bold">Masterplan</h1>
-          <h1 className="mt-8 text-center md:text-left text-lg md:mt-8 max-w-xl">
+          <h2 className="md:text-2xl text-center md:text-left text-lg mt-12 font-bold">
+            Insight
+          </h2>
+          <p className="mt-4 text-center md:text-left md:mt-8 max-w-xl">
             All you need to travel anywhere are local friends.
             <br />
             <br />
@@ -49,7 +52,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
             , the World's largest backpacker hostel chain.
             <br />
             <br />
-          </h1>
+          </p>
         </Flex>
         <Flex
           col
