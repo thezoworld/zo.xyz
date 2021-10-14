@@ -1,5 +1,10 @@
 import React from "react";
-import { TwitterCircle, TwitterFilled } from "../../../../../assets/icons";
+import {
+  Instagram,
+  LinkedIn,
+  TwitterCircle,
+  TwitterFilled,
+} from "../../../../../assets/icons";
 import { Flex } from "../../../../structure";
 import Avatar from "../../../../ui/Avatar";
 
@@ -7,7 +12,10 @@ interface TeamCardProps {
   avatar: string;
   name: string;
   department: string;
-  twitter: string;
+  numberOfCards: number;
+  twitter?: string;
+  linkedin?: string;
+  instagram?: string;
 }
 
 const TeamCard: React.FC<TeamCardProps> = ({
@@ -15,22 +23,40 @@ const TeamCard: React.FC<TeamCardProps> = ({
   name,
   department,
   twitter,
+  numberOfCards,
+  linkedin,
+  instagram,
 }) => {
   return (
-    <div className="h-88 md:mx-0 mx-auto my-5">
-      <Avatar
-        svg={avatar}
-        className="w-32 mx-auto"
-        style={{ backgroundColor: "rgba(15, 122, 156, 0.13)" }}
-      />
-      <p className="font-bold md:text-xl pt-2 text-center">{name}</p>
-      <Flex items="center" justify="center" className="mt-1">
-        <p className="text-gray-600 text-sm md:text-base">{department}</p>
-        {twitter && twitter !== "" && (
-          <a href={twitter} target="_blank" rel="noreferrer">
-            <TwitterCircle className="w-5 h-5 ml-2" />
-          </a>
+    <div className="md:h-64 my-2 md:my-4 rounded-lg p-4 bg-gray-100 flex md:flex-col items-center">
+      <Avatar svg={avatar} className="md:w-32 w-24 bg-gray-200" />
+      <Flex col className="ml-2 md:ml-0 md:mt-2">
+        <p className="md:text-center font-semibold ml-2 md:ml-0">{name}</p>
+        <p className="md:text-center text-gray-600 text-sm ml-2 md:ml-0">
+          {department}
+        </p>
+        {numberOfCards > 0 && (
+          <p className="md:text-center ml-2 md:ml-0 text-gray-800">
+            3 founder cards
+          </p>
         )}
+        <Flex items="center" className="md:justify-center">
+          {twitter && twitter !== "" && (
+            <a href={twitter} target="_blank" rel="noreferrer">
+              <TwitterFilled className="w-5 h-5 m-2" />
+            </a>
+          )}
+          {instagram && instagram !== "" && (
+            <a href={instagram} target="_blank" rel="noreferrer">
+              <Instagram className="w-5 h-5 m-2" />
+            </a>
+          )}
+          {linkedin && linkedin !== "" && (
+            <a href={linkedin} target="_blank" rel="noreferrer">
+              <LinkedIn className="w-5 h-5 m-2" />
+            </a>
+          )}
+        </Flex>
       </Flex>
     </div>
   );

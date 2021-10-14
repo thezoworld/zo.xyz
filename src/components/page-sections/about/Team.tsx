@@ -14,7 +14,7 @@ const Team: React.FC<TeamProps> = () => {
           style={{ color: "#BE392C" }}
           className="md:text-5xl text-2xl font-bold"
         >
-          Our team
+          Founders
         </h1>
         <Flex
           items="center"
@@ -24,9 +24,12 @@ const Team: React.FC<TeamProps> = () => {
             <TeamCard
               key={index}
               avatar={item.avatarUrl}
-              name={item.name}
+              name={item.alias}
               department={item.department}
+              numberOfCards={item.numberOfCards}
               twitter={item.twitter}
+              instagram={item.instagram}
+              linkedin={item.linkedin}
             />
           ))}
         </Flex>

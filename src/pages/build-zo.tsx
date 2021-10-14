@@ -162,7 +162,7 @@ const BuildZo: React.FC<BuildZoProps> = () => {
             </h2>
             <p className="text-center md:text-left pb-6 md:pb-0">
               As the minting of first 5555 NFTs is ongoing we have started
-              allocation of the rest of the (5555) NFTs via separate contracts
+              allocation of the rest of the (5555) NFTs via separate contract
               which will reserve your spot and be allocated post minting is
               complete.
               <br />

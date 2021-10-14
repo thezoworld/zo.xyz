@@ -32,7 +32,12 @@ function useWindowSize() {
       return () => window.removeEventListener("resize", handleResize);
     }
   }, []); // Empty array ensures that effect is only run on mount
-  return windowSize;
+
+  const isMobile = windowSize.width <= 768;
+  const isPortrait = windowSize.width < windowSize.height;
+  const isLandscape = !isPortrait;
+
+  return { ...windowSize, isMobile, isPortrait, isLandscape };
 }
 
 export default useWindowSize;
