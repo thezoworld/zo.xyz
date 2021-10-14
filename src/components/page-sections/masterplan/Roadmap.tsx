@@ -7,7 +7,7 @@ interface RoadmapProps {}
 
 const Roadmap: React.FC<RoadmapProps> = () => {
   return (
-    <section className="md:pt-20 pt-5">
+    <section className="pt-5 md:pt-14">
       <Flex
         items="center"
         justify="center"
