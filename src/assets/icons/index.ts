@@ -2,6 +2,8 @@ import ArrowLeft from "./ArrowLeft";
 import Close from "./Close";
 import Discord from "./Discord";
 import Download from "./Download";
+import Instagram from "./Instagram";
+import LinkedIn from "./LinkedIn";
 import Menu from "./Menu";
 import TwitterCircle from "./TwitterCircle";
 import TwitterFilled from "./TwitterFilled";
@@ -18,4 +20,6 @@ export {
   ArrowLeft,
   Download,
   Zap,
+  LinkedIn,
+  Instagram,
 };

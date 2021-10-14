@@ -33,13 +33,16 @@ const Mission: React.FC<MissionProps> = () => {
           style={{ paddingBottom: width > 768 ? "8vh" : "" }}
         >
           We are building the Zo World as a community led travel ecosystem that
-          enables everyone to travel anywhere in the world. We are using web3
-          network effects for working with individuals all across the world.
+          enables everyone to travel anywhere in the world.
           <br />
           <br />
-          We have launched Zo World genesis country set comprising of 11,111
-          NFTs. Join our Discord, Twitter for further updates and detailed
-          conversations.
+          We are using web3 technologies for collaborating with individuals and
+          businesses all across the world.
+          <br />
+          <br />
+          Starting with "Founders of the Zo World" collection comprising of
+          11,111 NFTs. Upto half to be minted by believers starting on 31st
+          October and rest to be earned by the Zo community.
         </p>
       </Flex>
     </section>
