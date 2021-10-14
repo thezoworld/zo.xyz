@@ -127,8 +127,8 @@ const BecomeCofounder: React.FC<BecomeCofounderProps> = () => {
             Become a founder
           </h2>
           <span className="mt-6 md:text-lg text-center md:text-left relative z-2">
-            Mint NFTs from Zo World Country Founder Set and become one of the
-            only 11,111 founders of the Zo World.
+            Mint NFTs from "Founders of the Zo World" collection and become one
+            of the only 11,111 founders of the Zo World.
           </span>
           <Link href="/become-a-founder" passHref>
             <Button className="mt-8 mb-16">Learn More</Button>

@@ -115,7 +115,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       {showLaunchVideo && (
         <Flex
           col
-          className="fixed w-screen md:h-full overflow-auto md:max-h-screen z-50 md:pt-5 items-end md:bg-gray-100 bg-black md:bg-opacity-70"
+          className="fixed w-screen p-4 md:h-full overflow-auto md:max-h-screen z-50 md:pt-5 items-end md:bg-gray-100 bg-black md:bg-opacity-70"
         >
           <Button
             onClick={() => setshowLaunchVideo(false)}
@@ -166,7 +166,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
           The Zo World
         </h1>
         <Button className="mt-8" onClick={() => setshowLaunchVideo(true)}>
-          Watch our video
+          Watch our Founders video
         </Button>
       </Flex>
       <Flex items="end" justify="around" className="mb-12 md:px-32 px-0 w-full">

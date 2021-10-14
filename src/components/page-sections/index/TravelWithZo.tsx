@@ -102,8 +102,10 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
             Experience India with Zo
           </h2>
           <span className="mt-6 text-center md:text-left md:text-lg relative z-1">
-            Backpacking or Digital Zomad lifestyle? Travel and live across India
-            like never before, anywhere, anytime and we’ll be there for you.
+            Backpacking or Digital Nomad lifestyle?
+            <br />
+            Travel and live across India like never before, anywhere, anytime
+            and we’ll be there for you.
           </span>
           <Link href="/travel-with-zo" passHref>
             <Button className="mt-8 mb-40 relative z-4">Start Traveling</Button>

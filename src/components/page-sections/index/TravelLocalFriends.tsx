@@ -12,7 +12,7 @@ import { useWindowSize } from "../../hooks";
 interface TravelLocalFriendsProps {}
 
 const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
-  const { width } = useWindowSize();
+  const { isMobile } = useWindowSize();
 
   const globe = useRef<SVGSVGElement>(null);
   const sky = useRef<SVGSVGElement>(null);
@@ -24,27 +24,29 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(globe.current, {
-      scrollTrigger: {
-        trigger: globe.current,
-        scrub: 1,
-      },
-      rotate: "540deg",
-    });
-    gsap.to(sky.current, {
-      scrollTrigger: {
-        trigger: sky.current,
-        scrub: 1,
-      },
-      scale: width <= 768 ? 2 : 1.5,
-    });
-    gsap.to(text.current, {
-      scrollTrigger: {
-        trigger: globe.current,
-        scrub: true,
-      },
-      y: "-20vh",
-    });
+    if (!isMobile) {
+      gsap.to(globe.current, {
+        scrollTrigger: {
+          trigger: globe.current,
+          scrub: true,
+        },
+        rotate: "540deg",
+      });
+      gsap.to(sky.current, {
+        scrollTrigger: {
+          trigger: sky.current,
+          scrub: true,
+        },
+        scale: isMobile ? 2 : 1.5,
+      });
+      gsap.to(text.current, {
+        scrollTrigger: {
+          trigger: globe.current,
+          scrub: true,
+        },
+        y: "-20vh",
+      });
+    }
     gsap.to(female1.current, {
       scrollTrigger: {
         trigger: female1.current,
@@ -66,7 +68,7 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
       },
       y: "20vh",
     });
-  });
+  }, [isMobile]);
 
   return (
     <section
@@ -80,7 +82,7 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
           ref={sky}
           className="absolute bottom-0 md:bottom-auto"
           style={{
-            height: width <= 768 ? "auto" : "30vw",
+            height: isMobile ? "auto" : "30vw",
           }}
         />
         <Globe
@@ -95,9 +97,9 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
       <h2
         ref={text}
         className="text-white text-xl md:text-2xl md:ml-12 tracking-wide text-center flex flex-col"
-        style={{ marginBottom: width <= 768 ? "30vh" : "0" }}
+        style={{ marginBottom: isMobile ? "30vh" : "0" }}
       >
-        <span className="mb-2">Travel with the help of</span>
+        <span className="mb-2">Travel fearlessly with the help of</span>
         <span className="font-semibold">local friends around the world.</span>
       </h2>
       <FemaleLeftFull1
@@ -113,9 +115,9 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
         ref={male1}
         className="absolute right-0 z-1"
         style={{
-          width: width <= 768 ? "35vw" : "auto",
-          height: width <= 768 ? "auto" : "50vh",
-          bottom: width <= 768 ? "10vh" : "60vh",
+          width: isMobile ? "35vw" : "auto",
+          height: isMobile ? "auto" : "50vh",
+          bottom: isMobile ? "10vh" : "60vh",
         }}
       />
     </section>

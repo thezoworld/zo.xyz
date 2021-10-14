@@ -81,16 +81,13 @@ const MasterPlan: React.FC<MasterPlanProps> = () => {
         items="center"
         className="absolute bottom-0 h-screen md:h-auto md:relative w-full max-w-5xl mx-auto"
       >
-        <Flex col className="relative items-center md:items-start z-2">
+        <Flex col className="relative items-center md:items-start z-2 px-4">
           <h2 className="text-xl font-semibold text-center md:text-3xl">
             Masterplan
           </h2>
           <span className="mt-6 text-center md:text-left max-w-lg md:text-lg">
             How will we build a future where anyone can live, work, and travel
             fearlessly anywhere in the world?
-            <br />
-            Understand our world view, strategy, master plan, roadmap, economy
-            and more.
           </span>
           <Link href="/masterplan" passHref>
             <Button className="mt-8 mb-40 relative z-3">
