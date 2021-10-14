@@ -2,11 +2,11 @@ import Link from "next/link";
 import React from "react";
 import { ZobuPLayingCards } from "../../../assets/props";
 import { Flex } from "../../structure";
-import { Button, Container } from "../../ui";
+import { Container } from "../../ui";
 
-interface JoinDiscordProps {}
+interface BelieversProps {}
 
-const JoinDiscord: React.FC<JoinDiscordProps> = () => {
+const Believers: React.FC<BelieversProps> = () => {
   return (
     <section className="max-w-full">
       <Container
@@ -49,4 +49,4 @@ const JoinDiscord: React.FC<JoinDiscordProps> = () => {
   );
 };
 
-export default JoinDiscord;
+export default Believers;

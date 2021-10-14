@@ -1,8 +1,8 @@
 import Introduction from "./Introduction";
 import Details from "./Details";
 import Conclusion from "./Conclusion";
-import EarnCards from "./EarnCards";
-import JoinDiscord from "./JoinDiscord";
+import Builders from "./Builders";
+import Believers from "./Believers";
 import ZoApp from "./ZoApp";
 import ZomadAvatar from "./ZomadAvatar";
 import Roadmap from "./Roadmap";
@@ -11,8 +11,9 @@ export {
   Introduction,
   Details,
   Conclusion,
-  EarnCards,
-  JoinDiscord,
+  Builders,
+  Believers,
   ZoApp,
   ZomadAvatar,
+  Roadmap,
 };
