@@ -27,6 +27,8 @@ const TeamMembersData: {
     department: "CEO",
     numberOfCards: 0,
     twitter: "https://twitter.com/pofunder",
+    linkedin: "https://www.linkedin.com/in/chetan-chauhan-237a4a87/",
+    instagram: "https://www.instagram.com/zofunder/"
   },
   {
     avatarUrl:
@@ -35,6 +37,7 @@ const TeamMembersData: {
     alias: "anantdd",
     department: "Engineering",
     numberOfCards: 0,
+    linkedin: "https://www.linkedin.com/in/anant-dev-dubey/",
   },
   {
     avatarUrl:
@@ -43,6 +46,7 @@ const TeamMembersData: {
     alias: "atul",
     department: "Operations",
     numberOfCards: 0,
+    linkedin: "https://www.linkedin.com/in/atul-jaiswal-847607223/",
   },
   {
     avatarUrl:
@@ -52,6 +56,8 @@ const TeamMembersData: {
     department: "Product",
     numberOfCards: 0,
     twitter: "https://twitter.com/A_VIRAL_FEVER",
+    instagram: "https://www.instagram.com/aviralgupta2211/",
+    linkedin:  "https://www.linkedin.com/in/gupta-aviral/",
   },
   {
     avatarUrl:
@@ -60,6 +66,9 @@ const TeamMembersData: {
     alias: "ChrisCraig",
     department: "Design",
     numberOfCards: 0,
+    twitter: "https://twitter.com/Chris76697374",
+    instagram: "https://www.instagram.com/christopher_design09/",
+    linkedin: "https://www.linkedin.com/in/christopher-nazareth-0a4388134/",
   },
   {
     avatarUrl:
@@ -69,6 +78,8 @@ const TeamMembersData: {
     department: "Engineering",
     numberOfCards: 0,
     twitter: "https://twitter.com/GoyalGaurav",
+    linkedin: "https://www.linkedin.com/in/gauravgoyaltech/",
+    instagram: "https://www.instagram.com/masterchief.42/",
   },
   {
     avatarUrl:
@@ -78,6 +89,8 @@ const TeamMembersData: {
     department: "Design",
     numberOfCards: 0,
     twitter: "https://twitter.com/HemantKokate3",
+    instagram: "https://www.instagram.com/dexterzone_art/",
+    linkedin: "https://www.linkedin.com/in/hemant-kokate-873979167/",
   },
   {
     avatarUrl:
@@ -97,6 +110,9 @@ const TeamMembersData: {
     alias: "KaZo",
     department: "Engineering",
     numberOfCards: 0,
+    twitter: "https://twitter.com/kushalKaZo",
+    instagram: "https://www.instagram.com/kushal_kazo/",
+    linkedin: "https://www.linkedin.com/in/kushal-agarwal-b6b5701bb/"
   },
   {
     avatarUrl:
@@ -106,6 +122,8 @@ const TeamMembersData: {
     department: "Engineering",
     numberOfCards: 0,
     twitter: "https://twitter.com/manas_vivek_27",
+    instagram: "https://www.instagram.com/manas_vivek_27/",
+    linkedin: "https://www.linkedin.com/in/manas-choubal/"
   },
   {
     avatarUrl:
@@ -115,6 +133,8 @@ const TeamMembersData: {
     department: "Design",
     numberOfCards: 0,
     twitter: "https://twitter.com/sakshii_shah",
+    instagram: "https://www.instagram.com/sakshii_shahh/",
+    linkedin: "https://www.linkedin.com/in/sakshiishahh/",
   },
   {
     avatarUrl:
@@ -123,6 +143,9 @@ const TeamMembersData: {
     alias: "Sindbad",
     department: "Operations",
     numberOfCards: 0,
+    twitter: "https://twitter.com/DekateSanchit",
+    instagram: "https://twitter.com/DekateSanchit",
+    linkedin: "https://www.linkedin.com/in/sanchit-dekate-6714ba100/",
   },
   {
     avatarUrl:
@@ -131,6 +154,9 @@ const TeamMembersData: {
     alias: "DevPius",
     department: "Design",
     numberOfCards: 0,
+    twitter: "https://twitter.com/dev_pius",
+    instagram: "https://www.instagram.com/dev.pius/",
+    linkedin: "https://www.linkedin.com/in/satyadev-pius-5229851a3/",
   },
   {
     avatarUrl:
@@ -140,6 +166,8 @@ const TeamMembersData: {
     department: "Operations",
     numberOfCards: 0,
     twitter: "https://twitter.com/ShuklaSridutt",
+    instagram: "https://www.instagram.com/sridutt.shukla/",
+    linkedin: "https://www.linkedin.com/in/sridutt-shukla-7b92b4169/",
   },
   {
     avatarUrl:
@@ -149,6 +177,19 @@ const TeamMembersData: {
     department: "Operations",
     numberOfCards: 0,
     twitter: "https://twitter.com/romi_on",
+    instagram: "https://www.instagram.com/therealswap/",
+    linkedin: "https://www.linkedin.com/in/swapnilsrivastava1987/",
+  },
+  {
+    avatarUrl:
+      "https://cdn.zo.xyz/profile/289130/assets/1/4c48232c-e2d7-409b-9f9e-970a4d6b673b/20210901134147.svg",
+    name: "Tanme Srivastav",
+    alias: "tanme",
+    department: "Operations",
+    numberOfCards: 0,
+    twitter: "https://twitter.com/tanme_srivastav",
+    instagram: "https://www.instagram.com/im_tanme/",
+    linkedin: "https://www.linkedin.com/in/tanme-s-09553a108/"
   },
   {
     avatarUrl:
@@ -158,6 +199,7 @@ const TeamMembersData: {
     department: "Engineering",
     numberOfCards: 0,
     twitter: "https://twitter.com/thevibhujoshi",
+    linkedin: "https://www.linkedin.com/in/vibhuj/"
   },
 ];
 
