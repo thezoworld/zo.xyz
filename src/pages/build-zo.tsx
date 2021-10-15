@@ -83,13 +83,13 @@ const BuildZo: React.FC<BuildZoProps> = () => {
           <h1 className="md:text-3xl text-2xl font-bold z-10 mt-12 text-left w-full md:text-center">
             Build Zo World
           </h1>
-          <h1 className="md:text-xl text-md leading-relaxed md:leading-relaxed mt-8 text-left md:text-center md:mt-8 z-10">
+          <h1 className="md:text-xl max-w-2xl mx-auto text-md leading-relaxed md:leading-relaxed mt-8 text-left md:text-center md:mt-8 z-10">
             We are a community of local hosts, designers, coders, influencers,
             entrepreneurs and other passionate people following their heart.
             <br />
             <br />
             Billions of explorers will be served by millions of our community
-            members
+            members.
             <br />
             <br />
           </h1>
