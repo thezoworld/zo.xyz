@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
+import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import AssetsSelector from "./components/AssetsSelector";
 import AssetsDisplay from "./components/AssetsSelector/AssetsDisplay";
@@ -62,6 +63,8 @@ const CATEGORY_PROBABILITY: any = {
 };
 
 const ZomadCreator: React.FC<ZomadCreatorProps> = () => {
+  const { isPortrait } = useWindowSize();
+
   const [backgrounds, setBackgrounds] = useState<Background[]>([]);
   const [bases, setBases] = useState<AvatarBase[]>([]);
   const [categories, setCategories] = useState<AvatarCategory[]>([]);
@@ -339,17 +342,19 @@ const ZomadCreator: React.FC<ZomadCreatorProps> = () => {
           }
         }
       });
-    const randomBG = getRandomItem(backgrounds).file;
-    console.log("BBBBB", randomBG);
-    console.log(randomLayers);
+    const randomBG = getRandomItem(backgrounds);
+    let bgFile = randomBG.file_horizontal;
+    if (isPortrait) {
+      bgFile = randomBG.file_vertical;
+    }
     shuffleArray(randomLayers);
-    setSelectedBackground(randomBG);
+    setSelectedBackground(bgFile);
     primalLayers();
     randomLayers.forEach((_layer) => {
       handleChange(_layer[0], _layer[1]);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedBase, categories, handleChange, hiddenLayers]);
+  }, [selectedBase, categories, isPortrait, handleChange, hiddenLayers]);
 
   useEffect(() => {
     switch (selectedBase) {
@@ -410,7 +415,7 @@ const ZomadCreator: React.FC<ZomadCreatorProps> = () => {
         zobuLayers={zobuLayers}
         selectedBackground={selectedBackground}
       />
-      <AssetsSelector
+      {/* <AssetsSelector
         backgrounds={backgrounds}
         selectedBackground={selectedBackground}
         categories={categories}
@@ -419,7 +424,7 @@ const ZomadCreator: React.FC<ZomadCreatorProps> = () => {
         zobuLayers={zobuLayers}
         hiddenLayers={hiddenLayers}
         selectedBase={selectedBase}
-      />
+      /> */}
     </Flex>
   );
 };
