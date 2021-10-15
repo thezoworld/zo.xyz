@@ -8,8 +8,10 @@ interface FooterProps {}
 
 const MISS_TEXT = [
   "the latest updates",
-  "the free giveaways",
+  "free giveaways",
   "being a founder",
+  "sharing ideas",
+  "Zo community /\\z/",
 ];
 
 const Footer: React.FC<FooterProps> = () => {
