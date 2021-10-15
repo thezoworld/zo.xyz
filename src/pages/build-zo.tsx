@@ -79,17 +79,19 @@ const BuildZo: React.FC<BuildZoProps> = () => {
         ) : (
           <BuildZoWorldDesktop className="absolute bottom-0 w-full z-5" />
         )}
-        <Flex items="center" className="mx-auto text-black px-4" col>
-          <h1 className="md:text-3xl text-2xl font-bold z-10 mt-12">
+        <Flex items="center" className="mx-auto text-black px-12" col>
+          <h1 className="md:text-3xl text-2xl font-bold z-10 mt-12 text-left w-full md:text-center">
             Build Zo World
           </h1>
-          <h1 className="md:text-xl text-md  leading-relaxed md:leading-relaxed mt-8 text-center md:mt-8 z-10">
-            5,555 builders will become Zo World founders and earn country NFTs.
+          <h1 className="md:text-xl text-md leading-relaxed md:leading-relaxed mt-8 text-left md:text-center md:mt-8 z-10">
+            We are a community of local hosts, designers, coders, influencers,
+            entrepreneurs and other passionate people following their heart.
             <br />
-            We are looking for passionate people who believe in a world where
-            anyone
             <br />
-            can travel anywhere fearlessly.
+            Billions of explorers will be served by millions of our community
+            members
+            <br />
+            <br />
           </h1>
         </Flex>
       </section>
@@ -118,7 +120,30 @@ const BuildZo: React.FC<BuildZoProps> = () => {
             "linear-gradient(90deg, #317ED8 0%, #2162AE 23.96%, #063F82 50%)",
         }}
       ></Flex> */}
-      <Container className="py-16">
+      <Container className="px-4">
+        <Flex
+          items="center"
+          className="md:flex-row flex-col py-16 px-8 md:px-0"
+          justify="between"
+        >
+          <div className="max-w-2xl w-full">
+            <h2 className="font-semibold text-2xl mb-6 text-left">
+              Allocation
+            </h2>
+            <p className="text-left pb-8 md:pb-0">
+              We're recognizing these early crazy souls over the coming months
+              with 'Founders of the Zo World' NFTs.
+              <br />
+              <br />
+              The category wise distribution for these is below. We'll soon be
+              adding quests in each category for individuals to complete and
+              become a founder
+            </p>
+          </div>
+          <Image src={founderCards1} alt="" className="h-64" />
+        </Flex>
+      </Container>
+      <Container style={{ backgroundColor: "#B3E1E7" }} className="py-16">
         <h2 className="font-semibold text-2xl mb-6 text-center">
           Distribution
         </h2>
@@ -150,30 +175,8 @@ const BuildZo: React.FC<BuildZoProps> = () => {
           </table>
         </Flex>
       </Container>
-      <Container style={{ backgroundColor: "#B3E1E7" }} className="px-4">
-        <Flex
-          items="center"
-          className="md:flex-row flex-col py-16"
-          justify="between"
-        >
-          <div className="max-w-2xl w-full">
-            <h2 className="font-semibold text-2xl mb-6 text-center md:text-left">
-              Allocation
-            </h2>
-            <p className="text-center md:text-left pb-6 md:pb-0">
-              As the minting of first 5555 NFTs is ongoing we have started
-              allocation of the rest of the (5555) NFTs via separate contract
-              which will reserve your spot and be allocated post minting is
-              complete.
-              <br />
-              If any of you have any suggestions/questions on the distribution
-              we would love to have your inputs.
-            </p>
-          </div>
-          <Image src={founderCards1} alt="" className="h-64" />
-        </Flex>
-      </Container>
-      <section className="max-w-4xl mx-auto px-4 pt-14 md:pt-24 pb-10 md:text-lg text-center">
+
+      <section className="max-w-4xl mx-auto md:px-4 px-12 pt-14 md:pt-24 pb-10 md:text-lg text-left md:text-center">
         We’ll soon open opportunties for even more community members across a
         range of challenges we come across towards building the Zo World.
       </section>
