@@ -19,8 +19,7 @@ const Mission: React.FC<MissionProps> = () => {
       )}
       <Flex
         col
-        items="center"
-        className="text-center flex-grow md:mx-0 mx-3 md:text-white text-black md:justify-between"
+        className="text-left items-start md:items-center md:text-center flex-grow md:mx-0 mx-12 md:text-white text-black md:justify-between"
       >
         <h1
           className="md:text-5xl text-2xl font-extrabold z-10"

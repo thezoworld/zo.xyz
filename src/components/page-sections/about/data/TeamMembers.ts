@@ -14,7 +14,7 @@ const TeamMembersData: {
     name: "Dharamveer Singh Chouhan",
     alias: "DV",
     department: "CEO",
-    numberOfCards: 3,
+    numberOfCards: 0,
     twitter: "https://twitter.com/dvcoolster",
     instagram: "https://instagram.com/dvcoolster",
     linkedin: "https://linkedin.com/dvcoolster",
@@ -28,7 +28,7 @@ const TeamMembersData: {
     numberOfCards: 0,
     twitter: "https://twitter.com/pofunder",
     linkedin: "https://www.linkedin.com/in/chetan-chauhan-237a4a87/",
-    instagram: "https://www.instagram.com/zofunder/"
+    instagram: "https://www.instagram.com/zofunder/",
   },
   {
     avatarUrl:
@@ -57,7 +57,7 @@ const TeamMembersData: {
     numberOfCards: 0,
     twitter: "https://twitter.com/A_VIRAL_FEVER",
     instagram: "https://www.instagram.com/aviralgupta2211/",
-    linkedin:  "https://www.linkedin.com/in/gupta-aviral/",
+    linkedin: "https://www.linkedin.com/in/gupta-aviral/",
   },
   {
     avatarUrl:
@@ -98,7 +98,7 @@ const TeamMembersData: {
     name: "Ishaan Rawat",
     alias: "Cannibal",
     department: "Engineering",
-    numberOfCards: 3,
+    numberOfCards: 0,
     twitter: "https://twitter.com/IshaanRawat",
     instagram: "https://instagram.com/_ishaanrawat_",
     linkedin: "https://linkedin.com/IshaanRawat",
@@ -112,7 +112,7 @@ const TeamMembersData: {
     numberOfCards: 0,
     twitter: "https://twitter.com/kushalKaZo",
     instagram: "https://www.instagram.com/kushal_kazo/",
-    linkedin: "https://www.linkedin.com/in/kushal-agarwal-b6b5701bb/"
+    linkedin: "https://www.linkedin.com/in/kushal-agarwal-b6b5701bb/",
   },
   {
     avatarUrl:
@@ -123,7 +123,7 @@ const TeamMembersData: {
     numberOfCards: 0,
     twitter: "https://twitter.com/manas_vivek_27",
     instagram: "https://www.instagram.com/manas_vivek_27/",
-    linkedin: "https://www.linkedin.com/in/manas-choubal/"
+    linkedin: "https://www.linkedin.com/in/manas-choubal/",
   },
   {
     avatarUrl:
@@ -189,7 +189,7 @@ const TeamMembersData: {
     numberOfCards: 0,
     twitter: "https://twitter.com/tanme_srivastav",
     instagram: "https://www.instagram.com/im_tanme/",
-    linkedin: "https://www.linkedin.com/in/tanme-s-09553a108/"
+    linkedin: "https://www.linkedin.com/in/tanme-s-09553a108/",
   },
   {
     avatarUrl:
@@ -199,7 +199,7 @@ const TeamMembersData: {
     department: "Engineering",
     numberOfCards: 0,
     twitter: "https://twitter.com/thevibhujoshi",
-    linkedin: "https://www.linkedin.com/in/vibhuj/"
+    linkedin: "https://www.linkedin.com/in/vibhuj/",
   },
 ];
 
