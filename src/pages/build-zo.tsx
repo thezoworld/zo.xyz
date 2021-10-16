@@ -5,7 +5,6 @@ import { FemaleHalf1, MaleHalf1 } from "../assets/avatars";
 import { BuildZoWorldDesktop, BuildZoWorldMob } from "../assets/backgrounds";
 import { BuildingZo2 } from "../assets/props";
 import { useWindowSize } from "../components/hooks";
-import DistributionCard from "../components/page-sections/buildZoWorld/components/DistributionCard";
 import { Flex } from "../components/structure";
 import { Container } from "../components/ui";
 import distcommunity from "./../../public/assets/dist-community.png";
