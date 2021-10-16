@@ -89,7 +89,7 @@ const TravelWithZo: React.FC<TravelWithZoProps> = () => {
             <FemaleWithMarshmellow
               ref={female2}
               className="relative"
-              style={{ height: width <= 768 ? "30vh" : "40vh", bottom: "10vh" }}
+              style={{ height: width <= 768 ? "30vh" : "40vh", bottom: "2vh" }}
             />
             <MaleSittingLog
               ref={male1}
