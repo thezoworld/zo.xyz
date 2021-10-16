@@ -1,4 +1,5 @@
 import ArrowLeft from "./ArrowLeft";
+import CheckCircle from "./CheckCircle";
 import Close from "./Close";
 import Discord from "./Discord";
 import Download from "./Download";
@@ -13,6 +14,7 @@ import Zo from "./Zo";
 export {
   Menu,
   Zo,
+  CheckCircle,
   Discord,
   TwitterFilled,
   Close,

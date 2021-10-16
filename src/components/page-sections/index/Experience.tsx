@@ -130,7 +130,8 @@ const Experience: React.FC<ExperienceProps> = () => {
           />
         </section>
         <span className="font-normal text-lg text-center mt-12">
-          as you complete quests along with earning collectables as NFTs.
+          as you complete quests, collect NFTs, <br />
+          and make new friends exploring the world.
         </span>
         <DoubleArrowDown className="h-8 mt-6" />
       </section>

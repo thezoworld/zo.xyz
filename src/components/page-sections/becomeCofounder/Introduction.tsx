@@ -32,7 +32,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
           We realize that when we build something of our own, work is far
           superior.
           <br />
-          Ownership, responsibility and self-driven culture are at the core of
+          Ownership, responsibility and self-driven culture are at core of the
           Zo World philosophy. <br />
           <br />
           And Web3 enables us to have thousands of founders for our vision.
