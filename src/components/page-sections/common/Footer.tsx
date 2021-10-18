@@ -11,7 +11,7 @@ const MISS_TEXT = [
   "free giveaways",
   "being a founder",
   "sharing ideas",
-  "Zo community /\\z/",
+  "Zo community \\z/",
 ];
 
 const Footer: React.FC<FooterProps> = () => {
