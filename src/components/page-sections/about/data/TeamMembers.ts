@@ -24,7 +24,7 @@ const TeamMembersData: {
       "https://cdn.zo.xyz/profile/141707/assets/1/acc1d43e-e9f8-40df-934d-7ca09ba59a0b/20210917070645.svg",
     name: "Chetan Singh Chouhan",
     alias: "Pofunder",
-    department: "CEO",
+    department: "COO",
     numberOfCards: 0,
     twitter: "https://twitter.com/pofunder",
     linkedin: "https://www.linkedin.com/in/chetan-chauhan-237a4a87/",
