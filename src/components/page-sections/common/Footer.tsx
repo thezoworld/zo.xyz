@@ -44,7 +44,8 @@ const Footer: React.FC<FooterProps> = () => {
             href="https://discord.zo.xyz/"
             target="_blank"
             rel="noreferrer"
-            className="mx-4 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl border-white border text-white"
+            className="mx-4 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl text-white"
+            style={{ backgroundColor: "#5865F2" }}
           >
             <Discord
               className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
@@ -56,7 +57,10 @@ const Footer: React.FC<FooterProps> = () => {
             href="https://twitter.zo.xyz/"
             target="_blank"
             rel="noreferrer"
-            className="mx-4 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl border-white border text-white"
+            className="mx-4 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl text-white"
+            style={{
+              backgroundColor: "#1da1f2",
+            }}
           >
             <TwitterFilled
               className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
