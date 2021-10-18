@@ -18,3 +18,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.headroom {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+.headroom-wrapper {
+  height: 0 !important;
+}
+
+.headroom.headroom--unfixed {
+  background-color: transparent !important;
+  position: fixed;
+}
+.headroom.headroom--pinned {
+  z-index: 60 !important;
+}
