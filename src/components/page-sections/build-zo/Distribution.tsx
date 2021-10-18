@@ -8,7 +8,7 @@ interface DisctributionProps {}
 
 const Distribution: React.FC<DisctributionProps> = () => {
   return (
-    <Container className="py-16">
+    <Container style={{ backgroundColor: "#B3E1E7" }} className="py-16">
       <h2 className="font-semibold text-2xl mb-6 text-center">Distribution</h2>
       <Flex col items="center" className="max-w-3xl w-full mx-auto px-4">
         <table className="table-fixed w-full">
