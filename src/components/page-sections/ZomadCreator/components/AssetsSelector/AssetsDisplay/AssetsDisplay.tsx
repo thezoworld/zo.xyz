@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { ArrowLeft, Download, Zap } from "../../../../../../assets/icons";
+import { getRandomItem } from "../../../../../../utils/array";
 
 interface AssetsDisplayProps {
   randomZobu: () => void;
@@ -20,6 +21,23 @@ const loadImage = (url: string) => {
   });
 };
 
+const COLOR_CODES = [
+  "#2D9C94",
+  "#17D0E8",
+  "#2953A6",
+  "#BF2A45",
+  "#590202",
+  "#202959",
+  "#F2B705",
+  "#532559",
+  "#6976BF",
+  "#F2AEC1",
+  "#26658C",
+  "#29A65F",
+  "#16B4F2",
+  "#A693BF",
+];
+
 const AssetsDisplay: React.FC<AssetsDisplayProps> = ({
   randomZobu,
   localBases,
@@ -31,13 +49,16 @@ const AssetsDisplay: React.FC<AssetsDisplayProps> = ({
 
   const download = async () => {
     let canvas = document.createElement("canvas");
-    canvas.height = 600;
-    canvas.width = 600;
+    canvas.height = 1024;
+    canvas.width = 1024;
     let context = canvas.getContext("2d");
     const backgroundImage = await loadImage(selectedBackground);
 
     if (svgRef.current) {
       const svgElement = svgRef.current;
+      const { width, height } = svgElement.getBoundingClientRect();
+      svgElement.style.width = "2000px";
+      svgElement.style.height = "5120px";
       let clonedSvgElement: any = svgElement.cloneNode(true);
       let outerHTML = clonedSvgElement.outerHTML,
         blob = new Blob([outerHTML], { type: "image/svg+xml;charset=utf-8" });
@@ -45,8 +66,10 @@ const AssetsDisplay: React.FC<AssetsDisplayProps> = ({
       let blobURL = URL.createObjectURL(blob);
       const svgImage = await loadImage(blobURL);
       if (context) {
-        context.drawImage(backgroundImage, -200, -400);
-        context.drawImage(svgImage, 200, 150, 200, 512);
+        // context.drawImage(backgroundImage, 0, 0);
+        context.fillStyle = getRandomItem(COLOR_CODES);
+        context.fillRect(0, 0, 1024, 1024);
+        context.drawImage(svgImage, -80, -225, 1200, 3072);
       }
       canvas.toBlob((blob) => {
         let data = window.URL.createObjectURL(blob);
@@ -55,6 +78,8 @@ const AssetsDisplay: React.FC<AssetsDisplayProps> = ({
         link.download = "feed.jpg";
         link.click();
       }, "image/jpeg");
+      svgElement.style.width = `${width}px`;
+      svgElement.style.height = `${height}px`;
     }
   };
 

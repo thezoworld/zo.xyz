@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
+import { getRandomItem, shuffleArray } from "../../../utils/array";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 import AssetsSelector from "./components/AssetsSelector";
@@ -37,18 +38,6 @@ const fetchSeed = async () => {
     background: responsePS.data.background,
   };
 };
-
-function shuffleArray(array: any[]) {
-  for (var i = array.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-}
-
-const getRandomItem = (array: any[]) =>
-  array[Math.floor(Math.random() * array.length)];
 
 const CATEGORY_PROBABILITY: any = {
   "3": 0.9,
@@ -304,7 +293,9 @@ const ZomadCreator: React.FC<ZomadCreatorProps> = () => {
 
   const handleBackgroundChange = (backgroundKey: string) => {
     const background: string =
-      backgrounds.find((bg) => bg.key === backgroundKey)?.file || "";
+      backgrounds.find((bg) => bg.key === backgroundKey)?.file_horizontal ||
+      backgrounds.find((bg) => bg.key === backgroundKey)?.file ||
+      "";
     setSelectedBackground(background);
   };
 
