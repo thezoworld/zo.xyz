@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Close, Zo, Discord, TwitterFilled } from "../../../assets/icons";
+import { Close, Discord, TwitterFilled, Zo } from "../../../assets/icons";
 import { Flex } from "../../structure";
 
 interface BurgerMenuProps {
@@ -11,7 +11,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
   return (
     <Flex
       col
-      className="fixed top-0 w-screen md:h-full overflow-auto md:max-h-screen z-50 items-end md:bg-gray-100 bg-black md:bg-opacity-80"
+      className="fixed top-0 w-screen md:h-full overflow-auto md:max-h-screen z-70 items-end md:bg-gray-100 bg-black md:bg-opacity-80"
     >
       <Flex
         col
