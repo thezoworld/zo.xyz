@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import Script from "next/script";
 import "tailwindcss/tailwind.css";
 import { Footer, Header } from "../components/page-sections/common";
+import "./../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

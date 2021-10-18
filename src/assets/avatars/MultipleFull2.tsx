@@ -2330,14 +2330,14 @@ function SvgComponent(
       <path
         d="M156.681 148.209L145.734 195.859"
         stroke="#809D9D"
-        stroke-width="0.674455"
-        stroke-miterlimit="10"
+        strokeWidth="0.674455"
+        strokeMiterlimit="10"
       />
       <path
         d="M135.708 151.933L127.816 193.466"
         stroke="#809D9D"
-        stroke-width="0.674455"
-        stroke-miterlimit="10"
+        strokeWidth="0.674455"
+        strokeMiterlimit="10"
       />
       <path
         d="M79.1341 159.715L101.856 168.766L109.721 165.286L112.371 167.255L116.809 171.437L129.954 175.983L130.008 179.665L118.421 176.462L128.167 184.589L125.948 188.42L113.916 182.471L119.986 188.622L117.699 190.8L112.27 185.944L100.359 181.918L97.7355 174.85L75.9102 167.485"

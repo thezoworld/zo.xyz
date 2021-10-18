@@ -173,50 +173,50 @@ function SvgComponent(
           opacity="0.41"
           d="M501.934 274.979C501.934 275.354 504.957 272.86 508.976 270.248C512.995 266.841 518.028 265.087 522.047 261.452C526.066 258.446 529.08 257.259 529.08 256.711"
           stroke="black"
-          stroke-width="0.913409"
-          stroke-miterlimit="10"
+          strokeWidth="0.913409"
+          strokeMiterlimit="10"
         />
         <path
           opacity="0.41"
           d="M491.77 258.538C491.77 258.903 494.784 256.419 498.803 253.797C502.831 250.399 507.855 248.636 511.874 245.01C515.902 242.005 518.916 240.818 518.916 240.27"
           stroke="black"
-          stroke-width="0.913409"
-          stroke-miterlimit="10"
+          strokeWidth="0.913409"
+          strokeMiterlimit="10"
         />
         <path
           opacity="0.41"
           d="M494.582 264.987C494.582 265.361 497.596 262.867 501.615 260.255C505.643 256.857 510.667 255.094 514.686 251.459C518.714 248.454 521.729 247.266 521.729 246.728"
           stroke="black"
-          stroke-width="0.913409"
-          stroke-miterlimit="10"
+          strokeWidth="0.913409"
+          strokeMiterlimit="10"
         />
         <path
           opacity="0.41"
           d="M498.848 269.791C498.848 270.166 501.871 267.672 505.89 265.06C509.909 261.662 514.942 259.899 518.961 256.264C522.98 253.259 525.994 252.071 525.994 251.532"
           stroke="black"
-          stroke-width="0.913409"
-          stroke-miterlimit="10"
+          strokeWidth="0.913409"
+          strokeMiterlimit="10"
         />
         <path
           opacity="0.41"
           d="M505.312 280.25C505.312 280.615 508.327 278.121 512.346 275.509C516.374 272.111 521.398 270.348 525.417 266.713C529.445 263.717 532.459 262.529 532.459 261.981"
           stroke="black"
-          stroke-width="0.913409"
-          stroke-miterlimit="10"
+          strokeWidth="0.913409"
+          strokeMiterlimit="10"
         />
         <path
           opacity="0.41"
           d="M509.043 284.497C509.043 284.862 512.057 282.378 516.076 279.756C520.095 276.358 525.128 274.604 529.147 270.969C533.166 267.964 536.19 266.777 536.19 266.229"
           stroke="black"
-          stroke-width="0.913409"
-          stroke-miterlimit="10"
+          strokeWidth="0.913409"
+          strokeMiterlimit="10"
         />
         <path
           opacity="0.41"
           d="M512.422 289.885C512.422 290.251 515.445 287.766 519.464 285.145C523.483 281.747 528.516 279.984 532.535 276.358C536.554 273.353 539.568 272.165 539.568 271.617"
           stroke="black"
-          stroke-width="0.913409"
-          stroke-miterlimit="10"
+          strokeWidth="0.913409"
+          strokeMiterlimit="10"
         />
       </g>
       <path

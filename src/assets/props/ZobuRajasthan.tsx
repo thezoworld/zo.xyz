@@ -384,197 +384,197 @@ function SvgComponent(
         <path
           d="M82.3672 105.144V121.367"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M82.3672 138.044V154.267"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M129.711 126.013V142.236"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M148.188 126.013V142.236"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M129.711 91.1548V107.377"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M148.188 91.1548V107.377"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M129.711 58.1323V74.355"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M148.188 49.042V65.2647"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M82.3672 170.945V187.168"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M82.3672 203.844V264.28"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M129.711 203.844V264.28"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M148.094 203.844V264.28"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M129.711 160.894V190.581"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M148.188 160.894V190.581"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M354.254 105.144V121.367"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M354.254 138.044V154.267"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M306.898 126.013V142.236"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M288.434 126.013V142.236"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M306.898 91.1548V107.377"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M288.434 91.1548V107.377"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M306.898 58.1323V74.355"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M288.434 49.042V65.2647"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M354.254 170.945V187.168"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M354.254 203.844V264.28"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M306.898 203.844V264.28"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M288.523 203.844V264.28"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M306.898 160.894V190.581"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M288.434 160.894V190.581"
           stroke="#594257"
-          stroke-width="1.01013"
-          stroke-miterlimit="10"
+          strokeWidth="1.01013"
+          strokeMiterlimit="10"
           stroke-linecap="round"
         />
         <path
