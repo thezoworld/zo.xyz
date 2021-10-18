@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { ArrowLeft, Download, Zap } from "../../../../../../assets/icons";
-import { getRandomItem } from "../../../../../../utils/array";
+import { ArrowLeft, Download, Zap } from "../../../../../assets/icons";
+import { getRandomItem } from "../../../../../utils/array";
 
 interface AssetsDisplayProps {
   randomZobu: () => void;
