@@ -3,8 +3,8 @@ import React, { useCallback, useEffect, useState } from "react";
 import { getRandomItem, shuffleArray } from "../../../utils/array";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
+import AssetsDisplay from "./components/AssetsDisplay";
 import AssetsSelector from "./components/AssetsSelector";
-import AssetsDisplay from "./components/AssetsSelector/AssetsDisplay";
 
 interface ZomadCreatorProps {}
 
@@ -398,7 +398,7 @@ const ZomadCreator: React.FC<ZomadCreatorProps> = () => {
   }, [categories, bases]);
 
   return (
-    <Flex className="fixed inset-0 bg-white z-60" items="stretch">
+    <Flex className="min-h-screen mt-18 w-full" items="stretch">
       <AssetsDisplay
         randomZobu={randomZobu}
         localBases={localBases}
@@ -406,7 +406,7 @@ const ZomadCreator: React.FC<ZomadCreatorProps> = () => {
         zobuLayers={zobuLayers}
         selectedBackground={selectedBackground}
       />
-      {/* <AssetsSelector
+      <AssetsSelector
         backgrounds={backgrounds}
         selectedBackground={selectedBackground}
         categories={categories}
@@ -415,7 +415,7 @@ const ZomadCreator: React.FC<ZomadCreatorProps> = () => {
         zobuLayers={zobuLayers}
         hiddenLayers={hiddenLayers}
         selectedBase={selectedBase}
-      /> */}
+      />
     </Flex>
   );
 };

@@ -6,7 +6,7 @@ interface createProps {}
 const create: React.FC<createProps> = () => {
   return (
     <section>
-      <header className="bg-orangy h-18 w-full" />
+      <header className="bg-orangy absolute top-0 left-0 right-0 h-18 w-full" />
       <ZomadCreator />
     </section>
   );
