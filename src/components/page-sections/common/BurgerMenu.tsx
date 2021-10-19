@@ -1,6 +1,13 @@
 import Link from "next/link";
 import React from "react";
-import { Close, Discord, TwitterFilled, Zo } from "../../../assets/icons";
+import {
+  Close,
+  Discord,
+  Instagram,
+  LinkedIn,
+  TwitterFilled,
+  Zo,
+} from "../../../assets/icons";
 import { Flex } from "../../structure";
 
 interface BurgerMenuProps {
@@ -75,28 +82,41 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
           href="https://discord.zo.xyz/"
           target="_blank"
           rel="noreferrer"
-          className="mx-auto mt-8 mb-5 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl border-white border text-white"
-          onClick={closeMenu}
+          className="mt-6 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl border border-white text-white"
+          // style={{ backgroundColor: "#5865F2" }}
         >
           <Discord
             className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
             fill="white"
           />
-          Discord
+          Join us on Discord
         </a>
-        <a
-          href="https://twitter.zo.xyz/"
-          target="_blank"
-          rel="noreferrer"
-          className="mx-auto flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl border-white border text-white"
-          onClick={closeMenu}
-        >
-          <TwitterFilled
-            className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
-            fill="white"
-          />
-          Twitter
-        </a>
+        <Flex items="center" justify="center" className="mt-6">
+          <a
+            href="https://twitter.zo.xyz/"
+            target="_blank"
+            rel="noreferrer"
+            className="mx-4"
+          >
+            <TwitterFilled className="w-6 h-6" fill="white" />
+          </a>
+          <a
+            href="https://instagram.zo.xyz/"
+            target="_blank"
+            rel="noreferrer"
+            className="mx-4"
+          >
+            <Instagram className="w-6 h-6" />
+          </a>
+          <a
+            href="https://linkedin.zo.xyz/"
+            target="_blank"
+            rel="noreferrer"
+            className="mx-4"
+          >
+            <LinkedIn className="w-6 h-6" fill="white" />
+          </a>
+        </Flex>
       </Flex>
     </Flex>
   );
