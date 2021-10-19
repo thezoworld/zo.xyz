@@ -32,7 +32,7 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
             <br />
             <br />
             Web3 will enable individuals and businesses to easily trust, work
-            and earn building the the Zo World.
+            and earn building the Zo World.
           </p>
           {/* <Link href="https://discord.zo.xyz">
               <p className="md:text-2xl mt-8 text-center md:text-left md:leading-10 leading-7 text-lg md:mt-8 text-orangy cursor-pointer">
