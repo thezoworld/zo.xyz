@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <section>
       <Headroom>
-        <header className="w-full mx-auto text-white flex items-center p-4 md:px-8 justify-between">
+        <header className="w-full mx-auto relative z-50 text-white flex items-center p-4 md:px-8 justify-between">
           <Link href="/" passHref>
             <a>
               <Zo className="w-10 h-10" fill="white" />

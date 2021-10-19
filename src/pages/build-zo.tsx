@@ -16,38 +16,43 @@ const BuildZo: React.FC<BuildZoProps> = () => {
   return (
     <section className="bg-white w-full">
       <Head>
-        <title>Build Zo World | The Zo World</title>
+        <meta name="title" content="Zo World | Build Zo World" />
+        <meta
+          name="description"
+          content="Help us build Zo World using any of your skills from being a community manager, coder to local host, experience provider, transport vendor and many more."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zo.xyz/build-zo" />
+        <meta property="og:title" content="Zo World | Build Zo World" />
+        <meta
+          property="og:description"
+          content="Help us build Zo World using any of your skills from being a community manager, coder to local host, experience provider, transport vendor and many more."
+        />
+        <meta
+          property="og:image"
+          content="https://cdn.zo.xyz/branding/zo_sunrise_background.jpg"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://zo.xyz/build-zo" />
+        <meta property="twitter:title" content="Zo World | Build Zo World" />
+        <meta
+          property="twitter:description"
+          content="Help us build Zo World using any of your skills from being a community manager, coder to local host, experience provider, transport vendor and many more."
+        />
+        <meta
+          property="twitter:image"
+          content="https://cdn.zo.xyz/branding/zo_sunrise_background.jpg"
+        />
+        <meta name="theme-color" content="#8ed1da" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@The_Zo_World" />
+        <title>Zo World | Build Zo World</title>
       </Head>
 
       <Introduction />
       <Allocation />
       <Distribution />
       <Conclusion />
-
-      {/* <Flex
-        items="end"
-        justify="around"
-        className="max-w-8xl px-4 mx-auto md:pt-0 pt-20 md:pb-0 pb-24"
-      >
-        <MaleHalf1 className="h-56 z-10 md:block hidden" />
-        <div className="text-xl font-bold text-center my-auto">
-          <p className="text-black pb-5">
-            Five people to reach 100 invites on our Discord will have earned the
-            first Zo-founder countries NFTs.
-          </p>
-          <p className="text-orangy">Rest coming soon!</p>
-        </div>
-        <FemaleHalf1 className="md:block hidden h-56" />
-      </Flex>
-      <Flex
-        col
-        items="center"
-        className="w-full md:-mt-7 -mt-12 h-4 relative z-1"
-        style={{
-          background:
-            "linear-gradient(90deg, #317ED8 0%, #2162AE 23.96%, #063F82 50%)",
-        }}
-      ></Flex> */}
     </section>
   );
 };

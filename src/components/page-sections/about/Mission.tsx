@@ -13,9 +13,9 @@ const Mission: React.FC<MissionProps> = () => {
       style={{ backgroundColor: "#b7e2e8" }}
     >
       {width <= 768 ? (
-        <AboutZoMob className="absolute bottom-0 w-full z-5" />
+        <AboutZoMob className="absolute bottom-0 w-full" />
       ) : (
-        <AboutZoDesktop className="absolute bottom-0 w-full z-5" />
+        <AboutZoDesktop className="absolute bottom-0 w-full" />
       )}
       <Flex
         col

@@ -30,7 +30,49 @@ const Home: NextPage = () => {
   return (
     <section className="overflow-x-hidden w-full h-full">
       <Head>
-        <title>Zo World | Follow your heart</title>
+        <meta
+          name="title"
+          content="Zo World | Travel Freely with help of Local Friends"
+        />
+        <meta
+          name="description"
+          content="Travel fearlessly with local friends across the world, go on adventures, complete quests, collect NFTs, become a builder
+and make new friends exploring the world. \z/."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zo.xyz/" />
+        <meta
+          property="og:title"
+          content="Zo World | Travel Freely with help of Local Friends"
+        />
+        <meta
+          property="og:description"
+          content="Travel fearlessly with local friends across the world, go on adventures, complete quests, collect NFTs, become a builder
+and make new friends exploring the world. \z/."
+        />
+        <meta
+          property="og:image"
+          content="https://cdn.zo.xyz/branding/zo_sunrise_background.jpg"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://zo.xyz/" />
+        <meta
+          property="twitter:title"
+          content="Zo World | Travel Freely with help of Local Friends"
+        />
+        <meta
+          property="twitter:description"
+          content="Travel fearlessly with local friends across the world, go on adventures, complete quests, collect NFTs, become a builder
+and make new friends exploring the world. \z/"
+        />
+        <meta
+          property="twitter:image"
+          content="https://cdn.zo.xyz/branding/zo_sunrise_background.jpg"
+        />
+        <meta name="theme-color" content="#ff683c" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@The_Zo_World" />
+        <title>Zo World | Travel Freely with help of Local Friends</title>
       </Head>
       <Welcome />
       <TravelLocalFriends />

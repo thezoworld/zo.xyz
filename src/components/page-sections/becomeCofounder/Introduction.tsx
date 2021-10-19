@@ -16,13 +16,13 @@ const Introduction: React.FC<IntroductionProps> = () => {
       style={{ backgroundColor: "#a5daf3" }}
     >
       {width <= 768 ? (
-        <BecomeFounderMob className="absolute bottom-0 z-5" />
+        <BecomeFounderMob className="absolute bottom-0" />
       ) : (
-        <BecomeFounderDesktop className="absolute bottom-0 z-5" />
+        <BecomeFounderDesktop className="absolute bottom-0" />
       )}
       <Flex
         col
-        className="text-black md:text-white md:items-center items-start text-center py-24 md:p-0 px-12 md:px-0 px-3"
+        className="text-black md:items-center items-start text-center py-24 md:p-0 px-12 md:px-0 px-3"
         justify="center"
       >
         <h1 className="md:text-5xl text-xl font-bold z-10 md:pt-56 mt-10">
