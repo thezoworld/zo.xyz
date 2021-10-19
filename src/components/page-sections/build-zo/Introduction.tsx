@@ -12,7 +12,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
   const { width } = useWindowSize();
   return (
     <section
-      className="w-full h-screen py-20 relative overflow-hidden"
+      className="w-full min-h-screen py-20 relative overflow-hidden"
       style={{
         background: "#8ed1da",
       }}
@@ -26,7 +26,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
         <h1 className="md:text-3xl text-2xl font-bold z-10 mt-12 text-left w-full md:text-center">
           Build Zo World
         </h1>
-        <h1 className="md:text-xl max-w-2xl mx-auto text-md leading-relaxed md:leading-relaxed mt-8 text-left md:text-center md:mt-8 z-10">
+        <h1 className="md:text-xl max-w-2xl h-screen -mb-56 md:-mb-16 mx-auto text-md leading-relaxed md:leading-relaxed mt-8 text-left md:text-center md:mt-8 z-10">
           We are a community of local hosts, designers, coders, influencers,
           entrepreneurs and other passionate people following their heart.
           <br />
@@ -35,6 +35,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
           members.
           <br />
           <br />
+          But there can only be 11,111 founders.
         </h1>
       </Flex>
     </section>
