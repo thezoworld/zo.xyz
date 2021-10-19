@@ -9,7 +9,7 @@ const Mission: React.FC<MissionProps> = () => {
   const { width } = useWindowSize();
   return (
     <section
-      className="h-screen w-full flex flex-col items-center relative"
+      className="md:h-screen w-full flex flex-col items-center relative"
       style={{ backgroundColor: "#b7e2e8" }}
     >
       {width <= 768 ? (
@@ -28,7 +28,7 @@ const Mission: React.FC<MissionProps> = () => {
           About Zo World
         </h1>
         <p
-          className="max-w-2xl mx-auto leading-relaxed z-10 pt-8 md:pt-0"
+          className="max-w-2xl mx-auto h-screen md:h-auto leading-relaxed z-10 pt-8 md:pt-0"
           style={{ paddingBottom: width > 768 ? "8vh" : "" }}
         >
           We are building the Zo World as a community led travel ecosystem that
