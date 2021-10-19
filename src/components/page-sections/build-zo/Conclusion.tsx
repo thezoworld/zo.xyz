@@ -8,7 +8,7 @@ interface IntroductionProps {}
 const Introduction: React.FC<IntroductionProps> = () => {
   return (
     <div>
-      <section className="max-w-4xl mx-auto px-4 pt-14 md:pt-24 pb-10 md:text-lg text-center">
+      <section className="max-w-4xl mx-auto md:px-4 px-12 pt-14 md:pt-24 pb-10 md:text-lg text-left md:text-center">
         We’ll soon open opportunties for even more community members across a
         range of challenges we come across towards building the Zo World.
       </section>
