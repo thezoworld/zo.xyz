@@ -6,8 +6,10 @@ import {
   FemaleLeftFull1,
   MaleRightFull1,
 } from "../../../assets/avatars";
+import { Discord } from "../../../assets/icons";
 import { Globe, Sky } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
+import { Button } from "../../ui";
 
 interface TravelLocalFriendsProps {}
 
@@ -101,6 +103,19 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
       >
         <span className="mb-2">Travel fearlessly with the help of</span>
         <span className="font-semibold">local friends around the world.</span>
+        <a
+          href="https://discord.zo.xyz/"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 flex items-center justify-center px-6 py-4 md:px-8 md:py-4 text-sm md:text-base leading-none rounded-xl border border-white text-white"
+          // style={{ backgroundColor: "#5865F2" }}
+        >
+          <Discord
+            className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
+            fill="white"
+          />
+          Join our community of Travellers
+        </a>
       </h2>
       <FemaleLeftFull1
         ref={female1}
