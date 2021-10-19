@@ -937,56 +937,56 @@ function SvgComponent(
         <path
           d="M277.533 639.059L256.709 639.743"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M252.683 647.039L237.56 647.571"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M290.073 617.094L156.391 621.198"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M176.607 637.768L121.432 639.44"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M327.922 641.643L312.95 642.099"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M136.632 608.051L117.557 608.583"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M93.0103 655.399L118.698 654.639"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M123.635 629.104L110.791 629.484"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M100.761 629.787L79.2529 630.471"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <g opacity="0.31">
           <rect
@@ -1008,56 +1008,56 @@ function SvgComponent(
         <path
           d="M1165.26 638.297L1186.01 639.513"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1189.88 647.037L1205.01 647.873"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1153.25 616.029L1286.78 623.781"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1266.11 639.816L1321.21 643.084"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1114.79 639.514L1129.69 640.35"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1306.92 611.24L1326 612.38"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1349.25 659.805L1323.56 658.361"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1319.31 632.674L1332.15 633.434"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1342.18 633.965L1363.62 635.257"
           stroke="#111D36"
-          stroke-width="0.759989"
-          stroke-miterlimit="10"
+          strokeWidth="0.759989"
+          strokeMiterlimit="10"
         />
         <path
           d="M1214.96 446.324H1264.67L1262.99 467.148L1269.91 463.576V486.756L1261.47 483.564L1259.95 499.979C1259.73 502.031 1258.06 503.551 1256 503.551H1249.32L1248.71 519.587L1241.94 530.531L1236.09 518.599L1235.26 503.551H1225.15C1223.1 503.551 1221.42 501.955 1221.2 499.979L1219.6 482.956L1212 486.756L1209.72 466.084L1217.93 468.82L1214.96 446.324Z"
