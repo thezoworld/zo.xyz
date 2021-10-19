@@ -9,12 +9,8 @@ const TravelWithZoClub: NextPage = () => {
       <Head>
         <title>Travel with Zo Club | The Zo World</title>
       </Head>
-      <header className="bg-orangy h-18 w-full" />
-      <Widget
-        id="fctEvmR6"
-        className="w-full"
-        style={{ height: "calc(100vh - 5rem)" }}
-      />
+      <header className="bg-orangy absolute top-0 inset-x-0 h-18 w-full" />
+      <Widget id="fctEvmR6" className="w-full h-screen pt-18" />
     </section>
   );
 };
