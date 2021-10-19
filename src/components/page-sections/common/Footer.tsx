@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Fields3 } from "../../../assets/backgrounds";
-import { Discord, TwitterFilled } from "../../../assets/icons";
+import {
+  Discord,
+  Instagram,
+  LinkedIn,
+  TwitterFilled,
+} from "../../../assets/icons";
 import { TreesLeft, TreesRight } from "../../../assets/props";
 import { Flex } from "../../structure";
 
@@ -39,34 +44,43 @@ const Footer: React.FC<FooterProps> = () => {
           on {MISS_TEXT[index]}
         </h4>
 
-        <Flex items="center" className="mt-4 mb-8 md:mb-0">
-          <a
-            href="https://discord.zo.xyz/"
-            target="_blank"
-            rel="noreferrer"
-            className="mx-4 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl text-white"
-            style={{ backgroundColor: "#5865F2" }}
-          >
-            <Discord
-              className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
-              fill="white"
-            />
-            Discord
-          </a>
+        <a
+          href="https://discord.zo.xyz/"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-8 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl text-white"
+          style={{ backgroundColor: "#5865F2" }}
+        >
+          <Discord
+            className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
+            fill="white"
+          />
+          Join us on Discord
+        </a>
+        <Flex items="center" className="mt-4">
           <a
             href="https://twitter.zo.xyz/"
             target="_blank"
             rel="noreferrer"
-            className="mx-4 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl text-white"
-            style={{
-              backgroundColor: "#1da1f2",
-            }}
+            className="mx-4"
           >
-            <TwitterFilled
-              className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
-              fill="white"
-            />
-            Twitter
+            <TwitterFilled className="w-6 h-6" fill="white" />
+          </a>
+          <a
+            href="https://instagram.zo.xyz/"
+            target="_blank"
+            rel="noreferrer"
+            className="mx-4"
+          >
+            <Instagram className="w-6 h-6" />
+          </a>
+          <a
+            href="https://linkedin.zo.xyz/"
+            target="_blank"
+            rel="noreferrer"
+            className="mx-4"
+          >
+            <LinkedIn className="w-6 h-6" fill="white" />
           </a>
         </Flex>
       </Flex>
