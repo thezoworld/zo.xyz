@@ -27,8 +27,8 @@ const Believers: React.FC<BelieversProps> = () => {
               their support by minting a 'Founders of the Zo World' NFT.
               <br />
               <br />
-              5,555 of the only 11,111 founder NFTs will be available for public
-              minting, 31st Oct 2021 onwards.
+              5,555 of the only 11,111 founders NFTs will be available for
+              public minting, 31st Oct 2021 onwards.
             </p>
           </Flex>
         </Flex>
