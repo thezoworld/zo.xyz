@@ -40,16 +40,14 @@ const Footer: React.FC<FooterProps> = () => {
     >
       <Flex col items="center" className="mx-4 w-full mt-12">
         <h3 className="font-semibold text-2xl">Don't miss out</h3>
-        <h4 className="font-semibold text-xl mt-2 mb-4">
-          on {MISS_TEXT[index]}
-        </h4>
+        <h4 className="font-semibold text-xl mt-2">on {MISS_TEXT[index]}</h4>
 
         <a
           href="https://discord.zo.xyz/"
           target="_blank"
           rel="noreferrer"
-          className="mt-8 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl text-white"
-          style={{ backgroundColor: "#5865F2" }}
+          className="mt-6 flex items-center justify-center px-6 py-2 md:px-8 md:py-4 md:text-lg leading-none rounded-xl border border-white text-white"
+          // style={{ backgroundColor: "#5865F2" }}
         >
           <Discord
             className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
@@ -57,7 +55,7 @@ const Footer: React.FC<FooterProps> = () => {
           />
           Join us on Discord
         </a>
-        <Flex items="center" className="mt-4">
+        <Flex items="center" className="mt-6">
           <a
             href="https://twitter.zo.xyz/"
             target="_blank"
