@@ -1,12 +1,21 @@
 import axios from "axios";
-import React, { useCallback, useEffect, useState } from "react";
-import { getRandomItem, shuffleArray } from "../../../utils/array";
-import { useWindowSize } from "../../hooks";
-import { Flex } from "../../structure";
-import AssetsDisplay from "./components/AssetsDisplay";
-import AssetsSelector from "./components/AssetsSelector";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { Flex } from "../../components/structure";
+import { Button } from "../../components/ui";
+import { getRandomItem, shuffleArray } from "../../utils/array";
 
-interface ZomadGeneratorProps {}
+const loadImage = (url: string) => {
+  return new Promise<HTMLImageElement>((resolve, revoke) => {
+    let img = new Image();
+    img.onload = () => {
+      resolve(img);
+    };
+    img.crossOrigin = "Anonymous";
+    img.src = url;
+  });
+};
+
+interface GenerateProps {}
 
 const fetchSeed = async () => {
   const response: any = await axios.get(
@@ -24,10 +33,24 @@ const fetchSeed = async () => {
   return { ...response.data.avatar };
 };
 
-const ZomadGenerator: React.FC<ZomadGeneratorProps> = () => {
-  const { isPortrait } = useWindowSize();
+const COLOR_CODES = [
+  "#2D9C94",
+  "#17D0E8",
+  "#2953A6",
+  "#BF2A45",
+  "#590202",
+  "#202959",
+  "#F2B705",
+  "#532559",
+  "#6976BF",
+  "#F2AEC1",
+  "#26658C",
+  "#29A65F",
+  "#16B4F2",
+  "#A693BF",
+];
 
-  const [backgrounds, setBackgrounds] = useState<Background[]>([]);
+const Generate: React.FC<GenerateProps> = () => {
   const [bases, setBases] = useState<AvatarBase[]>([]);
   const [categories, setCategories] = useState<AvatarCategory[]>([]);
   const [categoryProbabilities, setCategoryProbabilities] = useState<any>({});
@@ -45,16 +68,58 @@ const ZomadGenerator: React.FC<ZomadGeneratorProps> = () => {
   const [zobuLayers, setZobuLayers] = useState<any[]>([]);
   const [selectedBase, setSelectedBase] = useState(1);
 
+  const svgRef = useRef<SVGSVGElement>(null);
+
+  const download = async () => {
+    let canvas = document.createElement("canvas");
+    canvas.height = 1024;
+    canvas.width = 1024;
+    let context = canvas.getContext("2d");
+
+    if (svgRef.current) {
+      const svgElement = svgRef.current;
+      const { width, height } = svgElement.getBoundingClientRect();
+      svgElement.style.width = "2000px";
+      svgElement.style.height = "5120px";
+      let clonedSvgElement: any = svgElement.cloneNode(true);
+      let outerHTML = clonedSvgElement.outerHTML,
+        blob = new Blob([outerHTML], { type: "image/svg+xml;charset=utf-8" });
+      let URL = window.URL || window.webkitURL || window;
+      let blobURL = URL.createObjectURL(blob);
+      const svgImage = await loadImage(blobURL);
+      if (context) {
+        // context.drawImage(backgroundImage, 0, 0);
+        context.fillStyle = selectedBackground;
+        context.fillRect(0, 0, 1024, 1024);
+        context.drawImage(svgImage, -80, -225, 1200, 3072);
+      }
+      canvas.toBlob((blob) => {
+        let data = window.URL.createObjectURL(blob);
+        let link = document.createElement("a");
+        link.href = data;
+        link.download = "feed.jpg";
+        link.click();
+      }, "image/jpeg");
+      svgElement.style.width = `${width}px`;
+      svgElement.style.height = `${height}px`;
+    }
+  };
+
   const getCategory = (name: string) => categories.find((c) => c.name === name);
 
   useEffect(() => {
     fetchSeed().then((res) => {
-      setBackgrounds(res.background);
       setBases(res.bases);
       setCategories(res.categories);
       setCategoryProbabilities(res.probabilities);
     });
   }, []);
+
+  useEffect(() => {
+    if (!loadingAssets) {
+      randomZobu();
+    }
+  }, [loadingAssets]);
 
   const fetchAsset = async (category: number, asset: number) => {
     if (localLayers[category] && localLayers[category][asset]) {
@@ -266,14 +331,6 @@ const ZomadGenerator: React.FC<ZomadGeneratorProps> = () => {
     [fetchAsset]
   );
 
-  const handleBackgroundChange = (backgroundKey: string) => {
-    const background: string =
-      backgrounds.find((bg) => bg.key === backgroundKey)?.file_horizontal ||
-      backgrounds.find((bg) => bg.key === backgroundKey)?.file ||
-      "";
-    setSelectedBackground(background);
-  };
-
   const primalLayers = useCallback(() => {
     createLayers();
     const handCategory = getCategory("Hand");
@@ -308,19 +365,15 @@ const ZomadGenerator: React.FC<ZomadGeneratorProps> = () => {
           }
         }
       });
-    const randomBG = getRandomItem(backgrounds);
-    let bgFile = randomBG.file_horizontal;
-    if (isPortrait) {
-      bgFile = randomBG.file_vertical;
-    }
+
     shuffleArray(randomLayers);
-    setSelectedBackground(bgFile);
+    setSelectedBackground(getRandomItem(COLOR_CODES));
     primalLayers();
     randomLayers.forEach((_layer) => {
       handleChange(_layer[0], _layer[1]);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedBase, categories, isPortrait, handleChange, hiddenLayers]);
+  }, [selectedBase, categories, handleChange, hiddenLayers]);
 
   useEffect(() => {
     switch (selectedBase) {
@@ -362,7 +415,6 @@ const ZomadGenerator: React.FC<ZomadGeneratorProps> = () => {
         .finally(() => {
           if (mounted) {
             setLoadingAssets(false);
-            randomZobu();
           }
         });
     }
@@ -373,26 +425,65 @@ const ZomadGenerator: React.FC<ZomadGeneratorProps> = () => {
   }, [categories, bases]);
 
   return (
-    <Flex className="min-h-screen mt-18 w-full" items="stretch">
-      <AssetsDisplay
-        randomZobu={randomZobu}
-        localBases={localBases}
-        selectedBase={selectedBase}
-        zobuLayers={zobuLayers}
-        selectedBackground={selectedBackground}
-      />
-      <AssetsSelector
-        backgrounds={backgrounds}
-        selectedBackground={selectedBackground}
-        categories={categories}
-        handleBackgroundChange={handleBackgroundChange}
-        handleChange={handleChange}
-        zobuLayers={zobuLayers}
-        hiddenLayers={hiddenLayers}
-        selectedBase={selectedBase}
-      />
-    </Flex>
+    <section className="h-screen flex flex-col">
+      <header className="bg-orangy absolute top-0 left-0 right-0 h-18 w-full" />
+      <Flex
+        col
+        className="mt-18 w-full flex-grow-0 flex-shrink-0"
+        items="center"
+      >
+        <h1
+          className="text-2xl md:text-4xl font-black py-8"
+          onClick={randomZobu}
+        >
+          Get your Zomad Avatar!
+        </h1>
+      </Flex>
+      <Flex items="stretch" className="flex-1 md:flex-row flex-col">
+        <Flex items="center" justify="center" className="flex-1">
+          <figure className="w-72 h-72 border-8 relative overflow-hidden border-white shadow-md rounded-lg">
+            <div
+              className="absolute inset-0 rounded-lg"
+              style={{ backgroundColor: selectedBackground }}
+            />
+            <svg
+              className="pointer-events-none z-10 absolute no-svg-animation mx-auto"
+              ref={svgRef}
+              style={{ top: "-16px" }}
+              id="zomad"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="154 0 200 512"
+            >
+              <g
+                id={String(selectedBase)}
+                dangerouslySetInnerHTML={{ __html: localBases[selectedBase] }}
+              ></g>
+              {zobuLayers &&
+                zobuLayers.map((layer) => {
+                  if (layer.svg) {
+                    return (
+                      <g
+                        id={layer.category}
+                        key={layer.category}
+                        dangerouslySetInnerHTML={{ __html: layer.svg }}
+                      ></g>
+                    );
+                  } else {
+                    return <g key={layer.category}></g>;
+                  }
+                })}
+            </svg>
+          </figure>
+        </Flex>
+        <Flex col items="center" justify="center" className="flex-1">
+          <Button onClick={download}>Download your Zomad Avatar</Button>
+          <Button className="mt-16" onClick={randomZobu}>
+            Randomize
+          </Button>
+        </Flex>
+      </Flex>
+    </section>
   );
 };
 
-export default ZomadGenerator;
+export default Generate;
