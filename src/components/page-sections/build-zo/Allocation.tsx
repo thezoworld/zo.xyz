@@ -8,24 +8,22 @@ interface AllocationProps {}
 
 const Allocation: React.FC<AllocationProps> = () => {
   return (
-    <Container style={{ backgroundColor: "#B3E1E7" }} className="px-4">
+    <Container className="px-4">
       <Flex
         items="center"
-        className="md:flex-row flex-col py-16"
+        className="md:flex-row flex-col py-16 px-8 md:px-0"
         justify="between"
       >
         <div className="max-w-2xl w-full">
-          <h2 className="font-semibold text-2xl mb-6 text-center md:text-left">
-            Allocation
-          </h2>
-          <p className="text-center md:text-left pb-6 md:pb-0">
-            As the minting of first 5555 NFTs is ongoing we have started
-            allocation of the rest of the (5555) NFTs via separate contract
-            which will reserve your spot and be allocated post minting is
-            complete.
+          <h2 className="font-semibold text-2xl mb-6 text-left">Allocation</h2>
+          <p className="text-left pb-8 md:pb-0">
+            We're recognizing these early crazy souls over the coming months
+            with 'Founders of the Zo World' NFTs.
             <br />
-            If any of you have any suggestions/questions on the distribution we
-            would love to have your inputs.
+            <br />
+            The category wise distribution for these is below. We'll soon be
+            adding quests in each category for individuals to complete and
+            become a founder
           </p>
         </div>
         <Image src={founderCards1} alt="" className="h-64" />

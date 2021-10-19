@@ -126,7 +126,7 @@ const Experience: React.FC<ExperienceProps> = () => {
           </span>
           <MultipleFull2
             className="absolute w-full"
-            style={{ height: width <= 768 ? "50vh" : "60vh", bottom: "-20vh" }}
+            style={{ height: width <= 768 ? "50vh" : "60vh", bottom: "-25vh" }}
           />
         </section>
         <span className="font-normal text-lg text-center mt-12">
