@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Church,
-  ThreeZobuStanding2,
-  ZoAppOnPhone,
-} from "../../../assets/props";
+import { Church } from "../../../assets/props";
 import { Flex } from "../../structure";
 import { Container } from "../../ui";
 
@@ -12,16 +8,16 @@ interface EarnCardsProps {}
 const EarnCards: React.FC<EarnCardsProps> = () => {
   return (
     <section>
-      <Container className="md:h-144 h-auto relative px-4">
+      <Container className="h-full relative px-4">
         <Flex
           col
           justify="center"
-          className="h-full md:pt-24 md:pb-12 items-start md:items-center pb-0 pt-0 px-8 md:px-0 w-full text-black md:ml-10"
+          className="h-full md:py-12 py-8 items-start md:items-center px-8 md:px-0 w-full text-black md:ml-10"
         >
           <h1 className="md:text-2xl mt-8 md:text-center text-left w-full md:leading-10 leading-7 text-lg md:mt-8 font-bold">
             Tokenomics
           </h1>
-          <p className="mt-8 md:text-center md:mt-8">
+          <p className="my-8 md:text-center">
             As we learn to work deeper with partners and service providers,
             we’ll launch the first draft paper for Zoconomics of the Zo World.
             <br />
@@ -40,21 +36,23 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
               </p>
             </Link> */}
         </Flex>
-        <Flex className="md:flex-row flex-col md:pt-12 pt-8 md:mx-0">
+        <Flex className="md:flex-row flex-col md:py-2 px-8 md:px-0">
           <Flex
             col
-            className="h-full md:pt-20 pt-0 md:pb-24 md:items-start items-center md:w-1/2 overflow-hidden order-2 md:order-1"
+            justify="center"
+            className="h-full md:items-start items-center md:w-1/2 overflow-hidden order-2 md:order-1"
           >
-            <Church className="md:absolute md:-left-0 md:-bottom-0 md:w-2/3 w-1/2" />
+            <Church className="md:absolute md:left-0 md:bottom-0 md:w-2/3 w-1/2" />
           </Flex>
           <Flex
             col
-            className="h-full md:pt-0 pb-10 pt-0 md:px-0 px-8 items-start md:w-1/2 text-black md:ml-10 order-1 md:order-2"
+            justify="center"
+            className="h-full md:py-10 items-start md:w-1/2 text-black md:ml-10 order-1 md:order-2"
           >
-            <h1 className="md:text-2xl mt-8 text-left md:leading-10 leading-7 text-lg md:mt-8 font-bold">
+            <h1 className="md:text-2xl text-left py-4 md:leading-10 leading-7 text-lg font-bold">
               AR & much more
             </h1>
-            <p className="mt-8 text-left  md:mt-8">
+            <p className="py-4 text-left">
               We’re building our location and AR expertise for helping all NFT
               and Web3 projects make the most of the real world by creating
               experiences on the Zo ecosystem across the globe.
@@ -72,7 +70,7 @@ const EarnCards: React.FC<EarnCardsProps> = () => {
         </Flex>
       </Container>
       <Container
-        className="pt-24 mt-8 md:mt-0 pb-24 text-left px-12 md:text-center md:px-0 text-white"
+        className="py-20 text-left px-12 md:text-center md:px-0 text-white"
         style={{ background: "#A3C550" }}
       >
         <h1 className="md:text-2xl md:text-center text-left w-full md:leading-10 leading-7 text-lg mb-8 font-bold">

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { ZobuPLayingCards } from "../../../assets/props";
 import { Flex } from "../../structure";
