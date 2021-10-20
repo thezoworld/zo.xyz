@@ -207,28 +207,28 @@ const Generate: React.FC<GenerateProps> = () => {
     for (const category in categories) {
       if (categories.hasOwnProperty(category)) {
         const indieCat = categories[category];
-        if (WORKING_LAYERS.indexOf(Number(indieCat.id)) !== 1) {
-          c[indieCat.id] = {};
-          for (const asset of indieCat.assets) {
-            try {
-              if (Object.keys(asset).length && asset.file) {
-                c[indieCat.id][asset.id] = await fetchAsset(
-                  indieCat.id,
-                  asset.id
-                );
-              } else {
-                c[indieCat.id][asset.id] = null;
-              }
-            } catch (error) {
-              console.log(error);
+        c[indieCat.id] = {};
+        for (const asset of indieCat.assets) {
+          try {
+            if (Object.keys(asset).length && asset.file) {
+              c[indieCat.id][asset.id] = await fetchAsset(
+                indieCat.id,
+                asset.id
+              );
+            } else {
               c[indieCat.id][asset.id] = null;
             }
+          } catch (error) {
+            console.log(error);
+            c[indieCat.id][asset.id] = null;
           }
         }
       }
     }
     setLocalLayers(c);
-    setTimeout(() => {});
+    setTimeout(() => {
+      randomZobu();
+    }, 500);
   };
 
   const createLayers = () => {
