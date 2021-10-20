@@ -226,9 +226,6 @@ const Generate: React.FC<GenerateProps> = () => {
       }
     }
     setLocalLayers(c);
-    setTimeout(() => {
-      randomZobu();
-    }, 500);
   };
 
   const createLayers = () => {
@@ -362,8 +359,12 @@ const Generate: React.FC<GenerateProps> = () => {
         const assetsAccesible = _category.assets.filter(
           (a) => a.bases.indexOf(newBase) !== -1
         );
-        const randomAsset =
+        let randomAsset =
           assetsAccesible[Math.floor(Math.random() * assetsAccesible.length)];
+        if (randomAsset == null) {
+          randomAsset =
+            assetsAccesible[Math.floor(Math.random() * assetsAccesible.length)];
+        }
         const categoryProbability = categoryProbabilities[_category.id];
         if (categoryProbability) {
           const shouldAppear = Math.random() <= categoryProbability;
@@ -377,12 +378,15 @@ const Generate: React.FC<GenerateProps> = () => {
     shuffleArray(randomLayers);
     setSelectedBackground(getRandomItem(backgroundColors));
     primalLayers();
-    randomLayers.forEach((_layer) => {
-      handleChange(_layer[0], _layer[1]);
-    });
     setTimeout(() => {
-      setLoadingAssets(false);
-    }, 2000);
+      randomLayers.forEach((_layer) => {
+        handleChange(_layer[0], _layer[1]);
+      });
+      setTimeout(() => {
+        setLoadingAssets(false);
+      }, 1000);
+    }, 1000);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categories, handleChange]);
 
