@@ -54,7 +54,6 @@ const Generate: React.FC<GenerateProps> = () => {
   const [bases, setBases] = useState<AvatarBase[]>([]);
   const [categories, setCategories] = useState<AvatarCategory[]>([]);
   const [categoryProbabilities, setCategoryProbabilities] = useState<any>({});
-  const [hiddenLayers, setHiddenLayers] = useState<string[]>(["Base", "Hand"]);
 
   const [localLayers, setLocalLayers] = useState<any>({});
   const [localBases, setLocalBases] = useState<any>({});
@@ -348,11 +347,18 @@ const Generate: React.FC<GenerateProps> = () => {
   const randomZobu = useCallback(() => {
     const _categories = [...categories];
     const randomLayers: any[] = [];
+    const newBase = getRandomItem([1, 2]);
+    const hiddenLayers =
+      newBase === 1
+        ? ["Base", "Hand"]
+        : ["Base", "Hand", "Facial Hair", "Hats"];
+    handleBaseChange(newBase);
+
     _categories
       .filter((c) => hiddenLayers.indexOf(c.name) === -1)
       .forEach((_category) => {
         const assetsAccesible = _category.assets.filter(
-          (a) => a.bases.indexOf(selectedBase) !== -1
+          (a) => a.bases.indexOf(newBase) !== -1
         );
         const randomAsset =
           assetsAccesible[Math.floor(Math.random() * assetsAccesible.length)];
@@ -373,20 +379,7 @@ const Generate: React.FC<GenerateProps> = () => {
       handleChange(_layer[0], _layer[1]);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedBase, categories, handleChange, hiddenLayers]);
-
-  useEffect(() => {
-    switch (selectedBase) {
-      case 1:
-        setHiddenLayers(["Base", "Hand"]);
-        break;
-      case 2:
-        setHiddenLayers(["Base", "Hand", "Facial Hair", "Hats"]);
-        break;
-      default:
-        setHiddenLayers(["Base", "Hand"]);
-    }
-  }, [selectedBase]);
+  }, [categories, handleChange]);
 
   useEffect(() => {
     if (categories.length) {
