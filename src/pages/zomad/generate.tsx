@@ -105,10 +105,10 @@ const Generate: React.FC<GenerateProps> = () => {
 
   useEffect(() => {
     fetchSeed().then((res) => {
-      setBases(res.bases);
-      setCategories(res.categories);
       setCategoryProbabilities(res.probabilities);
       setBackgroundColors(res.background.colors);
+      setBases(res.bases);
+      setCategories(res.categories);
     });
   }, []);
 
@@ -226,7 +226,7 @@ const Generate: React.FC<GenerateProps> = () => {
       }
     }
     setLocalLayers(c);
-    setTimeout(randomZobu, 2000);
+    return true;
   };
 
   const createLayers = () => {
@@ -336,7 +336,6 @@ const Generate: React.FC<GenerateProps> = () => {
   const randomZobu = () => {
     setLoadingText("Shuffling ...");
     setLoadingAssets(true);
-    const _categories = [...categories];
     const randomLayers: any[] = [];
     const newBase = getRandomItem([1, 2]);
     const hiddenLayers = newBase === 1 ? [1, 9] : [1, 9, 2, 5];
@@ -344,7 +343,7 @@ const Generate: React.FC<GenerateProps> = () => {
     setSelectedBase(newBase);
     setSelectedBackground(getRandomItem(backgroundColors));
 
-    _categories
+    categories
       .filter(
         (c) =>
           hiddenLayers.indexOf(+c.id) === -1 &&
@@ -354,11 +353,9 @@ const Generate: React.FC<GenerateProps> = () => {
         const assetsAccesible = _category.assets.filter(
           (a) => a.bases.indexOf(newBase) !== -1
         );
-        let randomAsset =
-          assetsAccesible[Math.floor(Math.random() * assetsAccesible.length)];
+        let randomAsset = getRandomItem(assetsAccesible);
         if (randomAsset == null) {
-          randomAsset =
-            assetsAccesible[Math.floor(Math.random() * assetsAccesible.length)];
+          randomAsset = getRandomItem(assetsAccesible);
         }
         const categoryProbability = categoryProbabilities[_category.id];
         if (categoryProbability) {
@@ -387,11 +384,6 @@ const Generate: React.FC<GenerateProps> = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categories]);
 
-  const handleBaseChange = (_base: number) => {
-    primalLayers();
-    setSelectedBase(_base);
-  };
-
   useEffect(() => {
     let mounted = true;
     if (categories.length && bases.length) {
@@ -400,14 +392,12 @@ const Generate: React.FC<GenerateProps> = () => {
       downloadLayers()
         .then(() => {
           console.log("Downloaded Assets...");
+          randomZobu();
         })
         .catch((e) => {
           console.log("Assets downloading failed");
         })
-        .finally(() => {
-          if (mounted) {
-          }
-        });
+        .finally(() => {});
     }
     return () => {
       mounted = false;
