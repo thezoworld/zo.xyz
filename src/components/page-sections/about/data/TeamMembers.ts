@@ -74,7 +74,7 @@ const TeamMembersData: {
     avatarUrl:
       "https://cdn.zo.xyz/profile/17401/assets/1/4b45d857-d5c6-4755-8eee-109382d70df0/20210526122314.svg",
     name: "Gaurav Goyal",
-    alias: "MasterChef",
+    alias: "MasterChief",
     department: "Engineering",
     numberOfCards: 0,
     twitter: "https://twitter.com/GoyalGaurav",
