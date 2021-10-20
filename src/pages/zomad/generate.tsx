@@ -108,7 +108,7 @@ const Generate: React.FC<GenerateProps> = () => {
       setBases(res.bases);
       setCategories(res.categories);
       setCategoryProbabilities(res.probabilities);
-      setBackgroundColors(res.background_colors);
+      setBackgroundColors(res.background.colors);
     });
   }, []);
 
