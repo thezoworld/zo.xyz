@@ -1,12 +1,20 @@
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import { useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
 import { Footer, Header } from "../components/page-sections/common";
+import PageLoading from "../components/ui/PageLoading";
 import "./../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [loading, setLoading] = useState<boolean>(true);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <>
+      <PageLoading isLoading={loading} />
       <Script
         id="gtm"
         strategy="lazyOnload"
@@ -17,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-PWPM6Z8');`,
         }}
-      ></Script>
+      />
       <main className="w-full h-full">
         <Header />
         <Component {...pageProps} />
