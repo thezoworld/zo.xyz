@@ -35,29 +35,11 @@ const fetchSeed = async () => {
   return { ...response.data.avatar };
 };
 
-const COLOR_CODES = [
-  "#18C29C",
-  "#88F9D4",
-  "#0468BF",
-  "#00F6FF",
-  "#7E93FF",
-  "#E06769",
-  "#B2D6CC",
-  "#FFFDF4",
-  "#F2275D",
-  "#F2E2C4",
-  "#45B3BF",
-  "#F285C1",
-  "#F279B2",
-  "#F2E96D",
-  "#24BF93",
-  "#03A63C",
-];
-
 const WORKING_LAYERS = [1, 2, 3, 4, 5, 8, 10, 11];
 
 const Generate: React.FC<GenerateProps> = () => {
   const [bases, setBases] = useState<AvatarBase[]>([]);
+  const [backgroundColors, setBackgroundColors] = useState<AvatarBase[]>([]);
   const [categories, setCategories] = useState<AvatarCategory[]>([]);
   const [categoryProbabilities, setCategoryProbabilities] = useState<any>({});
 
@@ -126,6 +108,7 @@ const Generate: React.FC<GenerateProps> = () => {
       setBases(res.bases);
       setCategories(res.categories);
       setCategoryProbabilities(res.probabilities);
+      setBackgroundColors(res.background_colors);
     });
   }, []);
 
@@ -245,7 +228,7 @@ const Generate: React.FC<GenerateProps> = () => {
       }
     }
     setLocalLayers(c);
-    randomZobu();
+    setTimeout(() => {});
   };
 
   const createLayers = () => {
@@ -392,7 +375,7 @@ const Generate: React.FC<GenerateProps> = () => {
       });
 
     shuffleArray(randomLayers);
-    setSelectedBackground(getRandomItem(COLOR_CODES));
+    setSelectedBackground(getRandomItem(backgroundColors));
     primalLayers();
     randomLayers.forEach((_layer) => {
       handleChange(_layer[0], _layer[1]);
