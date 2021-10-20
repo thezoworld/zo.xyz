@@ -226,6 +226,7 @@ const Generate: React.FC<GenerateProps> = () => {
       }
     }
     setLocalLayers(c);
+    setTimeout(randomZobu, 2000);
   };
 
   const createLayers = () => {
@@ -332,27 +333,21 @@ const Generate: React.FC<GenerateProps> = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [createLayers]);
 
-  // const handleBaseChange = (_base) => {
-  //   primalLayers();
-  //   setBase(_base);
-  // };
-
-  const randomZobu = useCallback(() => {
+  const randomZobu = () => {
     setLoadingText("Shuffling ...");
     setLoadingAssets(true);
     const _categories = [...categories];
     const randomLayers: any[] = [];
     const newBase = getRandomItem([1, 2]);
-    const hiddenLayers =
-      newBase === 1
-        ? ["Base", "Hand"]
-        : ["Base", "Hand", "Facial Hair", "Hats"];
-    handleBaseChange(newBase);
+    const hiddenLayers = newBase === 1 ? [1, 9] : [1, 9, 2, 5];
+    primalLayers();
+    setSelectedBase(newBase);
+    setSelectedBackground(getRandomItem(backgroundColors));
 
     _categories
       .filter(
         (c) =>
-          hiddenLayers.indexOf(c.name) === -1 &&
+          hiddenLayers.indexOf(+c.id) === -1 &&
           WORKING_LAYERS.indexOf(+c.id) !== -1
       )
       .forEach((_category) => {
@@ -368,7 +363,7 @@ const Generate: React.FC<GenerateProps> = () => {
         const categoryProbability = categoryProbabilities[_category.id];
         if (categoryProbability) {
           const shouldAppear = Math.random() <= categoryProbability;
-          console.log(categoryProbability, _category.id, shouldAppear);
+          console.log(categoryProbability, _category.name, shouldAppear);
           if (shouldAppear) {
             randomLayers.push([_category.id, randomAsset.id]);
           }
@@ -376,19 +371,14 @@ const Generate: React.FC<GenerateProps> = () => {
       });
 
     shuffleArray(randomLayers);
-    setSelectedBackground(getRandomItem(backgroundColors));
-    primalLayers();
-    setTimeout(() => {
-      randomLayers.forEach((_layer) => {
-        handleChange(_layer[0], _layer[1]);
-      });
-      setTimeout(() => {
-        setLoadingAssets(false);
-      }, 1000);
-    }, 1000);
+    randomLayers.forEach((_layer) => {
+      handleChange(_layer[0], _layer[1]);
+    });
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [categories, handleChange]);
+    setTimeout(() => {
+      setLoadingAssets(false);
+    }, 2000);
+  };
 
   useEffect(() => {
     if (categories.length) {
@@ -416,7 +406,6 @@ const Generate: React.FC<GenerateProps> = () => {
         })
         .finally(() => {
           if (mounted) {
-            setLoadingAssets(false);
           }
         });
     }
