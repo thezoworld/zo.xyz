@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Download, Shuffle } from "../../assets/icons";
 import { Flex } from "../../components/structure";
 import { Button } from "../../components/ui";
+import Loading from "../../components/ui/Loading";
 import { getRandomItem, shuffleArray } from "../../utils/array";
 
 const loadImage = (url: string) => {
@@ -75,6 +76,8 @@ const Generate: React.FC<GenerateProps> = () => {
   const svgRef = useRef<SVGSVGElement>(null);
 
   const download = async () => {
+    setLoadingText("Downloading ...");
+    setLoadingAssets(true);
     let canvas = document.createElement("canvas");
     canvas.height = 1024;
     canvas.width = 1024;
@@ -83,29 +86,36 @@ const Generate: React.FC<GenerateProps> = () => {
     if (svgRef.current) {
       const svgElement = svgRef.current;
       const { width, height } = svgElement.getBoundingClientRect();
-      svgElement.style.width = "2000px";
-      svgElement.style.height = "5120px";
-      let clonedSvgElement: any = svgElement.cloneNode(true);
-      let outerHTML = clonedSvgElement.outerHTML,
-        blob = new Blob([outerHTML], { type: "image/svg+xml;charset=utf-8" });
-      let URL = window.URL || window.webkitURL || window;
-      let blobURL = URL.createObjectURL(blob);
-      const svgImage = await loadImage(blobURL);
-      if (context) {
-        // context.drawImage(backgroundImage, 0, 0);
-        context.fillStyle = selectedBackground;
-        context.fillRect(0, 0, 1024, 1024);
-        context.drawImage(svgImage, -80, -225, 1200, 3072);
+      try {
+        svgElement.style.width = "2000px";
+        svgElement.style.height = "5120px";
+        let clonedSvgElement: any = svgElement.cloneNode(true);
+        let outerHTML = clonedSvgElement.outerHTML,
+          blob = new Blob([outerHTML], { type: "image/svg+xml;charset=utf-8" });
+        let URL = window.URL || window.webkitURL || window;
+        let blobURL = URL.createObjectURL(blob);
+        const svgImage = await loadImage(blobURL);
+        if (context) {
+          // context.drawImage(backgroundImage, 0, 0);
+          context.fillStyle = selectedBackground;
+          context.fillRect(0, 0, 1024, 1024);
+          context.drawImage(svgImage, -80, -225, 1200, 3072);
+        }
+        canvas.toBlob((blob) => {
+          let data = window.URL.createObjectURL(blob);
+          let link = document.createElement("a");
+          link.href = data;
+          link.download = "feed.jpg";
+          link.click();
+        }, "image/jpeg");
+      } catch (error) {
+        svgElement.style.width = `${width}px`;
+        svgElement.style.height = `${height}px`;
+      } finally {
+        setTimeout(() => {
+          setLoadingAssets(false);
+        }, 2000);
       }
-      canvas.toBlob((blob) => {
-        let data = window.URL.createObjectURL(blob);
-        let link = document.createElement("a");
-        link.href = data;
-        link.download = "feed.jpg";
-        link.click();
-      }, "image/jpeg");
-      svgElement.style.width = `${width}px`;
-      svgElement.style.height = `${height}px`;
     }
   };
 
@@ -118,12 +128,6 @@ const Generate: React.FC<GenerateProps> = () => {
       setCategoryProbabilities(res.probabilities);
     });
   }, []);
-
-  useEffect(() => {
-    if (!loadingAssets) {
-      randomZobu();
-    }
-  }, [loadingAssets]);
 
   const fetchAsset = async (category: number, asset: number) => {
     if (localLayers[category] && localLayers[category][asset]) {
@@ -151,13 +155,13 @@ const Generate: React.FC<GenerateProps> = () => {
         case 5:
           setLoadingText("Finding the perfect match for your head");
           break;
-        case 6:
+        case 8:
           setLoadingText("Polishing our finest gems");
           break;
-        case 7:
+        case 10:
           setLoadingText("Ironing your collection");
           break;
-        case 8:
+        case 11:
           setLoadingText("Preparing your wardrobe");
           break;
         case 9:
@@ -240,6 +244,8 @@ const Generate: React.FC<GenerateProps> = () => {
         }
       }
     }
+    setLocalLayers(c);
+    randomZobu();
   };
 
   const createLayers = () => {
@@ -352,6 +358,8 @@ const Generate: React.FC<GenerateProps> = () => {
   // };
 
   const randomZobu = useCallback(() => {
+    setLoadingText("Shuffling ...");
+    setLoadingAssets(true);
     const _categories = [...categories];
     const randomLayers: any[] = [];
     const newBase = getRandomItem([1, 2]);
@@ -389,6 +397,9 @@ const Generate: React.FC<GenerateProps> = () => {
     randomLayers.forEach((_layer) => {
       handleChange(_layer[0], _layer[1]);
     });
+    setTimeout(() => {
+      setLoadingAssets(false);
+    }, 2000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categories, handleChange]);
 
@@ -448,48 +459,59 @@ const Generate: React.FC<GenerateProps> = () => {
           col
           items="center"
           justify="center"
-          className="max-w-xs h-108 rounded-xl bg-gray-100 p-4"
+          className="max-w-xs w-full h-108 rounded-xl bg-gray-100 p-4"
         >
-          <figure className="w-72 h-72 border-white border-8 relative overflow-hidden rounded-full">
-            <div
-              className="absolute inset-0 rounded-full"
-              style={{ backgroundColor: selectedBackground }}
-            />
-            <svg
-              className="pointer-events-none z-10 absolute no-svg-animation  mx-auto"
-              ref={svgRef}
-              style={{ top: "-16px" }}
-              id="zomad"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="154 0 200 512"
-            >
-              <g
-                id={String(selectedBase)}
-                dangerouslySetInnerHTML={{ __html: localBases[selectedBase] }}
-              ></g>
-              {zobuLayers &&
-                zobuLayers.map((layer) => {
-                  if (layer.svg) {
-                    return (
-                      <g
-                        id={layer.category}
-                        key={layer.category}
-                        dangerouslySetInnerHTML={{ __html: layer.svg }}
-                      ></g>
-                    );
-                  } else {
-                    return <g key={layer.category}></g>;
-                  }
-                })}
-            </svg>
-          </figure>
-          <button
-            className="text-center my-8 flex items-center px-8 py-3 text-lg left-0 top-0 text-white rounded-2xl relative border border-orangy text-orangy"
-            onClick={randomZobu}
-          >
-            <Shuffle className="w-6 h-6 mr-4" />
-            Randomise
-          </button>
+          {loadingAssets ? (
+            <Flex col items="center">
+              <Loading className="w-32" />
+              <span className="mt-4">{loadingText}</span>
+            </Flex>
+          ) : (
+            <>
+              <figure className="w-72 h-72 border-white border-8 relative overflow-hidden rounded-full">
+                <div
+                  className="absolute inset-0 rounded-full"
+                  style={{ backgroundColor: selectedBackground }}
+                />
+                <svg
+                  className="pointer-events-none z-10 absolute no-svg-animation  mx-auto"
+                  ref={svgRef}
+                  style={{ top: "-16px" }}
+                  id="zomad"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="154 0 200 512"
+                >
+                  <g
+                    id={String(selectedBase)}
+                    dangerouslySetInnerHTML={{
+                      __html: localBases[selectedBase],
+                    }}
+                  ></g>
+                  {zobuLayers &&
+                    zobuLayers.map((layer) => {
+                      if (layer.svg) {
+                        return (
+                          <g
+                            id={layer.category}
+                            key={layer.category}
+                            dangerouslySetInnerHTML={{ __html: layer.svg }}
+                          ></g>
+                        );
+                      } else {
+                        return <g key={layer.category}></g>;
+                      }
+                    })}
+                </svg>
+              </figure>
+              <button
+                className="text-center my-8 flex items-center px-8 py-3 text-lg left-0 top-0 text-white rounded-2xl relative border border-orangy text-orangy"
+                onClick={randomZobu}
+              >
+                <Shuffle className="w-6 h-6 mr-4" />
+                Randomise
+              </button>
+            </>
+          )}
         </Flex>
         <Button className="my-8" onClick={download}>
           <Download className="w-6 h-6 mr-4" />
