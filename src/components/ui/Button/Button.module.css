@@ -1,5 +1,5 @@
 .button {
-  @apply text-center px-8 py-3 text-lg left-0 top-0 text-white rounded-2xl relative;
+  @apply text-center px-8 py-3 text-lg left-0 top-0 text-white rounded-2xl relative flex items-center;
   background: #ea5f52;
   box-shadow: -4px 4px #be392c;
 }

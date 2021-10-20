@@ -6,6 +6,7 @@ import Download from "./Download";
 import Instagram from "./Instagram";
 import LinkedIn from "./LinkedIn";
 import Menu from "./Menu";
+import Shuffle from "./Shuffle";
 import TwitterCircle from "./TwitterCircle";
 import TwitterFilled from "./TwitterFilled";
 import Zap from "./Zap";
@@ -21,6 +22,7 @@ export {
   TwitterCircle,
   ArrowLeft,
   Download,
+  Shuffle,
   Zap,
   LinkedIn,
   Instagram,

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { Download, Shuffle } from "../../assets/icons";
 import { Flex } from "../../components/structure";
 import { Button } from "../../components/ui";
 import { getRandomItem, shuffleArray } from "../../utils/array";
@@ -34,21 +35,25 @@ const fetchSeed = async () => {
 };
 
 const COLOR_CODES = [
-  "#2D9C94",
-  "#17D0E8",
-  "#2953A6",
-  "#BF2A45",
-  "#590202",
-  "#202959",
-  "#F2B705",
-  "#532559",
-  "#6976BF",
-  "#F2AEC1",
-  "#26658C",
-  "#29A65F",
-  "#16B4F2",
-  "#A693BF",
+  "#18C29C",
+  "#88F9D4",
+  "#0468BF",
+  "#00F6FF",
+  "#7E93FF",
+  "#E06769",
+  "#B2D6CC",
+  "#FFFDF4",
+  "#F2275D",
+  "#F2E2C4",
+  "#45B3BF",
+  "#F285C1",
+  "#F279B2",
+  "#F2E96D",
+  "#24BF93",
+  "#03A63C",
 ];
+
+const WORKING_LAYERS = [1, 2, 3, 4, 5, 8, 10, 11];
 
 const Generate: React.FC<GenerateProps> = () => {
   const [bases, setBases] = useState<AvatarBase[]>([]);
@@ -215,20 +220,22 @@ const Generate: React.FC<GenerateProps> = () => {
     for (const category in categories) {
       if (categories.hasOwnProperty(category)) {
         const indieCat = categories[category];
-        c[indieCat.id] = {};
-        for (const asset of indieCat.assets) {
-          try {
-            if (Object.keys(asset).length && asset.file) {
-              c[indieCat.id][asset.id] = await fetchAsset(
-                indieCat.id,
-                asset.id
-              );
-            } else {
+        if (WORKING_LAYERS.indexOf(Number(indieCat.id)) !== 1) {
+          c[indieCat.id] = {};
+          for (const asset of indieCat.assets) {
+            try {
+              if (Object.keys(asset).length && asset.file) {
+                c[indieCat.id][asset.id] = await fetchAsset(
+                  indieCat.id,
+                  asset.id
+                );
+              } else {
+                c[indieCat.id][asset.id] = null;
+              }
+            } catch (error) {
+              console.log(error);
               c[indieCat.id][asset.id] = null;
             }
-          } catch (error) {
-            console.log(error);
-            c[indieCat.id][asset.id] = null;
           }
         }
       }
@@ -355,7 +362,11 @@ const Generate: React.FC<GenerateProps> = () => {
     handleBaseChange(newBase);
 
     _categories
-      .filter((c) => hiddenLayers.indexOf(c.name) === -1)
+      .filter(
+        (c) =>
+          hiddenLayers.indexOf(c.name) === -1 &&
+          WORKING_LAYERS.indexOf(+c.id) !== -1
+      )
       .forEach((_category) => {
         const assetsAccesible = _category.assets.filter(
           (a) => a.bases.indexOf(newBase) !== -1
@@ -418,7 +429,7 @@ const Generate: React.FC<GenerateProps> = () => {
   }, [categories, bases]);
 
   return (
-    <section className="h-screen flex flex-col">
+    <section className="flex flex-col">
       <header className="bg-orangy absolute top-0 left-0 right-0 h-18 w-full" />
       <Flex
         col
@@ -426,21 +437,26 @@ const Generate: React.FC<GenerateProps> = () => {
         items="center"
       >
         <h1
-          className="text-2xl md:text-4xl font-black py-8"
+          className="text-2xl md:text-4xl font-bold py-8"
           onClick={randomZobu}
         >
           Get your Zomad Avatar!
         </h1>
       </Flex>
-      <Flex items="stretch" className="flex-1 md:flex-row flex-col">
-        <Flex items="center" justify="center" className="flex-1">
-          <figure className="w-72 h-72 border-8 relative overflow-hidden border-white shadow-md rounded-lg">
+      <Flex col items="center" className="">
+        <Flex
+          col
+          items="center"
+          justify="center"
+          className="max-w-xs h-108 rounded-xl bg-gray-100 p-4"
+        >
+          <figure className="w-72 h-72 border-white border-8 relative overflow-hidden rounded-full">
             <div
-              className="absolute inset-0 rounded-lg"
+              className="absolute inset-0 rounded-full"
               style={{ backgroundColor: selectedBackground }}
             />
             <svg
-              className="pointer-events-none z-10 absolute no-svg-animation mx-auto"
+              className="pointer-events-none z-10 absolute no-svg-animation  mx-auto"
               ref={svgRef}
               style={{ top: "-16px" }}
               id="zomad"
@@ -467,13 +483,18 @@ const Generate: React.FC<GenerateProps> = () => {
                 })}
             </svg>
           </figure>
+          <button
+            className="text-center my-8 flex items-center px-8 py-3 text-lg left-0 top-0 text-white rounded-2xl relative border border-orangy text-orangy"
+            onClick={randomZobu}
+          >
+            <Shuffle className="w-6 h-6 mr-4" />
+            Randomise
+          </button>
         </Flex>
-        <Flex col items="center" justify="center" className="flex-1">
-          <Button onClick={download}>Download your Zomad Avatar</Button>
-          <Button className="mt-16" onClick={randomZobu}>
-            Randomize
-          </Button>
-        </Flex>
+        <Button className="my-8" onClick={download}>
+          <Download className="w-6 h-6 mr-4" />
+          Download
+        </Button>
       </Flex>
     </section>
   );
