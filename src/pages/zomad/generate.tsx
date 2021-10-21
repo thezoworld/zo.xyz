@@ -1,4 +1,5 @@
 import axios from "axios";
+import Head from "next/head";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Download, Shuffle } from "../../assets/icons";
 import { Flex } from "../../components/structure";
@@ -78,7 +79,6 @@ const Generate: React.FC<GenerateProps> = () => {
         let blobURL = URL.createObjectURL(blob);
         const svgImage = await loadImage(blobURL);
         if (context) {
-          // context.drawImage(backgroundImage, 0, 0);
           context.fillStyle = selectedBackground;
           context.fillRect(0, 0, 1024, 1024);
           context.drawImage(svgImage, -80, -225, 1200, 3072);
@@ -87,7 +87,7 @@ const Generate: React.FC<GenerateProps> = () => {
           let data = window.URL.createObjectURL(blob);
           let link = document.createElement("a");
           link.href = data;
-          link.download = "feed.jpg";
+          link.download = "zomad.jpg";
           link.click();
         }, "image/jpeg");
       } catch (error) {
@@ -407,6 +407,42 @@ const Generate: React.FC<GenerateProps> = () => {
 
   return (
     <section className="flex flex-col">
+      <Head>
+        <meta name="title" content="Zo World | Get your Zomad Avatar" />
+        <meta
+          name="description"
+          content="Build and get your super cool Zomad avatar to show off to the world."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zo.xyz/zomad/generate" />
+        <meta property="og:title" content="Zo World | Get your Zomad Avatar" />
+        <meta
+          property="og:description"
+          content="Build and get your super cool Zomad avatar to show off to the world."
+        />
+        <meta
+          property="og:image"
+          content="https://cdn.zo.xyz/branding/zo_sunrise_background.jpg"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://zo.xyz/zomad/generate" />
+        <meta
+          property="twitter:title"
+          content="Zo World | Get your Zomad Avatar"
+        />
+        <meta
+          property="twitter:description"
+          content="Build and get your super cool Zomad avatar to show off to the world."
+        />
+        <meta
+          property="twitter:image"
+          content="https://cdn.zo.xyz/branding/zo_sunrise_background.jpg"
+        />
+        <meta name="theme-color" content="#F15824" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@The_Zo_World" />
+        <title>Zo World | Get your Zomad Avatar</title>
+      </Head>
       <header className="bg-orangy absolute top-0 left-0 right-0 h-18 w-full" />
       <Flex
         col
@@ -434,7 +470,7 @@ const Generate: React.FC<GenerateProps> = () => {
             </Flex>
           ) : (
             <>
-              <figure className="w-72 h-72 border-white border-8 relative overflow-hidden rounded-full">
+              <figure className="w-72 h-72 border-white shadow-sm border-8 relative overflow-hidden rounded-full">
                 <div
                   className="absolute inset-0 rounded-full"
                   style={{ backgroundColor: selectedBackground }}
@@ -479,10 +515,14 @@ const Generate: React.FC<GenerateProps> = () => {
             </>
           )}
         </Flex>
-        <Button className="my-8" onClick={download}>
-          <Download className="w-6 h-6 mr-4" />
-          Download
-        </Button>
+        <Flex items="center" col justify="center" className="h-32">
+          {!loadingAssets && (
+            <Button onClick={download}>
+              <Download className="w-6 h-6 mr-4" />
+              Download
+            </Button>
+          )}
+        </Flex>
       </Flex>
     </section>
   );
