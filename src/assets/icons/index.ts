@@ -5,8 +5,10 @@ import Discord from "./Discord";
 import Download from "./Download";
 import Instagram from "./Instagram";
 import LinkedIn from "./LinkedIn";
+import Lock from "./Lock";
 import Menu from "./Menu";
 import Shuffle from "./Shuffle";
+import Trophy from "./Trophy";
 import TwitterCircle from "./TwitterCircle";
 import TwitterFilled from "./TwitterFilled";
 import Zap from "./Zap";
@@ -20,7 +22,9 @@ export {
   TwitterFilled,
   Close,
   TwitterCircle,
+  Lock,
   ArrowLeft,
+  Trophy,
   Download,
   Shuffle,
   Zap,
