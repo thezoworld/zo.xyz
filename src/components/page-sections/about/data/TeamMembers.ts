@@ -10,28 +10,6 @@ const TeamMembersData: {
 }[] = [
   {
     avatarUrl:
-      "https://cdn.zo.xyz/profile/268395/assets/1/5259b2e3-fd13-460b-93de-c4e9417e732f/20201230064226.svg",
-    name: "Dharamveer Singh Chouhan",
-    alias: "DV",
-    department: "CEO",
-    numberOfCards: 0,
-    twitter: "https://twitter.com/dvcoolster",
-    instagram: "https://instagram.com/dvcoolster",
-    linkedin: "https://linkedin.com/dvcoolster",
-  },
-  {
-    avatarUrl:
-      "https://cdn.zo.xyz/profile/141707/assets/1/acc1d43e-e9f8-40df-934d-7ca09ba59a0b/20210917070645.svg",
-    name: "Chetan Singh Chouhan",
-    alias: "Pofunder",
-    department: "COO",
-    numberOfCards: 0,
-    twitter: "https://twitter.com/pofunder",
-    linkedin: "https://www.linkedin.com/in/chetan-chauhan-237a4a87/",
-    instagram: "https://www.instagram.com/zofunder/",
-  },
-  {
-    avatarUrl:
       "https://cdn.zo.xyz/profile/276444/assets/1/c619f764-214f-4177-b968-936be7f19126/20210923060138.svg",
     name: "Anant Dev Dubey",
     alias: "anantdd",
@@ -61,6 +39,17 @@ const TeamMembersData: {
   },
   {
     avatarUrl:
+      "https://cdn.zo.xyz/profile/141707/assets/1/acc1d43e-e9f8-40df-934d-7ca09ba59a0b/20210917070645.svg",
+    name: "Chetan Singh Chouhan",
+    alias: "Pofunder",
+    department: "COO",
+    numberOfCards: 0,
+    twitter: "https://twitter.com/pofunder",
+    linkedin: "https://www.linkedin.com/in/chetan-chauhan-237a4a87/",
+    instagram: "https://www.instagram.com/zofunder/",
+  },
+  {
+    avatarUrl:
       "https://cdn.zo.xyz/profile/268406/assets/1/a911f516-1fc7-400b-95d1-5ba57f299e10/20210702130518.svg",
     name: "Christopher Nazareth",
     alias: "ChrisCraig",
@@ -69,6 +58,17 @@ const TeamMembersData: {
     twitter: "https://twitter.com/Chris76697374",
     instagram: "https://www.instagram.com/christopher_design09/",
     linkedin: "https://www.linkedin.com/in/christopher-nazareth-0a4388134/",
+  },
+  {
+    avatarUrl:
+      "https://cdn.zo.xyz/profile/268395/assets/1/5259b2e3-fd13-460b-93de-c4e9417e732f/20201230064226.svg",
+    name: "Dharamveer Singh Chouhan",
+    alias: "DV",
+    department: "CEO",
+    numberOfCards: 0,
+    twitter: "https://twitter.com/dvcoolster",
+    instagram: "https://instagram.com/dvcoolster",
+    linkedin: "https://linkedin.com/dvcoolster",
   },
   {
     avatarUrl:
@@ -101,7 +101,7 @@ const TeamMembersData: {
     numberOfCards: 0,
     twitter: "https://twitter.com/IshaanRawat",
     instagram: "https://instagram.com/_ishaanrawat_",
-    linkedin: "https://linkedin.com/IshaanRawat",
+    linkedin: "https://www.linkedin.com/in/IshaanRawat",
   },
   {
     avatarUrl:

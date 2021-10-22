@@ -4,6 +4,16 @@ import { Container } from "../../ui";
 import TeamCard from "./components/TeamCard";
 import TeamMembers from "./data/TeamMembers";
 
+const sorter = (a: any, b: any) => {
+  if (a.alias.toLowerCase() < b.alias.toLowerCase()) {
+    return -1;
+  }
+  if (a.alias.toLowerCase() > b.alias.toLowerCase()) {
+    return 1;
+  }
+  return 0;
+};
+
 interface TeamProps {}
 
 const Team: React.FC<TeamProps> = () => {
@@ -20,7 +30,7 @@ const Team: React.FC<TeamProps> = () => {
           items="center"
           className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-10 mb-10 w-full"
         >
-          {TeamMembers.map((item, index: number) => (
+          {TeamMembers.sort(sorter).map((item, index: number) => (
             <TeamCard
               key={index}
               avatar={item.avatarUrl}
