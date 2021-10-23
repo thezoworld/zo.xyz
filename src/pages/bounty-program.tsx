@@ -22,14 +22,16 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
         <meta name="title" content="Zo World | Bounty Program" />
         <meta
           name="description"
-          content="Win a chance to become one of the only 11,111 founders of the Zo World with our bounty program."
+          content="Complete any bounty to become one of the only 11,111 founders of the
+            Zo World and earn a Founder NFT worth 0.1 ETH each."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zo.xyz/bounty-program" />
         <meta property="og:title" content="Zo World | Bounty Program" />
         <meta
           property="og:description"
-          content="Win a chance to become one of the only 11,111 founders of the Zo World with our bounty program."
+          content="Complete any bounty to become one of the only 11,111 founders of the
+            Zo World and earn a Founder NFT worth 0.1 ETH each."
         />
         <meta
           property="og:image"
@@ -40,7 +42,8 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
         <meta property="twitter:title" content="Zo World | Bounty Program" />
         <meta
           property="twitter:description"
-          content="Win a chance to become one of the only 11,111 founders of the Zo World with our bounty program."
+          content="Complete any bounty to become one of the only 11,111 founders of the
+            Zo World and earn a Founder NFT worth 0.1 ETH each."
         />
         <meta
           property="twitter:image"
