@@ -1,20 +1,23 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   FemaleBottom1,
   FemaleLeftFull1,
   MaleRightFull1,
 } from "../../../assets/avatars";
-import { Discord } from "../../../assets/icons";
+import { PlayCircle } from "../../../assets/icons";
 import { Globe, Sky } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
+import { Flex } from "../../structure";
 import { Button } from "../../ui";
 
 interface TravelLocalFriendsProps {}
 
 const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
   const { isMobile } = useWindowSize();
+
+  const [showLaunchVideo, setshowLaunchVideo] = useState<boolean>(false);
 
   const globe = useRef<SVGSVGElement>(null);
   const sky = useRef<SVGSVGElement>(null);
@@ -79,6 +82,29 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
         background: "#28735D",
       }}
     >
+      {showLaunchVideo && (
+        <Flex col className="fixed inset-0 p-4 z-70 md:pt-5 items-end bg-black">
+          <Button
+            onClick={() => setshowLaunchVideo(false)}
+            className="md:mr-10"
+          >
+            Close
+          </Button>
+          <Flex
+            items="center"
+            className="self-center w-screen h-screen md:px-10 px-0 md:pt-4 md:pb-10"
+          >
+            <iframe
+              src="https://www.youtube.com/embed/0gijEkpRdAU"
+              title="Zo World | Launch Video"
+              frameBorder="0"
+              className="md:w-full md:h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </Flex>
+        </Flex>
+      )}
       <div className="md:relative md:w-1/2 flex flex-col items-center justify-center">
         <Sky
           ref={sky}
@@ -103,19 +129,13 @@ const TravelLocalFriends: React.FC<TravelLocalFriendsProps> = () => {
       >
         <span className="mb-2">Travel fearlessly with the help of</span>
         <span className="font-semibold">local friends around the world.</span>
-        <a
-          href="https://discord.zo.xyz/"
-          target="_blank"
-          rel="noreferrer"
-          className="mt-6 flex items-center justify-center px-6 py-4 md:px-8 md:py-4 text-sm md:text-base leading-none rounded-xl border border-white text-white"
-          // style={{ backgroundColor: "#5865F2" }}
+        <button
+          className="mt-6 flex items-center justify-center px-6 py-4 text-sm md:text-base leading-none rounded-xl border border-white text-white"
+          onClick={() => setshowLaunchVideo(true)}
         >
-          <Discord
-            className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5"
-            fill="white"
-          />
-          Join our community of Travellers
-        </a>
+          <PlayCircle className="w-6 h-6 mr-3 md:w-8 md:h-8 md:mr-5" />
+          Watch our video
+        </button>
       </h2>
       <FemaleLeftFull1
         ref={female1}

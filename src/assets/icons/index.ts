@@ -7,6 +7,7 @@ import Instagram from "./Instagram";
 import LinkedIn from "./LinkedIn";
 import Lock from "./Lock";
 import Menu from "./Menu";
+import PlayCircle from "./PlayCircle";
 import Shuffle from "./Shuffle";
 import Trophy from "./Trophy";
 import TwitterCircle from "./TwitterCircle";
@@ -20,6 +21,7 @@ export {
   CheckCircle,
   Discord,
   TwitterFilled,
+  PlayCircle,
   Close,
   TwitterCircle,
   Lock,

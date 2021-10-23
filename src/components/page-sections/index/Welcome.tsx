@@ -9,6 +9,7 @@ import {
   MaleWithMap,
 } from "../../../assets/avatars";
 import { ClifSunset, SunsetDesktop } from "../../../assets/backgrounds";
+import { Discord } from "../../../assets/icons";
 import { LeavesLeft2, LeavesRight2, OrangeCircle } from "../../../assets/props";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
@@ -17,8 +18,6 @@ import { Button } from "../../ui";
 interface WelcomeProps {}
 
 const Welcome: React.FC<WelcomeProps> = () => {
-  const [showLaunchVideo, setshowLaunchVideo] = useState<boolean>(false);
-
   const { width } = useWindowSize();
 
   const female1 = useRef<SVGSVGElement>(null);
@@ -97,6 +96,10 @@ const Welcome: React.FC<WelcomeProps> = () => {
     });
   }, []);
 
+  const openDiscord = () => {
+    window.open("https://discord.zo.xyz", "_blank");
+  };
+
   return (
     <section
       className="h-screen relative flex flex-col items-center justify-between overflow-hidden w-full"
@@ -112,32 +115,6 @@ const Welcome: React.FC<WelcomeProps> = () => {
           <SunsetDesktop className="absolute inset-0 w-full z-0 h-screen" />
         )
       ) : null}
-      {showLaunchVideo && (
-        <Flex
-          col
-          className="fixed w-screen p-4 md:h-full overflow-auto md:max-h-screen z-50 md:pt-5 items-end md:bg-gray-100 bg-black md:bg-opacity-70"
-        >
-          <Button
-            onClick={() => setshowLaunchVideo(false)}
-            className="md:mr-10"
-          >
-            Close
-          </Button>
-          <Flex
-            items="center"
-            className="self-center w-screen h-screen md:px-10 px-0 md:pt-4 md:pb-10"
-          >
-            <iframe
-              src="https://www.youtube.com/embed/0gijEkpRdAU"
-              title="Zo World | Launch Video"
-              frameBorder="0"
-              className="md:w-full md:h-full w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </Flex>
-        </Flex>
-      )}
       <LeavesLeft2
         ref={leavesLeft}
         className="absolute left-0 z-3 bottom-0"
@@ -165,8 +142,12 @@ const Welcome: React.FC<WelcomeProps> = () => {
         <h1 className="mt-2 text-white text-4xl md:text-5xl md:mt-6 font-extrabold">
           The Zo World
         </h1>
-        <Button className="mt-8" onClick={() => setshowLaunchVideo(true)}>
-          Watch our Founders video
+        <p className="mt-8 text-xl text-white font-semibold">
+          A global travel ecosystem powered by local friends
+        </p>
+        <Button className="mt-8 flex items-center" onClick={openDiscord}>
+          <Discord className="w-6 h-6 mr-6" fill="white" />
+          Join our Community
         </Button>
       </Flex>
       <Flex items="end" justify="around" className="mb-12 md:px-32 px-0 w-full">
