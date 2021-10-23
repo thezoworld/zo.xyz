@@ -44,6 +44,8 @@ const Generate: React.FC<GenerateProps> = () => {
   const [categories, setCategories] = useState<AvatarCategory[]>([]);
   const [categoryProbabilities, setCategoryProbabilities] = useState<any>({});
 
+  const [downloadLink, setDownloadLink] = useState<string>("");
+
   const [localLayers, setLocalLayers] = useState<any>({});
   const [localBases, setLocalBases] = useState<any>({});
 
@@ -88,6 +90,7 @@ const Generate: React.FC<GenerateProps> = () => {
           let link = document.createElement("a");
           link.href = data;
           link.download = "zomad.jpg";
+          setDownloadLink(data);
           link.click();
         }, "image/jpeg");
       } catch (error) {
@@ -334,6 +337,7 @@ const Generate: React.FC<GenerateProps> = () => {
   }, [createLayers]);
 
   const randomZobu = () => {
+    setDownloadLink("");
     setLoadingText("Shuffling ...");
     setLoadingAssets(true);
     const randomLayers: any[] = [];
@@ -516,7 +520,22 @@ const Generate: React.FC<GenerateProps> = () => {
           )}
         </Flex>
         <Flex items="center" col justify="center" className="h-32">
-          {!loadingAssets && (
+          {loadingAssets ? (
+            downloadLink != "" && (
+              <span className="text-center">
+                If the download hasn't started yet
+                <br />
+                <a
+                  href={downloadLink}
+                  target="_blank"
+                  download="zomad.jpg"
+                  className="text-orangy font-semibold"
+                >
+                  Click to download
+                </a>
+              </span>
+            )
+          ) : (
             <Button onClick={download}>
               <Download className="w-6 h-6 mr-4" />
               Download
