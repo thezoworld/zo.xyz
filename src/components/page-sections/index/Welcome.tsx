@@ -142,7 +142,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
         <h1 className="mt-2 text-white text-4xl md:text-5xl md:mt-6 font-extrabold">
           The Zo World
         </h1>
-        <p className="mt-8 text-xl text-white font-semibold">
+        <p className="mt-8 px-4 md:text-xl text-white font-semibold text-center">
           A global travel ecosystem powered by local friends
         </p>
         <Button className="mt-8 flex items-center" onClick={openDiscord}>
