@@ -18,7 +18,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
   return (
     <Flex
       col
-      className="fixed z-70 overflow-y-auto right-0 inset-y-0 md:max-w-sm w-screen md:px-10 px-4 pt-4 md:pb-10 bg-orangy text-white"
+      className="fixed z-70 overflow-y-auto right-0 inset-y-0 md:max-w-sm w-screen md:px-10 px-4 pt-4 pb-10 bg-orangy text-white"
     >
       <Flex justify="end">
         <Close
@@ -66,12 +66,12 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
           Masterplan
         </h1>
       </Link>
-      <Link href="/bounties" passHref>
+      <Link href="/bounty-program" passHref>
         <h1
           className="md:text-2xl text-xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
           onClick={closeMenu}
         >
-          Zo Bounties
+          Bounty Program
         </h1>
       </Link>
       <Link href="/zomad/generate" passHref>

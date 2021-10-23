@@ -3,6 +3,7 @@ import React from "react";
 interface ContainerProps {
   className?: string;
   index?: number;
+  id?: string;
   backgroundLayer?: any;
   style?: React.CSSProperties;
   fullHeight?: boolean;
@@ -12,12 +13,14 @@ const Container: React.FC<ContainerProps> = ({
   children,
   className = "",
   index = 1,
+  id,
   backgroundLayer,
   style,
   fullHeight,
 }) => {
   return (
     <section
+      id={id}
       className={className.concat(` w-full ${fullHeight ? "h-screen" : ""}`)}
       style={style}
     >
