@@ -4,11 +4,11 @@ import { useWindowSize } from "../components/hooks";
 import { Flex } from "../components/structure";
 import { Container } from "../components/ui";
 import GiveawayCard from "../components/ui/GiveawayCard";
-import giveawaysData from "./../data/giveaways.json";
+import bountiesData from "../data/bounties.json";
 
-interface giveawaysProps {}
+interface bountiesProps {}
 
-const giveaways: React.FC<giveawaysProps> = () => {
+const bounties: React.FC<bountiesProps> = () => {
   const { isMobile } = useWindowSize();
 
   return (
@@ -23,23 +23,19 @@ const giveaways: React.FC<giveawaysProps> = () => {
       )}
       <Container>
         <Flex col items="center" className="pt-24 text-black">
-          <h1 className="text-4xl font-bold">Zo Giveaways</h1>
-          <p className="text-center mt-8 px-12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.itae. Etiam
-            nunc volutpat auctor fermentum eget odio. Congue habitasse at
-            tristique consectetur vitae.
-          </p>
+          <h1 className="text-4xl font-bold">Zo Bounties</h1>
         </Flex>
       </Container>
       <Container className="py-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8">
-          {giveawaysData.map((d, i) => (
+          {bountiesData.map((d, i) => (
             <GiveawayCard {...d} key={i} />
           ))}
         </div>
       </Container>
+      <Container></Container>
     </section>
   );
 };
 
-export default giveaways;
+export default bounties;
