@@ -70,7 +70,9 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
             Zo World and earn a Founder NFT worth 0.1 ETH each.
           </p>
           <Link href="/become-a-founder#founder-benefits" passHref>
-            <a className="underline mt-4">Check out the Founder Benefits</a>
+            <button className="mt-6 flex items-center justify-center px-6 py-4 text-sm md:text-base leading-none rounded-xl border border-black text-black">
+              Check out our Founder benefits
+            </button>
           </Link>
         </Flex>
       </Container>

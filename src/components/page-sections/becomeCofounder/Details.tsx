@@ -45,7 +45,7 @@ const Story: React.FC<StoryProps> = () => {
       </Container>
       <Container
         id="founder-benefits"
-        className="md:pt-24 pt-10 px-4 pb-0 text-left relative"
+        className="md:pt-24 pt-10 md:pb-24 px-4 pb-0 text-left relative"
       >
         <Flex className="md:mx-0 px-8 flex-col md:items-start items-center flex-shrink mx-auto">
           <h2 className="md:text-2xl mb-8 w-full text-left md:leading-10 leading-7 text-lg font-bold">
