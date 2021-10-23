@@ -40,7 +40,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
         </Link>
         <Link href="/become-a-founder" passHref>
           <h1
-            className="md:text-3xl text-2xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
+            className="md:text-2xl text-xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
             onClick={closeMenu}
           >
             Become a founder
@@ -48,7 +48,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
         </Link>
         <Link href="/build-zo" passHref>
           <h1
-            className="md:text-3xl text-2xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
+            className="md:text-2xl text-xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
             onClick={closeMenu}
           >
             Build Zo World
@@ -56,7 +56,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
         </Link>
         <Link href="/travel-with-zo" passHref>
           <h1
-            className="md:text-3xl text-2xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
+            className="md:text-2xl text-xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
             onClick={closeMenu}
           >
             Travel with Zo
@@ -64,15 +64,31 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
         </Link>
         <Link href="/masterplan" passHref>
           <h1
-            className="md:text-3xl text-2xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
+            className="md:text-2xl text-xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
             onClick={closeMenu}
           >
             Masterplan
           </h1>
         </Link>
+        <Link href="/bounties" passHref>
+          <h1
+            className="md:text-2xl text-xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
+            onClick={closeMenu}
+          >
+            Zo Bounties
+          </h1>
+        </Link>
+        <Link href="/zomad/generate" passHref>
+          <h1
+            className="md:text-2xl text-xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
+            onClick={closeMenu}
+          >
+            Get your Zomad
+          </h1>
+        </Link>
         <Link href="/about" passHref>
           <h1
-            className="md:text-3xl text-2xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
+            className="md:text-2xl text-xl my-5 font-bold mx-auto no-underline hover:underline cursor-pointer"
             onClick={closeMenu}
           >
             About
