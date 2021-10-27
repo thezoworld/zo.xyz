@@ -3,16 +3,16 @@ import { AboutZoDesktop, AboutZoMob } from "../../../assets/backgrounds";
 import { useWindowSize } from "../../hooks";
 import { Flex } from "../../structure";
 
-interface MissionProps {}
+interface IntroductionProps {}
 
-const Mission: React.FC<MissionProps> = () => {
-  const { width } = useWindowSize();
+const Introduction: React.FC<IntroductionProps> = () => {
+  const { isMobile } = useWindowSize();
   return (
     <section
       className="md:h-screen w-full flex flex-col items-center relative"
       style={{ backgroundColor: "#b7e2e8" }}
     >
-      {width <= 768 ? (
+      {isMobile ? (
         <AboutZoMob className="absolute bottom-0 w-full" />
       ) : (
         <AboutZoDesktop className="absolute bottom-0 w-full" />
@@ -23,13 +23,13 @@ const Mission: React.FC<MissionProps> = () => {
       >
         <h1
           className="md:text-5xl text-2xl font-extrabold z-10"
-          style={{ paddingTop: width <= 768 ? "10vh" : "20vh" }}
+          style={{ paddingTop: isMobile ? "10vh" : "20vh" }}
         >
           About Zo World
         </h1>
         <p
           className="max-w-2xl mx-auto h-screen md:h-auto leading-relaxed z-10 pt-8 md:pt-0"
-          style={{ paddingBottom: width > 768 ? "8vh" : "" }}
+          style={{ paddingBottom: !isMobile ? "8vh" : "" }}
         >
           We are building the Zo World as a community led travel ecosystem that
           enables everyone to travel anywhere in the world.
@@ -48,4 +48,4 @@ const Mission: React.FC<MissionProps> = () => {
   );
 };
 
-export default Mission;
+export default Introduction;

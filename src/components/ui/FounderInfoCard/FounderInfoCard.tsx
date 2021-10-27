@@ -4,11 +4,11 @@ import {
   LinkedIn,
   TwitterCircle,
   TwitterFilled,
-} from "../../../../../assets/icons";
-import { Flex } from "../../../../structure";
-import Avatar from "../../../../ui/Avatar";
+} from "../../../assets/icons";
+import { Flex } from "../../structure";
+import Avatar from "../Avatar";
 
-interface TeamCardProps {
+interface FounderInfoCardProps {
   avatar: string;
   name: string;
   department: string;
@@ -18,7 +18,7 @@ interface TeamCardProps {
   instagram?: string;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({
+const FounderInfoCard: React.FC<FounderInfoCardProps> = ({
   avatar,
   name,
   department,
@@ -62,4 +62,4 @@ const TeamCard: React.FC<TeamCardProps> = ({
   );
 };
 
-export default TeamCard;
+export default FounderInfoCard;

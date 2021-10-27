@@ -1,3 +1,10 @@
+type StringObject = { [key: string]: string };
+
+type HeadObject = {
+  title: string;
+  meta: StringObject;
+};
+
 type BlogPost = {
   meta: {
     title: string;

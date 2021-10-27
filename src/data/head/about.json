@@ -1,0 +1,19 @@
+{
+  "title": "Zo World | About",
+  "meta": {
+    "title": "Zo World | About",
+    "description": "Meet the team and the 11,111 Founders building the Zo World",
+    "og:type": "website",
+    "og:url": "https://zo.xyz/about",
+    "og:title": "Zo World | About",
+    "og:description": "Meet the team and the 11,111 Founders building the Zo World",
+    "og:image": "https://cdn.zo.xyz/branding/zo_sunrise_background.jpg",
+    "twitter:card": "summary_large_image",
+    "twitter:url": "https://zo.xyz/about",
+    "twitter:title": "Zo World | About",
+    "twitter:description": "Meet the team and the 11,111 Founders building the Zo World",
+    "twitter:image": "https://cdn.zo.xyz/branding/zo_sunrise_background.jpg",
+    "twitter:site": "@The_Zo_World",
+    "theme-color": "#F15824"
+  }
+}

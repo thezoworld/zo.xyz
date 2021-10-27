@@ -1,4 +1,4 @@
-import Mission from "./Mission";
-import Team from "./Team";
+import FoundersList from "./FoundersList";
+import Introduction from "./Introduction";
 
-export { Mission, Team };
+export { Introduction, FoundersList };
