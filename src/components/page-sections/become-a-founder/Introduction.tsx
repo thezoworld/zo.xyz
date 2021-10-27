@@ -9,13 +9,13 @@ import { Flex } from "../../structure";
 interface IntroductionProps {}
 
 const Introduction: React.FC<IntroductionProps> = () => {
-  const { width } = useWindowSize();
+  const { isMobile } = useWindowSize();
   return (
     <section
       className="md:h-screen w-full relative h-screen"
       style={{ backgroundColor: "#a5daf3" }}
     >
-      {width <= 768 ? (
+      {isMobile ? (
         <BecomeFounderMob className="absolute bottom-0" />
       ) : (
         <BecomeFounderDesktop className="absolute bottom-0" />

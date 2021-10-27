@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Headroom from "react-headroom";
 import { BurgerMenu } from ".";
-import { Menu, Zo } from "../../../assets/icons";
+import { Menu, Zo } from "../../assets/icons";
 
 interface HeaderProps {}
 

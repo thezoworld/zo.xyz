@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
-import { Footer, Header } from "../components/page-sections/common";
+import { Footer, Header } from "../components/common";
 import PageLoading from "../components/ui/PageLoading";
 import "./../styles/globals.css";
 

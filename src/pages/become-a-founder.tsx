@@ -4,7 +4,7 @@ import React from "react";
 import {
   Details,
   Introduction,
-} from "../components/page-sections/becomeCofounder";
+} from "../components/page-sections/become-a-founder";
 
 const becomeCofounder: NextPage = () => {
   return (

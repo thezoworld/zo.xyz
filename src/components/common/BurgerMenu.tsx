@@ -7,8 +7,8 @@ import {
   LinkedIn,
   TwitterFilled,
   Zo,
-} from "../../../assets/icons";
-import { Flex } from "../../structure";
+} from "../../assets/icons";
+import { Flex } from "../structure";
 
 interface BurgerMenuProps {
   closeMenu: React.MouseEventHandler;

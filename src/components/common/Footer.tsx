@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Fields3 } from "../../../assets/backgrounds";
+import { Fields3 } from "../../assets/backgrounds";
 import {
   Discord,
   Instagram,
   LinkedIn,
   TwitterFilled,
-} from "../../../assets/icons";
-import { TreesLeft, TreesRight } from "../../../assets/props";
-import { Flex } from "../../structure";
+} from "../../assets/icons";
+import { TreesLeft, TreesRight } from "../../assets/props";
+import { Flex } from "../structure";
 
 interface FooterProps {}
 

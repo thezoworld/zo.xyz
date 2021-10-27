@@ -1,5 +1,5 @@
 import React from "react";
-import ZomadCreator from "./../../components/page-sections/ZomadCreator";
+import ZomadCreator from "../../components/ui/ZomadCreator";
 
 interface createProps {}
 
