@@ -3,8 +3,8 @@ import matter from "gray-matter";
 import Head from "next/head";
 import path from "path";
 import React from "react";
-import { sortByDate } from "../../../utils";
-import { BlogCard } from "../../ui";
+import { BlogCard } from "../src/components/ui";
+import { sortByDate } from "../src/utils";
 
 interface BlogPageProps {
   posts: BlogPost[];

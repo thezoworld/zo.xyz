@@ -1,5 +1,5 @@
 import React from "react";
-import { generateHeadDataFromObject } from "../../../utils";
+import { generateHeadDataFromObject } from "../../../utils/generator";
 
 interface PageProps {
   headData: HeadObject;

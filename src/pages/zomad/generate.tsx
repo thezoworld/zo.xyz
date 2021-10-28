@@ -22,16 +22,7 @@ interface GenerateProps {}
 
 const fetchSeed = async () => {
   const response: any = await axios.get(
-    "https://api.zostel.com/profile/api/v1/avatar/seed/",
-    {
-      headers: {
-        Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IlVBLTE3MDA2IiwicGlkIjoiV1E3MlJXWEoiLCJmaXJzdF9uYW1lIjoiSXNoYWFuIiwibGFzdF9uYW1lIjoiUmF3YXQiLCJtb2JpbGUiOiI5MS05NjAyMjYyMjYxIiwiYXBwX2lkIjoiNU5qYjVhd01rMGRiQzdWTm5ZN1ozNXR3MnlFRTFIdEE5MnI5WUExdCIsInVzZXJfaWQiOiI4NjIzMjY4YTc2IiwiaWF0IjoxNjMzOTY0NTA0fQ.bEQOLoAKbdMOPmF2Gy1YRTbYBfCh9kGCXfpPZioiuuU",
-        "Content-Type": "application/json",
-        "Client-App-Id": "Ne0HsSgWroMJkV9JQBpWd7ZdGIqARRnKeSYhRdVU",
-        "Client-User-Id": "ssssss",
-      },
-    }
+    "https://api.zostel.com/profile/api/v1/avatar/seed/"
   );
   return { ...response.data.avatar };
 };

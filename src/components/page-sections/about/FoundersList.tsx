@@ -3,7 +3,7 @@ import foundersHQ from "../../../data/founders-hq.json";
 import { sortByAlias } from "../../../utils";
 import { Flex } from "../../structure";
 import { Container } from "../../ui";
-import FounderInfoCard from "../../ui/FounderInfoCardß";
+import FounderInfoCard from "../../ui/FounderInfoCard";
 
 interface FoundersListProps {}
 
