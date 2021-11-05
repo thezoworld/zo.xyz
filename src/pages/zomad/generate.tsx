@@ -83,8 +83,7 @@ const Generate: React.FC<GenerateProps> = () => {
           let data = window.URL.createObjectURL(blob);
           let link = document.createElement("a");
           link.href = data;
-          // link.download = "zomad.jpg";
-          link.download = avatarName;
+          link.download = `${avatarName.replace(/\s+/g, "-")}.jpg`;
           setDownloadLink(data);
           link.click();
         }, "image/jpeg");
@@ -341,7 +340,6 @@ const Generate: React.FC<GenerateProps> = () => {
     primalLayers();
     setSelectedBase(newBase);
     setSelectedBackground(getRandomItem(backgroundColors));
-    setAvatarName(getRandomItem(AVATAR_NAMES));
 
     categories
       .filter(
@@ -358,6 +356,8 @@ const Generate: React.FC<GenerateProps> = () => {
           randomAsset = getRandomItem(assetsAccesible);
         }
         const categoryProbability = categoryProbabilities[_category.id];
+        setAvatarName(randomAsset.name);
+        console.log(`Avatar Name: ${randomAsset.name}`);
         if (categoryProbability) {
           const shouldAppear = Math.random() <= categoryProbability;
           console.log(categoryProbability, _category.name, shouldAppear);
@@ -376,6 +376,12 @@ const Generate: React.FC<GenerateProps> = () => {
       setLoadingAssets(false);
     }, 2000);
   };
+
+  useEffect(() => {
+    if (avatarName == null || avatarName == "") {
+      randomZobu();
+    }
+  }, [avatarName]);
 
   useEffect(() => {
     if (categories.length) {
@@ -525,8 +531,7 @@ const Generate: React.FC<GenerateProps> = () => {
                 <a
                   href={downloadLink}
                   target="_blank"
-                  // download="zomad.jpg"
-                  download={avatarName}
+                  download={`${avatarName.replace(/\s+/g, "-")}.jpg`}
                   className="text-orangy font-semibold"
                 >
                   Click to download
