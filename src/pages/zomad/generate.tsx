@@ -6,6 +6,7 @@ import { Flex } from "../../components/structure";
 import { Button } from "../../components/ui";
 import Loading from "../../components/ui/Loading";
 import { getRandomItem, shuffleArray } from "../../utils/array";
+import { AVATAR_NAMES } from "../../utils/avatarNames";
 
 const loadImage = (url: string) => {
   return new Promise<HTMLImageElement>((resolve, revoke) => {
@@ -36,6 +37,8 @@ const Generate: React.FC<GenerateProps> = () => {
   const [categoryProbabilities, setCategoryProbabilities] = useState<any>({});
 
   const [downloadLink, setDownloadLink] = useState<string>("");
+
+  const [avatarName, setAvatarName] = useState<string>("");
 
   const [localLayers, setLocalLayers] = useState<any>({});
   const [localBases, setLocalBases] = useState<any>({});
@@ -80,7 +83,7 @@ const Generate: React.FC<GenerateProps> = () => {
           let data = window.URL.createObjectURL(blob);
           let link = document.createElement("a");
           link.href = data;
-          link.download = "zomad.jpg";
+          link.download = `${avatarName.replace(/\s+/g, "-")}.jpg`;
           setDownloadLink(data);
           link.click();
         }, "image/jpeg");
@@ -353,6 +356,8 @@ const Generate: React.FC<GenerateProps> = () => {
           randomAsset = getRandomItem(assetsAccesible);
         }
         const categoryProbability = categoryProbabilities[_category.id];
+        setAvatarName(randomAsset.name);
+        console.log(`Avatar Name: ${randomAsset.name}`);
         if (categoryProbability) {
           const shouldAppear = Math.random() <= categoryProbability;
           console.log(categoryProbability, _category.name, shouldAppear);
@@ -371,6 +376,12 @@ const Generate: React.FC<GenerateProps> = () => {
       setLoadingAssets(false);
     }, 2000);
   };
+
+  useEffect(() => {
+    if (avatarName == null || avatarName == "") {
+      randomZobu();
+    }
+  }, [avatarName]);
 
   useEffect(() => {
     if (categories.length) {
@@ -456,7 +467,7 @@ const Generate: React.FC<GenerateProps> = () => {
           col
           items="center"
           justify="center"
-          className="max-w-xs w-full h-108 rounded-xl bg-gray-100 p-4"
+          className="max-w-xs w-full h-full rounded-xl bg-gray-100 p-4"
         >
           {loadingAssets ? (
             <Flex col items="center">
@@ -471,7 +482,7 @@ const Generate: React.FC<GenerateProps> = () => {
                   style={{ backgroundColor: selectedBackground }}
                 />
                 <svg
-                  className="pointer-events-none z-10 absolute no-svg-animation  mx-auto"
+                  className="pointer-events-none z-10 absolute no-svg-animation mx-auto"
                   ref={svgRef}
                   style={{ top: "-16px" }}
                   id="zomad"
@@ -500,8 +511,9 @@ const Generate: React.FC<GenerateProps> = () => {
                     })}
                 </svg>
               </figure>
+              <p className="py-3 text-lg">{avatarName}</p>
               <button
-                className="text-center my-8 flex items-center px-8 py-3 text-lg left-0 top-0 text-white rounded-2xl relative border border-orangy text-orangy"
+                className="text-center my-8 flex items-center px-8 py-3 text-lg left-0 top-0 rounded-2xl relative border border-orangy text-orangy"
                 onClick={randomZobu}
               >
                 <Shuffle className="w-6 h-6 mr-4" />
@@ -519,7 +531,7 @@ const Generate: React.FC<GenerateProps> = () => {
                 <a
                   href={downloadLink}
                   target="_blank"
-                  download="zomad.jpg"
+                  download={`${avatarName.replace(/\s+/g, "-")}.jpg`}
                   className="text-orangy font-semibold"
                 >
                   Click to download
