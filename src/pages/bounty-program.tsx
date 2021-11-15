@@ -59,8 +59,8 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
       ) : (
         <BecomeFounderDesktop className="absolute top-0" />
       )}
-      <Container className="px-4 relative">
-        <Flex className="md:flex-row md:justify-end flex-col md:h-screen md:overflow-y-auto scroll-hidden">
+      <Container className="px-4 relative md:h-screen md:overflow-y-auto scroll-hidden">
+        <Flex className="md:flex-row md:justify-end flex-col">
           <Flex
             col
             items="start"
