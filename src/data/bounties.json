@@ -1,140 +1,254 @@
 [
   {
     "title": "Zo Centurions",
-    "numberOfCards": "5",
-    "description": "First 5 Members to reach 100 active invites on Zo World discord get a founder card each",
-    "status": "Active"
+    "bounty_total": 5,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "First 5 Members to reach 100 active invites on our discord",
+    "status": "Active",
+    "icon": "/assets/bounty-icons/zo-centurions-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Enter Discord"
   },
   {
     "title": "Level Up",
-    "numberOfCards": "5",
-    "description": "First 5 members to reach level 10 on discord get a Founder card each. Level up by gaining Xp which is granted based on your conversations with other members, your reactions to emojis, how many people you interact; I guess what we are trying to say is just stay active on discord and you'll be rewarded.",
-    "status": "Active"
+    "bounty_total": 5,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "First 5 members to reach level 10 on our discord.",
+    "status": "Active",
+    "icon": "/assets/bounty-icons/level-up-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Enter Discord"
   },
   {
     "title": "Milestone Drop",
-    "numberOfCards": "10",
-    "description": "1 Founder Card giveaway at every 500 member milestone on Zo World discord community. The next one coming up at 1000, 1500, 2000 members and so on till 5000. ",
-    "status": "Active"
+    "bounty_total": 10,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "1 Founder NFT giveaway at every 500 member milestone on our discord. Till 5k members.",
+    "status": "Active",
+    "icon": "/assets/bounty-icons/milestone-drop-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Join Discord"
   },
   {
     "title": "Early Birds - 1",
-    "numberOfCards": "5",
-    "description": "5 random giveaways to the first 1000 members on the discord channel. The giveaway happens as soon as we reach 1000 members on discord",
-    "status": "Active"
+    "bounty_total": 5,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "5 random giveaways among the first 1000 members on our discord.",
+    "status": "Active",
+    "icon": "/assets/bounty-icons/early-birds-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Join Discord"
   },
   {
     "title": "Tweeple Giveaways",
-    "numberOfCards": "15",
-    "description": "Retweet the Twitter Giveaway thread, follow Zo World and tag 2 friends. We'll pick one winner everyday to win a Zo World founder card worth 0.1 ETH each.",
-    "status": "Active"
+    "bounty_total": 15,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Retweet the Twitter Giveaway thread, follow Zo World, tag 2 friends.",
+    "status": "Active",
+    "icon": "/assets/bounty-icons/tweeple-giveaways-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://twitter.com/The_Zo_World",
+    "next_action_text": "Zo Twitter"
   },
   {
     "title": "Evangeliser",
-    "numberOfCards": "15",
-    "description": "Draw the Zo World symbol \\z/ using anything, anywhere, at any place, on a beach in the sand, on your plate using cutlery, on a paper using a pen, and post on twitter using #BecomeAFounder and tagging 2 friends. The winning \\z/ gets displayed as our DP across all channels and a founder card worth 0.1 ETH each day. ",
-    "status": "Active"
+    "bounty_total": 15,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Draw the Zo World symbol \\z/ creatively, post on twitter using #BecomeAFounder, Tag 2 friends.",
+    "status": "Active",
+    "icon": "/assets/bounty-icons/evangeliser-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "",
+    "next_action_text": "Join Discord"
   },
   {
     "title": "Get Set, Zo! - 1",
-    "numberOfCards": "2",
-    "description": "First 2 members to reach 300 messages on Zo World discord gets a founder card",
-    "status": "Active"
+    "bounty_total": 2,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "First 2 members to reach 300 messages on our discord",
+    "status": "Active",
+    "icon": "/assets/bounty-icons/get-set-zo-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Enter Discord"
   },
   {
     "title": "Inked!",
-    "numberOfCards": "11",
-    "description": "Get a tattoo of the Zo symbol \\z/ in any creative style you want. The tattoo has to be minimum 1.5 * 1.5 inches in size. Submit a video of you getting the permanent tattoo and the first 5 submissions get a founder card each. 6 additional cards up for grabs based on the best 6 tattoos",
-    "status": "Active"
-  },
-  {
-    "title": "Seeders",
-    "numberOfCards": "5",
-    "description": "Top active invite holders at the time of 5000 discord members",
-    "status": "Upcoming"
-  },
-  {
-    "title": "Zo Memers",
-    "numberOfCards": "2",
-    "description": "2 giveaways based on winner of meme contest. The contest opens at 1000 discord members and continues until the member count is 2000. Memes are to be made on active topics related to conversations happening on the Zo World discord channel.",
-    "status": "Upcoming"
+    "bounty_total": 11,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Submit a video of you getting a 1.5 sq. in. permanent tattoo of Zo symbol \\z/ in any creative style. First 5 submissions get a founder NFT each. Next 6 winners based on the best design",
+    "status": "Active",
+    "icon": "/assets/bounty-icons/inked-01.svg",
+    "tags": ["Marketing"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Show it Off "
   },
   {
     "title": "Early Birds - 2",
-    "numberOfCards": "5",
-    "description": "5 random giveaways to the next 2000 members on the discord channel. The giveaway happens as soon as we reach 3000 members on discord",
-    "status": "Upcoming"
-  },
-  {
-    "title": "Wise Owl",
-    "numberOfCards": "5",
-    "description": "Zoom AMA/Townhall giveaways",
-    "status": "Upcoming"
-  },
-  {
-    "title": "Avatar Raffle",
-    "numberOfCards": "5",
-    "description": "Change your twitter, instagram, discord DP to a random Zomad avatar from zo.xyz + a Zo World introduction post with #thezoworld tag. The post has to stay active until the raffle winner is announcement at each stage. The raffle is announced at 1000, 2000, 3000, 4000, 5000 discord members",
-    "status": "Upcoming"
-  },
-  {
-    "title": "Daily Challenge",
-    "numberOfCards": "5",
-    "description": "24H Invite challenge. The member with the most invites in 24 hours get's a foundr card. Giveaway unlocks at 1000 discord members",
-    "status": "Upcoming"
-  },
-  {
-    "title": "What's in a Name",
-    "numberOfCards": "1",
-    "description": "Change Discord Name to Zomad/ZoWorld and enter the raffle to win a founder card. Giveaway happens at 4000 discord members",
-    "status": "Upcoming"
-  },
-  {
-    "title": "Daily Challenge",
-    "numberOfCards": "1",
-    "description": "24H Xp challenge - The member to gain the most Xp in a 24H window gets a founder card. Contest unlocks at 2500 Discord members.",
-    "status": "Upcoming"
+    "bounty_total": 5,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "5 random giveaways to the next 2000 members on our discord.",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Join Discord"
   },
   {
     "title": "Get Set, Zo! - 2",
-    "numberOfCards": "2",
-    "description": "Next 2 members to reach 600 messages on Zo World discord gets a founder card",
-    "status": "Upcoming"
+    "bounty_total": 2,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Next 2 members to reach 600 messages on Zo World discord",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Join Discord"
   },
   {
     "title": "Get Set, Zo! - 3",
-    "numberOfCards": "2",
-    "description": "Next 2 members to reach 1200 messages on Zo World discord gets a founder card",
-    "status": "Upcoming"
+    "bounty_total": 2,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Next 2 members to reach 1200 messages on Zo World discord",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Join Discord"
   },
   {
-    "title": "Twitter Raiders",
-    "numberOfCards": "2",
-    "description": "Twitter Giveaway - Become a founder tweet - Like and follow @The_Zo_World, retweet and tag 3 friends to enter the raffle. The first 2 post to reach 100 likes get a founder card giveaway",
-    "status": "Upcoming"
+    "title": "Seeders",
+    "bounty_total": 5,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Top active invite holders at the time of 5000 discord members",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Join Discord"
+  },
+  {
+    "title": "Zo Memers",
+    "bounty_total": 2,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Meme contest winners. Theme - Active conversations on Zo discord, Starts at 1000 members, ends at 2000 members.",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Enter Discord"
+  },
+  {
+    "title": "Wise Owl",
+    "bounty_total": 5,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Zoom AMA/Townhall giveaways",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Join Discord"
+  },
+  {
+    "title": "Daily Challenge",
+    "bounty_total": 5,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "24H Invite challenge. The member with most invites in 24 hours",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Join Discord"
+  },
+  {
+    "title": "What's in a Name",
+    "bounty_total": 1,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Change Discord Name to Zomad/ZoWorld and enter the raffle to win a founder card. Giveaway happens at 4000 members",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Enter Discord"
+  },
+  {
+    "title": "Daily Challenge",
+    "bounty_total": 1,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "24H Xp challenge - The member to gain the most Xp in a 24H window. Contest unlocks at 2500 Discord members.",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "https://discord.gg/thezoworld",
+    "next_action_text": "Enter Discord"
   },
   {
     "title": "Influencer Reachouts",
-    "numberOfCards": "5",
-    "description": "DM, Reach out to best influencers pitching Zo world, get a reply from them share screenshot",
-    "status": "Upcoming"
+    "bounty_total": 5,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Onboard any blue tick influencers on Zo world. They post about us, you win!",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "",
+    "next_action_text": "Join Discord"
   },
   {
     "title": "DAO Pao",
-    "numberOfCards": "2",
-    "description": "The community chooses 2 random Zomads through a voting system to be winner of 2 giveaways",
-    "status": "Upcoming"
+    "bounty_total": 2,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "The community chooses 2 random Zomads through a voting system",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "",
+    "next_action_text": "Join Discord"
   },
   {
     "title": "Big Daddy",
-    "numberOfCards": "4",
-    "description": "2 Giveaways on successfully inviting NFT prjoject leaders from any of the top 100 NFT projects on opensea. 1 for the invitee and 1 for the leader.",
-    "status": "Upcoming"
+    "bounty_total": 4,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Onboard founders from the top 100 NFT projects on opensea and win! 1 for you, 1 for founder",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "",
+    "next_action_text": "Join Discord"
   },
   {
     "title": "Pioneers",
-    "numberOfCards": "4",
-    "description": "2 Giveaways on successfully inviting any holder of BAYC/Crytpopunks to Zo World. 1 for the invitee, 1 for the BAYC/Punk holder",
-    "status": "Upcoming"
+    "bounty_total": 4,
+    "bounty_redeemed": 0,
+    "bounty_winners": [],
+    "description": "Onboard any holder of BAYC/Crytpopunks to Zo World. 1 for the invitee, 1 for the BAYC/Punk holder",
+    "status": "Upcoming",
+    "icon": "/assets/bounty-icons/locked-01.svg",
+    "tags": ["Discord"],
+    "next_action_link": "",
+    "next_action_text": "Join Discord"
   }
 ]

@@ -11,3 +11,7 @@ export const sortByAlias = (a: any, b: any) => {
   }
   return 0;
 };
+
+export const openLink = (link: string) => {
+  window.open(link, "_blank");
+};

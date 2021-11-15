@@ -33,3 +33,21 @@ a {
 .headroom.headroom--pinned {
   z-index: 60 !important;
 }
+
+.scroll-hidden::-webkit-scrollbar,
+.scroll-hidden ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-hidden::-webkit-scrollbar-thumb,
+.scroll-hidden ::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.scroll-hidden::-webkit-scrollbar-track,
+.scroll-hidden ::-webkit-scrollbar-track {
+  background: transparent;
+}

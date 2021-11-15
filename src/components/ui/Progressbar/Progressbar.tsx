@@ -12,25 +12,19 @@ const Progressbar: React.FC<ProgressbarProps> = ({
   highestValue,
 }) => {
   const percentage = (currentValue / highestValue) * 100;
-  console.log(percentage);
+
   return (
-    <span>
+    <div className="relative w-full bg-gray-300 rounded-2xl h-6 mt-2">
       <div
-        className="shadow w-full rounded-3xl h-6 mt-8"
-        style={{ background: "rgba(226, 93, 29, 1)" }}
-      >
-        <div
-          className="text-xs leading-none py-1 text-center text-white rounded-3xl h-6 my-auto"
-          style={{
-            width: `${percentage}`,
-            background: "rgba(251, 117, 54, 1)",
-          }}
-        >
-          {text} ({currentValue}/{highestValue})
-        </div>
-      </div>
-      <span>{percentage}%</span>
-    </span>
+        className="absolute z-1 rounded-2xl max-w-full left-0 inset-y-0 bg-green-600"
+        style={{
+          width: `${percentage}%`,
+        }}
+      />
+      <span className="absolute z-2 text-white inset-0 flex items-center justify-center text-sm">
+        {text}
+      </span>
+    </div>
   );
 };
 

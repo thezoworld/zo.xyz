@@ -59,31 +59,32 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
       ) : (
         <BecomeFounderDesktop className="absolute top-0" />
       )}
-      <Container className="px-4">
-        <Flex col items="center" className="pt-24 text-black">
-          <h1 className="text-2xl md:text-3xl font-bold">Bounty Program</h1>
-          {/* <h2 className="text-lg font-semibold my-4 text-center">
-            15 ETH worth of giveways up for grabs!
-          </h2> */}
-          <p className="text-center mt-4">
-            Complete any bounty to become one of the only 11,111 founders of the
-            Zo World and earn a Founder NFT worth 0.1 ETH each.
-          </p>
-          <Link href="/become-a-founder#founder-benefits" passHref>
-            <button className="mt-6 flex items-center justify-center px-6 py-4 text-sm md:text-base leading-none rounded-xl border border-black text-black">
-              Check out our Founder benefits
-            </button>
-          </Link>
+      <Container className="px-4 relative">
+        <Flex className="md:flex-row md:justify-end flex-col md:h-screen md:overflow-y-auto scroll-hidden">
+          <Flex
+            col
+            items="start"
+            className="pt-24 md:absolute top-0 left-0 text-black w-full max-w-lg flex-1"
+          >
+            <h1 className="text-2xl md:text-3xl font-bold">Bounty Program</h1>
+            <p className="mt-4 mr-8 md:text-lg">
+              Complete any bounty to become one of the only 11,111 founders of
+              the Zo World and earn a Founder NFT worth 0.1 ETH each.
+            </p>
+            <Link href="/become-a-founder#founder-benefits" passHref>
+              <button className="mt-6 flex items-center justify-center px-6 py-4 text-sm md:text-base leading-none rounded-xl border border-black text-black">
+                Check out our Founder benefits
+              </button>
+            </Link>
+          </Flex>
+          <div className="mt-16 flex-shrink-0">
+            {bountyProgramData.map((d, i) => (
+              <GiveawayCard {...d} key={i} />
+            ))}
+            <div className="h-8 w-full" />
+          </div>
         </Flex>
       </Container>
-      <Container className="py-16 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8">
-          {bountyProgramData.map((d, i) => (
-            <GiveawayCard {...d} key={i} />
-          ))}
-        </div>
-      </Container>
-      <Container></Container>
     </section>
   );
 };
