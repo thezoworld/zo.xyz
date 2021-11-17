@@ -40,8 +40,8 @@ const Introduction: React.FC<IntroductionProps> = () => {
           <br />
           <br />
           Starting with "Founders of the Zo World" collection comprising of
-          11,111 NFTs. Upto half to be minted by believers starting on 31st
-          October and rest to be earned by the Zo community.
+          11,111 NFTs. Upto half to be minted by believers starting very soon
+          and rest to be earned by the Zo community.
         </p>
       </Flex>
     </section>

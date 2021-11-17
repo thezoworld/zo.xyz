@@ -28,7 +28,7 @@ const Believers: React.FC<BelieversProps> = () => {
               <br />
               <br />
               5,555 of the only 11,111 founders NFTs will be available for
-              public minting, 31st Oct 2021 onwards.
+              public minting very soon.
             </p>
           </Flex>
         </Flex>

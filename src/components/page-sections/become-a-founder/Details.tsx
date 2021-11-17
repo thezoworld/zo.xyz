@@ -38,7 +38,7 @@ const Story: React.FC<StoryProps> = () => {
               <br />
               <br />
               5,555 of these will be available for public minting at the price
-              of 0.1 ETH starting 31<sup>st</sup> Oct 2021.
+              of 0.1 ETH starting very soon.
             </p>
           </div>
         </Flex>
