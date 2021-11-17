@@ -93,7 +93,7 @@ const Generate: React.FC<GenerateProps> = () => {
       } finally {
         setTimeout(() => {
           setLoadingAssets(false);
-        }, 2000);
+        }, 500);
       }
     }
   };
@@ -374,7 +374,7 @@ const Generate: React.FC<GenerateProps> = () => {
 
     setTimeout(() => {
       setLoadingAssets(false);
-    }, 2000);
+    }, 500);
   };
 
   useEffect(() => {
