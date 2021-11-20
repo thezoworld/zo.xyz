@@ -33,7 +33,7 @@ const GiveawayCard: React.FC<GiveawayCardProps> = ({
   icon,
 }) => {
   return (
-    <article className="rounded-xl shadow-md my-4 max-w-lg">
+    <article className="rounded-xl shadow-md max-w-lg">
       <Flex className="bg-gray-300 rounded-t-xl p-2">
         {tags.map((t) => (
           <span className="px-3 pt-2 pb-1 bg-white rounded-2xl text-sm">

@@ -2,6 +2,14 @@ import AboutZoDesktop from "./AboutZoDesktop";
 import AboutZoMob from "./AboutZoMob";
 import BecomeFounderDesktop from "./BecomeFounderDesktop";
 import BecomeFounderMob from "./BecomeFounderMob";
+import BountyBG1 from "./BountyBG1";
+import BountyBG2 from "./BountyBG2";
+import BountyBG3 from "./BountyBG3";
+import BountyBG4 from "./BountyBG4";
+import BountyBG5 from "./BountyBG5";
+import BountyBG6 from "./BountyBG6";
+import BountyBG7 from "./BountyBG7";
+import BountyZ from "./BountyZ";
 import BuildZoWorldDesktop from "./BuildZoWorldDesktop";
 import BuildZoWorldMob from "./BuildZoWorldMob";
 import ClifSunset from "./ClifSunset";
@@ -30,4 +38,12 @@ export {
   AboutZoDesktop,
   BecomeFounderDesktop,
   BecomeFounderMob,
+  BountyBG1,
+  BountyBG2,
+  BountyBG3,
+  BountyBG4,
+  BountyBG5,
+  BountyBG6,
+  BountyBG7,
+  BountyZ,
 };

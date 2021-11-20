@@ -14,7 +14,7 @@ function SvgComponent(
     >
       <path
         d="M2.001 2l15 15L32 2"
-        stroke="#EA5F52"
+        stroke={props.stroke || "#EA5F52"}
         strokeOpacity={0.57}
         strokeWidth={3}
         strokeLinecap="round"
@@ -22,7 +22,7 @@ function SvgComponent(
       />
       <path
         d="M2 21.999l15 15 15-15"
-        stroke="#EA5F52"
+        stroke={props.stroke || "#EA5F52"}
         strokeOpacity={0.2}
         strokeWidth={3}
         strokeLinecap="round"
