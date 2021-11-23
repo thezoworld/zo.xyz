@@ -9,6 +9,8 @@ function useWeb3() {
       web3Ref.current = new Web3(window.ethereum as any);
     }
   }, []);
+
+  return web3Ref.current;
 }
 
 export default useWeb3;
