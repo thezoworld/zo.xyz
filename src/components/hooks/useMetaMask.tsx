@@ -20,19 +20,20 @@ function useMetaMask() {
   const isListeningToAccounts = useRef(false);
   const isListeningToChain = useRef(false);
 
-  const onboard = () => {
+  const install = () => {
     onboarding.current && onboarding.current.startOnboarding();
   };
 
-  const handleAccountChanged = (_wallet: string) => setWallet(_wallet);
+  const handleAccountsChanged = ([_wallet]: string[]) =>
+    setWallet(_wallet || "");
 
   const connect = async () => {
     if (isInstalled) {
       const [_wallet] = await ethereum?.request({
         method: "eth_requestAccounts",
       });
-      handleAccountChanged(_wallet);
-    } else onboard();
+      setWallet(_wallet);
+    } else install();
   };
 
   useEffect(() => {
@@ -54,13 +55,13 @@ function useMetaMask() {
 
   useEffect(() => {
     if (isInstalled && !isListeningToAccounts.current) {
-      ethereum.on("accountsChanged", handleAccountChanged);
+      ethereum.on("accountsChanged", handleAccountsChanged);
       isListeningToAccounts.current = true;
     }
 
     return () => {
       if (isListeningToAccounts.current) {
-        ethereum.removeListener("accountsChanged", handleAccountChanged);
+        ethereum.removeListener("accountsChanged", handleAccountsChanged);
         isListeningToAccounts.current = false;
       }
     };
