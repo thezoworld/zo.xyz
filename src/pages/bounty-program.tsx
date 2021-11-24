@@ -1,11 +1,8 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Head from "next/head";
-import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import {
-  BecomeFounderDesktop,
-  BecomeFounderMob,
   BountyBG1,
   BountyBG2,
   BountyBG3,
@@ -17,8 +14,7 @@ import {
 } from "../assets/backgrounds";
 import { DoubleArrowDown } from "../assets/props";
 import { useWindowSize } from "../components/hooks";
-import { Flex } from "../components/structure";
-import { Button, Container } from "../components/ui";
+import { Container } from "../components/ui";
 import GiveawayCard from "../components/ui/GiveawayCard";
 import bountyProgramData from "../data/bounties.json";
 
