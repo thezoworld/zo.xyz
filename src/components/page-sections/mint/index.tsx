@@ -1,3 +1,5 @@
+import AlphaNFT from "./AlphaNFT";
+import SwitchChain from "./SwitchChain";
 import Wallet from "./Wallet";
 
-export { Wallet };
+export { Wallet, SwitchChain, AlphaNFT };
