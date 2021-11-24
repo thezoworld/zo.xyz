@@ -10,6 +10,8 @@ interface WalletProps {
   isInstalled: boolean;
   connect: () => void;
   className?: string;
+  tokens?: number;
+  tokenName?: string;
 }
 
 const WEI = 1000000000000000000;
@@ -26,6 +28,8 @@ const Wallet: React.FC<WalletProps> = ({
   isInstalled,
   connect,
   className,
+  tokens = undefined,
+  tokenName = "Tokens",
 }) => {
   const { isMobile } = useWindowSize();
   const formattedWallet = useMemo(() => shortenAddress(wallet), [wallet]);
@@ -54,6 +58,14 @@ const Wallet: React.FC<WalletProps> = ({
               {(balance / WEI).toFixed(4)} ETH
             </span>
           </div>
+          {tokens !== undefined && (
+            <div className="px-8 pt-4 pb-8">
+              <span className="block text-sm uppercase">
+                {tokenName} In Wallet
+              </span>
+              <span className="block font-semibold">{tokens}</span>
+            </div>
+          )}
         </div>
       ) : (
         <div className="flex justify-center">
