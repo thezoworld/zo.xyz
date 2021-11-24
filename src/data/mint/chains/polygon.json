@@ -1,0 +1,11 @@
+{
+  "chainId": 137,
+  "chainName": "Polygon Mainnet",
+  "nativeCurrency": {
+    "name": "Matic",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
+  "rpcUrls": ["https://polygon-rpc.com/"],
+  "blockExplorerUrls": ["https://polygonscan.com/"]
+}
