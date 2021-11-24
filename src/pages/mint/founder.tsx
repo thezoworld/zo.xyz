@@ -2,23 +2,27 @@ import { NextPage } from "next";
 import React, { useEffect, useMemo, useState } from "react";
 import { ExternalLink } from "../../assets/icons";
 import { useMetaMask, useWeb3 } from "../../components/hooks";
-import { Wallet } from "../../components/page-sections/mint";
+import { SwitchChain, Wallet } from "../../components/page-sections/mint";
 import { Page } from "../../components/structure";
 import { Button } from "../../components/ui";
 import founderContract from "../../data/mint/contracts/founder.json";
 
-const WEI = 1000000000000000000;
+const WEI = 10 ** 18;
+const RINKEBY = 4;
 
 const founder: NextPage = () => {
-  const metamask = useMetaMask();
+  const wallet = useMetaMask();
   const web3 = useWeb3();
-  const [balance, setBalance] = useState(0);
+
   const [allowedToMintCount, setAllowedToMintCount] = useState<number>();
   const [mintStatus, setMintStatus] = useState<
     "success" | "error" | "pending" | "not-started"
   >("not-started");
+
   const [mintedHash, setMintedHash] = useState("");
   const [ownedCount, setOwnedCount] = useState(0);
+
+  const isConnectedToRinkeby = wallet.chainId === RINKEBY;
 
   const contract = useMemo(() => {
     if (web3)
@@ -28,25 +32,30 @@ const founder: NextPage = () => {
       );
   }, [web3]);
 
-  const hasSufficientBalance = useMemo(() => balance > 0.1 * WEI, [balance]);
+  const hasSufficientBalance = useMemo(
+    () => wallet.balance > 0.1 * WEI,
+    [wallet.balance]
+  );
 
   const checkAllowList = async () => {
-    const _isAllowListed = await contract?.methods
-      .isAllowedToMint(metamask.wallet)
-      .call();
-    setAllowedToMintCount(+_isAllowListed);
+    if (isConnectedToRinkeby) {
+      const _isAllowListed = await contract?.methods
+        .isAllowedToMint(wallet.address)
+        .call();
+      setAllowedToMintCount(+_isAllowListed);
+    }
   };
 
   const mintPublic = async () => {
-    if (allowedToMintCount && hasSufficientBalance) {
+    if (isConnectedToRinkeby && allowedToMintCount && hasSufficientBalance) {
       setMintStatus("pending");
       try {
         const approxGas = await contract?.methods
           .mintPublic()
-          .estimateGas({ from: metamask.wallet, value: 0.1 * WEI });
+          .estimateGas({ from: wallet.address, value: 0.1 * WEI });
 
         const txn = await contract?.methods.mintPublic().send({
-          from: metamask.wallet,
+          from: wallet.address,
           value: 0.1 * WEI,
           gasLimit: +Math.round(approxGas * 1.2).toFixed(0),
         });
@@ -69,28 +78,23 @@ const founder: NextPage = () => {
   const openEtherscanTxn = () =>
     window.open(`https://rinkeby.etherscan.io/tx/${mintedHash}`);
 
-  useEffect(() => {
-    metamask.wallet &&
-      (async () => {
-        const _balance = await web3?.eth.getBalance(metamask.wallet);
-        setBalance(+(_balance || "0"));
-      })();
-  }, [metamask.wallet]);
+  const switchToRinkeby = () => wallet.switchChain(RINKEBY);
 
   useEffect(() => {
     setAllowedToMintCount(undefined);
-  }, [metamask.wallet]);
+  }, [wallet.address]);
 
   useEffect(() => {
-    contract &&
-      metamask.wallet &&
+    isConnectedToRinkeby &&
+      contract &&
+      wallet.address &&
       (async () => {
         const _balanceOf = await contract?.methods
-          .balanceOf(metamask.wallet)
+          .balanceOf(wallet.address)
           .call();
         setOwnedCount(_balanceOf);
       })();
-  }, [mintStatus, contract, metamask.wallet]);
+  }, [isConnectedToRinkeby, mintStatus, contract, wallet.address]);
 
   return (
     <Page headData={{ title: "Zo Mint | Founders Of Zo World", meta: {} }}>
@@ -101,26 +105,27 @@ const founder: NextPage = () => {
         </span>
         <section className="flex justify-center w-full px-8 md:max-w-md xl:max-w-none xl:w-2/3">
           <Wallet
-            wallet={metamask.wallet}
-            balance={balance}
-            isConnected={metamask.isConnected}
-            isInstalled={metamask.isInstalled}
-            connect={metamask.connect}
-            tokens={ownedCount || undefined}
+            {...wallet}
+            tokensCount={ownedCount || undefined}
             tokenName="Zo World Founder NFTs"
             className="bg-green-600 rounded-lg shadow-lg"
           />
         </section>
-        {metamask.isConnected && (
+        {wallet.isConnected && (
           <section className="flex flex-col items-center justify-center px-8 mt-12 space-y-4">
-            {mintStatus === "success" ? (
+            {!isConnectedToRinkeby ? (
+              <SwitchChain
+                chainName="Rinkeby Testnet"
+                switchingFn={switchToRinkeby}
+              />
+            ) : mintStatus === "success" ? (
               <div className="flex flex-col items-center w-full space-y-8 text-lg">
                 <span
                   className="flex justify-center cursor-pointer"
                   onClick={openEtherscanTxn}
                 >
                   <span className="mr-2">
-                    Congratulations on minting your Founders Of Zo World NFT.{" "}
+                    Congratulations on minting your Founders Of Zo World NFT.
                   </span>
                   <ExternalLink />
                 </span>
