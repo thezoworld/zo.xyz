@@ -18,6 +18,7 @@ const founder: NextPage = () => {
     "success" | "error" | "pending" | "not-started"
   >("not-started");
   const [mintedHash, setMintedHash] = useState("");
+  const [ownedCount, setOwnedCount] = useState(0);
 
   const contract = useMemo(() => {
     if (web3)
@@ -66,7 +67,7 @@ const founder: NextPage = () => {
   };
 
   const openEtherscanTxn = () =>
-    window.open(`https://rinkeby.etherscan.io/address/${mintedHash}`);
+    window.open(`https://rinkeby.etherscan.io/tx/${mintedHash}`);
 
   useEffect(() => {
     metamask.wallet &&
@@ -79,6 +80,17 @@ const founder: NextPage = () => {
   useEffect(() => {
     setAllowedToMintCount(undefined);
   }, [metamask.wallet]);
+
+  useEffect(() => {
+    contract &&
+      metamask.wallet &&
+      (async () => {
+        const _balanceOf = await contract?.methods
+          .balanceOf(metamask.wallet)
+          .call();
+        setOwnedCount(_balanceOf);
+      })();
+  }, [mintStatus, contract, metamask.wallet]);
 
   return (
     <Page headData={{ title: "Zo Mint | Founders Of Zo World", meta: {} }}>
@@ -94,13 +106,15 @@ const founder: NextPage = () => {
             isConnected={metamask.isConnected}
             isInstalled={metamask.isInstalled}
             connect={metamask.connect}
+            tokens={ownedCount || undefined}
+            tokenName="Zo World Founder NFTs"
             className="bg-green-600 rounded-lg shadow-lg"
           />
         </section>
         {metamask.isConnected && (
           <section className="flex flex-col items-center justify-center px-8 mt-12 space-y-4">
             {mintStatus === "success" ? (
-              <div className="flex flex-col items-center w-full space-y-4 text-lg">
+              <div className="flex flex-col items-center w-full space-y-8 text-lg">
                 <span
                   className="flex justify-center cursor-pointer"
                   onClick={openEtherscanTxn}
@@ -115,7 +129,7 @@ const founder: NextPage = () => {
                 </span>
               </div>
             ) : mintStatus === "error" ? (
-              <div className="flex flex-col items-center space-y-4 text-lg">
+              <div className="flex flex-col items-center space-y-8 text-lg">
                 <span>
                   An error occured during minting of your NFT. Try minting
                   another or revisit after some time.
