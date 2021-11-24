@@ -62,11 +62,11 @@ const GiveawayCard: React.FC<GiveawayCardProps> = ({
         items="center"
       >
         <div>
-          {bounty_winners.length > 0 && (
+          {/* {bounty_winners.length > 0 && (
             <button className="text-orangy font-semibold text-sm">
               View Winners
             </button>
-          )}
+          )} */}
         </div>
         {status === "Active" ? (
           isValidString(next_action_link) && isValidString(next_action_text) ? (
