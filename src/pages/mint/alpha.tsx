@@ -1,17 +1,29 @@
 import { NextPage } from "next";
 import React, { useEffect, useMemo, useState } from "react";
 import { useMetaMask, useWeb3 } from "../../components/hooks";
-import { Wallet } from "../../components/page-sections/mint";
+import {
+  Wallet,
+  SwitchChain,
+  AlphaNFT,
+} from "../../components/page-sections/mint";
 import { Page } from "../../components/structure";
 import { Button } from "../../components/ui";
 import alphaContract from "../../data/mint/contracts/alpha.json";
+import polygon from "../../data/mint/chains/polygon.json";
+import { useRouter } from "next/router";
+
+const POLYGON = 137;
 
 const alpha: NextPage = () => {
-  const metamask = useMetaMask();
+  const router = useRouter();
+
+  const wallet = useMetaMask();
   const web3 = useWeb3();
-  const [balance, setBalance] = useState(0);
-  const [tokenId, setTokenId] = useState<number>();
-  const [balanceOf, setBalanceOf] = useState<number>();
+
+  const [tokenId, setTokenId] = useState(0);
+  const [verified, setVerified] = useState<boolean | undefined>();
+
+  const isConnectedToPolygon = wallet.chainId === POLYGON;
 
   const contract = useMemo(() => {
     if (web3)
@@ -21,97 +33,108 @@ const alpha: NextPage = () => {
       );
   }, [web3]);
 
-  const getBalanceOf = async () => {
-    if (metamask.isConnected && tokenId) {
+  const verify = async () => {
+    if (wallet.isConnected && tokenId) {
       try {
-        const _balanceOf = await contract?.methods
-          .balanceOf(metamask.wallet, tokenId)
-          .call();
-        setBalanceOf(+_balanceOf);
-        console.log("Balance", _balanceOf);
-      } catch (error) {
-        setBalanceOf(0);
-      }
+        const _balanceOf = +(await contract?.methods
+          .balanceOf(wallet.address, tokenId)
+          .call());
+        setVerified(_balanceOf === 1);
+        setVerified(true);
+      } catch (error) {}
     }
   };
 
-  useEffect(() => {
-    metamask.wallet &&
-      (async () => {
-        const _balance = await web3?.eth.getBalance(metamask.wallet);
-        setBalance(+(_balance || "0"));
-      })();
-  }, [metamask.wallet]);
+  const switchToPolygon = async () => {
+    if (wallet.isConnected) {
+      await wallet.addChain(polygon);
+      await wallet.switchChain(POLYGON);
+    }
+  };
+
+  const goBack = () => {
+    setVerified(undefined);
+    setTokenId(0);
+  };
 
   useEffect(() => {
-    setBalanceOf(undefined);
-  }, [tokenId]);
+    setVerified(undefined);
+  }, [tokenId, wallet.address]);
+
+  useEffect(() => {
+    verified && router.push("#ticket");
+  }, [verified]);
+
+  useEffect(() => {
+    if (!router.asPath.includes("#ticket")) goBack();
+  }, [router.asPath]);
 
   return (
     <Page headData={{ title: "Zo Mint | Zo World Alpha NFT", meta: {} }}>
-      <section className="flex flex-col items-center w-full min-h-screen text-white bg-purple-500 md:h-screen">
-        <header className="w-full h-18" />
-        <span className="flex justify-center w-full mb-12 text-4xl font-bold text-white">
-          Zo World Alpha NFT
-        </span>
-        <section className="flex justify-center w-full px-8 md:max-w-md xl:max-w-none xl:w-2/3">
-          <Wallet
-            wallet={metamask.wallet}
-            balance={balance}
-            isConnected={metamask.isConnected}
-            isInstalled={metamask.isInstalled}
-            connect={metamask.connect}
-            className="bg-purple-600 rounded-lg shadow-lg"
-          />
-        </section>
-        {metamask.isConnected && (
-          <>
-            <section className="w-full px-8 mt-12 sm:max-w-2xl">
-              Starting Nov 15, 2021, Zo World launched their Alpha NFT campaign
-              for 69 hours to grant free NFTs to people worldwide via Twitter.
-              During this campgain a total of 1245 Alpha NFTs were minted by Zo
-              World. If you own one of these, you can verify it down below!
+      <section className="flex w-full h-auto min-h-screen">
+        <section className="flex flex-col items-center w-full text-white bg-gray-500">
+          <header className="w-full h-18" />
+          <span className="flex justify-center w-full text-4xl font-bold text-white">
+            Zo World Alpha NFT
+          </span>
+          {!verified && (
+            <section className="flex justify-center w-full px-8 mt-12 mb-8 md:max-w-md xl:max-w-none xl:w-2/3">
+              <Wallet
+                {...wallet}
+                className="bg-gray-600 rounded-lg shadow-lg"
+              />
             </section>
-            <section className="flex flex-col justify-center px-8 mt-12 space-y-4">
-              <div className="flex justify-between h-full space-x-8">
-                <span className="flex flex-col items-center h-full sm:flex-row">
-                  <label htmlFor="token-id" className="mb-4 sm:mr-4 sm:mb-0">
-                    Token Number
-                  </label>
-                  <input
-                    id="token-id"
-                    className="w-32 px-4 text-lg font-semibold bg-purple-400 rounded-lg shadow-inner h-18 sm:h-full focus:outline-none"
-                    value={tokenId || ""}
-                    onChange={(e) => setTokenId(+(e.target.value || 0))}
-                    type="number"
-                    disabled={metamask.chainId !== "0x89"}
-                  />
-                </span>
-                <Button
-                  onClick={getBalanceOf}
-                  disabled={metamask.chainId !== "0x89"}
-                >
-                  Verify Your Alpha NFT
-                </Button>
-              </div>
-              {metamask.chainId !== "0x89" && (
-                <span className="block">
-                  *Switch chain to Polygon in MetaMask to be able to verify
-                  this.
-                </span>
-              )}
-              {balanceOf === 1 ? (
-                <span className="block">
-                  Verified: This NFT belongs to your wallet.
-                </span>
+          )}
+          {wallet.isConnected &&
+            (isConnectedToPolygon ? (
+              verified ? (
+                <section className="w-full h-full">
+                  <AlphaNFT tokenId={tokenId} walletAddress={wallet.address} />
+                </section>
               ) : (
-                balanceOf === 0 && (
-                  <span>This NFT doesn't not belong to your wallet.</span>
-                )
-              )}
-            </section>
-          </>
-        )}
+                <>
+                  <section className="w-full px-8 text-justify md:max-w-md xl:max-w-none xl:w-2/3">
+                    Starting Nov 15, 2021, Zo World launched their Alpha NFT
+                    campaign for 69 hours to grant free NFTs to people worldwide
+                    via Twitter. During this campgain a total of 1245 Alpha NFTs
+                    were minted by Zo World. If you own one of these, you can
+                    view it down below!
+                  </section>
+                  <section className="flex flex-col justify-center px-8 mt-12 space-y-4">
+                    <div className="flex flex-col items-start justify-between h-full sm:flex-row">
+                      <input
+                        id="token-id"
+                        className="w-56 px-4 my-4 text-lg font-semibold bg-gray-600 rounded-lg shadow-inner h-18 sm:h-full focus:outline-none sm:my-0 sm:mx-8"
+                        value={tokenId || ""}
+                        onChange={(e) => setTokenId(+(e.target.value || 0))}
+                        placeholder="Token Number"
+                        type="text"
+                        inputMode="numeric"
+                        style={{ boxShadow: "-4px 4px #374151" }}
+                        autoComplete="off"
+                      />
+
+                      <Button onClick={verify} disabled={!tokenId}>
+                        View Your Alpha NFT
+                      </Button>
+                    </div>
+                    {verified === false && (
+                      <span className="text-sm">
+                        *This token is not owned by your wallet.
+                      </span>
+                    )}
+                  </section>
+                </>
+              )
+            ) : (
+              <section className="px-8 mt-4">
+                <SwitchChain
+                  chainName="Polygon Mainnet"
+                  switchingFn={switchToPolygon}
+                />
+              </section>
+            ))}
+        </section>
       </section>
     </Page>
   );
