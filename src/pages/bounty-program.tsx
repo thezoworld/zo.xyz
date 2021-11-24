@@ -33,76 +33,78 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
   const bg7 = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    if (!isMobile) {
+      gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(bg1.current, {
-      scrollTrigger: {
-        scrub: true,
-        // trigger: bg1.current,
-      },
-      y: "0vh",
-    });
-    gsap.to(bg2.current, {
-      scrollTrigger: {
-        scrub: true,
-        // trigger: bg2.current,
-      },
-      y: "75vh",
-    });
-    gsap.to(bg3.current, {
-      scrollTrigger: {
-        scrub: true,
-        // trigger: bg3.current,
-      },
-      y: "95vh",
-    });
-    gsap.to(bg4.current, {
-      scrollTrigger: {
-        scrub: true,
-        // trigger: bg4.current,
-      },
-      y: "100vh",
-    });
-    gsap.to(bg5.current, {
-      scrollTrigger: {
-        scrub: true,
-        // trigger: bg5.current,
-      },
-      y: "110vh",
-    });
-    gsap.to(bg6.current, {
-      scrollTrigger: {
-        scrub: true,
-        // trigger: bg6.current,
-      },
-      y: "110vh",
-    });
-    gsap.to(bg7.current, {
-      scrollTrigger: {
-        scrub: true,
-        // trigger: bg7.current,
-      },
-      y: "110vh",
-    });
-    gsap.to(content.current, {
-      scrollTrigger: {
-        scrub: true,
-        // trigger: bg7.current,
-      },
-      y: "110vh",
-    });
-    gsap.to(z.current, {
-      scrollTrigger: {
-        scrub: true,
-      },
-      y: "110vh",
-    });
+      gsap.to(bg1.current, {
+        scrollTrigger: {
+          scrub: true,
+          // trigger: bg1.current,
+        },
+        y: "0vh",
+      });
+      gsap.to(bg2.current, {
+        scrollTrigger: {
+          scrub: true,
+          // trigger: bg2.current,
+        },
+        y: "75vh",
+      });
+      gsap.to(bg3.current, {
+        scrollTrigger: {
+          scrub: true,
+          // trigger: bg3.current,
+        },
+        y: "95vh",
+      });
+      gsap.to(bg4.current, {
+        scrollTrigger: {
+          scrub: true,
+          // trigger: bg4.current,
+        },
+        y: "100vh",
+      });
+      gsap.to(bg5.current, {
+        scrollTrigger: {
+          scrub: true,
+          // trigger: bg5.current,
+        },
+        y: "110vh",
+      });
+      gsap.to(bg6.current, {
+        scrollTrigger: {
+          scrub: true,
+          // trigger: bg6.current,
+        },
+        y: "110vh",
+      });
+      gsap.to(bg7.current, {
+        scrollTrigger: {
+          scrub: true,
+          // trigger: bg7.current,
+        },
+        y: "110vh",
+      });
+      gsap.to(content.current, {
+        scrollTrigger: {
+          scrub: true,
+          // trigger: bg7.current,
+        },
+        y: "110vh",
+      });
+      gsap.to(z.current, {
+        scrollTrigger: {
+          scrub: true,
+        },
+        y: "110vh",
+      });
+    }
   });
 
   return (
     <section
       className="h-full w-full min-h-screen relative"
-      style={{ backgroundColor: "#5a9b4c" }}
+      style={{ backgroundColor: "#002e30" }}
     >
       <Head>
         <meta name="title" content="Zo World | Bounty Program" />
@@ -148,7 +150,7 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
         }}
       >
         <div
-          className="absolute inset-0 px-4 flex flex-col md:items-center"
+          className="absolute inset-0 z-1 px-4 flex flex-col md:items-center"
           ref={content}
         >
           <h1 className="text-2xl md:text-4xl font-semibold md:text-center mt-32">
