@@ -14,8 +14,8 @@
   {
     "title": "Level Up",
     "bounty_total": 5,
-    "bounty_redeemed": 3,
-    "bounty_winners": ["Haiku", "Moka", "Ashwini"],
+    "bounty_redeemed": 4,
+    "bounty_winners": ["Haiku", "Moka", "Ashwini", "Junaid"],
     "description": "First 5 members to reach level 10 on our discord.",
     "status": "Active",
     "icon": "/assets/bounty-icons/level-up-01.svg",
@@ -26,8 +26,8 @@
   {
     "title": "Milestone Drop",
     "bounty_total": 10,
-    "bounty_redeemed": 1,
-    "bounty_winners": ["TheMaverickSoul"],
+    "bounty_redeemed": 2,
+    "bounty_winners": ["TheMaverickSoul","Johnxgalt"],
     "description": "1 Founder NFT giveaway at every 500 member milestone on our discord. Till 5k members.",
     "status": "Active",
     "icon": "/assets/bounty-icons/milestone-drop-01.svg",
