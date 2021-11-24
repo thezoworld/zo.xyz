@@ -84,6 +84,7 @@ const alpha: NextPage = () => {
                     value={tokenId || ""}
                     onChange={(e) => setTokenId(+(e.target.value || 0))}
                     type="number"
+                    disabled={metamask.chainId !== "0x89"}
                   />
                 </span>
                 <Button
