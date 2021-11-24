@@ -1,11 +1,14 @@
 import * as React from "react";
 
-function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
+function SvgComponent(
+  props: React.SVGProps<SVGSVGElement>,
+  svgRef?: React.Ref<SVGSVGElement>
+) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -13,6 +16,8 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
       stroke-linecap="round"
       stroke-linejoin="round"
       className="feather feather-external-link"
+      ref={svgRef}
+      {...props}
     >
       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
       <polyline points="15 3 21 3 21 9"></polyline>
@@ -21,4 +26,5 @@ function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default SvgComponent;
+const ForwardRef = React.forwardRef(SvgComponent);
+export default ForwardRef;
