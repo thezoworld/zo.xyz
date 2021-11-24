@@ -143,7 +143,7 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
         <title>Zo World | Bounty Program</title>
       </Head>
       <section
-        className="w-full relative overflow-hidden"
+        className="w-full relative overflow-hidden pointer-events-none"
         style={{
           height: isMobile ? "90vh" : "110vh",
           background: "linear-gradient(180deg, #80EE9E 0%, #FFF8AE 100%)",
@@ -153,10 +153,10 @@ const bountyProgram: React.FC<bountyProgramProps> = () => {
           className="absolute inset-0 z-1 px-4 flex flex-col md:items-center"
           ref={content}
         >
-          <h1 className="text-2xl md:text-4xl font-semibold md:text-center mt-32">
+          <h1 className="text-2xl md:text-4xl font-semibold md:text-center mt-32 pointer-events-auto">
             Bounty Program
           </h1>
-          <span className="mt-6 md:text-center md:text-lg md:max-w-3xl w-full">
+          <span className="mt-6 md:text-center md:text-lg md:max-w-3xl w-full pointer-events-auto">
             Complete any bounty to become one of the only 11,111 founders of the
             Zo World and earn a Founder NFT worth 0.1 ETH each.
           </span>
