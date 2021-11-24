@@ -80,6 +80,10 @@ const GiveawayCard: React.FC<GiveawayCardProps> = ({
               Join Discord
             </ButtonSmall>
           )
+        ) : status === "Completed" ? (
+          <span className="px-3 pt-1 text-sm text-gray-300">
+            Fully redeemed
+          </span>
         ) : (
           <span className="px-3 pt-1 text-sm text-gray-300">
             Not started yet
