@@ -14,10 +14,10 @@
   {
     "title": "Level Up",
     "bounty_total": 5,
-    "bounty_redeemed": 4,
-    "bounty_winners": ["Haiku", "Moka", "Ashwini", "Junaid"],
+    "bounty_redeemed": 5,
+    "bounty_winners": ["Haiku", "Moka", "Ashwini", "Junaid","Chon"],
     "description": "First 5 members to reach level 10 on our discord.",
-    "status": "Active",
+    "status": "Complete",
     "icon": "/assets/bounty-icons/level-up-01.svg",
     "tags": ["Discord"],
     "next_action_link": "https://discord.gg/thezoworld",
