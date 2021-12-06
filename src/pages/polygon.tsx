@@ -40,8 +40,8 @@ const polygon: NextPage = () => {
                 switchingFn={switchToPolygon}
               />
             ) : (
-              <span>
-                Congratulations! You are connected to Polygon Mainnet.
+              <span className="p-4 text-center">
+                You are connected to Polygon Mainnet.
               </span>
             ))}
         </section>
