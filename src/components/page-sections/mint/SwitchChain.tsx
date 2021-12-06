@@ -5,11 +5,13 @@ const REQUEST_PENDING = -32002;
 
 interface SwitchChainProps {
   chainName: string;
+  message?: string;
   switchingFn: () => Promise<void>;
 }
 
 const SwitchChain: React.FC<SwitchChainProps> = ({
   chainName,
+  message = "",
   switchingFn,
 }) => {
   const [requestPending, setRequestPending] = useState(false);
@@ -26,8 +28,9 @@ const SwitchChain: React.FC<SwitchChainProps> = ({
   return (
     <section className="flex flex-col items-center space-y-6">
       <span className="text-justify">
-        This token lives on the {chainName}. You need to switch chains before
-        you can continue.
+        {message ||
+          `This token lives on the ${chainName}. You need to switch chains before
+        you can continue.`}
       </span>
       <Button onClick={switchChains}>Switch To {chainName}</Button>
       {requestPending && (
