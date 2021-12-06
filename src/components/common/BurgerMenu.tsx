@@ -82,14 +82,6 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ closeMenu }) => {
           Get your Zomad
         </h1>
       </Link>
-      <Link href="/mint" passHref>
-        <h1
-          className="mx-auto my-5 text-xl font-bold no-underline cursor-pointer md:text-2xl hover:underline"
-          onClick={closeMenu}
-        >
-          Zo Mint
-        </h1>
-      </Link>
       <Link href="/about" passHref>
         <h1
           className="mx-auto my-5 text-xl font-bold no-underline cursor-pointer md:text-2xl hover:underline"
