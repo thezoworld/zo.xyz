@@ -43,7 +43,7 @@ const Footer: React.FC<FooterProps> = () => {
         <h3 className="text-2xl font-semibold">Don't miss out</h3>
         <h4 className="mt-2 text-xl font-semibold">on {MISS_TEXT[index]}</h4>
         <Link href="/polygon" passHref>
-          <div className="flex items-center justify-center px-6 py-3 mt-6 leading-none text-white border border-white md:px-8 md:py-4 md:text-lg rounded-xl">
+          <div className="flex items-center justify-center px-6 py-3 mt-6 leading-none text-white border border-white cursor-pointer md:px-8 md:py-4 md:text-lg rounded-xl">
             Add Polygon To MetaMask
           </div>
         </Link>
