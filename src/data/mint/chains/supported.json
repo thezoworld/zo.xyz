@@ -1,0 +1,50 @@
+[
+  {
+    "chainId": 1,
+    "chainName": "Ethereum Mainnet",
+    "symbol": "ETH",
+    "blockExplorer": "https://etherscan.io"
+  },
+  {
+    "chainId": 3,
+    "chainName": "Ropsten Test Network",
+    "symbol": "ETH",
+    "blockExplorer": "https://ropsten.etherscan.io"
+  },
+  {
+    "chainId": 4,
+    "chainName": "Rinkeby Test Network",
+    "symbol": "ETH",
+    "blockExplorer": "https://rinkeby.etherscan.io"
+  },
+  {
+    "chainId": 5,
+    "chainName": "Goerli Test Network",
+    "symbol": "ETH",
+    "blockExplorer": "https://goerli.etherscan.io"
+  },
+  {
+    "chainId": 42,
+    "chainName": "Kovan Test Network",
+    "symbol": "ETH",
+    "blockExplorer": "https://kovan.etherscan.io"
+  },
+  {
+    "chainId": 137,
+    "chainName": "Polygon Mainnet",
+    "symbol": "MATIC",
+    "blockExplorer": "https://polygonscan.com"
+  },
+  {
+    "chainId": 250,
+    "chainName": "Fantom Opera",
+    "symbol": "FTM",
+    "blockExplorer": "https://ftmscan.com"
+  },
+  {
+    "chainId": 43114,
+    "chainName": "Avalanche Mainnet",
+    "symbol": "AVAX",
+    "blockExplorer": "https://cchain.explorer.avax.network"
+  }
+]
