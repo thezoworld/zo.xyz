@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { Page } from "../../components/structure";
@@ -23,7 +24,11 @@ const ConnectZomad: NextPage = () => {
   }, [router.query]);
 
   return (
-    <Page headData={{ title: "Connect Zomad", meta: {} }}>
+    <section>
+      <Head>
+        <meta name="title" content="Zo World | Connect Zomad" />
+        <title>Zo World | Connect Zomad</title>
+      </Head>
       <header className="bg-orangy absolute top-0 inset-x-0 h-18 w-full" />
       <section
         className="flex flex-col justify-center items-center w-full"
@@ -32,7 +37,7 @@ const ConnectZomad: NextPage = () => {
         <Loading className="w-48 h-48" />
         <span className="font-semibold text-xl">Loading ...</span>
       </section>
-    </Page>
+    </section>
   );
 };
 
