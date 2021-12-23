@@ -46,5 +46,11 @@
     "chainName": "Avalanche Mainnet",
     "symbol": "AVAX",
     "blockExplorer": "https://cchain.explorer.avax.network"
+  },
+  {
+    "chainId": 80001,
+    "chainName": "Polygon Testnet",
+    "symbol": "MATIC",
+    "blockExplorer": "https://mumbai.polygonscan.com"
   }
 ]
