@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "category": "friends",
+    "title": "3 days in Mauritius",
+    "prices": "Starting from ₹52,000"
+  },
+  {
+    "id": 2,
+    "category": "solo",
+    "title": "3 days in Mauritius",
+    "prices": "Starting from ₹52,000"
+  },
+  {
+    "id": 3,
+    "category": "friends",
+    "title": "3 days in Mauritius",
+    "prices": "Starting from ₹52,000"
+  },
+  {
+    "id": 4,
+    "category": "solo",
+    "title": "3 days in Mauritius",
+    "prices": "Starting from ₹52,000"
+  },
+  {
+    "id": 5,
+    "category": "friends",
+    "title": "3 days in Mauritius",
+    "prices": "Starting from ₹52,000"
+  },
+  {
+    "id": 6,
+    "category": "solo",
+    "title": "3 days in Mauritius",
+    "prices": "Starting from ₹52,000"
+  },
+  {
+    "id": 7,
+    "category": "friends",
+    "title": "3 days in Mauritius",
+    "prices": "Starting from ₹52,000"
+  },
+  {
+    "id": 8,
+    "category": "solo",
+    "title": "3 days in Mauritius",
+    "prices": "Starting from ₹52,000"
+  }
+]

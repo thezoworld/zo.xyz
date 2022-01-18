@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Manali",
+    "distance": "4 hours away"
+  },
+  {
+    "id": 2,
+    "name": "Rishikesh",
+    "distance": "3.5 hours away"
+  },
+  {
+    "id": 3,
+    "name": "Manali",
+    "distance": "4 hours away"
+  },
+  {
+    "id": 4,
+    "name": "Rishikesh",
+    "distance": "3.5 hours away"
+  },
+  {
+    "id": 5,
+    "name": "Manali",
+    "distance": "4 hours away"
+  },
+  {
+    "id": 6,
+    "name": "Rishikesh",
+    "distance": "3.5 hours away"
+  },
+  {
+    "id": 7,
+    "name": "Manali",
+    "distance": "4 hours away"
+  },
+  {
+    "id": 8,
+    "name": "Rishikesh",
+    "distance": "3.5 hours away"
+  }
+]
