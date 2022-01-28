@@ -2,10 +2,10 @@ import { NextPage } from "next";
 import Link from "next/link";
 import React, { useEffect } from "react";
 
-import { useMetaMask } from "../components/hooks";
-import { SwitchChain, Wallet } from "../components/page-sections/mint";
-import { Page } from "../components/structure";
-import polygonMainnet from "../data/mint/chains/polygon.json";
+import { useMetaMask } from "../../components/hooks";
+import { SwitchChain, Wallet } from "../../components/page-sections/mint";
+import { Page } from "../../components/structure";
+import polygonMainnet from "../../data/mint/chains/polygon.json";
 
 const polygon: NextPage = () => {
   const wallet = useMetaMask();

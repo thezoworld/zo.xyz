@@ -1,14 +1,14 @@
 import { NextPage } from "next";
 import React, { useEffect, useMemo, useState } from "react";
-import { useMetaMask, useWeb3 } from "../components/hooks";
-import { SwitchChain, Wallet } from "../components/page-sections/mint";
-import { Page } from "../components/structure";
-import { Button } from "../components/ui";
-import { parseWeb3Error } from "../utils/w3";
-import grant from "../data/mint/contracts/grant.json";
-import artefacts from "../data/mint/contracts/artefacts.json";
-import supportedChains from "../data/mint/chains/supported.json";
-import polygonTestnet from "../data/mint/chains/polygonTestnet.json";
+import { useMetaMask, useWeb3 } from "../../components/hooks";
+import { SwitchChain, Wallet } from "../../components/page-sections/mint";
+import { Page } from "../../components/structure";
+import { Button } from "../../components/ui";
+import { parseWeb3Error } from "../../utils/w3";
+import grant from "../../data/mint/contracts/grant.json";
+import artefacts from "../../data/mint/contracts/artefacts.json";
+import supportedChains from "../../data/mint/chains/supported.json";
+import polygonTestnet from "../../data/mint/chains/polygonTestnet.json";
 
 const matic: NextPage = () => {
   const wallet = useMetaMask();

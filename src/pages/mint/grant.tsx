@@ -1,10 +1,10 @@
 import axios from "axios";
 import { NextPage } from "next";
 import React, { useCallback, useState } from "react";
-import { useMetaMask, useWeb3 } from "../components/hooks";
-import { Wallet } from "../components/page-sections/mint";
-import { Page } from "../components/structure";
-import { Button } from "../components/ui";
+import { useMetaMask, useWeb3 } from "../../components/hooks";
+import { Wallet } from "../../components/page-sections/mint";
+import { Page } from "../../components/structure";
+import { Button } from "../../components/ui";
 
 const SIGNING_BASE_URL = "https://api.staging.zostel.com/api/v1/artefacts";
 
