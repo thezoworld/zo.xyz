@@ -1,7 +1,11 @@
 import { NextPage } from "next";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useMetaMask, useWeb3 } from "../../components/hooks";
-import { SwitchChain, Wallet } from "../../components/page-sections/mint";
+import {
+  FounderMintInput,
+  SwitchChain,
+  Wallet,
+} from "../../components/page-sections/mint";
 import { Page } from "../../components/structure";
 import { Button } from "../../components/ui";
 import { parseWeb3Error } from "../../utils/w3";
@@ -12,6 +16,9 @@ import axios from "axios";
 const Founder: NextPage = () => {
   const wallet = useMetaMask();
   const web3 = useWeb3();
+
+  const [numTokens, setNumTokens] = useState(1);
+  const [priceToken, setPriceToken] = useState(0);
 
   const [isPreSale, setIsPreSale] = useState(false);
   const [isPreSaleAllowed, setIsPreSaleAllowed] = useState(false);
@@ -29,11 +36,13 @@ const Founder: NextPage = () => {
   const [poll, setPoll] = useState(1);
 
   const [transferEvents, setTransferEvents] = useState<any[]>([]);
-  const [transferInputs, setTransferInputs] = useState<{
-    from: string;
-    to: string;
-    tokenId: number;
-  }>();
+  const [transferInputs, setTransferInputs] = useState<
+    {
+      from: string;
+      to: string;
+      tokenId: number;
+    }[]
+  >([]);
 
   const [error, setError] = useState<any>();
 
@@ -55,6 +64,11 @@ const Founder: NextPage = () => {
     if (web3) return new web3.eth.Contract(founder.abi as any, founder.address);
   }, [web3]);
 
+  const canMintTokens = useMemo(
+    () => numTokens <= allowedToMint && wallet.balance > numTokens * priceToken,
+    [numTokens, allowedToMint, wallet.balance, priceToken]
+  );
+
   useEffect(() => {
     (async () => {
       if (isConnectedToRinkeby && founderContract && wallet.address) {
@@ -67,6 +81,9 @@ const Founder: NextPage = () => {
           .balanceOf(wallet.address)
           .call();
         setBalanceOf(+_balanceOf);
+
+        const _priceToken = await founderContract.methods.pricePerMint().call();
+        setPriceToken(+_priceToken);
       }
     })();
   }, [isConnectedToRinkeby, founderContract, wallet.address]);
@@ -127,20 +144,20 @@ const Founder: NextPage = () => {
               `http://127.0.0.1:8000/proof?address=${wallet.address}`
             )
           ).data;
-          mintFn = founderContract.methods.mintEarly(1, _proof.proof);
+          mintFn = founderContract.methods.mintEarly(numTokens, _proof.proof);
         } else return;
-      } else mintFn = founderContract.methods.mint(1);
+      } else mintFn = founderContract.methods.mint(numTokens);
 
       try {
         const approxGas = await mintFn.estimateGas({
           from: wallet.address,
-          value: 0,
+          value: priceToken * numTokens,
         });
 
         setHasStartedMint(true);
         const txn = await mintFn.send({
           from: wallet.address,
-          value: 0,
+          value: priceToken * numTokens,
           gasLimit: +Math.round(approxGas * 1.2).toFixed(0),
         });
 
@@ -154,7 +171,14 @@ const Founder: NextPage = () => {
       }
       setIsProcessingTransaction(false);
     }
-  }, [wallet.address, founderContract, isPreSale, isPreSaleAllowed]);
+  }, [
+    wallet.address,
+    founderContract,
+    isPreSale,
+    isPreSaleAllowed,
+    numTokens,
+    priceToken,
+  ]);
 
   const updateLatestBlock = async () => {
     if (web3) {
@@ -170,7 +194,11 @@ const Founder: NextPage = () => {
         fromBlock: lastBlock,
         toBlock: "latest",
       });
-      setTransferEvents((e) => [...e, ..._events]);
+
+      setTransferEvents((oldEvents) => [
+        ...oldEvents,
+        ..._events.filter((_e) => !oldEvents.map((o) => o.id).includes(_e.id)),
+      ]);
       console.log("Events", _events);
       await updateLatestBlock();
     }
@@ -178,29 +206,32 @@ const Founder: NextPage = () => {
 
   useEffect(() => {
     (async () => {
-      if (!transferInputs && hasStartedMint) {
+      if (hasStartedMint && transferInputs.length !== numTokens) {
         await pollNewEvents();
       }
     })();
-  }, [poll, transferInputs, hasStartedMint]);
+  }, [poll, hasStartedMint, transferInputs]);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setPoll((p) => p + 1);
-    }, 1000);
+    }, 12000);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     if (transactionHash) {
-      const [_transfer] = transferEvents.filter(
-        (_e) => _e.transactionHash === transactionHash
-      );
-      if (_transfer) {
-        console.log("Transfer event", _transfer.returnValues);
-        const { from, to, tokenId } = _transfer.returnValues;
-        setTransferInputs({ from, to, tokenId });
-      }
+      const _transfers = transferEvents
+        .filter((_e) => _e.transactionHash === transactionHash)
+        .map((_e) => _e.returnValues);
+      _transfers.length &&
+        setTransferInputs(
+          _transfers.map((_t) => ({
+            from: _t.from,
+            to: _t.to,
+            tokenId: _t.tokenId,
+          }))
+        );
     }
   }, [transactionHash, transferEvents]);
 
@@ -243,10 +274,14 @@ const Founder: NextPage = () => {
                           Click here to view your transaction.
                         </a>
                       </span>
-                      {transferInputs ? (
+                      {transferInputs.length > 0 ? (
                         <>
                           <span className="block font-semibold">
-                            Minted token #{transferInputs.tokenId} for you!
+                            Minted{" "}
+                            {transferInputs
+                              .map((t) => `#${t.tokenId}`)
+                              .join(", ")}{" "}
+                            for you!
                           </span>
                         </>
                       ) : (
@@ -262,36 +297,46 @@ const Founder: NextPage = () => {
                           PRE SALE: HURRY LIMITED TIME SALE!
                         </span>
                       )}
-                      <span className="block font-semibold text-center">
-                        You currently own {ownedTokens.join(", ")} of Zo World
-                        Founder NFTs.
-                      </span>
+                      {ownedTokens.length ? (
+                        <span className="block font-semibold text-center">
+                          You currently own {ownedTokens.join(", ")} of Zo World
+                          Founder NFTs.
+                        </span>
+                      ) : null}
                       <span className="block font-semibold text-center">
                         You are allowed to mint {allowedToMint} of Zo World
-                        Founder NFTs.
+                        Founder NFTs. {priceToken / 10 ** 18} ETH for each mint.
                       </span>
-                      <div className="flex justify-center">
+                      <div className="flex justify-center space-x-4">
                         {isPreSale ? (
                           isPreSaleAllowed ? (
-                            <Button
-                              disabled={isProcessingTransaction}
+                            <FounderMintInput
+                              numTokens={numTokens}
+                              setNumTokens={setNumTokens}
+                              maxAllowedTokens={allowedToMint}
+                              canMintSelectedTokens={canMintTokens}
+                              text="PRESALE MINT"
+                              disabled={
+                                isProcessingTransaction || !canMintTokens
+                              }
                               onClick={handleMint}
-                            >
-                              PRESALE MINT
-                            </Button>
+                            />
                           ) : (
                             <span className="block font-semibold text-center">
-                              You are allowed to participate in the Pre Sale
+                              You are not allowed to participate in the Pre Sale
                               Mint. Come back for the regular sale.
                             </span>
                           )
                         ) : (
-                          <Button
-                            disabled={isProcessingTransaction}
+                          <FounderMintInput
+                            numTokens={numTokens}
+                            setNumTokens={setNumTokens}
+                            maxAllowedTokens={allowedToMint}
+                            canMintSelectedTokens={canMintTokens}
+                            text="MINT"
+                            disabled={isProcessingTransaction || !canMintTokens}
                             onClick={handleMint}
-                          >
-                            MINT
-                          </Button>
+                          />
                         )}
                       </div>
                     </>
