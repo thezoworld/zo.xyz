@@ -13,9 +13,6 @@ import founder from "../../data/mint/contracts/founder.json";
 import supportedChains from "../../data/mint/chains/supported.json";
 import axios from "axios";
 
-// TODO: PRESALE HASN'T STARTED BANNER TILL BLOCK - 1, AND PUBLIC SALE AFTER THAT
-// TODO: LIVE STATS OF MINTED TOKENS IN CONTRACT
-
 const Founder: NextPage = () => {
   const wallet = useMetaMask();
   const web3 = useWeb3();
@@ -23,8 +20,13 @@ const Founder: NextPage = () => {
   const [numTokens, setNumTokens] = useState(1);
   const [priceToken, setPriceToken] = useState(0);
 
+  const [publicMax, setPublicMax] = useState(0);
+  const [publicIssued, setPublicIssued] = useState(0);
+
   const [isPreSale, setIsPreSale] = useState(false);
   const [isPreSaleAllowed, setIsPreSaleAllowed] = useState(false);
+
+  const [isSale, setIsSale] = useState(false);
 
   const [balanceOf, setBalanceOf] = useState(0);
   const [allowedToMint, setAllowedToMint] = useState(0);
@@ -72,6 +74,11 @@ const Founder: NextPage = () => {
     [numTokens, allowedToMint, wallet.balance, priceToken]
   );
 
+  const updatePublicIssued = async () => {
+    const _publicIssued = await founderContract?.methods.publicIssued().call();
+    setPublicIssued(_publicIssued);
+  };
+
   useEffect(() => {
     (async () => {
       if (isConnectedToRinkeby && founderContract && wallet.address) {
@@ -116,8 +123,13 @@ const Founder: NextPage = () => {
         const _preSaleBlock = await founderContract.methods
           .earlyAccessStart()
           .call();
+        const _saleBlock = await founderContract.methods.purchaseStart().call();
+
         setIsPreSale(_currentBlock > +_preSaleBlock);
-        console.log(_currentBlock > +_preSaleBlock);
+        setIsSale(_currentBlock > +_saleBlock);
+
+        const _publicMax = await founderContract.methods.publicMax().call();
+        setPublicMax(_publicMax);
       }
     })();
   }, [isConnectedToRinkeby, founderContract]);
@@ -212,6 +224,7 @@ const Founder: NextPage = () => {
       if (hasStartedMint && transferInputs.length !== numTokens) {
         await pollNewEvents();
       }
+      await updatePublicIssued();
     })();
   }, [poll, hasStartedMint, transferInputs]);
 
@@ -295,10 +308,15 @@ const Founder: NextPage = () => {
                     </>
                   ) : allowedToMint > 0 ? (
                     <>
-                      {isPreSale && (
-                        <span className="block font-semibold text-center">
-                          PRE SALE: HURRY LIMITED TIME SALE!
-                        </span>
+                      <span className="block font-semibold text-center">
+                        Public Claimed: {publicIssued} / {publicMax}
+                      </span>
+                      {isPreSale && !isSale && (
+                        <>
+                          <span className="block font-semibold text-center">
+                            PRE SALE: HURRY LIMITED TIME SALE!
+                          </span>
+                        </>
                       )}
                       {ownedTokens.length ? (
                         <span className="block font-semibold text-center">
@@ -311,7 +329,7 @@ const Founder: NextPage = () => {
                         Founder NFTs. {priceToken / 10 ** 18} ETH for each mint.
                       </span>
                       <div className="flex justify-center space-x-4">
-                        {isPreSale ? (
+                        {isPreSale && !isSale ? (
                           isPreSaleAllowed ? (
                             <FounderMintInput
                               numTokens={numTokens}
@@ -330,7 +348,7 @@ const Founder: NextPage = () => {
                               Mint. Come back for the regular sale.
                             </span>
                           )
-                        ) : (
+                        ) : isSale ? (
                           <FounderMintInput
                             numTokens={numTokens}
                             setNumTokens={setNumTokens}
@@ -340,6 +358,10 @@ const Founder: NextPage = () => {
                             disabled={isProcessingTransaction || !canMintTokens}
                             onClick={handleMint}
                           />
+                        ) : (
+                          <span className="block font-semibold text-center">
+                            Sale hasn't started yet. Come back another time.
+                          </span>
                         )}
                       </div>
                     </>
