@@ -13,6 +13,9 @@ import founder from "../../data/mint/contracts/founder.json";
 import supportedChains from "../../data/mint/chains/supported.json";
 import axios from "axios";
 
+// TODO: PRESALE HASN'T STARTED BANNER TILL BLOCK - 1, AND PUBLIC SALE AFTER THAT
+// TODO: LIVE STATS OF MINTED TOKENS IN CONTRACT
+
 const Founder: NextPage = () => {
   const wallet = useMetaMask();
   const web3 = useWeb3();
@@ -215,7 +218,7 @@ const Founder: NextPage = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setPoll((p) => p + 1);
-    }, 12000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 
