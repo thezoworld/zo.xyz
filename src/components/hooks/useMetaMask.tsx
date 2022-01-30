@@ -14,7 +14,6 @@ type Chain = {
   rpcUrls: string[];
   blockExplorerUrls?: string[];
 };
-const CHAIN_NOT_ADDED_ERROR = 4902;
 
 const toNumber = (hex: string) => +new Web3().utils.hexToNumberString(hex);
 const toHex = new Web3().utils.toHex;
@@ -101,11 +100,9 @@ function useMetaMask() {
   useEffect(() => {
     isConnected &&
       (async () => {
-        const _balance = await ethereum.request({
-          method: "eth_getBalance",
-          params: [address],
-        });
-        setBalance(toNumber(_balance));
+        const web3 = new Web3(ethereum);
+        const _balance = await web3.eth.getBalance(address);
+        setBalance(+_balance);
       })();
   }, [address, ethereum, isConnected]);
 

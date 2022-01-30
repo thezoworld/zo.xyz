@@ -1,33 +1,7 @@
 {
-  "address": "0x87603A6d07836c8C0B58C606Bd1F579671cEEb69",
+  "address": "0xae7Eb6D261Dd892E2D7C9778c3cdC3C0bee18820",
   "abi": [
     { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "addr",
-          "type": "address"
-        }
-      ],
-      "name": "AllowListAddressAdded",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "addr",
-          "type": "address"
-        }
-      ],
-      "name": "AllowListAddressRemoved",
-      "type": "event"
-    },
     {
       "anonymous": false,
       "inputs": [
@@ -145,32 +119,7 @@
     },
     {
       "inputs": [],
-      "name": "ROYALTY_PERCENT",
-      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        { "internalType": "address", "name": "_addr", "type": "address" }
-      ],
-      "name": "addAddressToAllowList",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        { "internalType": "address[]", "name": "_addrs", "type": "address[]" }
-      ],
-      "name": "addAddressesToAllowList",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "allIssued",
+      "name": "allowMintPerAddress",
       "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
       "stateMutability": "view",
       "type": "function"
@@ -201,6 +150,13 @@
       "name": "burn",
       "outputs": [],
       "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "earlyAccessStart",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -253,28 +209,42 @@
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "merkleRoot",
+      "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [
-        { "internalType": "address", "name": "_addr", "type": "address" }
+        { "internalType": "uint256", "name": "amount", "type": "uint256" }
       ],
-      "name": "mintGrant",
+      "name": "mint",
       "outputs": [],
-      "stateMutability": "nonpayable",
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "amount", "type": "uint256" },
+        {
+          "internalType": "bytes32[]",
+          "name": "merkleProof",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "mintEarly",
+      "outputs": [],
+      "stateMutability": "payable",
       "type": "function"
     },
     {
       "inputs": [
         { "internalType": "address[]", "name": "_addrs", "type": "address[]" }
       ],
-      "name": "mintGrantBatch",
+      "name": "mintGrant",
       "outputs": [],
       "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "mintPublic",
-      "outputs": [],
-      "stateMutability": "payable",
       "type": "function"
     },
     {
@@ -322,21 +292,10 @@
       "type": "function"
     },
     {
-      "inputs": [
-        { "internalType": "address", "name": "_addr", "type": "address" }
-      ],
-      "name": "removeAddressFromAllowList",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        { "internalType": "address[]", "name": "_addrs", "type": "address[]" }
-      ],
-      "name": "removeAddressesFromAllowList",
-      "outputs": [],
-      "stateMutability": "nonpayable",
+      "inputs": [],
+      "name": "purchaseStart",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -344,19 +303,6 @@
       "name": "renounceOwnership",
       "outputs": [],
       "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
-        { "internalType": "uint256", "name": "_salePrice", "type": "uint256" }
-      ],
-      "name": "royaltyInfo",
-      "outputs": [
-        { "internalType": "address", "name": "", "type": "address" },
-        { "internalType": "uint256", "name": "", "type": "uint256" }
-      ],
-      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -384,6 +330,19 @@
     },
     {
       "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_allowMintPerAddress",
+          "type": "uint256"
+        }
+      ],
+      "name": "setAllowMintPerAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
         { "internalType": "address", "name": "operator", "type": "address" },
         { "internalType": "bool", "name": "approved", "type": "bool" }
       ],
@@ -394,9 +353,9 @@
     },
     {
       "inputs": [
-        { "internalType": "string", "name": "baseURI", "type": "string" }
+        { "internalType": "bytes32", "name": "_merkleRoot", "type": "bytes32" }
       ],
-      "name": "setBaseURI",
+      "name": "setMerkleRoot",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -425,13 +384,10 @@
     },
     {
       "inputs": [
-        {
-          "internalType": "address",
-          "name": "_royaltyAddress",
-          "type": "address"
-        }
+        { "internalType": "string", "name": "_tokenBaseURI", "type": "string" },
+        { "internalType": "string", "name": "_tokenURIExt", "type": "string" }
       ],
-      "name": "setroyaltyAddress",
+      "name": "setURI",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
